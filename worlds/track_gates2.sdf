@@ -1,6 +1,6 @@
-<?xml version="1.0" ?>
+<?xml version="1.1" ?>
 <sdf version="1.9">
-  <world name="iris_runway">
+  <world name="track_gates2">
     <physics name="1ms" type="ignore">
       <max_step_size>0.001</max_step_size>
       <real_time_factor>1.0</real_time_factor>
@@ -40,20 +40,46 @@
       <heading_deg>0</heading_deg>
       <surface_model>EARTH_WGS84</surface_model>
     </spherical_coordinates>
-
-    <light type="directional" name="sun">
-      <cast_shadows>true</cast_shadows>
+    
+    
+    <light name="sun" type="directional">
       <pose>0 0 10 0 0 0</pose>
-      <diffuse>0.8 0.8 0.8 1</diffuse>
-      <specular>0.8 0.8 0.8 1</specular>
+      <diffuse>1 1 1 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
       <attenuation>
         <range>1000</range>
         <constant>0.9</constant>
         <linear>0.01</linear>
         <quadratic>0.001</quadratic>
       </attenuation>
-      <direction>-0.5 0.1 -0.9</direction>
+      <direction>-0.5 0.5 -1</direction>
     </light>
+    
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.3 0.3 0.3 1</ambient>
+            <diffuse>0.3 0.3 0.3 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
 
     <model name="axes">
       <static>1</static>
@@ -110,14 +136,66 @@
       </link>
     </model>
     
+    
     <include>
-      <uri>model://runway</uri>
-      <pose degrees="true">-29 545 0 0 0 363</pose>
+      <uri>model://gate</uri>
+      <name>gate1</name>
+      <pose> 2.44 2.71 0 0 0 2.332112</pose>
+      <static>true</static>
     </include>
 
     <include>
-      <uri>model://iris_with_gimbal</uri>
-      <pose degrees="true">0 0 0.195 0 0 90</pose>
+      <uri>model://gate</uri>
+      <name>gate2</name>
+      <pose>8.95 0.9299 0 0 0 1.3077788817244544</pose>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://double_gate</uri>
+      <name>gate3</name>
+      <pose>14.3799 4.5299 0 0 0 2.5275894959432916</pose>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://double_gate</uri>
+      <name>gate4</name>
+      <pose> 17.58 7.4599 0 0 0 3.1340914110113207</pose>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://gate</uri>
+      <name>gate5</name>
+      <pose>19.3 -0.5199 0 0 0 3.1415963267948968</pose>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://gate</uri>
+      <name>gate6</name>
+      <pose>14.54 -8.59 0 0 0 1.5708</pose>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://gate</uri>
+      <name>gate7</name>
+      <pose> 9.04 -5.07 0 0 0 1.5708</pose>
+      <static>true</static>
+    </include>
+
+    <include>
+      <uri>model://gate</uri>
+      <name>gate8</name>
+      <pose>3.54 -8.59 0 0 0 0.7854018366025517</pose>
+      <static>true</static>
+    </include>
+    
+    <include>
+      <uri>model://iris_with_camera</uri>
+      <pose degrees="true">0 0 0.195 0 0 1.5708</pose>
     </include>
 
   </world>

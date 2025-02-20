@@ -1,0 +1,233 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <model name="gate">
+    <static>true</static>
+    <!-- Definición del primer panel lateral -->
+    <link name="side_panel_left_bottom">
+      <pose>1.05 0 1.35 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.6 0.08 1.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.6 0.08 1.5</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.05 0 0.2 1</ambient>
+          <diffuse>0.05 0 0.2 1</diffuse>
+
+        </material>
+      </visual>
+    </link>
+    <!-- Definición del segundo panel lateral -->
+    <link name="side_panel_right_bottom">
+      <pose>-1.05 0 1.35 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.6 0.08 1.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.6 0.08 1.5</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.05 0 0.2 1</ambient>
+          <diffuse>0.05 0 0.2 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <!-- Definición de la barra superior -->
+    <link name="top_bar_bottom">
+      <pose>0 0 2.4 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>2.7 0.08 0.6</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>2.7 0.08 0.6</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.05 0 0.2 1</ambient>
+          <diffuse>0.05 0 0.2 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <!-- Definición de la barra inferior -->
+    <link name="bottom_bar_bottom">
+      <pose>0 0 0.3 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>2.7 0.08 0.6</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>2.7 0.08 0.6</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.05 0 0.2 1</ambient>
+          <diffuse>0.05 0 0.2 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <link name="gate_banner_bottom">
+      <!-- Ajusta pose para que "tapice" el frente del gate -->
+      <pose>0 0.05 1.35 1.5708 0 3.1416 </pose>
+      <visual name="banner_visual">
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>2.7 2.7</size> <!-- Ajustar a tu gusto -->
+          </plane>
+        </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <pbr>
+            <metal>
+              <albedo_map>textures/Gate_design.png</albedo_map>
+              <roughness>0.6</roughness>
+              <metalness>0</metalness>
+            </metal>
+          </pbr>
+        </material>
+      </visual>
+      <!-- Sin collision para que sea "solo visual" -->
+    </link>
+    <link name="side_panel_left_top">
+      <pose>1.05 0 4.05 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.6 0.08 1.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.6 0.08 1.5</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.05 0 0.2 1</ambient>
+          <diffuse>0.05 0 0.2 1</diffuse>
+
+        </material>
+      </visual>
+    </link>
+    <!-- Definición del segundo panel lateral -->
+    <link name="side_panel_right_top">
+      <pose>-1.05 0 4.05 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.6 0.08 1.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.6 0.08 1.5</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.05 0 0.2 1</ambient>
+          <diffuse>0.05 0 0.2 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <!-- Definición de la barra superior -->
+    <link name="top_bar_top">
+      <pose>0 0 5.1 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>2.7 0.08 0.6</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>2.7 0.08 0.6</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.05 0 0.2 1</ambient>
+          <diffuse>0.05 0 0.2 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <!-- Definición de la barra inferior -->
+    <link name="bottom_bar_top">
+      <pose>0 0 3 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>2.7 0.08 0.6</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>2.7 0.08 0.6</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.05 0 0.2 1</ambient>
+          <diffuse>0.05 0 0.2 1</diffuse>
+        </material>
+      </visual>
+    </link>
+    <link name="gate_banner_top">
+      <!-- Ajusta pose para que "tapice" el frente del gate -->
+      <pose>0 0.05 4.05 1.5708 0 3.1416 </pose>
+      <visual name="banner_visual">
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>2.7 2.7</size> <!-- Ajustar a tu gusto -->
+          </plane>
+        </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <pbr>
+            <metal>
+              <albedo_map>textures/Gate_design.png</albedo_map>
+              <roughness>0.6</roughness>
+              <metalness>0</metalness>
+            </metal>
+          </pbr>
+        </material>
+      </visual>
+      <!-- Sin collision para que sea "solo visual" -->
+    </link>
+  </model>
+</sdf>
