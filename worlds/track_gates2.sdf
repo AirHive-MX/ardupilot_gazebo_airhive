@@ -34,9 +34,17 @@
     </scene>
 
     <spherical_coordinates>
+      <!-- Canberra, Australia -->
+      <!--
       <latitude_deg>-35.363262</latitude_deg>
       <longitude_deg>149.165237</longitude_deg>
       <elevation>584</elevation>
+      <heading_deg>0</heading_deg>
+      -->
+      <!-- Monterrey, Mexico -->
+      <latitude_deg>25.59156740</latitude_deg>
+      <longitude_deg>-100.27814722</longitude_deg>
+      <elevation>640</elevation>
       <heading_deg>0</heading_deg>
       <surface_model>EARTH_WGS84</surface_model>
     </spherical_coordinates>
