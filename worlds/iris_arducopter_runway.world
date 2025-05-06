@@ -38,8 +38,14 @@
       <uri>model://runway</uri>
     </include>
 
-    <include>
+    <!-- <include>
       <uri>model://iris_with_standoffs</uri>
+      <pose>0 0 0.227 0 0 0</pose>
+    </include> -->
+
+    <include>
+      <uri>model://x500</uri>
+      <pose>0 0 0.227 0 0 0</pose>
     </include>
 
   </world>
