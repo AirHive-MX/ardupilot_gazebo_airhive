@@ -8,7 +8,8 @@
     <include>
       <uri>model://gimbal_small_3d</uri>
       <name>gimbal</name>
-      <pose degrees="true">0 -0.01 -0.124923 90 0 90</pose>    
+      <pose degrees="true">0 -0.01 -0.124923 90 0 90</pose>  
+      
     </include>
 
     <joint name="gimbal_joint" type="revolute">
@@ -24,11 +25,11 @@
     </joint>
 
     <!-- plugins -->
-    <plugin filename="gz-sim-joint-state-publisher-system"
-      name="gz::sim::systems::JointStatePublisher">
+    <plugin filename="libignition-gazebo-joint-state-publisher-system.so"
+      name="ignition::gazebo::systems::JointStatePublisher">
     </plugin>
-    <plugin filename="gz-sim-lift-drag-system"
-        name="gz::sim::systems::LiftDrag">
+    <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
       <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
       <cla>4.2500</cla>
@@ -44,8 +45,8 @@
       <upward>0 0 1</upward>
       <link_name>iris_with_standoffs::rotor_0</link_name>
     </plugin>
-    <plugin filename="gz-sim-lift-drag-system"
-        name="gz::sim::systems::LiftDrag">
+    <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
       <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
       <cla>4.2500</cla>
@@ -62,8 +63,8 @@
       <link_name>iris_with_standoffs::rotor_0</link_name>
     </plugin>
 
-    <plugin filename="gz-sim-lift-drag-system"
-        name="gz::sim::systems::LiftDrag">
+    <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
       <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
       <cla>4.2500</cla>
@@ -79,8 +80,8 @@
       <upward>0 0 1</upward>
       <link_name>iris_with_standoffs::rotor_1</link_name>
     </plugin>
-    <plugin filename="gz-sim-lift-drag-system"
-        name="gz::sim::systems::LiftDrag">
+    <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
       <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
       <cla>4.2500</cla>
@@ -97,8 +98,8 @@
       <link_name>iris_with_standoffs::rotor_1</link_name>
     </plugin>
 
-    <plugin filename="gz-sim-lift-drag-system"
-        name="gz::sim::systems::LiftDrag">
+    <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
       <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
       <cla>4.2500</cla>
@@ -114,8 +115,8 @@
       <upward>0 0 1</upward>
       <link_name>iris_with_standoffs::rotor_2</link_name>
     </plugin>
-    <plugin filename="gz-sim-lift-drag-system"
-        name="gz::sim::systems::LiftDrag">
+    <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
       <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
       <cla>4.2500</cla>
@@ -132,8 +133,8 @@
       <link_name>iris_with_standoffs::rotor_2</link_name>
     </plugin>
 
-    <plugin filename="gz-sim-lift-drag-system"
-        name="gz::sim::systems::LiftDrag">
+    <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
       <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
       <cla>4.2500</cla>
@@ -149,8 +150,8 @@
       <upward>0 0 1</upward>
       <link_name>iris_with_standoffs::rotor_3</link_name>
     </plugin>
-    <plugin filename="gz-sim-lift-drag-system"
-        name="gz::sim::systems::LiftDrag">
+    <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
       <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
       <cla>4.2500</cla>
@@ -167,23 +168,23 @@
       <link_name>iris_with_standoffs::rotor_3</link_name>
     </plugin>
 
-    <plugin filename="gz-sim-apply-joint-force-system"
-      name="gz::sim::systems::ApplyJointForce">
+    <plugin filename="libignition-gazebo-apply-joint-force-system.so"
+      name="ignition::gazebo::systems::ApplyJointForce">
       <joint_name>iris_with_standoffs::rotor_0_joint</joint_name>
     </plugin>
-    <plugin filename="gz-sim-apply-joint-force-system"
-      name="gz::sim::systems::ApplyJointForce">
+    <plugin filename="libignition-gazebo-apply-joint-force-system.so"
+      name="ignition::gazebo::systems::ApplyJointForce">
       <joint_name>iris_with_standoffs::rotor_1_joint</joint_name>
     </plugin>
-    <plugin filename="gz-sim-apply-joint-force-system"
-      name="gz::sim::systems::ApplyJointForce">
+    <plugin filename="libignition-gazebo-apply-joint-force-system.so"
+      name="ignition::gazebo::systems::ApplyJointForce">
       <joint_name>iris_with_standoffs::rotor_2_joint</joint_name>
     </plugin>
-    <plugin filename="gz-sim-apply-joint-force-system"
-      name="gz::sim::systems::ApplyJointForce">
+    <plugin filename="libignition-gazebo-apply-joint-force-system.so"
+      name="ignition::gazebo::systems::ApplyJointForce">
       <joint_name>iris_with_standoffs::rotor_3_joint</joint_name>
     </plugin>
-
+  
     <plugin name="ArduPilotPlugin"
       filename="ArduPilotPlugin">
       <!-- Port settings -->
@@ -199,7 +200,7 @@
       <gazeboXYZToNED degrees="true">0 0 0 180 0 90</gazeboXYZToNED>
 
       <!-- Sensors -->
-      <imuName>iris_with_standoffs::imu_link::imu_sensor</imuName>
+      <imuName>iris_with_standoffs::imu_sensor</imuName>
 
       <!--
           incoming control command [0, 1]
