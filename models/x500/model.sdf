@@ -234,18 +234,47 @@
         </air_pressure>
       </sensor>
     </link>
-      
-    <include>
-      <uri>model://gimbal_small_3d</uri>
-      <name>gimbal_small_3d</name>
-      <pose degrees="true">0.12 -0.005 -0.05 90 0 90</pose> <!-- Ajusta la posición del gimbal según sea necesario -->
-       
-    </include>
 
-    <!-- Gimbal Joint -->
+    <!-- ========================  GIMBAL INTEGRADO  ======================== -->
+    <link name="gimbal_base_link">
+      <!-- <pose degrees="true">0.22 -0.005 -0.05 90 0 90</pose>  -->
+      <pose relative_to="base_link">0.12 -0.005 -0.05 1.5708 0 1.5708</pose>
+      <inertial>
+        <mass>0.2</mass>
+        <inertia>
+          <ixx>0.0001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0001</iyy>
+          <iyz>0</iyz>
+          <izz>0.0001</izz>
+        </inertia>
+      </inertial>
+      <visual name="gimbal_base_visual">
+        <geometry>
+          <mesh>
+            <uri>model://gimbal_small_3d/meshes/base_plate.dae</uri>
+            <scale>0.5 0.5 0.5</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1</ambient>
+          <diffuse>0.1 0.1 0.1</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+        </material>
+      </visual>
+      <collision name="gimbal_base_collision">
+        <!-- <pose>0.01 0.075 -0.025 0 0 0</pose> -->
+        <geometry>
+          <box>
+            <size>0.05 0.025 0.075</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
     <joint name="gimbal_joint" type="revolute">
       <parent>base_link</parent>
-      <child>gimbal_small_3d::base_link</child>
+      <child>gimbal_base_link</child>
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
@@ -254,6 +283,245 @@
         </limit>
       </axis>
     </joint>
+
+    <link name="yaw_link">
+      <!-- <pose relative_to="gimbal_base_link">0.0105 0.065 -0.002 0 0 0</pose> -->
+      <pose relative_to="gimbal_base_link">0.0 0.0 0.0 0 0 0</pose>
+      <inertial>
+        <mass>0.01</mass>
+        <inertia>
+          <ixx>0.00001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00001</iyy>
+          <iyz>0</iyz>
+          <izz>0.00001</izz>
+        </inertia>
+      </inertial>
+      <visual name="yaw_visual">
+        <geometry>
+          <mesh>
+            <uri>model://gimbal_small_3d/meshes/yaw_arm.dae</uri>
+            <scale>0.5 0.5 0.5</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1</ambient>
+          <diffuse>0.1 0.1 0.1</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+        </material>
+      </visual>
+      <collision name="yaw_collision">
+        <geometry>
+          <mesh>
+            <uri>model://gimbal_small_3d/meshes/yaw_arm.dae</uri>
+            <scale>0.5 0.5 0.5</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name="yaw_joint" type="revolute">
+      <parent>gimbal_base_link</parent>
+      <child>yaw_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <damping>0.01</damping>
+        </dynamics>
+        <limit>
+          <lower>-3.1415926</lower>
+          <upper>3.1415926</upper>
+        </limit>
+      </axis>
+      <pose>0.0105 0.065 -0.002 0 0 0</pose>
+    </joint>
+
+    <link name="roll_link">
+      <!-- <pose relative_to="yaw_link">0.0099 0.002 -0.05 0 0 0</pose> -->
+      <pose relative_to="yaw_link">0.0 0.0 0.0 0 0 0</pose>
+      <inertial>
+        <mass>0.01</mass>
+        <inertia>
+          <ixx>0.00001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00001</iyy>
+          <iyz>0</iyz>
+          <izz>0.00001</izz>
+        </inertia>
+      </inertial>
+      <visual name="roll_visual">
+        <geometry>
+          <mesh>
+            <uri>model://gimbal_small_3d/meshes/roll_arm.dae</uri>
+            <scale>0.5 0.5 0.5</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1</ambient>
+          <diffuse>0.1 0.1 0.1</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+        </material>
+      </visual>
+      <collision name="roll_collision">
+        <geometry>
+          <mesh>
+            <uri>model://gimbal_small_3d/meshes/roll_arm.dae</uri>
+            <scale>0.5 0.5 0.5</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name="roll_joint" type="revolute">
+      <parent>yaw_link</parent>
+      <child>roll_link</child>
+      <axis> 
+        <xyz>0 0 1</xyz>
+        <dynamics>
+          <damping>0.01</damping>
+        </dynamics>
+        <limit>
+          <lower>-3.1415926</lower>
+          <upper>3.1415926</upper>
+        </limit>
+      </axis>
+      <pose>0.0099 0.002 -0.05 0 0 0</pose>
+    </joint>
+
+    <link name="pitch_link">
+      <!-- <pose relative_to="roll_link">0.045 0.0021 0.0199 0 0 0</pose> -->
+      <pose relative_to="roll_link">0.0 0.0 0.0 0 0 0</pose>
+      <inertial>
+        <mass>0.01</mass>
+        <inertia>
+          <ixx>0.00001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00001</iyy>
+          <iyz>0</iyz>
+          <izz>0.00001</izz>
+        </inertia>
+      </inertial>
+      <visual name="pitch_visual">
+         
+        <geometry>
+          <mesh>
+            <uri>model://gimbal_small_3d/meshes/camera_enclosure.dae</uri>
+            <scale>0.5 0.5 0.5</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.4 0.4 0.4</ambient>
+          <diffuse>0.4 0.4 0.4</diffuse>
+          <specular>0.1 0.1 0.1 1.0</specular>
+        </material>
+      </visual>
+      <collision name="pitch_collision">
+        <!-- <pose>0 0 0 0 0 0</pose> -->
+        <geometry>
+          <mesh>
+            <uri>model://gimbal_small_3d/meshes/camera_enclosure.dae</uri>
+            <scale>0.5 0.5 0.5</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="camera_visual">
+        <pose>0 0 0.02 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.025</radius>
+            <length>0.050</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.4 0.4 0.4</ambient>
+          <diffuse>0.4 0.4 0.4</diffuse>
+          <specular>0.1 0.1 0.1 1.0</specular>
+        </material>
+      </visual>
+      <collision name="camera_collision">
+        <pose>0 0 0.02 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.025</radius>
+            <length>0.050</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <sensor name="camera" type="camera">
+        <pose>0 0 0.1 -1.57 -1.57 0</pose>
+        <camera>
+          <camera_info_topic>camera/camera_info</camera_info_topic>
+          <horizontal_fov>1.089</horizontal_fov>
+          <image>
+            <format>R8G8B8</format>
+            <width>640</width>
+            <height>480</height>
+          </image>
+          <clip>
+            <near>0.01</near>
+            <far>100</far>
+          </clip> 
+        </camera>
+        <always_on>1</always_on>
+        <update_rate>30</update_rate>
+        <visualize>1</visualize>
+        <topic>/camera/image</topic>
+         
+        <!-- <plugin filename="CameraZoomPlugin"
+            name="CameraZoomPlugin">
+          <max_zoom>125.0</max_zoom>
+          <slew_rate>0.42514285714</slew_rate>
+        </plugin>
+        
+        <plugin name="GstCameraPlugin"
+            filename="GstCameraPlugin">
+          <udp_host>127.0.0.1</udp_host>
+          <udp_port>5600</udp_port>
+          <use_basic_pipeline>true</use_basic_pipeline>
+          <use_cuda>false</use_cuda>
+        </plugin> -->
+
+      </sensor>
+    </link>
+    <joint name="pitch_joint" type="revolute">
+      <parent>roll_link</parent>
+      <child>pitch_link</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <dynamics>
+          <damping>0.01</damping>
+        </dynamics>
+        <limit>
+          <lower>-3.1415926</lower>
+          <upper>3.1415926</upper>
+        </limit>
+      </axis>
+      <pose>0.045 0.0021 0.0199 0 0 0</pose>
+    </joint>
+
+      
+    <!-- <include>
+      <uri>model://gimbal_small_3d</uri>
+      <name>gimbal</name>
+      <pose degrees="true">0.12 -0.005 -0.05 90 0 90</pose> 
+       
+    </include> -->
+
+    <!-- Gimbal Joint -->
+    <!-- <joint name="gimbal_joint" type="revolute">
+      <parent>base_link</parent>
+      <child>gimbal::base_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+        </limit>
+      </axis>
+    </joint> --> 
+
+    <!-- ========================  MOTORES / OTROS LINKS  ===================== -->
 
     <link name='imu_link'>
       <inertial>
@@ -730,7 +998,7 @@
     <!-- ARDUPILOT PLUGIN -->
     <!-- ################ -->
 
-    <plugin name="ArduPilotPlugin" filename="ArduPilotPlugin">
+    <plugin name="ArduPilotPlugin" filename="libArduPilotPlugin.so">
       <!-- Dirección IP y puerto para comunicación -->
       <fdm_addr>127.0.0.1</fdm_addr>
       <fdm_port_in>9002</fdm_port_in>
@@ -819,6 +1087,48 @@
         <i_min>0</i_min>
         <cmd_max>2.5</cmd_max>
         <cmd_min>-2.5</cmd_min>
+        <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+      </control>
+
+      <!-- Gimbal control -->
+      <!-- En realidad es 10 -->
+      <control channel="9">
+        <jointName>roll_joint</jointName>
+        <multiplier>1.047197551196</multiplier>
+        <offset>-0.5236</offset>
+        <servo_min>1100</servo_min>
+        <servo_max>1900</servo_max> 
+        <type>POSITION</type>
+        <cmd_topic>/gimbal/cmd_roll</cmd_topic> 
+        <p_gain>2</p_gain>
+        <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+      </control>
+
+      <!-- En realidad es 11 -->
+      <control channel="10">
+        <jointName>pitch_joint</jointName>
+        <multiplier>2.047197551196</multiplier>
+        <offset>-0.5236</offset>
+        <servo_min>1100</servo_min>
+        <servo_max>1900</servo_max>
+        <!-- <type>COMMAND</type> -->
+        <type>POSITION</type>
+        <cmd_topic>/gimbal/cmd_pitch</cmd_topic>
+        <p_gain>2</p_gain>
+        <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+      </control>
+
+      <!-- En realidad es 12 -->
+      <control channel="11">
+        <jointName>yaw_joint</jointName>
+        <multiplier>1.047197551196</multiplier>
+        <offset>-0.5236</offset>
+        <servo_min>1100</servo_min>
+        <servo_max>1900</servo_max>
+        <!-- <type>COMMAND</type> -->
+        <type>POSITION</type>
+        <cmd_topic>/gimbal/cmd_yaw</cmd_topic>
+        <p_gain>2</p_gain>
         <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
       </control>
 

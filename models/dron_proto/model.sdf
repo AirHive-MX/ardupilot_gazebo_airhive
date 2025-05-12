@@ -1,0 +1,322 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<sdf version='1.9'>
+  <model name='dron_proto'>
+    <!-- Base Link: Componente1 -->
+    <link name='Componente1'>
+      <inertial>
+        <pose>-2.521039982942914e-17 0.001917345781891839 0.004600386758328884 0 0 0</pose>
+        <mass>0.76481483070642287</mass>
+        <inertia>
+          <ixx>0.0021734420587412118</ixx>
+          <ixy>-4.6644779382187212e-18</ixy>
+          <ixz>-1.2455786411706609e-18</ixz>
+          <iyy>0.001179904663959561</iyy>
+          <iyz>1.733572287801616e-05</iyz>
+          <izz>0.0030238000221793899</izz>
+        </inertia>
+      </inertial>
+      <collision name='Componente1_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://dron_proto/meshes/Componente1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Componente1_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <material>
+          <ambient>0.1 0.1 0.1 1.0</ambient>
+          <diffuse>0.1 0.1 0.1 1.0</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>model://dron_proto/meshes/Componente1.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="5010_motor_base_0">
+        <pose>0.108711 -0.108711 .02 0 0 -.45</pose>
+        <geometry>
+          <mesh>
+            <scale>0.5 0.5 0.5</scale>
+            <uri>model://x500/meshes/5010Base.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="5010_motor_base_1">
+        <pose>-0.108711 0.108711 .02 0 0 -.45</pose>
+        <geometry>
+          <mesh>
+            <scale>0.5 0.5 0.5</scale> 
+            <uri>model://x500/meshes/5010Base.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="5010_motor_base_2">
+        <pose>0.108711 0.108711 .02 0 0 -.45</pose>
+        <geometry>
+          <mesh>
+            <scale>0.5 0.5 0.5</scale>
+            <uri>model://x500/meshes/5010Base.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="5010_motor_base_3">
+        <pose>-0.108711 -0.108711 .02 0 0 -.45</pose>
+        <geometry>
+          <mesh>
+            <scale>0.5 0.5 0.5</scale>
+            <uri>model://x500/meshes/5010Base.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- IMU Sensor Link -->
+    <link name='imu_link'>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>0.15</mass>
+        <inertia>
+          <ixx>0.00001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00002</iyy>
+          <iyz>0</iyz>
+          <izz>0.00002</izz>
+        </inertia>
+      </inertial>
+      <sensor name='imu_sensor' type='imu'>
+        <pose>0 0 0 3.141593 0 0</pose>
+        <always_on>1</always_on>
+        <update_rate>500</update_rate>
+      </sensor>
+    </link>
+
+    <!-- Fixed Joint: attach IMU to base -->
+    <joint name='base_imu_joint' type='fixed'>
+      <parent>Componente1</parent>
+      <child>imu_link</child>
+    </joint>
+
+    <!-- Rotors / Motors -->
+    <!-- Rotor 0 -->
+    <link name='rotor_0'>
+      <pose>0.108711 -0.108711 0.06 0 0 0</pose>
+      <inertial>
+        <mass>0.016</mass>
+        <inertia>
+          <ixx>3.8e-07</ixx>
+          <iyy>2.6e-05</iyy>
+          <izz>2.6e-05</izz>
+        </inertia>
+      </inertial>
+      <visual name='rotor_0_visual'>
+        <pose>-0.0078 -0.0519 -0.0295 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.3 0.3 0.3</scale>
+            <uri>model://dron_proto/meshes/1345_prop_ccw.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='rotor_0_bell'>
+        <pose>0 0 -0.04 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.5 0.5 0.5</scale>
+            <uri>model://dron_proto/meshes/5010Bell.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name='rotor_0_collision'>
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.005</length>
+          </cylinder>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name='rotor_0_joint' type='revolute'>
+      <parent>Componente1</parent>
+      <child>rotor_0</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit><lower>-1e16</lower><upper>1e16</upper></limit>
+      </axis>
+    </joint>
+
+    <!-- Rotor 1 -->
+    <link name='rotor_1'>
+      <pose>-0.108711 0.108711 0.06 0 0 0</pose>
+      <inertial>
+        <mass>0.016</mass>
+        <inertia>
+          <ixx>3.8e-07</ixx>
+          <iyy>2.6e-05</iyy>
+          <izz>2.6e-05</izz>
+        </inertia>
+      </inertial>
+      <visual name='rotor_1_visual'>
+        <pose>-0.0078 -0.0519 -0.0295 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.3 0.3 0.3</scale>
+            <uri>model://dron_proto/meshes/1345_prop_cw.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='rotor_1_bell'>
+        <pose>0 0 -0.04 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.5 0.5 0.5</scale>
+            <uri>model://dron_proto/meshes/5010Bell.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name='rotor_1_collision'>
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.005</length>
+          </cylinder>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='rotor_1_joint' type='revolute'>
+      <parent>Componente1</parent>
+      <child>rotor_1</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit><lower>-1e16</lower><upper>1e16</upper></limit>
+      </axis>
+    </joint>
+
+    <!-- Rotor 2 -->
+    <link name='rotor_2'>
+      <pose>0.108711 0.108711 0.06 0 0 0</pose>
+      <inertial>
+        <mass>0.016</mass>
+        <inertia>
+          <ixx>3.8e-07</ixx>
+          <iyy>2.6e-05</iyy>
+          <izz>2.6e-05</izz>
+        </inertia>
+      </inertial>
+      <visual name='rotor_2_visual'>
+        <pose>-0.0078 -0.0519 -0.0295 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.3 0.3 0.3</scale>
+            <uri>model://dron_proto/meshes/1345_prop_cw.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='rotor_2_bell'>
+        <pose>0 0 -0.04 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.5 0.5 0.5</scale>
+            <uri>model://dron_proto/meshes/5010Bell.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name='rotor_2_collision'>
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.005</length>
+          </cylinder>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='rotor_2_joint' type='revolute'>
+      <parent>Componente1</parent>
+      <child>rotor_2</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit><lower>-1e16</lower><upper>1e16</upper></limit>
+      </axis>
+    </joint>
+
+    <!-- Rotor 3 -->
+    <link name='rotor_3'>
+      <pose>-0.108711 -0.108711 0.06 0 0 0</pose>
+      <inertial>
+        <mass>0.016</mass>
+        <inertia>
+          <ixx>3.8e-07</ixx>
+          <iyy>2.6e-05</iyy>
+          <izz>2.6e-05</izz>
+        </inertia>
+      </inertial>
+      <visual name='rotor_3_visual'>
+        <pose>-0.0078 -0.0519 -0.0295 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.3 0.3 0.3</scale>
+            <uri>model://dron_proto/meshes/1345_prop_ccw.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='rotor_3_bell'>
+        <pose>0 0 -0.04 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.5 0.5 0.5</scale>
+            <uri>model://dron_proto/meshes/5010Bell.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name='rotor_3_collision'>
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.005</length>
+          </cylinder>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='rotor_3_joint' type='revolute'>
+      <parent>Componente1</parent>
+      <child>rotor_3</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit><lower>-1e16</lower><upper>1e16</upper></limit>
+      </axis>
+    </joint>
+
+  </model>
+</sdf>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="FAST_DESING">
+    <link name="Componente1">
+        <inertial>
+            <origin xyz="-2.521039982942914e-17 0.0019173457818918386 0.004600386758328884" rpy="0.0 0.0 0.0" />
+            <mass value="0.7648148307064229" />
+            <inertia ixx="0.002173442058741212" iyy="0.0011799046639595612" izz="0.0030238000221793895" ixy="-4.664477938218721e-18" iyz="1.7335722878016163e-05" ixz="-1.2455786411706615e-18" />
+        </inertial>
+        <visual name="Componente1_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Componente1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Componente1_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Componente1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+</robot>
