@@ -221,15 +221,15 @@
       <pose degrees="true">0.1 0 0.009 0 0 -90</pose>
     </include>
 
-    <!-- <include>
+    <include>
       <uri>model://dron_proto</uri> 
       <pose>0 0 0.2 0 0 0</pose>
-    </include> -->
+    </include>
 
-    <include>
+    <!-- <include>
       <uri>model://dron_gimbal_proto</uri>
       <pose>0 0 0.1905 0 0 0</pose>
-    </include>
+    </include> -->
 
     <!-- <include>
       <uri>model://gimbal_proto</uri>
