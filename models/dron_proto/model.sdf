@@ -1,30 +1,28 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <sdf version='1.9'>
   <model name='dron_proto'>
-    <!-- Base Link: Componente1 -->
-    <link name='Componente1'>
+    <link name='dron_base_link'>
       <inertial>
-        <pose>-2.521039982942914e-17 0.001917345781891839 0.004600386758328884 0 0 0</pose>
-        <mass>0.76481483070642287</mass>
+        <pose>6.497843739160201e-17 0.0009017790995962314 0.001388684484437706 0 0 0</pose>
+        <mass>0.89010290209178577</mass>
         <inertia>
-          <ixx>0.0021734420587412118</ixx>
-          <ixy>-4.6644779382187212e-18</ixy>
-          <ixz>-1.2455786411706609e-18</ixz>
-          <iyy>0.001179904663959561</iyy>
-          <iyz>1.733572287801616e-05</iyz>
-          <izz>0.0030238000221793899</izz>
+          <ixx>0.002693007495041231</ixx>
+          <ixy>1.0850315633625009e-17</ixy>
+          <ixz>2.4001565683650771e-18</ixz>
+          <iyy>0.001358603695110399</iyy>
+          <iyz>0.0001186562592042086</iyz>
+          <izz>0.003485663582361638</izz>
         </inertia>
       </inertial>
-      <collision name='Componente1_collision'>
+      <collision name='dron_base_link_collision'>
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://dron_proto/meshes/Componente1.stl</uri>
+            <uri>meshes/DRONE_FAST.stl</uri>
           </mesh>
         </geometry>
       </collision>
-      <visual name='Componente1_visual'>
+      <visual name='dron_base_link_visual'>
         <pose>0 0 0 0 0 0</pose>
         <material>
           <ambient>0.1 0.1 0.1 1.0</ambient>
@@ -35,7 +33,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://dron_proto/meshes/Componente1.stl</uri>
+            <uri>meshes/DRONE_FAST.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -77,8 +75,298 @@
       </visual>
     </link>
 
+    <!-- GIMBAL PROTO -->
+    <link name='YAW_MOTOR'>
+      <pose>0.01 -0.1 0 0 0 0</pose>
+      <inertial>
+        <pose>-0.009999999999999976 0.01199999999999995 0.02804129606099103 0 0 0</pose>
+        <mass>0.001965584567608258</mass>
+        <inertia>
+          <ixx>5.4192220613480292e-08</ixx>
+          <ixy>1.557719150691305e-21</ixy>
+          <ixz>-1.6987776396636011e-22</ixz>
+          <iyy>5.4192220613479491e-08</iyy>
+          <iyz>2.8630438107184578e-22</iyz>
+          <izz>9.6814093632033369e-08</izz>
+        </inertia>
+      </inertial>
+      <collision name='YAW_MOTOR_collision_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/YAW_MOTOR.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='YAW_MOTOR_visual_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <material>
+          <ambient>0.0 0.0 0.0 1.0</ambient>
+          <diffuse>0.0 0.0 0.0 1.0</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/YAW_MOTOR.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='gimbal_to_dron' type='fixed'>
+      <pose relative_to='dron_base_link'>0 0 0 0 0 0</pose>
+      <parent>dron_base_link</parent>
+      <child>YAW_MOTOR</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <joint name='YAW_MOTOR_Revolución-1' type='revolute'>
+      <pose relative_to='YAW_MOTOR'>-0.01 0.01200000000000001 0.02499999999999999 3.141592653589793 -1.041918287758573e-16 4.93038065763133e-32</pose>
+      <parent>YAW_MOTOR</parent>
+      <child>ROLL_MOTOR</child>
+      <axis>
+        <xyz>-0 0 1</xyz>
+        <limit>
+          <lower>-1.5707960000000001</lower>
+          <upper>1.5707960000000001</upper>
+          <effort>1000000</effort>
+          <velocity>1000000</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='ROLL_MOTOR'>
+      <pose relative_to='YAW_MOTOR_Revolución-1'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-7.133516000124018e-14 -0.01109672658027615 0.01370636108928117 0 0 4.539048581190739e-112</pose>
+        <mass>0.0041847337119974458</mass>
+        <inertia>
+          <ixx>9.4235653041181994e-07</ixx>
+          <ixy>-1.6159430415530481e-18</ixy>
+          <ixz>3.3718599847248172e-18</ixz>
+          <iyy>6.3762142646680097e-07</iyy>
+          <iyz>3.7184911209001741e-07</iyz>
+          <izz>4.894283102382256e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='ROLL_MOTOR_collision_collision'>
+        <pose>0.009999999999999981 0.01199999999999998 0.02499999999999996 -3.141592653589793 -1.041918287758571e-16 4.930380657631328e-32</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/ROLL_MOTOR.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='ROLL_MOTOR_visual_visual'>
+        <pose>0.009999999999999981 0.01199999999999998 0.02499999999999996 -3.141592653589793 -1.041918287758571e-16 4.930380657631328e-32</pose>
+        <material>
+          <ambient>0.2 0.2 0.2 1.0</ambient>
+          <diffuse>0.2 0.2 0.2 1.0</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/ROLL_MOTOR.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='ROLL_MOTOR_Revolución-2' type='revolute'>
+      <pose relative_to='ROLL_MOTOR'>7.766887691061141e-35 -0.016 0.025 -1.570796326794896 0 1.347073413886418e-48</pose>
+      <parent>ROLL_MOTOR</parent>
+      <child>PITCH_MOTOR</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.78539800000000004</lower>
+          <upper>0.78539800000000004</upper>
+          <effort>1000000</effort>
+          <velocity>1000000</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='PITCH_MOTOR'>
+      <pose relative_to='ROLL_MOTOR_Revolución-2'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>9.174692117142058e-12 1.685782180516071e-11 0.01743111969768133 0 -5.050697655593556e-112 0</pose>
+        <mass>0.0076385969043926086</mass>
+        <inertia>
+          <ixx>1.2557409997488159e-06</ixx>
+          <ixy>5.0261696951860239e-17</ixy>
+          <ixz>1.8765296011948961e-16</ixz>
+          <iyy>2.9916259244081749e-06</iyy>
+          <iyz>1.548600426614087e-15</iyz>
+          <izz>2.048053521892662e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='PITCH_MOTOR_collision_collision'>
+        <pose>0.009999999999999981 4.440892098500626e-17 0.02799999999999998 -1.570796326794896 -5.546678239835239e-32 -1.041918287758571e-16</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/PITCH_MOTOR.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='PITCH_MOTOR_visual_visual'>
+        <pose>0.009999999999999981 4.440892098500626e-17 0.02799999999999998 -1.570796326794896 -5.546678239835239e-32 -1.041918287758571e-16</pose>
+        <material>
+          <ambient>0.2 0.2 0.2 1.0</ambient>
+          <diffuse>0.2 0.2 0.2 1.0</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/PITCH_MOTOR.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='PITCH_MOTOR_Revolución-3' type='revolute'>
+      <pose relative_to='PITCH_MOTOR'>0.015 0 0.028 -1.570796326794896 0 1.570796326794896</pose>
+      <parent>PITCH_MOTOR</parent>
+      <child>CAMERA_ASSEMBLY</child>
+      <axis>
+        <xyz>-0 0 1</xyz>
+        <limit>
+          <lower>-1.5707960000000001</lower>
+          <upper>1.5707960000000001</upper>
+          <effort>1000000</effort>
+          <velocity>1000000</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='CAMERA_ASSEMBLY'>
+      <pose relative_to='PITCH_MOTOR_Revolución-3'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-0.0002964096027717713 7.377641387053365e-05 0.01499999999993289 0 0 0</pose>
+        <mass>0.01158737085806299</mass>
+        <inertia>
+          <ixx>1.313819721784926e-06</ixx>
+          <ixy>-7.553356696980327e-09</ixy>
+          <ixz>-1.5818340289974059e-19</ixz>
+          <iyy>1.118452749146035e-06</iyy>
+          <iyz>-8.4794714726729395e-18</iyz>
+          <izz>7.854582852086776e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='CAMERA_ASSEMBLY_collision_collision'>
+        <pose>4.440892098500626e-17 1.776356839400251e-17 0.005000000000000019 0 1.570796326794897 2.926627140777003e-31</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/CAMERA_ASSEMBLY.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='CAMERA_ASSEMBLY_fixed_joint_lump__CAMERA_collision_collision_1'>
+        <pose>-0.0004999999999999614 -0.0009999999999999853 0.005000000000000018 0 1.570796326794897 6.283185307179586</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/CAMERA.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='CAMERA_ASSEMBLY_visual_visual'>
+        <pose>4.440892098500626e-17 1.776356839400251e-17 0.005000000000000019 0 1.570796326794897 2.926627140777003e-31</pose>
+        <material>
+          <ambient>0.2 0.2 0.2 1.0</ambient>
+          <diffuse>0.2 0.2 0.2 1.0</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/CAMERA_ASSEMBLY.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='CAMERA_ASSEMBLY_fixed_joint_lump__CAMERA_visual_visual_1'>
+        <pose>-0.0004999999999999614 -0.0009999999999999853 0.005000000000000018 0 1.570796326794897 6.283185307179586</pose>
+        <material>
+          <ambient>0.0 0.0 0.0 1.0</ambient>
+          <diffuse>0.0 0.0 0.0 1.0</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/CAMERA.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <sensor name="camera" type="camera">
+        <pose degrees="true">0 -0.005 0.015 90 180 90</pose>
+        <camera>
+          <camera_info_topic>camera/camera_info</camera_info_topic>
+          <horizontal_fov>2.0</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>480</height>
+          </image>
+          <clip>
+            <near>0.01</near>
+            <far>15000</far>
+          </clip> 
+        </camera>
+        <always_on>1</always_on>
+        <update_rate>30</update_rate>
+        <visualize>1</visualize>
+        <topic>/camera/image</topic>
+      </sensor>
+    </link>
+
     <!-- IMU Sensor Link -->
     <link name='imu_link'>
+      <visual name='imu_visual'>
+        <!-- Coloca el cubo justo encima del fuselaje, sin rotación -->
+        <pose>0 0 0.0 0 0 0</pose>
+        <geometry>
+          <box>
+            <!-- 2 cm × 2 cm × 2 cm -->
+            <size>0.02 0.02 0.005</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1.0</ambient>
+          <diffuse>0 0 0 1.0</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.15</mass>
@@ -92,21 +380,44 @@
         </inertia>
       </inertial>
       <sensor name='imu_sensor' type='imu'>
-        <pose>0 0 0 3.141593 0 0</pose>
+        <!-- Déjalo en 0,0,0 si la pose visual ya está arriba -->
+        <pose>0 0 0 0 0 0</pose>
         <always_on>1</always_on>
-        <update_rate>500</update_rate>
+        <update_rate>1000</update_rate>
       </sensor>
     </link>
 
+
     <!-- Fixed Joint: attach IMU to base -->
     <joint name='base_imu_joint' type='fixed'>
-      <parent>Componente1</parent>
+      <parent>dron_base_link</parent>
       <child>imu_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <damping>1.0</damping>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <ode>
+          <implicit_spring_damper>1</implicit_spring_damper>
+        </ode>
+      </physics>
     </joint>
 
     <!-- Rotors / Motors -->
     <!-- Rotor 0 -->
     <link name='rotor_0'>
+      <gravity>true</gravity>
+      <self_collide>false</self_collide>
+      <velocity_decay/>
       <pose>0.108711 -0.108711 0.06 0 0 0</pose>
       <inertial>
         <mass>0.016</mass>
@@ -147,22 +458,47 @@
             <length>0.005</length>
           </cylinder>
         </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <min_depth>0.001</min_depth>
+              <max_vel>0</max_vel>
+            </ode>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
     </link>
 
     <joint name='rotor_0_joint' type='revolute'>
-      <parent>Componente1</parent>
+      <parent>dron_base_link</parent>
       <child>rotor_0</child>
       <axis>
         <xyz>0 0 1</xyz>
         <limit><lower>-1e16</lower><upper>1e16</upper></limit>
+        <dynamics>
+          <damping>0.004</damping>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
-    </joint>
+      <physics>
+        <ode>
+          <implicit_spring_damper>1</implicit_spring_damper>
+        </ode>
+      </physics>
+    </joint> 
 
     <!-- Rotor 1 -->
     <link name='rotor_1'>
+      <gravity>true</gravity>
+      <self_collide>false</self_collide>
+      <velocity_decay/>
       <pose>-0.108711 0.108711 0.06 0 0 0</pose>
-      <inertial>
+      <inertial> 
         <mass>0.016</mass>
         <inertia>
           <ixx>3.8e-07</ixx>
@@ -201,19 +537,44 @@
             <length>0.005</length>
           </cylinder>
         </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <min_depth>0.001</min_depth>
+              <max_vel>0</max_vel>
+            </ode>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
     </link>
     <joint name='rotor_1_joint' type='revolute'>
-      <parent>Componente1</parent>
+      <parent>dron_base_link</parent>
       <child>rotor_1</child>
       <axis>
         <xyz>0 0 1</xyz>
         <limit><lower>-1e16</lower><upper>1e16</upper></limit>
+        <dynamics>
+          <damping>0.004</damping>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
+      <physics>
+        <ode>
+          <implicit_spring_damper>1</implicit_spring_damper>
+        </ode>
+      </physics>
     </joint>
 
     <!-- Rotor 2 -->
     <link name='rotor_2'>
+      <gravity>true</gravity>
+      <self_collide>false</self_collide>
+      <velocity_decay/>
       <pose>0.108711 0.108711 0.06 0 0 0</pose>
       <inertial>
         <mass>0.016</mass>
@@ -254,19 +615,44 @@
             <length>0.005</length>
           </cylinder>
         </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <min_depth>0.001</min_depth>
+              <max_vel>0</max_vel>
+            </ode>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
     </link>
     <joint name='rotor_2_joint' type='revolute'>
-      <parent>Componente1</parent>
+      <parent>dron_base_link</parent>
       <child>rotor_2</child>
       <axis>
         <xyz>0 0 1</xyz>
         <limit><lower>-1e16</lower><upper>1e16</upper></limit>
+        <dynamics>
+          <damping>0.004</damping>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
+      <physics>
+        <ode>
+          <implicit_spring_damper>1</implicit_spring_damper>
+        </ode>
+      </physics>
     </joint>
 
     <!-- Rotor 3 -->
     <link name='rotor_3'>
+      <gravity>true</gravity>
+      <self_collide>false</self_collide>
+      <velocity_decay/>
       <pose>-0.108711 -0.108711 0.06 0 0 0</pose>
       <inertial>
         <mass>0.016</mass>
@@ -307,16 +693,287 @@
             <length>0.005</length>
           </cylinder>
         </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <min_depth>0.001</min_depth>
+              <max_vel>0</max_vel>
+            </ode>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
     </link>
     <joint name='rotor_3_joint' type='revolute'>
-      <parent>Componente1</parent>
+      <parent>dron_base_link</parent>
       <child>rotor_3</child>
       <axis>
         <xyz>0 0 1</xyz>
         <limit><lower>-1e16</lower><upper>1e16</upper></limit>
+        <dynamics>
+          <damping>0.004</damping>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
+      <physics>
+        <ode>
+          <implicit_spring_damper>1</implicit_spring_damper>
+        </ode>
+      </physics>
     </joint>
+
+    <!-- ################# -->
+    <!-- FISICAS REALISTAS -->
+    <!-- ################# -->
+
+    <!-- Estado de articulaciones -->
+    <plugin filename="libignition-gazebo-joint-state-publisher-system.so"
+      name="ignition::gazebo::systems::JointStatePublisher">
+    </plugin>
+
+    <!-- Lift & Drag (Aerodinámica) -->
+    <!-- Repetir para cada rotor ajustando "cp" (posición) -->
+
+    <!-- Ejemplo rotor 0 CCW -->
+    <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
+      <a0>0.3</a0>
+      <alpha_stall>1.4</alpha_stall>
+      <cla>4.2500</cla>
+      <cda>0.10</cda>
+      <cma>0.0</cma>
+      <cla_stall>-0.025</cla_stall>
+      <cda_stall>0.0</cda_stall>
+      <cma_stall>0.0</cma_stall>
+      <!-- <area>0.002</area> -->
+      <area>0.0013</area>
+      <air_density>1.2041</air_density>
+      <cp>0.108711 -0.108711 0.06</cp> 
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>rotor_0</link_name>
+    </plugin>
+
+    <!-- Ejemplo rotor 1 CW -->
+    <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
+      <a0>0.3</a0>
+      <alpha_stall>1.4</alpha_stall>
+      <cla>4.2500</cla>
+      <cda>0.10</cda>
+      <cma>0.0</cma>
+      <cla_stall>-0.025</cla_stall>
+      <cda_stall>0.0</cda_stall>
+      <cma_stall>0.0</cma_stall>
+      <!-- <area>0.002</area> -->
+      <area>0.0013</area>
+      <air_density>1.2041</air_density>
+      
+      <cp>-0.108711 0.108711 0.06</cp> 
+      <forward>0 -1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>rotor_1</link_name>
+    </plugin>
+
+    <!-- Lift & Drag Rotor 2 -->
+    <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
+      <a0>0.3</a0>
+      <alpha_stall>1.4</alpha_stall>
+      <cla>4.2500</cla>
+      <cda>0.10</cda>
+      <cma>0.0</cma>
+      <cla_stall>-0.025</cla_stall> 
+      <cda_stall>0.0</cda_stall>
+      <cma_stall>0.0</cma_stall>
+      <!-- <area>0.002</area> -->
+      <area>0.0013</area>
+      <air_density>1.2041</air_density>
+      <cp>0.108711 0.108711 0.06</cp> 
+      <forward>0 -1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>rotor_2</link_name>
+    </plugin>
+
+    <!-- Lift & Drag Rotor 3 -->
+    <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
+      <a0>0.3</a0>
+      <alpha_stall>1.4</alpha_stall>
+      <cla>4.2500</cla>
+      <cda>0.10</cda>
+      <cma>0.0</cma>
+      <cla_stall>-0.025</cla_stall>
+      <cda_stall>0.0</cda_stall>
+      <cma_stall>0.0</cma_stall>
+      <!-- <area>0.002</area> -->
+      <area>0.0013</area>
+      <air_density>1.2041</air_density>
+      <cp>-0.108711 -0.108711 0.06</cp> 
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>rotor_3</link_name>
+    </plugin>
+
+    <plugin filename="libignition-gazebo-apply-joint-force-system.so"
+      name="ignition::gazebo::systems::ApplyJointForce">
+      <joint_name>rotor_0_joint</joint_name>
+    </plugin>
+    <plugin filename="libignition-gazebo-apply-joint-force-system.so"
+      name="ignition::gazebo::systems::ApplyJointForce">
+      <joint_name>rotor_1_joint</joint_name>
+    </plugin>
+    <plugin filename="libignition-gazebo-apply-joint-force-system.so"
+      name="ignition::gazebo::systems::ApplyJointForce">
+      <joint_name>rotor_2_joint</joint_name>
+    </plugin>
+    <plugin filename="libignition-gazebo-apply-joint-force-system.so"
+      name="ignition::gazebo::systems::ApplyJointForce">
+      <joint_name>rotor_3_joint</joint_name>
+    </plugin>
+
+
+    <!-- ################ -->
+    <!-- ARDUPILOT PLUGIN -->
+    <!-- ################ -->
+
+    <plugin name="ArduPilotPlugin" filename="libArduPilotPlugin.so">
+      <!-- Dirección IP y puerto para comunicación -->
+      <fdm_addr>127.0.0.1</fdm_addr>
+      <fdm_port_in>9002</fdm_port_in>
+      <connectionTimeoutMaxCount>5</connectionTimeoutMaxCount>
+      <lock_step>1</lock_step>
+
+      <!-- Conversión de coordenadas -->
+      <modelXYZToAirplaneXForwardZDown degrees="true">0 0 0 180 0 0</modelXYZToAirplaneXForwardZDown>
+      <gazeboXYZToNED degrees="true">0 0 0 180 0 90</gazeboXYZToNED>
+
+      <!-- Sensor IMU -->
+      <!-- <imuName>base_link::imu_sensor</imuName> -->
+      <imuName>imu_sensor</imuName>
+
+      <!-- Configuración de los motores -->
+      <control channel="0">
+        <jointName>rotor_0_joint</jointName>
+        <useForce>1</useForce>
+        <multiplier>838</multiplier>
+        <offset>0</offset>
+        <servo_min>1100</servo_min>
+        <servo_max>1900</servo_max>
+        <deadband>50</deadband>
+        <type>VELOCITY</type>
+        <p_gain>0.05</p_gain>
+        <i_gain>0</i_gain>
+        <d_gain>0</d_gain>
+        <i_max>0</i_max>
+        <i_min>0</i_min>
+        <cmd_max>2.5</cmd_max>
+        <cmd_min>-2.5</cmd_min>
+        <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+      </control>
+
+      <control channel="1">
+        <jointName>rotor_1_joint</jointName>
+        <useForce>1</useForce>
+        <multiplier>838</multiplier>
+        <offset>0</offset>
+        <servo_min>1100</servo_min>
+        <servo_max>1900</servo_max>
+        <deadband>50</deadband>
+        <type>VELOCITY</type>
+        <p_gain>0.05</p_gain>
+        <i_gain>0</i_gain>
+        <d_gain>0</d_gain>
+        <i_max>0</i_max>
+        <i_min>0</i_min>
+        <cmd_max>2.5</cmd_max>
+        <cmd_min>-2.5</cmd_min>
+        <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+      </control>
+
+      <control channel="2">
+        <jointName>rotor_2_joint</jointName>
+        <useForce>1</useForce>
+        <multiplier>-838</multiplier>
+        <offset>0</offset>
+        <servo_min>1100</servo_min>
+        <servo_max>1900</servo_max>
+        <deadband>50</deadband>
+        <type>VELOCITY</type>
+        <p_gain>0.05</p_gain>
+        <i_gain>0</i_gain>
+        <d_gain>0</d_gain>
+        <i_max>0</i_max>
+        <i_min>0</i_min>
+        <cmd_max>2.5</cmd_max>
+        <cmd_min>-2.5</cmd_min>
+        <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+      </control>
+
+      <control channel="3">
+        <jointName>rotor_3_joint</jointName>
+        <useForce>1</useForce>
+        <multiplier>-838</multiplier>
+        <offset>0</offset>
+        <servo_min>1100</servo_min>
+        <servo_max>1900</servo_max> 
+        <deadband>50</deadband>
+        <type>VELOCITY</type>
+        <p_gain>0.05</p_gain>
+        <i_gain>0</i_gain>
+        <d_gain>0</d_gain>
+        <i_max>0</i_max>
+        <i_min>0</i_min>
+        <cmd_max>2.5</cmd_max>
+        <cmd_min>-2.5</cmd_min>
+        <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+      </control>
+
+      <!-- Gimbal control -->
+      <!-- En realidad es 10 -->
+      <!-- <control channel="9">
+        <jointName>roll_joint</jointName>
+        <multiplier>1.047197551196</multiplier>
+        <offset>-0.5236</offset>
+        <servo_min>1100</servo_min>
+        <servo_max>1900</servo_max> 
+        <type>POSITION</type>
+        <cmd_topic>/gimbal/cmd_roll</cmd_topic> 
+        <p_gain>2</p_gain>
+        <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+      </control> -->
+
+      <!-- En realidad es 11 -->
+      <!-- <control channel="10">
+        <jointName>pitch_joint</jointName>
+        <multiplier>2.047197551196</multiplier>
+        <offset>-0.5236</offset>
+        <servo_min>1100</servo_min>
+        <servo_max>1900</servo_max>
+        <type>POSITION</type>
+        <cmd_topic>/gimbal/cmd_pitch</cmd_topic>
+        <p_gain>2</p_gain>
+        <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+      </control> -->
+
+      <!-- En realidad es 12 -->
+      <!-- <control channel="11">
+        <jointName>yaw_joint</jointName>
+        <multiplier>1.047197551196</multiplier>
+        <offset>-0.5236</offset>
+        <servo_min>1100</servo_min>
+        <servo_max>1900</servo_max>
+        <type>POSITION</type>
+        <cmd_topic>/gimbal/cmd_yaw</cmd_topic>
+        <p_gain>2</p_gain>
+        <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+      </control> -->
+
+    </plugin>
 
   </model>
 </sdf>

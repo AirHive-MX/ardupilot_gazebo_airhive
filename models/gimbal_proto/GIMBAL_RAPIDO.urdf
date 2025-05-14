@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="GIMBAL_RAPIDO">
+    <link name="CAMERA_ASSEMBLY">
+        <inertial>
+            <origin xyz="1.8077930263871166e-11 0.0032756026727633735 0.015000000000000006" rpy="0.0 -0.0 0.0" />
+            <mass value="0.004718154701058241" />
+            <inertia ixx="8.378558376386652e-07" iyy="7.336772213625239e-07" izz="3.087951517082629e-07" ixy="-6.161993167103216e-16" iyz="-1.0331425577052675e-21" ixz="1.6146105361808051e-22" />
+        </inertial>
+        <visual name="CAMERA_ASSEMBLY_visual">
+            <origin xyz="4.4408920985006264e-17 1.7763568394002505e-17 0.005000000000000019" rpy="-2.9266271407770027e-31 1.5707963267948966 0" />
+            <geometry>
+                <mesh filename="meshes/CAMERA_ASSEMBLY.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="CAMERA_ASSEMBLY_collision">
+            <origin xyz="4.4408920985006264e-17 1.7763568394002505e-17 0.005000000000000019" rpy="-2.9266271407770027e-31 1.5707963267948966 0" />
+            <geometry>
+                <mesh filename="meshes/CAMERA_ASSEMBLY.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="PITCH_MOTOR">
+        <inertial>
+            <origin xyz="9.174692117142058e-12 1.6857821805160712e-11 0.01743111969768133" rpy="0.0 -5.050697655593556e-112 0.0" />
+            <mass value="0.007638596904392609" />
+            <inertia ixx="1.255740999748816e-06" iyy="2.991625924408175e-06" izz="2.048053521892662e-06" ixy="5.026169695186024e-17" iyz="1.5486004266140874e-15" ixz="1.8765296011948964e-16" />
+        </inertial>
+        <visual name="PITCH_MOTOR_visual">
+            <origin xyz="0.009999999999999981 4.4408920985006264e-17 0.02799999999999998" rpy="-1.5707963267948966 -4.930380657631328e-32 -1.0419182877585705e-16" />
+            <geometry>
+                <mesh filename="meshes/PITCH_MOTOR.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="PITCH_MOTOR_collision">
+            <origin xyz="0.009999999999999981 4.4408920985006264e-17 0.02799999999999998" rpy="-1.5707963267948966 -4.930380657631328e-32 -1.0419182877585705e-16" />
+            <geometry>
+                <mesh filename="meshes/PITCH_MOTOR.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="YAW_MOTOR">
+        <inertial>
+            <origin xyz="-0.009999999999999976 0.011999999999999948 0.02804129606099103" rpy="0.0 0.0 0.0" />
+            <mass value="0.001965584567608258" />
+            <inertia ixx="5.4192220613480285e-08" iyy="5.419222061347949e-08" izz="9.681409363203337e-08" ixy="1.5577191506913052e-21" iyz="2.863043810718458e-22" ixz="-1.698777639663601e-22" />
+        </inertial>
+        <visual name="YAW_MOTOR_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/YAW_MOTOR.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="YAW_MOTOR_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/YAW_MOTOR.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="CAMERA">
+        <inertial>
+            <origin xyz="1.1320944182102723e-13 0.010125413605788726 -0.005500000000000039" rpy="0.0 -0.0 5.050697655593556e-112" />
+            <mass value="0.006869216157004747" />
+            <inertia ixx="3.9437228490211786e-07" iyy="3.840762745352041e-07" izz="3.943722887962718e-07" ixy="-6.768107223636498e-18" iyz="2.085584074652712e-50" ixz="3.961681588021628e-24" />
+        </inertial>
+        <visual name="CAMERA_visual">
+            <origin xyz="0.009999999999999981 0.008999999999999985 -0.005500000000000039" rpy="-3.141592653589793 -1.0419182877585703e-16 -1.2246467991473517e-16" />
+            <geometry>
+                <mesh filename="meshes/CAMERA.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="CAMERA_collision">
+            <origin xyz="0.009999999999999981 0.008999999999999985 -0.005500000000000039" rpy="-3.141592653589793 -1.0419182877585703e-16 -1.2246467991473517e-16" />
+            <geometry>
+                <mesh filename="meshes/CAMERA.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="ROLL_MOTOR">
+        <inertial>
+            <origin xyz="-7.133516000124018e-14 -0.011096726580276155 0.01370636108928117" rpy="0.0 -0.0 4.539048581190739e-112" />
+            <mass value="0.004184733711997446" />
+            <inertia ixx="9.423565304118199e-07" iyy="6.37621426466801e-07" izz="4.894283102382256e-07" ixy="-1.6159430415530485e-18" iyz="3.718491120900174e-07" ixz="3.371859984724817e-18" />
+        </inertial>
+        <visual name="ROLL_MOTOR_visual">
+            <origin xyz="0.009999999999999981 0.011999999999999983 0.024999999999999956" rpy="-3.141592653589793 -1.0419182877585705e-16 4.930380657631328e-32" />
+            <geometry>
+                <mesh filename="meshes/ROLL_MOTOR.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="ROLL_MOTOR_collision">
+            <origin xyz="0.009999999999999981 0.011999999999999983 0.024999999999999956" rpy="-3.141592653589793 -1.0419182877585705e-16 4.930380657631328e-32" />
+            <geometry>
+                <mesh filename="meshes/ROLL_MOTOR.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="YAW_MOTOR_Revolución-1" type="revolute">
+        <origin xyz="-0.01 0.012000000000000007 0.024999999999999994" rpy="3.141592653589793 -1.0419182877585728e-16 4.93038065763133e-32" />
+        <parent link="YAW_MOTOR" />
+        <child link="ROLL_MOTOR" />
+        <axis xyz="-1.232595164407831e-32 0.0 1.0" />
+        <limit lower="-1.570796" upper="1.570796" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="ROLL_MOTOR_Revolución-2" type="revolute">
+        <origin xyz="7.766887691061141e-35 -0.016 0.025" rpy="-1.5707963267948966 -0.0 1.347073413886418e-48" />
+        <parent link="ROLL_MOTOR" />
+        <child link="PITCH_MOTOR" />
+        <axis xyz="1.3297513615889164e-47 -0.0 1.0" />
+        <limit lower="-0.785398" upper="0.785398" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="PITCH_MOTOR_Revolución-3" type="revolute">
+        <origin xyz="0.015 0.0 0.027999999999999997" rpy="-1.5707963267948966 -0.0 1.5707963267948966" />
+        <parent link="PITCH_MOTOR" />
+        <child link="CAMERA_ASSEMBLY" />
+        <axis xyz="-3.0814879110195774e-33 3.947994594512044e-35 1.0" />
+        <limit lower="-1.570796" upper="1.570796" effort="1000000" velocity="1000000" />
+    </joint>
+    <joint name="CAMERA_ASSEMBLY_Rígida-4" type="fixed">
+        <origin xyz="-0.006000000000000001 0.008 0.015" rpy="-3.141592653589793 1.5707963267948966 0" />
+        <parent link="CAMERA_ASSEMBLY" />
+        <child link="CAMERA" />
+    </joint>
+</robot>

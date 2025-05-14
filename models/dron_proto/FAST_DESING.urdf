@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="FAST_DESING">
+    <link name="DRONE_FAST">
+        <inertial>
+            <origin xyz="6.497843739160201e-17 0.0009017790995962314 0.0013886844844377055" rpy="0.0 0.0 0.0" />
+            <mass value="0.8901029020917858" />
+            <inertia ixx="0.0026930074950412305" iyy="0.0013586036951103986" izz="0.0034856635823616376" ixy="1.0850315633625011e-17" iyz="0.00011865625920420858" ixz="2.4001565683650767e-18" />
+        </inertial>
+        <visual name="DRONE_FAST_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/DRONE_FAST.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="DRONE_FAST_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/DRONE_FAST.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+</robot>

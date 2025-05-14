@@ -1,0 +1,264 @@
+<sdf version='1.9'>
+  <model name='GIMBAL_RAPIDO'>
+    <link name='YAW_MOTOR'>
+      <inertial>
+        <pose>-0.009999999999999976 0.01199999999999995 0.02804129606099103 0 0 0</pose>
+        <mass>0.001965584567608258</mass>
+        <inertia>
+          <ixx>5.4192220613480292e-08</ixx>
+          <ixy>1.557719150691305e-21</ixy>
+          <ixz>-1.6987776396636011e-22</ixz>
+          <iyy>5.4192220613479491e-08</iyy>
+          <iyz>2.8630438107184578e-22</iyz>
+          <izz>9.6814093632033369e-08</izz>
+        </inertia>
+      </inertial>
+      <collision name='YAW_MOTOR_collision_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/YAW_MOTOR.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='YAW_MOTOR_visual_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <material>
+          <ambient>0.0 0.0 0.0 1.0</ambient>
+          <diffuse>0.0 0.0 0.0 1.0</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/YAW_MOTOR.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='YAW_MOTOR_Revolución-1' type='revolute'>
+      <pose relative_to='YAW_MOTOR'>-0.01 0.01200000000000001 0.02499999999999999 3.141592653589793 -1.041918287758573e-16 4.93038065763133e-32</pose>
+      <parent>YAW_MOTOR</parent>
+      <child>ROLL_MOTOR</child>
+      <axis>
+        <xyz>-0 0 1</xyz>
+        <limit>
+          <lower>-1.5707960000000001</lower>
+          <upper>1.5707960000000001</upper>
+          <effort>1000000</effort>
+          <velocity>1000000</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='ROLL_MOTOR'>
+      <pose relative_to='YAW_MOTOR_Revolución-1'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-7.133516000124018e-14 -0.01109672658027615 0.01370636108928117 0 0 4.539048581190739e-112</pose>
+        <mass>0.0041847337119974458</mass>
+        <inertia>
+          <ixx>9.4235653041181994e-07</ixx>
+          <ixy>-1.6159430415530481e-18</ixy>
+          <ixz>3.3718599847248172e-18</ixz>
+          <iyy>6.3762142646680097e-07</iyy>
+          <iyz>3.7184911209001741e-07</iyz>
+          <izz>4.894283102382256e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='ROLL_MOTOR_collision_collision'>
+        <pose>0.009999999999999981 0.01199999999999998 0.02499999999999996 -3.141592653589793 -1.041918287758571e-16 4.930380657631328e-32</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/ROLL_MOTOR.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='ROLL_MOTOR_visual_visual'>
+        <pose>0.009999999999999981 0.01199999999999998 0.02499999999999996 -3.141592653589793 -1.041918287758571e-16 4.930380657631328e-32</pose>
+        <material>
+          <ambient>0.2 0.2 0.2 1.0</ambient>
+          <diffuse>0.2 0.2 0.2 1.0</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/ROLL_MOTOR.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='ROLL_MOTOR_Revolución-2' type='revolute'>
+      <pose relative_to='ROLL_MOTOR'>7.766887691061141e-35 -0.016 0.025 -1.570796326794896 0 1.347073413886418e-48</pose>
+      <parent>ROLL_MOTOR</parent>
+      <child>PITCH_MOTOR</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.78539800000000004</lower>
+          <upper>0.78539800000000004</upper>
+          <effort>1000000</effort>
+          <velocity>1000000</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='PITCH_MOTOR'>
+      <pose relative_to='ROLL_MOTOR_Revolución-2'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>9.174692117142058e-12 1.685782180516071e-11 0.01743111969768133 0 -5.050697655593556e-112 0</pose>
+        <mass>0.0076385969043926086</mass>
+        <inertia>
+          <ixx>1.2557409997488159e-06</ixx>
+          <ixy>5.0261696951860239e-17</ixy>
+          <ixz>1.8765296011948961e-16</ixz>
+          <iyy>2.9916259244081749e-06</iyy>
+          <iyz>1.548600426614087e-15</iyz>
+          <izz>2.048053521892662e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='PITCH_MOTOR_collision_collision'>
+        <pose>0.009999999999999981 4.440892098500626e-17 0.02799999999999998 -1.570796326794896 -5.546678239835239e-32 -1.041918287758571e-16</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/PITCH_MOTOR.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='PITCH_MOTOR_visual_visual'>
+        <pose>0.009999999999999981 4.440892098500626e-17 0.02799999999999998 -1.570796326794896 -5.546678239835239e-32 -1.041918287758571e-16</pose>
+        <material>
+          <ambient>0.2 0.2 0.2 1.0</ambient>
+          <diffuse>0.2 0.2 0.2 1.0</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/PITCH_MOTOR.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='PITCH_MOTOR_Revolución-3' type='revolute'>
+      <pose relative_to='PITCH_MOTOR'>0.015 0 0.028 -1.570796326794896 0 1.570796326794896</pose>
+      <parent>PITCH_MOTOR</parent>
+      <child>CAMERA_ASSEMBLY</child>
+      <axis>
+        <xyz>-0 0 1</xyz>
+        <limit>
+          <lower>-1.5707960000000001</lower>
+          <upper>1.5707960000000001</upper>
+          <effort>1000000</effort>
+          <velocity>1000000</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='CAMERA_ASSEMBLY'>
+      <pose relative_to='PITCH_MOTOR_Revolución-3'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-0.0002964096027717713 7.377641387053365e-05 0.01499999999993289 0 0 0</pose>
+        <mass>0.01158737085806299</mass>
+        <inertia>
+          <ixx>1.313819721784926e-06</ixx>
+          <ixy>-7.553356696980327e-09</ixy>
+          <ixz>-1.5818340289974059e-19</ixz>
+          <iyy>1.118452749146035e-06</iyy>
+          <iyz>-8.4794714726729395e-18</iyz>
+          <izz>7.854582852086776e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='CAMERA_ASSEMBLY_collision_collision'>
+        <pose>4.440892098500626e-17 1.776356839400251e-17 0.005000000000000019 0 1.570796326794897 2.926627140777003e-31</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/CAMERA_ASSEMBLY.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='CAMERA_ASSEMBLY_fixed_joint_lump__CAMERA_collision_collision_1'>
+        <pose>-0.0004999999999999614 -0.0009999999999999853 0.005000000000000018 0 1.570796326794897 6.283185307179586</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/CAMERA.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='CAMERA_ASSEMBLY_visual_visual'>
+        <pose>4.440892098500626e-17 1.776356839400251e-17 0.005000000000000019 0 1.570796326794897 2.926627140777003e-31</pose>
+        <material>
+          <ambient>0.2 0.2 0.2 1.0</ambient>
+          <diffuse>0.2 0.2 0.2 1.0</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/CAMERA_ASSEMBLY.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='CAMERA_ASSEMBLY_fixed_joint_lump__CAMERA_visual_visual_1'>
+        <pose>-0.0004999999999999614 -0.0009999999999999853 0.005000000000000018 0 1.570796326794897 6.283185307179586</pose>
+        <material>
+          <ambient>0.0 0.0 0.0 1.0</ambient>
+          <diffuse>0.0 0.0 0.0 1.0</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/CAMERA.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <sensor name="camera" type="camera">
+        <pose degrees="true">0 -0.005 0.015 90 180 90</pose>
+        <camera>
+          <camera_info_topic>camera/camera_info</camera_info_topic>
+          <horizontal_fov>2.0</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>480</height>
+          </image>
+          <clip>
+            <near>0.01</near>
+            <far>15000</far>
+          </clip> 
+        </camera>
+        <always_on>1</always_on>
+        <update_rate>30</update_rate>
+        <visualize>1</visualize>
+        <topic>/camera/image</topic>
+      </sensor>
+
+    </link>
+
+    <frame name='CAMERA_ASSEMBLY_Rígida-4' attached_to='CAMERA_ASSEMBLY'>
+      <pose>-0.006 0.008 0.015 -3.14159 1.5708 0</pose>
+    </frame>
+    <frame name='CAMERA' attached_to='CAMERA_ASSEMBLY_Rígida-4'/>
+
+  </model>
+</sdf>
