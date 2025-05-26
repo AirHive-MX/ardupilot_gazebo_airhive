@@ -185,6 +185,12 @@
         <always_on>1</always_on>
         <update_rate>1000.0</update_rate>
       </sensor>
+      <sensor name="mag_sensor" type="magnetometer">
+        <always_on>1</always_on>
+        <update_rate>50</update_rate>
+        <visualize>1</visualize>
+      </sensor>
+
     </link>
     <joint name='iris/imu_joint' type='revolute'>
       <child>imu_link</child>
@@ -713,6 +719,7 @@
 
       <!-- Sensors -->
       <imuName>imu_sensor</imuName>
+      <magSensorName>mag_sensor</magSensorName> 
 
       <!--
           incoming control command [0, 1]

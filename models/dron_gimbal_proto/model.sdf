@@ -1,5 +1,5 @@
 <sdf version='1.9'>
-  <model name='dron_gimbal_proto'>
+  <model name='FAST_ASSEMBLY'>
     <link name='FAST_DESING-v9_Componente1'>
       <inertial>
         <pose>-1.852400338288567e-05 0.002168496427963567 -0.005388857397627378 0 0 0</pose>
@@ -24,12 +24,6 @@
       </collision>
       <collision name='FAST_DESING-v9_Componente1_fixed_joint_lump__GIMBAL_RAPIDO-v16_YAW_MOTOR_collision_collision_1'>
         <pose>0 -0.08066288000000001 0.006999999999999999 3.141592653589793 0 0</pose>
-        <material>
-          <ambient>0.0 0.0 0.0 1.0</ambient>
-          <diffuse>0.0 0.0 0.0 1.0</diffuse>
-          <specular>0.01 0.01 0.01 1.0</specular>
-          <emissive>0 0 0 0</emissive>
-        </material>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -39,12 +33,6 @@
       </collision>
       <visual name='FAST_DESING-v9_Componente1_visual_visual'>
         <pose>0 0 0 0 0 0</pose>
-        <material>
-          <ambient>0.1 0.1 0.1 1.0</ambient>
-          <diffuse>0.1 0.1 0.1 1.0</diffuse>
-          <specular>0.01 0.01 0.01 1.0</specular>
-          <emissive>0 0 0 0</emissive>
-        </material>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -81,7 +69,7 @@
       </axis>
     </joint>
     <link name='GIMBAL_RAPIDO-v16_ROLL_MOTOR'>
-      <pose relative_to='FAST_DESING-v9_Componente1'>0.01 -0.1 -0.021 0 0 0</pose>
+      <pose relative_to='GIMBAL_RAPIDO-v16_YAW_MOTOR_Revolución-1'>0 0 0 0 0 0</pose>
       <inertial>
         <pose>-0.01000000000007135 0.02309672658027618 0.0112936389107188 0 0 0</pose>
         <mass>0.0041847337119974458</mass>
@@ -105,12 +93,6 @@
       </collision>
       <visual name='GIMBAL_RAPIDO-v16_ROLL_MOTOR_visual_visual'>
         <pose>0 0 0 0 0 0</pose>
-        <material>
-          <ambient>0.0 0.0 0.0 1.0</ambient>
-          <diffuse>0.0 0.0 0.0 1.0</diffuse>
-          <specular>0.01 0.01 0.01 1.0</specular>
-          <emissive>0 0 0 0</emissive>
-        </material>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -162,12 +144,6 @@
       </collision>
       <visual name='GIMBAL_RAPIDO-v16_PITCH_MOTOR_visual_visual'>
         <pose>0 0 0 0 0 0</pose>
-        <material>
-          <ambient>0.2 0.2 0.2 1.0</ambient>
-          <diffuse>0.2 0.2 0.2 1.0</diffuse>
-          <specular>0.01 0.01 0.01 1.0</specular>
-          <emissive>0 0 0 0</emissive>
-        </material>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -228,12 +204,6 @@
       </collision>
       <visual name='GIMBAL_RAPIDO-v16_CAMERA_ASSEMBLY_visual_visual'>
         <pose>0 0 0 0 0 0</pose>
-        <material>
-          <ambient>0.2 0.2 0.2 1.0</ambient>
-          <diffuse>0.2 0.2 0.2 1.0</diffuse>
-          <specular>0.01 0.01 0.01 1.0</specular>
-          <emissive>0 0 0 0</emissive>
-        </material>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -243,12 +213,6 @@
       </visual>
       <visual name='GIMBAL_RAPIDO-v16_CAMERA_ASSEMBLY_fixed_joint_lump__GIMBAL_RAPIDO-v16_CAMERA_visual_visual_1'>
         <pose>-0.009999999999999992 0.008000002692912603 -0.005999999999999997 3.141592653589793 0 0</pose>
-        <material>
-          <ambient>0.0 0.0 0.0 1.0</ambient>
-          <diffuse>0.0 0.0 0.0 1.0</diffuse>
-          <specular>0.01 0.01 0.01 1.0</specular>
-          <emissive>0 0 0 0</emissive>
-        </material>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
