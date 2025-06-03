@@ -16,13 +16,12 @@
     <plugin filename="libignition-gazebo-navsat-system.so"
           name="ignition::gazebo::systems::NavSat">
     </plugin>
-    
-    <plugin
-      filename="libignition-gazebo-sensors-system.so"
+    <plugin filename="libignition-gazebo-sensors-system.so"
       name="ignition::gazebo::systems::Sensors">
       <!-- <render_engine>ogre2</render_engine> -->
     </plugin>
 
+    
 
 
     <spherical_coordinates>
@@ -223,7 +222,7 @@
 
     <include>
       <uri>model://dron_proto</uri> 
-      <pose>0 0 0.2 0 0 0</pose>
+      <pose degrees="true">0 0 0.2 0 0 90</pose>
     </include>
 
     <!-- <include>

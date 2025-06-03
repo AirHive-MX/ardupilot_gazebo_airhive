@@ -1,6 +1,6 @@
 <sdf version='1.9'>
   <model name='dron_proto'>
-    <pose degrees="true">0 0 0 0 0 90</pose>
+    <!-- <pose degrees="true">0 0 0 0 0 90</pose> -->
     <self_collide>false</self_collide>
     <static>false</static>
     
@@ -354,7 +354,7 @@
     <link name='imu_link'>
       <visual name='imu_visual'>
         <!-- Coloca el cubo justo encima del fuselaje, sin rotación -->
-        <pose>0 0 0.0 0 0 0</pose>
+        <pose>0 0 0 0 0 0</pose>
         <geometry>
           <box>
             <!-- 2 cm × 2 cm × 2 cm -->
@@ -387,6 +387,29 @@
         <always_on>1</always_on>
         <update_rate>1000</update_rate>
       </sensor>
+      <sensor name="mag_sensor" type="magnetometer">
+        <always_on>1</always_on>
+        <update_rate>50</update_rate>
+        <visualize>1</visualize>
+      </sensor>
+      <sensor name="gps_sensor" type="gps">
+        <!-- posición relativa a imu_link: aquí lo dejamos en (0,0,0). -->
+        <pose>0 0 0 0 0 0</pose>
+        <always_on>1</always_on>
+        <update_rate>10</update_rate>     <!-- 10 Hz, por ejemplo -->
+        <gps>
+          <!-- Punto de referencia (home) en coordenadas WGS84 -->
+          <gps_ref>
+            <latitude_deg>-35.363262</latitude_deg>
+            <longitude_deg>149.165237</longitude_deg>
+            <altitude>584</altitude>
+          </gps_ref>
+          <!-- Ajusta estos niveles de ruido para que sean parecidos a tu receptor GPS real -->
+          <position_noise>1e-1</position_noise>  <!-- ±0.1 m de ruido en posición -->
+          <velocity_noise>0.05</velocity_noise>   <!-- ±0.05 m/s en velocidad -->
+        </gps>
+      </sensor>
+      
     </link>
     <!-- Fixed Joint: attach IMU to base -->
     <joint name='base_imu_joint' type='fixed'>
@@ -915,8 +938,8 @@
       <lock_step>1</lock_step>
 
       <!-- Conversión de coordenadas -->
-      <!-- <modelXYZToAirplaneXForwardZDown degrees="true">0 0 0 180 0 90</modelXYZToAirplaneXForwardZDown>
-      <gazeboXYZToNED degrees="true">0 0 0 180 0 90</gazeboXYZToNED> -->
+      <modelXYZToAirplaneXForwardZDown degrees="true">0 0 0 180 0 0</modelXYZToAirplaneXForwardZDown>
+      <gazeboXYZToNED degrees="true">0 0 0 180 0 0</gazeboXYZToNED>
 
       <!-- <modelXYZToAirplaneXForwardZDown>0 0 0 3.141593 0 0</modelXYZToAirplaneXForwardZDown>
       <gazeboXYZToNED>0 0 0 3.141593 0 0</gazeboXYZToNED> -->
@@ -924,6 +947,8 @@
       <!-- Sensor IMU -->
       <!-- <imuName>base_link::imu_sensor</imuName> -->
       <imuName>imu_sensor</imuName>
+      <magSensorName>mag_sensor</magSensorName> 
+      <gpsName>gps_sensor</gpsName>
 
       <!-- Configuración de los motores -->
       <control channel="0">
