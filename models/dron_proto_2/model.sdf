@@ -491,6 +491,7 @@
     <!--  Lift & Drag Plugins  -->
     <!-- ##################### --> 
 
+    <!-- Plugin for rotor 0 -->
     <plugin filename="libignition-gazebo-lift-drag-system.so"
         name="ignition::gazebo::systems::LiftDrag">
       <a0>0.3</a0>
@@ -526,6 +527,8 @@
       <link_name>rotor_0</link_name>
     </plugin>
 
+
+    <!-- Plugin for rotor 1 -->
     <plugin filename="libignition-gazebo-lift-drag-system.so"
         name="ignition::gazebo::systems::LiftDrag">
       <a0>0.3</a0>
@@ -561,6 +564,8 @@
       <link_name>rotor_1</link_name>
     </plugin>
 
+
+    <!-- Plugin for rotor 2 -->
     <plugin filename="libignition-gazebo-lift-drag-system.so"
         name="ignition::gazebo::systems::LiftDrag">
       <a0>0.3</a0>
@@ -596,6 +601,7 @@
       <link_name>rotor_2</link_name>
     </plugin>
 
+    <!-- Plugin for rotor 3 -->
     <plugin filename="libignition-gazebo-lift-drag-system.so"
         name="ignition::gazebo::systems::LiftDrag">
       <a0>0.3</a0>
@@ -630,168 +636,6 @@
       <upward>0 0 1</upward>
       <link_name>rotor_3</link_name>
     </plugin>
-
-    <!-- Rotor 0 (CCW) -->
-    <!-- Blade 1 -->
-    <!-- <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
-      <a0>0.3</a0>
-      <alpha_stall>1.4</alpha_stall>
-      <cla>4.25</cla>
-      <cda>0.10</cda>
-      <cma>0.0</cma>
-      <cla_stall>-0.025</cla_stall>
-      <cda_stall>0.0</cda_stall>
-      <cma_stall>0.0</cma_stall>
-      <area>0.002</area>
-      <air_density>1.2041</air_density>
-      <cp>0.00021 0 0</cp>
-      <forward>0 1 0</forward>
-      <upward>0 0 1</upward>
-      <link_name>rotor_0</link_name>
-    </plugin> -->
-    <!-- Blade 2 -->
-    <!-- <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
-      <a0>0.3</a0>
-      <alpha_stall>1.4</alpha_stall>
-      <cla>4.25</cla>
-      <cda>0.10</cda>
-      <cma>0.0</cma>
-      <cla_stall>-0.025</cla_stall>
-      <cda_stall>0.0</cda_stall>
-      <cma_stall>0.0</cma_stall>
-      <area>0.002</area>
-      <air_density>1.2041</air_density>
-      <cp>-0.00021 0 0</cp>
-      <forward>0 -1 0</forward>
-      <upward>0 0 1</upward>
-      <link_name>rotor_0</link_name>
-    </plugin> -->
-
-    <!-- Rotor 1 (CCW) -->
-    <!-- Blade 1 -->
-    <!-- <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
-      <a0>0.3</a0>
-      <alpha_stall>1.4</alpha_stall>
-      <cla>4.25</cla>
-      <cda>0.10</cda>
-      <cma>0.0</cma>
-      <cla_stall>-0.025</cla_stall>
-      <cda_stall>0.0</cda_stall>
-      <cma_stall>0.0</cma_stall>
-      <area>0.002</area>
-      <air_density>1.2041</air_density>
-      <cp>0.00021 0 0</cp>
-      <forward>0 1 0</forward>
-      <upward>0 0 1</upward>
-      <link_name>rotor_1</link_name>
-    </plugin> -->
-    <!-- Blade 2 -->
-    <!-- <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
-      <a0>0.3</a0>
-      <alpha_stall>1.4</alpha_stall>
-      <cla>4.25</cla>
-      <cda>0.10</cda>
-      <cma>0.0</cma>
-      <cla_stall>-0.025</cla_stall>
-      <cda_stall>0.0</cda_stall>
-      <cma_stall>0.0</cma_stall>
-      <area>0.002</area>
-      <air_density>1.2041</air_density>
-      <cp>-0.00021 0 0</cp>
-      <forward>0 -1 0</forward>
-      <upward>0 0 1</upward>
-      <link_name>rotor_1</link_name>
-    </plugin> -->
-
-    <!-- Rotor 2 (CW) -->
-    <!-- Blade 1 -->
-    <!-- <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
-      <a0>0.3</a0>
-      <alpha_stall>1.4</alpha_stall>
-      <cla>4.25</cla>
-      <cda>0.10</cda>
-      <cma>0.0</cma>
-      <cla_stall>-0.025</cla_stall>
-      <cda_stall>0.0</cda_stall>
-      <cma_stall>0.0</cma_stall>
-      <area>0.002</area>
-      <air_density>1.2041</air_density>
-      <cp>0.084 0 0</cp>
-      <cp>0.00021 0 0</cp>
-      <forward>0 -1 0</forward>
-      <upward>0 0 1</upward>
-      <link_name>rotor_2</link_name>
-    </plugin> -->
-    <!-- Blade 2 -->
-    <!-- <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
-      <a0>0.3</a0>
-      <alpha_stall>1.4</alpha_stall>
-      <cla>4.25</cla>
-      <cda>0.10</cda>
-      <cma>0.0</cma>
-      <cla_stall>-0.025</cla_stall>
-      <cda_stall>0.0</cda_stall>
-      <cma_stall>0.0</cma_stall>
-      <area>0.002</area>
-      <air_density>1.2041</air_density>
-      <cp>-0.00021 0 0</cp>
-      <forward>0 1 0</forward>
-      <upward>0 0 1</upward>
-      <link_name>rotor_2</link_name>
-    </plugin> -->
-
-    <!-- Rotor 3 (CW) -->
-    <!-- Blade 1 -->
-    <!-- <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
-      <a0>0.3</a0>
-      <alpha_stall>1.4</alpha_stall>
-      <cla>4.25</cla>
-      <cda>0.10</cda>
-      <cma>0.0</cma>
-      <cla_stall>-0.025</cla_stall>
-      <cda_stall>0.0</cda_stall>
-      <cma_stall>0.0</cma_stall>
-      <area>0.002</area>
-      <air_density>1.2041</air_density>
-      <cp>0.00021 0 0</cp>
-      <forward>0 -1 0</forward>
-      <upward>0 0 1</upward>
-      <link_name>rotor_3</link_name>
-    </plugin> -->
-    <!-- Blade 2 -->
-    <!-- <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
-      <a0>0.3</a0>
-      <alpha_stall>1.4</alpha_stall>
-      <cla>4.25</cla>
-      <cda>0.10</cda>
-      <cma>0.0</cma>
-      <cla_stall>-0.025</cla_stall>
-      <cda_stall>0.0</cda_stall>
-      <cma_stall>0.0</cma_stall>
-      <area>0.002</area>
-      <air_density>1.2041</air_density>
-      <cp>-0.00021 0 0</cp>
-      <forward>0 1 0</forward>
-      <upward>0 0 1</upward>
-      <link_name>rotor_3</link_name>
-    </plugin> -->
-
-    <!-- <plugin filename="libignition-gazebo-apply-joint-force-system.so"
-      name="ignition::gazebo::systems::ApplyJointForce">
-      <joint_name>rotor_0_joint</joint_name>
-    </plugin>
-    <plugin filename="libignition-gazebo-apply-joint-force-system.so"
-      name="ignition::gazebo::systems::ApplyJointForce">
-      <joint_name>rotor_1_joint</joint_name>
-    </plugin>
-    <plugin filename="libignition-gazebo-apply-joint-force-system.so"
-      name="ignition::gazebo::systems::ApplyJointForce">
-      <joint_name>rotor_2_joint</joint_name>
-    </plugin>
-    <plugin filename="libignition-gazebo-apply-joint-force-system.so"
-      name="ignition::gazebo::systems::ApplyJointForce">
-      <joint_name>rotor_3_joint</joint_name>
-    </plugin> -->
 
 
     <!-- ################ -->
