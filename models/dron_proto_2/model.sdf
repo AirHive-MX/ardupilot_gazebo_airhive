@@ -1,10 +1,11 @@
 <sdf version='1.9'>
   <model name='dron_proto_2'>
-    <pose degrees="true">0 0 0 0 0 90</pose>
+    <pose degrees="true">0 0 0 0 0 0</pose>
     <self_collide>false</self_collide>
     <static>false</static>
     
     <link name='dron_base_link'>
+      <pose degrees="true">0 0 0 0 0 90</pose>
       <velocity_decay>
         <linear>0.0</linear>
         <angular>0.0</angular>
@@ -26,7 +27,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>0.001 0.001 0.001</scale>
+            <scale>0.002 0.002 0.002</scale>
             <uri>meshes/DRONE_FAST.stl</uri>
           </mesh>
         </geometry>
@@ -41,313 +42,47 @@
         </material>
         <geometry>
           <mesh>
-            <scale>0.001 0.001 0.001</scale>
+            <scale>0.002 0.002 0.002</scale>
             <uri>meshes/DRONE_FAST.stl</uri>
           </mesh>
         </geometry>
       </visual>
       <visual name="5010_motor_base_0">
-        <pose>0.108711 -0.108711 .02 0 0 -.45</pose>
+        <pose>0.217422 -0.217422 .04 0 0 -.45</pose>
         <geometry>
           <mesh>
-            <scale>0.5 0.5 0.5</scale>
+            <scale>1.0 1.0 1.0</scale>
             <uri>model://x500/meshes/5010Base.dae</uri>
           </mesh>
         </geometry>
       </visual>
       <visual name="5010_motor_base_1">
-        <pose>-0.108711 0.108711 .02 0 0 -.45</pose>
+        <pose>-0.217422 0.217422 .04 0 0 -.45</pose>
         <geometry>
           <mesh>
-            <scale>0.5 0.5 0.5</scale> 
+            <scale>1.0 1.0 1.0</scale> 
             <uri>model://x500/meshes/5010Base.dae</uri>
           </mesh>
         </geometry>
       </visual>
       <visual name="5010_motor_base_2">
-        <pose>0.108711 0.108711 .02 0 0 -.45</pose>
+        <pose>0.217422 0.217422 .04 0 0 -.45</pose>
         <geometry>
           <mesh>
-            <scale>0.5 0.5 0.5</scale>
+            <scale>1.0 1.0 1.0</scale>
             <uri>model://x500/meshes/5010Base.dae</uri>
           </mesh>
         </geometry>
       </visual>
       <visual name="5010_motor_base_3">
-        <pose>-0.108711 -0.108711 .02 0 0 -.45</pose>
+        <pose>-0.217422 -0.217422 .04 0 0 -.45</pose>
         <geometry>
           <mesh>
-            <scale>0.5 0.5 0.5</scale>
+            <scale>1.0 1.0 1.0</scale>
             <uri>model://x500/meshes/5010Base.dae</uri>
           </mesh>
         </geometry>
       </visual>
-    </link>
-
-    <!-- GIMBAL PROTO -->
-    <link name='YAW_MOTOR'>
-      <pose relative_to='dron_base_link'>0.01 -0.1 -0.021 0 0 0</pose>
-      <inertial>
-        <pose>-0.009999999999999976 0.01199999999999995 0.02804129606099103 0 0 0</pose>
-        <mass>0.001965584567608258</mass>
-        <inertia>
-          <ixx>5.4192220613480292e-08</ixx>
-          <ixy>1.557719150691305e-21</ixy>
-          <ixz>-1.6987776396636011e-22</ixz>
-          <iyy>5.4192220613479491e-08</iyy>
-          <iyz>2.8630438107184578e-22</iyz>
-          <izz>9.6814093632033369e-08</izz>
-        </inertia>
-      </inertial>
-      <collision name='YAW_MOTOR_collision_collision'>
-        <pose>0 0 0 0 0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>meshes/YAW_MOTOR.stl</uri>
-          </mesh>
-        </geometry>
-      </collision>
-      <visual name='YAW_MOTOR_visual_visual'>
-        <pose>0 0 0 0 0 0</pose>
-        <material>
-          <ambient>0.0 0.0 0.0 1.0</ambient>
-          <diffuse>0.0 0.0 0.0 1.0</diffuse>
-          <specular>0.01 0.01 0.01 1.0</specular>
-          <emissive>0 0 0 0</emissive>
-        </material>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>meshes/YAW_MOTOR.stl</uri>
-          </mesh>
-        </geometry>
-      </visual>
-    </link>
-    <joint name='gimbal_to_dron' type='fixed'>
-      
-      <parent>dron_base_link</parent>
-      <child>YAW_MOTOR</child>
-      
-    </joint>
-
-    <joint name='yaw_joint' type='revolute'>
-      <pose relative_to='YAW_MOTOR'>-0.01 0.01200000000000001 0.02499999999999999 3.141592653589793 -1.041918287758573e-16 4.93038065763133e-32</pose>
-      <parent>YAW_MOTOR</parent>
-      <child>ROLL_MOTOR</child>
-      <axis>
-        <xyz>-0 0 1</xyz>
-        <limit>
-          <lower>-1.5707960000000001</lower>
-          <upper>1.5707960000000001</upper>
-          <effort>1000000</effort>
-          <velocity>1000000</velocity>
-        </limit>
-        <dynamics>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-          <damping>0.005</damping>
-          
-        </dynamics>
-      </axis>
-    </joint>
-    <link name='ROLL_MOTOR'>
-      <pose relative_to='yaw_joint'>0 0 0 0 0 0</pose>
-      <inertial>
-        <pose>-7.133516000124018e-14 -0.01109672658027615 0.01370636108928117 0 0 4.539048581190739e-112</pose>
-        <mass>0.0041847337119974458</mass>
-        <inertia>
-          <ixx>9.4235653041181994e-07</ixx>
-          <ixy>-1.6159430415530481e-18</ixy>
-          <ixz>3.3718599847248172e-18</ixz>
-          <iyy>6.3762142646680097e-07</iyy>
-          <iyz>3.7184911209001741e-07</iyz>
-          <izz>4.894283102382256e-07</izz>
-        </inertia>
-      </inertial>
-      <collision name='ROLL_MOTOR_collision_collision'>
-        <pose>0.009999999999999981 0.01199999999999998 0.02499999999999996 -3.141592653589793 -1.041918287758571e-16 4.930380657631328e-32</pose>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>meshes/ROLL_MOTOR.stl</uri>
-          </mesh>
-        </geometry>
-      </collision>
-      <visual name='ROLL_MOTOR_visual_visual'>
-        <pose>0.009999999999999981 0.01199999999999998 0.02499999999999996 -3.141592653589793 -1.041918287758571e-16 4.930380657631328e-32</pose>
-        <material>
-          <ambient>0.2 0.2 0.2 1.0</ambient>
-          <diffuse>0.2 0.2 0.2 1.0</diffuse>
-          <specular>0.01 0.01 0.01 1.0</specular>
-          <emissive>0 0 0 0</emissive>
-        </material>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>meshes/ROLL_MOTOR.stl</uri>
-          </mesh>
-        </geometry>
-      </visual>
-    </link>
-    <joint name='roll_joint' type='revolute'>
-      <pose relative_to='ROLL_MOTOR'>7.766887691061141e-35 -0.016 0.025 -1.570796326794896 0 1.347073413886418e-48</pose>
-      <parent>ROLL_MOTOR</parent>
-      <child>PITCH_MOTOR</child>
-      <axis>
-        <xyz>0 0 1</xyz>
-        <limit>
-          <lower>-0.78539800000000004</lower>
-          <upper>0.78539800000000004</upper>
-          
-        </limit>
-        <dynamics>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-          <damping>0.005</damping>
-        </dynamics>
-      </axis>
-    </joint>
-    <link name='PITCH_MOTOR'>
-      <pose relative_to='roll_joint'>0 0 0 0 0 0</pose>
-      <inertial>
-        <pose>9.174692117142058e-12 1.685782180516071e-11 0.01743111969768133 0 -5.050697655593556e-112 0</pose>
-        <mass>0.0076385969043926086</mass>
-        <inertia>
-          <ixx>1.2557409997488159e-06</ixx>
-          <ixy>5.0261696951860239e-17</ixy>
-          <ixz>1.8765296011948961e-16</ixz>
-          <iyy>2.9916259244081749e-06</iyy>
-          <iyz>1.548600426614087e-15</iyz>
-          <izz>2.048053521892662e-06</izz>
-        </inertia>
-      </inertial>
-      <collision name='PITCH_MOTOR_collision_collision'>
-        <pose>0.009999999999999981 4.440892098500626e-17 0.02799999999999998 -1.570796326794896 -5.546678239835239e-32 -1.041918287758571e-16</pose>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>meshes/PITCH_MOTOR.stl</uri>
-          </mesh>
-        </geometry>
-      </collision>
-      <visual name='PITCH_MOTOR_visual_visual'>
-        <pose>0.009999999999999981 4.440892098500626e-17 0.02799999999999998 -1.570796326794896 -5.546678239835239e-32 -1.041918287758571e-16</pose>
-        <material>
-          <ambient>0.2 0.2 0.2 1.0</ambient>
-          <diffuse>0.2 0.2 0.2 1.0</diffuse>
-          <specular>0.01 0.01 0.01 1.0</specular>
-          <emissive>0 0 0 0</emissive>
-        </material>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>meshes/PITCH_MOTOR.stl</uri>
-          </mesh>
-        </geometry>
-      </visual>
-    </link>
-    <joint name='pitch_joint' type='revolute'>
-      <pose relative_to='PITCH_MOTOR'>0.015 0 0.028 -1.570796326794896 0 1.570796326794896</pose>
-      <parent>PITCH_MOTOR</parent>
-      <child>CAMERA_ASSEMBLY</child>
-      <axis>
-        <xyz>-0 0 1</xyz>
-        <limit>
-          <lower>-1.5707960000000001</lower>
-          <upper>1.5707960000000001</upper>
-          <effort>1000000</effort>
-          <velocity>1000000</velocity>
-        </limit>
-        <dynamics>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-          <damping>0.005</damping>
-        </dynamics>
-      </axis>
-    </joint>
-    <link name='CAMERA_ASSEMBLY'>
-      <pose relative_to='pitch_joint'>0 0 0 0 0 0</pose>
-      <inertial>
-        <pose>-0.0002964096027717713 7.377641387053365e-05 0.01499999999993289 0 0 0</pose>
-        <mass>0.01158737085806299</mass>
-        <inertia>
-          <ixx>1.313819721784926e-06</ixx>
-          <ixy>-7.553356696980327e-09</ixy>
-          <ixz>-1.5818340289974059e-19</ixz>
-          <iyy>1.118452749146035e-06</iyy>
-          <iyz>-8.4794714726729395e-18</iyz>
-          <izz>7.854582852086776e-07</izz>
-        </inertia>
-      </inertial>
-      <collision name='CAMERA_ASSEMBLY_collision_collision'>
-        <pose>4.440892098500626e-17 1.776356839400251e-17 0.005000000000000019 0 1.570796326794897 2.926627140777003e-31</pose>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>meshes/CAMERA_ASSEMBLY.stl</uri>
-          </mesh>
-        </geometry>
-      </collision>
-      <collision name='CAMERA_ASSEMBLY_fixed_joint_lump__CAMERA_collision_collision_1'>
-        <pose>-0.0004999999999999614 -0.0009999999999999853 0.005000000000000018 0 1.570796326794897 6.283185307179586</pose>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>meshes/CAMERA.stl</uri>
-          </mesh>
-        </geometry>
-      </collision>
-      <visual name='CAMERA_ASSEMBLY_visual_visual'>
-        <pose>4.440892098500626e-17 1.776356839400251e-17 0.005000000000000019 0 1.570796326794897 2.926627140777003e-31</pose>
-        <material>
-          <ambient>0.2 0.2 0.2 1.0</ambient>
-          <diffuse>0.2 0.2 0.2 1.0</diffuse>
-          <specular>0.01 0.01 0.01 1.0</specular>
-          <emissive>0 0 0 0</emissive>
-        </material>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>meshes/CAMERA_ASSEMBLY.stl</uri>
-          </mesh>
-        </geometry>
-      </visual>
-      <visual name='CAMERA_ASSEMBLY_fixed_joint_lump__CAMERA_visual_visual_1'>
-        <pose>-0.0004999999999999614 -0.0009999999999999853 0.005000000000000018 0 1.570796326794897 6.283185307179586</pose>
-        <material>
-          <ambient>0.0 0.0 0.0 1.0</ambient>
-          <diffuse>0.0 0.0 0.0 1.0</diffuse>
-          <specular>0.01 0.01 0.01 1.0</specular>
-          <emissive>0 0 0 0</emissive>
-        </material>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>meshes/CAMERA.stl</uri>
-          </mesh>
-        </geometry>
-      </visual>
-
-      <sensor name="camera" type="camera">
-        <pose degrees="true">0 -0.005 0.015 90 180 90</pose>
-        <camera>
-          <camera_info_topic>camera/camera_info</camera_info_topic>
-          <horizontal_fov>2.0</horizontal_fov>
-          <image>
-            <width>640</width>
-            <height>480</height>
-          </image>
-          <clip>
-            <near>0.01</near>
-            <far>15000</far>
-          </clip> 
-        </camera>
-        <always_on>1</always_on>
-        <update_rate>30</update_rate>
-        <visualize>1</visualize>
-        <topic>/camera/image</topic>
-      </sensor>
     </link>
 
     <!-- IMU Sensor Link -->
@@ -419,7 +154,7 @@
       <gravity>true</gravity>
       <self_collide>false</self_collide>
       <velocity_decay/>
-      <pose>0.108711 -0.108711 0.06 0 0 0</pose>
+      <pose>0.217422 -0.217422 0.06 0 0 0</pose>
       <inertial>
         <mass>0.016</mass>
         <inertia>
@@ -429,25 +164,28 @@
         </inertia>
       </inertial>
       <visual name='rotor_0_visual'>
-        <pose>-0.0078 -0.0519 -0.0295 0 0 0</pose>
+        <pose>0.0045 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>0.3 0.3 0.3</scale>
-            <uri>model://dron_proto/meshes/1345_prop_ccw.stl</uri>
+            <scale>1 1 1</scale>
+            <uri>model://iris_with_standoffs/meshes/iris_prop_ccw.dae</uri>
           </mesh>
         </geometry>
         <material>
-          <script>
-            <name>Gazebo/DarkGrey</name>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-          </script>
+          <!--script>
+            <name>Gazebo/Blue</name>
+            <uri>__default__</uri>
+          </script-->
+          <ambient>0 0 1</ambient>
+          <diffuse>0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
       <visual name='rotor_0_bell'>
-        <pose>0 0 -0.04 0 0 0</pose>
+        <pose>0 0 -0.025 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>0.5 0.5 0.5</scale>
+            <scale>1.0 1.0 1.0</scale>
             <uri>model://dron_proto/meshes/5010Bell.dae</uri>
           </mesh>
         </geometry>
@@ -498,8 +236,8 @@
       <gravity>true</gravity>
       <self_collide>false</self_collide>
       <velocity_decay/>
-      <pose>-0.108711 0.108711 0.06 0 0 0</pose>
-      <inertial> 
+      <pose>-0.217422 0.217422 0.06 0 0 0</pose>
+      <inertial>
         <mass>0.016</mass>
         <inertia>
           <ixx>3.8e-07</ixx>
@@ -508,25 +246,28 @@
         </inertia>
       </inertial>
       <visual name='rotor_1_visual'>
-        <pose>-0.0078 -0.0519 -0.0295 0 0 0</pose>
+        <pose>0.0045 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>0.3 0.3 0.3</scale>
-            <uri>model://dron_proto/meshes/1345_prop_cw.stl</uri>
+            <scale>1 1 1</scale>
+            <uri>model://iris_with_standoffs/meshes/iris_prop_ccw.dae</uri>
           </mesh>
         </geometry>
         <material>
-          <script>
-            <name>Gazebo/DarkGrey</name>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-          </script>
+          <!--script>
+            <name>Gazebo/Blue</name>
+            <uri>__default__</uri>
+          </script-->
+          <ambient>0 0 1</ambient>
+          <diffuse>0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
       <visual name='rotor_1_bell'>
-        <pose>0 0 -0.04 0 0 0</pose>
+        <pose>0 0 -0.025 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>0.5 0.5 0.5</scale>
+            <scale>1.0 1.0 1.0</scale>
             <uri>model://dron_proto/meshes/5010Bell.dae</uri>
           </mesh>
         </geometry>
@@ -551,6 +292,7 @@
         </surface>
       </collision>
     </link>
+
     <joint name='rotor_1_joint' type='revolute'>
       <parent>dron_base_link</parent>
       <child>rotor_1</child>
@@ -569,14 +311,14 @@
           <implicit_spring_damper>1</implicit_spring_damper>
         </ode>
       </physics>
-    </joint>
+    </joint> 
 
     <!-- Rotor 2 -->
     <link name='rotor_2'>
       <gravity>true</gravity>
       <self_collide>false</self_collide>
       <velocity_decay/>
-      <pose>0.108711 0.108711 0.06 0 0 0</pose>
+      <pose>0.217422 0.217422 0.06 0 0 0</pose>
       <inertial>
         <mass>0.016</mass>
         <inertia>
@@ -586,25 +328,28 @@
         </inertia>
       </inertial>
       <visual name='rotor_2_visual'>
-        <pose>-0.0078 -0.0519 -0.0295 0 0 0</pose>
+        <pose>0.001 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>0.3 0.3 0.3</scale>
-            <uri>model://dron_proto/meshes/1345_prop_cw.stl</uri>
+            <scale>1 1 1</scale>
+            <uri>model://iris_with_standoffs/meshes/iris_prop_cw.dae</uri>
           </mesh>
         </geometry>
         <material>
-          <script>
-            <name>Gazebo/DarkGrey</name>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-          </script>
+          <!--script>
+            <name>Gazebo/Blue</name>
+            <uri>__default__</uri>
+          </script-->
+          <ambient>0 0 1</ambient>
+          <diffuse>0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
       <visual name='rotor_2_bell'>
-        <pose>0 0 -0.04 0 0 0</pose>
+        <pose>0 0 -0.025 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>0.5 0.5 0.5</scale>
+            <scale>1.0 1.0 1.0</scale>
             <uri>model://dron_proto/meshes/5010Bell.dae</uri>
           </mesh>
         </geometry>
@@ -629,6 +374,7 @@
         </surface>
       </collision>
     </link>
+
     <joint name='rotor_2_joint' type='revolute'>
       <parent>dron_base_link</parent>
       <child>rotor_2</child>
@@ -647,14 +393,14 @@
           <implicit_spring_damper>1</implicit_spring_damper>
         </ode>
       </physics>
-    </joint>
+    </joint> 
 
     <!-- Rotor 3 -->
     <link name='rotor_3'>
       <gravity>true</gravity>
       <self_collide>false</self_collide>
       <velocity_decay/>
-      <pose>-0.108711 -0.108711 0.06 0 0 0</pose>
+      <pose>-0.217422 -0.217422 0.06 0 0 0</pose>
       <inertial>
         <mass>0.016</mass>
         <inertia>
@@ -664,25 +410,28 @@
         </inertia>
       </inertial>
       <visual name='rotor_3_visual'>
-        <pose>-0.0078 -0.0519 -0.0295 0 0 0</pose>
+        <pose>0.001 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>0.3 0.3 0.3</scale>
-            <uri>model://dron_proto/meshes/1345_prop_ccw.stl</uri>
+            <scale>1 1 1</scale>
+            <uri>model://iris_with_standoffs/meshes/iris_prop_cw.dae</uri>
           </mesh>
         </geometry>
         <material>
-          <script>
-            <name>Gazebo/DarkGrey</name>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-          </script>
+          <!--script>
+            <name>Gazebo/Blue</name>
+            <uri>__default__</uri>
+          </script-->
+          <ambient>0 0 1</ambient>
+          <diffuse>0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
       <visual name='rotor_3_bell'>
-        <pose>0 0 -0.04 0 0 0</pose>
+        <pose>0 0 -0.025 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>0.5 0.5 0.5</scale>
+            <scale>1.0 1.0 1.0</scale>
             <uri>model://dron_proto/meshes/5010Bell.dae</uri>
           </mesh>
         </geometry>
@@ -707,6 +456,7 @@
         </surface>
       </collision>
     </link>
+
     <joint name='rotor_3_joint' type='revolute'>
       <parent>dron_base_link</parent>
       <child>rotor_3</child>
@@ -725,7 +475,7 @@
           <implicit_spring_damper>1</implicit_spring_damper>
         </ode>
       </physics>
-    </joint>
+    </joint> 
 
     <!-- ################# -->
     <!-- FISICAS REALISTAS -->
@@ -740,152 +490,292 @@
     <!--  Lift & Drag Plugins  -->
     <!-- ##################### --> 
 
+    <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
+      <a0>0.3</a0>
+      <alpha_stall>1.4</alpha_stall>
+      <cla>4.2500</cla>
+      <cda>0.10</cda>
+      <cma>0.00</cma>
+      <cla_stall>-0.025</cla_stall>
+      <cda_stall>0.0</cda_stall>
+      <cma_stall>0.0</cma_stall>
+      <area>0.002</area>
+      <air_density>1.2041</air_density>
+      <cp>0.084 0 0</cp>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>rotor_0</link_name>
+    </plugin>
+    <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
+      <a0>0.3</a0>
+      <alpha_stall>1.4</alpha_stall>
+      <cla>4.2500</cla>
+      <cda>0.10</cda>
+      <cma>0.00</cma>
+      <cla_stall>-0.025</cla_stall>
+      <cda_stall>0.0</cda_stall>
+      <cma_stall>0.0</cma_stall>
+      <area>0.002</area>
+      <air_density>1.2041</air_density>
+      <cp>-0.084 0 0</cp>
+      <forward>0 -1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>rotor_0</link_name>
+    </plugin>
+
+    <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
+      <a0>0.3</a0>
+      <alpha_stall>1.4</alpha_stall>
+      <cla>4.2500</cla>
+      <cda>0.10</cda>
+      <cma>0.00</cma>
+      <cla_stall>-0.025</cla_stall>
+      <cda_stall>0.0</cda_stall>
+      <cma_stall>0.0</cma_stall>
+      <area>0.002</area>
+      <air_density>1.2041</air_density>
+      <cp>0.084 0 0</cp>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>rotor_1</link_name>
+    </plugin>
+    <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
+      <a0>0.3</a0>
+      <alpha_stall>1.4</alpha_stall>
+      <cla>4.2500</cla>
+      <cda>0.10</cda>
+      <cma>0.00</cma>
+      <cla_stall>-0.025</cla_stall>
+      <cda_stall>0.0</cda_stall>
+      <cma_stall>0.0</cma_stall>
+      <area>0.002</area>
+      <air_density>1.2041</air_density>
+      <cp>-0.084 0 0</cp>
+      <forward>0 -1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>rotor_1</link_name>
+    </plugin>
+
+    <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
+      <a0>0.3</a0>
+      <alpha_stall>1.4</alpha_stall>
+      <cla>4.2500</cla>
+      <cda>0.10</cda>
+      <cma>0.00</cma>
+      <cla_stall>-0.025</cla_stall>
+      <cda_stall>0.0</cda_stall>
+      <cma_stall>0.0</cma_stall>
+      <area>0.002</area>
+      <air_density>1.2041</air_density>
+      <cp>0.084 0 0</cp>
+      <forward>0 -1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>rotor_2</link_name>
+    </plugin>
+    <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
+      <a0>0.3</a0>
+      <alpha_stall>1.4</alpha_stall>
+      <cla>4.2500</cla>
+      <cda>0.10</cda>
+      <cma>0.00</cma>
+      <cla_stall>-0.025</cla_stall>
+      <cda_stall>0.0</cda_stall>
+      <cma_stall>0.0</cma_stall>
+      <area>0.002</area>
+      <air_density>1.2041</air_density>
+      <cp>-0.084 0 0</cp>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>rotor_2</link_name>
+    </plugin>
+
+    <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
+      <a0>0.3</a0>
+      <alpha_stall>1.4</alpha_stall>
+      <cla>4.2500</cla>
+      <cda>0.10</cda>
+      <cma>0.00</cma>
+      <cla_stall>-0.025</cla_stall>
+      <cda_stall>0.0</cda_stall>
+      <cma_stall>0.0</cma_stall>
+      <area>0.002</area>
+      <air_density>1.2041</air_density>
+      <cp>0.084 0 0</cp>
+      <forward>0 -1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>rotor_3</link_name>
+    </plugin>
+    <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
+      <a0>0.3</a0>
+      <alpha_stall>1.4</alpha_stall>
+      <cla>4.2500</cla>
+      <cda>0.10</cda>
+      <cma>0.00</cma>
+      <cla_stall>-0.025</cla_stall>
+      <cda_stall>0.0</cda_stall>
+      <cma_stall>0.0</cma_stall>
+      <area>0.002</area>
+      <air_density>1.2041</air_density>
+      <cp>-0.084 0 0</cp>
+      <forward>0 1 0</forward>
+      <upward>0 0 1</upward>
+      <link_name>rotor_3</link_name>
+    </plugin>
+    
     <!-- Rotor 0 (CCW) -->
     <!-- Blade 1 -->
-    <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
-      <!-- <a0>0.3</a0>
+    <!-- <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
+      <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
       <cla>4.25</cla>
       <cda>0.10</cda>
       <cma>0.0</cma>
       <cla_stall>-0.025</cla_stall>
       <cda_stall>0.0</cda_stall>
-      <cma_stall>0.0</cma_stall> -->
+      <cma_stall>0.0</cma_stall>
       <area>0.002</area>
       <air_density>1.2041</air_density>
       <cp>0.00021 0 0</cp>
       <forward>0 1 0</forward>
       <upward>0 0 1</upward>
       <link_name>rotor_0</link_name>
-    </plugin>
+    </plugin> -->
     <!-- Blade 2 -->
-    <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
-      <!-- <a0>0.3</a0>
+    <!-- <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
+      <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
       <cla>4.25</cla>
       <cda>0.10</cda>
       <cma>0.0</cma>
       <cla_stall>-0.025</cla_stall>
       <cda_stall>0.0</cda_stall>
-      <cma_stall>0.0</cma_stall> -->
+      <cma_stall>0.0</cma_stall>
       <area>0.002</area>
       <air_density>1.2041</air_density>
       <cp>-0.00021 0 0</cp>
       <forward>0 -1 0</forward>
       <upward>0 0 1</upward>
       <link_name>rotor_0</link_name>
-    </plugin>
+    </plugin> -->
 
     <!-- Rotor 1 (CCW) -->
     <!-- Blade 1 -->
-    <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
-      <!-- <a0>0.3</a0>
+    <!-- <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
+      <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
       <cla>4.25</cla>
       <cda>0.10</cda>
       <cma>0.0</cma>
       <cla_stall>-0.025</cla_stall>
       <cda_stall>0.0</cda_stall>
-      <cma_stall>0.0</cma_stall> -->
+      <cma_stall>0.0</cma_stall>
       <area>0.002</area>
       <air_density>1.2041</air_density>
       <cp>0.00021 0 0</cp>
       <forward>0 1 0</forward>
       <upward>0 0 1</upward>
       <link_name>rotor_1</link_name>
-    </plugin>
+    </plugin> -->
     <!-- Blade 2 -->
-    <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
-      <!-- <a0>0.3</a0>
+    <!-- <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
+      <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
       <cla>4.25</cla>
       <cda>0.10</cda>
       <cma>0.0</cma>
       <cla_stall>-0.025</cla_stall>
       <cda_stall>0.0</cda_stall>
-      <cma_stall>0.0</cma_stall> -->
+      <cma_stall>0.0</cma_stall>
       <area>0.002</area>
       <air_density>1.2041</air_density>
       <cp>-0.00021 0 0</cp>
       <forward>0 -1 0</forward>
       <upward>0 0 1</upward>
       <link_name>rotor_1</link_name>
-    </plugin>
+    </plugin> -->
 
     <!-- Rotor 2 (CW) -->
     <!-- Blade 1 -->
-    <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
-      <!-- <a0>0.3</a0>
+    <!-- <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
+      <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
       <cla>4.25</cla>
       <cda>0.10</cda>
       <cma>0.0</cma>
       <cla_stall>-0.025</cla_stall>
       <cda_stall>0.0</cda_stall>
-      <cma_stall>0.0</cma_stall> -->
+      <cma_stall>0.0</cma_stall>
       <area>0.002</area>
       <air_density>1.2041</air_density>
-      <!-- <cp>0.084 0 0</cp> -->
+      <cp>0.084 0 0</cp>
       <cp>0.00021 0 0</cp>
       <forward>0 -1 0</forward>
       <upward>0 0 1</upward>
       <link_name>rotor_2</link_name>
-    </plugin>
+    </plugin> -->
     <!-- Blade 2 -->
-    <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
-      <!-- <a0>0.3</a0>
+    <!-- <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
+      <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
       <cla>4.25</cla>
       <cda>0.10</cda>
       <cma>0.0</cma>
       <cla_stall>-0.025</cla_stall>
       <cda_stall>0.0</cda_stall>
-      <cma_stall>0.0</cma_stall> -->
+      <cma_stall>0.0</cma_stall>
       <area>0.002</area>
       <air_density>1.2041</air_density>
       <cp>-0.00021 0 0</cp>
       <forward>0 1 0</forward>
       <upward>0 0 1</upward>
       <link_name>rotor_2</link_name>
-    </plugin>
+    </plugin> -->
 
     <!-- Rotor 3 (CW) -->
     <!-- Blade 1 -->
-    <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
-      <!-- <a0>0.3</a0>
+    <!-- <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
+      <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
       <cla>4.25</cla>
       <cda>0.10</cda>
       <cma>0.0</cma>
       <cla_stall>-0.025</cla_stall>
       <cda_stall>0.0</cda_stall>
-      <cma_stall>0.0</cma_stall> -->
+      <cma_stall>0.0</cma_stall>
       <area>0.002</area>
       <air_density>1.2041</air_density>
       <cp>0.00021 0 0</cp>
       <forward>0 -1 0</forward>
       <upward>0 0 1</upward>
       <link_name>rotor_3</link_name>
-    </plugin>
+    </plugin> -->
     <!-- Blade 2 -->
-    <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
-      <!-- <a0>0.3</a0>
+    <!-- <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
+      <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
       <cla>4.25</cla>
       <cda>0.10</cda>
       <cma>0.0</cma>
       <cla_stall>-0.025</cla_stall>
       <cda_stall>0.0</cda_stall>
-      <cma_stall>0.0</cma_stall> -->
+      <cma_stall>0.0</cma_stall>
       <area>0.002</area>
       <air_density>1.2041</air_density>
       <cp>-0.00021 0 0</cp>
       <forward>0 1 0</forward>
       <upward>0 0 1</upward>
       <link_name>rotor_3</link_name>
-    </plugin>
+    </plugin> -->
 
-    <plugin filename="libignition-gazebo-apply-joint-force-system.so"
+    <!-- <plugin filename="libignition-gazebo-apply-joint-force-system.so"
       name="ignition::gazebo::systems::ApplyJointForce">
       <joint_name>rotor_0_joint</joint_name>
     </plugin>
@@ -900,7 +790,7 @@
     <plugin filename="libignition-gazebo-apply-joint-force-system.so"
       name="ignition::gazebo::systems::ApplyJointForce">
       <joint_name>rotor_3_joint</joint_name>
-    </plugin>
+    </plugin> -->
 
 
     <!-- ################ -->
@@ -915,11 +805,10 @@
       <lock_step>1</lock_step>
 
       <!-- Conversión de coordenadas -->
-      <!-- <modelXYZToAirplaneXForwardZDown degrees="true">0 0 0 180 0 90</modelXYZToAirplaneXForwardZDown>
-      <gazeboXYZToNED degrees="true">0 0 0 180 0 90</gazeboXYZToNED> -->
+      <modelXYZToAirplaneXForwardZDown degrees="true">0 0 0 0 180 0</modelXYZToAirplaneXForwardZDown>
+      <gazeboXYZToNED degrees="true">0 0 0 180 0 0</gazeboXYZToNED>
 
-      <!-- <modelXYZToAirplaneXForwardZDown>0 0 0 3.141593 0 0</modelXYZToAirplaneXForwardZDown>
-      <gazeboXYZToNED>0 0 0 3.141593 0 0</gazeboXYZToNED> -->
+      
 
       <!-- Sensor IMU -->
       <!-- <imuName>base_link::imu_sensor</imuName> -->
@@ -1004,7 +893,7 @@
 
       <!-- Gimbal control -->
       <!-- En realidad es 10 -->
-      <control channel="9">
+      <!-- <control channel="9">
         <jointName>roll_joint</jointName>
         <multiplier>1.047197551196</multiplier>
         <offset>-0.5236</offset>
@@ -1016,10 +905,10 @@
         <i_gain>0</i_gain>
         <d_gain>0</d_gain>
         <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
-      </control>
+      </control> -->
 
       <!-- En realidad es 11 -->
-      <control channel="10">
+      <!-- <control channel="10">
         <jointName>pitch_joint</jointName>
         <multiplier>2.047197551196</multiplier>
         <offset>-0.5236</offset>
@@ -1031,10 +920,10 @@
         <i_gain>0</i_gain>
         <d_gain>0</d_gain>
         <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
-      </control>
+      </control> -->
 
       <!-- En realidad es 12 -->
-      <control channel="11">
+      <!-- <control channel="11">
         <jointName>yaw_joint</jointName>
         <multiplier>1.047197551196</multiplier>
         <offset>-0.5236</offset>
@@ -1046,7 +935,7 @@
         <i_gain>0</i_gain>
         <d_gain>0</d_gain>
         <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
-      </control>
+      </control> -->
 
     </plugin>
 

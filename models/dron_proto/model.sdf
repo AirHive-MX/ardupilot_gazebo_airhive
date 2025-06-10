@@ -387,28 +387,28 @@
         <always_on>1</always_on>
         <update_rate>1000</update_rate>
       </sensor>
-      <sensor name="mag_sensor" type="magnetometer">
+      <!-- <sensor name="mag_sensor" type="magnetometer">
         <always_on>1</always_on>
         <update_rate>50</update_rate>
         <visualize>1</visualize>
-      </sensor>
-      <sensor name="gps_sensor" type="gps">
+      </sensor> -->
+      <!-- <sensor name="gps_sensor" type="gps"> -->
         <!-- posición relativa a imu_link: aquí lo dejamos en (0,0,0). -->
-        <pose>0 0 0 0 0 0</pose>
-        <always_on>1</always_on>
-        <update_rate>10</update_rate>     <!-- 10 Hz, por ejemplo -->
-        <gps>
-          <!-- Punto de referencia (home) en coordenadas WGS84 -->
+        <!-- <pose>0 0 0 0 0 0</pose> -->
+        <!-- <always_on>1</always_on> -->
+        <!-- <update_rate>10</update_rate>     10 Hz, por ejemplo -->
+        <!-- <gps>
+          
           <gps_ref>
             <latitude_deg>-35.363262</latitude_deg>
             <longitude_deg>149.165237</longitude_deg>
             <altitude>584</altitude>
-          </gps_ref>
+          </gps_ref> -->
           <!-- Ajusta estos niveles de ruido para que sean parecidos a tu receptor GPS real -->
-          <position_noise>1e-1</position_noise>  <!-- ±0.1 m de ruido en posición -->
-          <velocity_noise>0.05</velocity_noise>   <!-- ±0.05 m/s en velocidad -->
+          <!-- <position_noise>1e-1</position_noise>  
+          <velocity_noise>0.05</velocity_noise>   
         </gps>
-      </sensor>
+      </sensor> -->
       
     </link>
     <!-- Fixed Joint: attach IMU to base -->
@@ -766,14 +766,14 @@
     <!-- Rotor 0 (CCW) -->
     <!-- Blade 1 -->
     <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
-      <!-- <a0>0.3</a0>
+      <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
       <cla>4.25</cla>
       <cda>0.10</cda>
       <cma>0.0</cma>
       <cla_stall>-0.025</cla_stall>
       <cda_stall>0.0</cda_stall>
-      <cma_stall>0.0</cma_stall> -->
+      <cma_stall>0.0</cma_stall>
       <area>0.002</area>
       <air_density>1.2041</air_density>
       <cp>0.00021 0 0</cp>
@@ -783,14 +783,14 @@
     </plugin>
     <!-- Blade 2 -->
     <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
-      <!-- <a0>0.3</a0>
+      <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
       <cla>4.25</cla>
       <cda>0.10</cda>
       <cma>0.0</cma>
       <cla_stall>-0.025</cla_stall>
       <cda_stall>0.0</cda_stall>
-      <cma_stall>0.0</cma_stall> -->
+      <cma_stall>0.0</cma_stall>
       <area>0.002</area>
       <air_density>1.2041</air_density>
       <cp>-0.00021 0 0</cp>
@@ -802,14 +802,14 @@
     <!-- Rotor 1 (CCW) -->
     <!-- Blade 1 -->
     <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
-      <!-- <a0>0.3</a0>
+      <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
       <cla>4.25</cla>
       <cda>0.10</cda>
       <cma>0.0</cma>
       <cla_stall>-0.025</cla_stall>
       <cda_stall>0.0</cda_stall>
-      <cma_stall>0.0</cma_stall> -->
+      <cma_stall>0.0</cma_stall>
       <area>0.002</area>
       <air_density>1.2041</air_density>
       <cp>0.00021 0 0</cp>
@@ -819,14 +819,14 @@
     </plugin>
     <!-- Blade 2 -->
     <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
-      <!-- <a0>0.3</a0>
+      <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
       <cla>4.25</cla>
       <cda>0.10</cda>
       <cma>0.0</cma>
       <cla_stall>-0.025</cla_stall>
       <cda_stall>0.0</cda_stall>
-      <cma_stall>0.0</cma_stall> -->
+      <cma_stall>0.0</cma_stall>
       <area>0.002</area>
       <air_density>1.2041</air_density>
       <cp>-0.00021 0 0</cp>
@@ -838,14 +838,14 @@
     <!-- Rotor 2 (CW) -->
     <!-- Blade 1 -->
     <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
-      <!-- <a0>0.3</a0>
+      <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
       <cla>4.25</cla>
       <cda>0.10</cda>
       <cma>0.0</cma>
       <cla_stall>-0.025</cla_stall>
       <cda_stall>0.0</cda_stall>
-      <cma_stall>0.0</cma_stall> -->
+      <cma_stall>0.0</cma_stall>
       <area>0.002</area>
       <air_density>1.2041</air_density>
       <!-- <cp>0.084 0 0</cp> -->
@@ -856,14 +856,14 @@
     </plugin>
     <!-- Blade 2 -->
     <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
-      <!-- <a0>0.3</a0>
+      <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
       <cla>4.25</cla>
       <cda>0.10</cda>
       <cma>0.0</cma>
       <cla_stall>-0.025</cla_stall>
       <cda_stall>0.0</cda_stall>
-      <cma_stall>0.0</cma_stall> -->
+      <cma_stall>0.0</cma_stall>
       <area>0.002</area>
       <air_density>1.2041</air_density>
       <cp>-0.00021 0 0</cp>
@@ -875,14 +875,14 @@
     <!-- Rotor 3 (CW) -->
     <!-- Blade 1 -->
     <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
-      <!-- <a0>0.3</a0>
+      <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
       <cla>4.25</cla>
       <cda>0.10</cda>
       <cma>0.0</cma>
       <cla_stall>-0.025</cla_stall>
       <cda_stall>0.0</cda_stall>
-      <cma_stall>0.0</cma_stall> -->
+      <cma_stall>0.0</cma_stall>
       <area>0.002</area>
       <air_density>1.2041</air_density>
       <cp>0.00021 0 0</cp>
@@ -892,14 +892,14 @@
     </plugin>
     <!-- Blade 2 -->
     <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
-      <!-- <a0>0.3</a0>
+      <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
       <cla>4.25</cla>
       <cda>0.10</cda>
       <cma>0.0</cma>
       <cla_stall>-0.025</cla_stall>
       <cda_stall>0.0</cda_stall>
-      <cma_stall>0.0</cma_stall> -->
+      <cma_stall>0.0</cma_stall>
       <area>0.002</area>
       <air_density>1.2041</air_density>
       <cp>-0.00021 0 0</cp>
@@ -938,14 +938,14 @@
       <lock_step>1</lock_step>
 
       <!-- Conversión de coordenadas -->
-      <modelXYZToAirplaneXForwardZDown degrees="true">0 0 0 180 0 90</modelXYZToAirplaneXForwardZDown>
+      <modelXYZToAirplaneXForwardZDown degrees="true">0 0 0 0 180 90</modelXYZToAirplaneXForwardZDown>
       <gazeboXYZToNED degrees="true">0 0 0 180 0 90</gazeboXYZToNED>
 
       <!-- Sensor IMU -->
       <!-- <imuName>base_link::imu_sensor</imuName> -->
       <imuName>imu_sensor</imuName>
-      <magSensorName>mag_sensor</magSensorName> 
-      <gpsName>gps_sensor</gpsName>
+      <!-- <magSensorName>mag_sensor</magSensorName>  -->
+      <!-- <gpsName>gps_sensor</gpsName> -->
 
       <!-- Configuración de los motores -->
       <control channel="0">

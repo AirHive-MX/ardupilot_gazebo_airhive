@@ -225,8 +225,13 @@
       <pose degrees="true">0 0 0.2 0 0 0</pose>
     </include> -->
 
-    <include>
+    <!-- <include>
       <uri>model://dron_proto_2</uri> 
+      <pose degrees="true">0 0 0.2 0 0 0</pose>
+    </include> -->
+
+    <include>
+      <uri>model://alti_transition_quad</uri> 
       <pose degrees="true">0 0 0.2 0 0 0</pose>
     </include>
 
