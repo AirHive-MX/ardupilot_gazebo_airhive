@@ -13,7 +13,8 @@
 
       <inertial>
         <pose>6.497843739160201e-17 0.0009017790995962314 0.001388684484437706 0 0 0</pose>
-        <mass>0.89010290209178577</mass>
+        <!-- <mass>0.89010290209178577</mass> -->
+        <mass>4.5</mass>
         <inertia>
           <ixx>0.002693007495041231</ixx>
           <ixy>1.0850315633625009e-17</ixy>
@@ -218,7 +219,7 @@
         <xyz>0 0 1</xyz>
         <limit><lower>-1e16</lower><upper>1e16</upper></limit>
         <dynamics>
-          <!-- <damping>0.004</damping> -->
+          <damping>0.004</damping>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -300,7 +301,7 @@
         <xyz>0 0 1</xyz>
         <limit><lower>-1e16</lower><upper>1e16</upper></limit>
         <dynamics>
-          <!-- <damping>0.004</damping> -->
+          <damping>0.004</damping>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -382,7 +383,7 @@
         <xyz>0 0 1</xyz>
         <limit><lower>-1e16</lower><upper>1e16</upper></limit>
         <dynamics>
-          <!-- <damping>0.004</damping> -->
+          <damping>0.004</damping>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -464,7 +465,7 @@
         <xyz>0 0 1</xyz>
         <limit><lower>-1e16</lower><upper>1e16</upper></limit>
         <dynamics>
-          <!-- <damping>0.004</damping> -->
+          <damping>0.004</damping>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
@@ -629,7 +630,7 @@
       <upward>0 0 1</upward>
       <link_name>rotor_3</link_name>
     </plugin>
-    
+
     <!-- Rotor 0 (CCW) -->
     <!-- Blade 1 -->
     <!-- <plugin name="ignition::gazebo::v6::systems::LiftDrag" filename="libignition-gazebo-lift-drag-system.so">
