@@ -226,7 +226,7 @@
     </include> -->
 
     <include>
-      <uri>model://dron_proto_2</uri> 
+      <uri>model://dron_proto_3</uri> 
       <pose degrees="true">0 0 0.2 0 0 0</pose>
     </include>
 
