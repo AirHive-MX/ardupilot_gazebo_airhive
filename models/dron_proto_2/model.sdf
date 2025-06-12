@@ -14,7 +14,7 @@
       <inertial>
         <pose>6.497843739160201e-17 0.0009017790995962314 0.001388684484437706 0 0 0</pose>
         <!-- <mass>0.89010290209178577</mass> -->
-        <mass>2.5</mass>
+        <mass>1.5</mass>
         <inertia>
           <ixx>0.002693007495041231</ixx>
           <ixy>1.0850315633625009e-17</ixy>
@@ -496,8 +496,7 @@
         name="ignition::gazebo::systems::LiftDrag">
       <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
-      <!-- <cla>4.2500</cla> -->
-      <cla>3.2500</cla>
+      <cla>4.2500</cla> 
       <cda>0.10</cda>
       <cma>0.00</cma>
       <cla_stall>-0.025</cla_stall>
@@ -514,8 +513,7 @@
         name="ignition::gazebo::systems::LiftDrag">
       <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
-      <!-- <cla>4.2500</cla> -->
-      <cla>3.2500</cla>
+      <cla>4.2500</cla>
       <cda>0.10</cda>
       <cma>0.00</cma>
       <cla_stall>-0.025</cla_stall>
@@ -535,8 +533,7 @@
         name="ignition::gazebo::systems::LiftDrag">
       <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
-      <!-- <cla>4.2500</cla> -->
-      <cla>3.2500</cla>
+      <cla>4.2500</cla>
       <cda>0.10</cda>
       <cma>0.00</cma>
       <cla_stall>-0.025</cla_stall>
@@ -553,8 +550,7 @@
         name="ignition::gazebo::systems::LiftDrag">
       <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
-      <!-- <cla>4.2500</cla> -->
-      <cla>3.2500</cla>
+      <cla>4.2500</cla>
       <cda>0.10</cda>
       <cma>0.00</cma>
       <cla_stall>-0.025</cla_stall>
@@ -574,8 +570,7 @@
         name="ignition::gazebo::systems::LiftDrag">
       <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
-      <!-- <cla>4.2500</cla> -->
-      <cla>3.2500</cla>
+      <cla>4.2500</cla>
       <cda>0.10</cda>
       <cma>0.00</cma>
       <cla_stall>-0.025</cla_stall>
@@ -592,8 +587,7 @@
         name="ignition::gazebo::systems::LiftDrag">
       <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
-      <!-- <cla>4.2500</cla> -->
-      <cla>3.2500</cla>
+      <cla>4.2500</cla>
       <cda>0.10</cda>
       <cma>0.00</cma>
       <cla_stall>-0.025</cla_stall>
@@ -612,8 +606,7 @@
         name="ignition::gazebo::systems::LiftDrag">
       <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
-      <!-- <cla>4.2500</cla> -->
-      <cla>3.2500</cla>
+      <cla>4.2500</cla>
       <cda>0.10</cda>
       <cma>0.00</cma>
       <cla_stall>-0.025</cla_stall>
@@ -630,8 +623,7 @@
         name="ignition::gazebo::systems::LiftDrag">
       <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
-      <!-- <cla>4.2500</cla> -->
-      <cla>3.2500</cla>
+      <cla>4.2500</cla>
       <cda>0.10</cda>
       <cma>0.00</cma>
       <cla_stall>-0.025</cla_stall>
