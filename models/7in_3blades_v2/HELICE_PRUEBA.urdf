@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="HELICE_PRUEBA">
+    <link name="Helice">
+        <inertial>
+            <origin xyz="-2.163485048685316e-06 1.688710759117138e-06 0.5987460758831048" rpy="0.0 0.0 0.0" />
+            <mass value="18362.584052168284" />
+            <inertia ixx="225635.57993678894" iyy="225635.5896739663" izz="449746.1094179103" ixy="-0.20635406513458465" iyz="0.01684386478246207" ixz="0.015233134235333162" />
+        </inertial>
+        <visual name="Helice_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Helice.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Helice_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Helice.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+</robot>

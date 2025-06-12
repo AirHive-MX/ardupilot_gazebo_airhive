@@ -14,7 +14,7 @@
       <inertial>
         <pose>6.497843739160201e-17 0.0009017790995962314 0.001388684484437706 0 0 0</pose>
         <!-- <mass>0.89010290209178577</mass> -->
-        <mass>4.5</mass>
+        <mass>1.5</mass>
         <inertia>
           <ixx>0.002693007495041231</ixx>
           <ixy>1.0850315633625009e-17</ixy>
@@ -90,7 +90,7 @@
     <link name='imu_link'>
       <visual name='imu_visual'>
         <!-- Coloca el cubo justo encima del fuselaje, sin rotación -->
-        <pose>1 0 0.0 0 0 0</pose>
+        <pose>0 0 0.0 0 0 0</pose>
         <geometry>
           <box>
             <!-- 2 cm × 2 cm × 2 cm -->
@@ -106,7 +106,7 @@
       </visual>
 
       <inertial>
-        <pose>1 0 0 0 0 0</pose>
+        <pose>0 0 0 0 0 0</pose>
         <mass>0.15</mass>
         <inertia>
           <ixx>0.00001</ixx>
@@ -119,7 +119,7 @@
       </inertial>
       <sensor name='imu_sensor' type='imu'>
         <!-- Déjalo en 0,0,0 si la pose visual ya está arriba -->
-        <pose>1 0 0 0 0 0</pose>
+        <pose>0 0 0 0 0 0</pose>
         <always_on>1</always_on>
         <update_rate>1000</update_rate>
       </sensor>
@@ -494,24 +494,9 @@
     <!-- Plugin for rotor 0 -->
     <plugin filename="libignition-gazebo-lift-drag-system.so"
         name="ignition::gazebo::systems::LiftDrag">
-      <a0>0.05</a0>
-      <alpha_stall>1.3</alpha_stall>
-      <cla>5.7</cla>
-      <cda>0.12</cda>
-      <cma>0.0</cma>
-      <cla_stall>-0.05</cla_stall>
-      <cda_stall>0.1</cda_stall>
-      <cma_stall>0.0</cma_stall>
-      <area>0.0025</area> <!-- ejemplo: rotor de 5" (12.7 cm), ancho de pala 1.5 cm -->
-      <air_density>1.2041</air_density>
-      <cp>0.084 0 0</cp>
-      <forward>0 1 0</forward>
-      <upward>0 0 1</upward>
-      <link_name>rotor_0</link_name>
-      
-      <!-- <a0>0.3</a0>
+      <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
-      <cla>4.2500</cla>
+      <cla>3.5</cla>
       <cda>0.10</cda>
       <cma>0.00</cma>
       <cla_stall>-0.025</cla_stall>
@@ -520,65 +505,17 @@
       <area>0.002</area>
       <air_density>1.2041</air_density>
       <cp>0.084 0 0</cp>
-      <forward>0 1 0</forward>
-      <upward>0 0 1</upward>
-      <link_name>rotor_0</link_name> -->
-    </plugin>
-    <plugin filename="libignition-gazebo-lift-drag-system.so"
-        name="ignition::gazebo::systems::LiftDrag">
-      <a0>0.05</a0>
-      <alpha_stall>1.3</alpha_stall>
-      <cla>5.7</cla>
-      <cda>0.12</cda>
-      <cma>0.0</cma>
-      <cla_stall>-0.05</cla_stall>
-      <cda_stall>0.1</cda_stall>
-      <cma_stall>0.0</cma_stall>
-      <area>0.0025</area> <!-- ejemplo: rotor de 5" (12.7 cm), ancho de pala 1.5 cm -->
-      <air_density>1.2041</air_density>
-      <cp>-0.084 0 0</cp>
       <forward>0 -1 0</forward>
       <upward>0 0 1</upward>
-      <link_name>rotor_0</link_name>
-      
-      <!-- <a0>0.3</a0>
-      <alpha_stall>1.4</alpha_stall>
-      <cla>4.2500</cla>
-      <cda>0.10</cda>
-      <cma>0.00</cma>
-      <cla_stall>-0.025</cla_stall>
-      <cda_stall>0.0</cda_stall>
-      <cma_stall>0.0</cma_stall>
-      <area>0.002</area>
-      <air_density>1.2041</air_density>
-      <cp>-0.084 0 0</cp>
-      <forward>0 -1 0</forward>
-      <upward>0 0 1</upward>
-      <link_name>rotor_0</link_name> -->
+      <link_name>rotor_0</link_name> 
     </plugin>
-
 
     <!-- Plugin for rotor 1 -->
     <plugin filename="libignition-gazebo-lift-drag-system.so"
         name="ignition::gazebo::systems::LiftDrag">
-      <a0>0.05</a0>
-      <alpha_stall>1.3</alpha_stall>
-      <cla>5.7</cla>
-      <cda>0.12</cda>
-      <cma>0.0</cma>
-      <cla_stall>-0.05</cla_stall>
-      <cda_stall>0.1</cda_stall>
-      <cma_stall>0.0</cma_stall>
-      <area>0.0025</area> <!-- ejemplo: rotor de 5" (12.7 cm), ancho de pala 1.5 cm -->
-      <air_density>1.2041</air_density>
-      <cp>0.084 0 0</cp>
-      <forward>0 1 0</forward>
-      <upward>0 0 1</upward>
-      <link_name>rotor_1</link_name>
-      
-      <!-- <a0>0.3</a0>
+      <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
-      <cla>4.2500</cla>
+      <cla>3.5</cla>
       <cda>0.10</cda>
       <cma>0.00</cma>
       <cla_stall>-0.025</cla_stall>
@@ -589,63 +526,16 @@
       <cp>0.084 0 0</cp>
       <forward>0 1 0</forward>
       <upward>0 0 1</upward>
-      <link_name>rotor_1</link_name> -->
-    </plugin>
-    <plugin filename="libignition-gazebo-lift-drag-system.so"
-        name="ignition::gazebo::systems::LiftDrag">
-      <a0>0.05</a0>
-      <alpha_stall>1.3</alpha_stall>
-      <cla>5.7</cla>
-      <cda>0.12</cda>
-      <cma>0.0</cma>
-      <cla_stall>-0.05</cla_stall>
-      <cda_stall>0.1</cda_stall>
-      <cma_stall>0.0</cma_stall>
-      <area>0.0025</area> <!-- ejemplo: rotor de 5" (12.7 cm), ancho de pala 1.5 cm -->
-      <air_density>1.2041</air_density>
-      <cp>-0.084 0 0</cp>
-      <forward>0 -1 0</forward>
-      <upward>0 0 1</upward>
       <link_name>rotor_1</link_name>
-      
-      <!-- <a0>0.3</a0>
-      <alpha_stall>1.4</alpha_stall>
-      <cla>4.2500</cla>
-      <cda>0.10</cda>
-      <cma>0.00</cma>
-      <cla_stall>-0.025</cla_stall>
-      <cda_stall>0.0</cda_stall>
-      <cma_stall>0.0</cma_stall>
-      <area>0.002</area>
-      <air_density>1.2041</air_density>
-      <cp>-0.084 0 0</cp>
-      <forward>0 -1 0</forward>
-      <upward>0 0 1</upward>
-      <link_name>rotor_1</link_name> -->
     </plugin>
 
 
     <!-- Plugin for rotor 2 -->
     <plugin filename="libignition-gazebo-lift-drag-system.so"
         name="ignition::gazebo::systems::LiftDrag">
-      <a0>0.05</a0>
-      <alpha_stall>1.3</alpha_stall>
-      <cla>5.7</cla>
-      <cda>0.12</cda>
-      <cma>0.0</cma>
-      <cla_stall>-0.05</cla_stall>
-      <cda_stall>0.1</cda_stall>
-      <cma_stall>0.0</cma_stall>
-      <area>0.0025</area> <!-- ejemplo: rotor de 5" (12.7 cm), ancho de pala 1.5 cm -->
-      <air_density>1.2041</air_density>
-      <cp>0.084 0 0</cp>
-      <forward>0 -1 0</forward>
-      <upward>0 0 1</upward>
-      <link_name>rotor_2</link_name>
-      
-      <!-- <a0>0.3</a0>
+      <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
-      <cla>4.2500</cla>
+      <cla>3.5</cla>
       <cda>0.10</cda>
       <cma>0.00</cma>
       <cla_stall>-0.025</cla_stall>
@@ -656,62 +546,15 @@
       <cp>0.084 0 0</cp>
       <forward>0 -1 0</forward>
       <upward>0 0 1</upward>
-      <link_name>rotor_2</link_name> -->
-    </plugin>
-    <plugin filename="libignition-gazebo-lift-drag-system.so"
-        name="ignition::gazebo::systems::LiftDrag">
-      <a0>0.05</a0>
-      <alpha_stall>1.3</alpha_stall>
-      <cla>5.7</cla>
-      <cda>0.12</cda>
-      <cma>0.0</cma>
-      <cla_stall>-0.05</cla_stall>
-      <cda_stall>0.1</cda_stall>
-      <cma_stall>0.0</cma_stall>
-      <area>0.0025</area> <!-- ejemplo: rotor de 5" (12.7 cm), ancho de pala 1.5 cm -->
-      <air_density>1.2041</air_density>
-      <cp>-0.084 0 0</cp>
-      <forward>0 1 0</forward>
-      <upward>0 0 1</upward>
       <link_name>rotor_2</link_name>
-      
-      <!-- <a0>0.3</a0>
-      <alpha_stall>1.4</alpha_stall>
-      <cla>4.2500</cla>
-      <cda>0.10</cda>
-      <cma>0.00</cma>
-      <cla_stall>-0.025</cla_stall>
-      <cda_stall>0.0</cda_stall>
-      <cma_stall>0.0</cma_stall>
-      <area>0.002</area>
-      <air_density>1.2041</air_density>
-      <cp>-0.084 0 0</cp>
-      <forward>0 1 0</forward>
-      <upward>0 0 1</upward>
-      <link_name>rotor_2</link_name> -->
     </plugin>
 
     <!-- Plugin for rotor 3 -->
     <plugin filename="libignition-gazebo-lift-drag-system.so"
         name="ignition::gazebo::systems::LiftDrag">
-      <a0>0.05</a0>
-      <alpha_stall>1.3</alpha_stall>
-      <cla>5.7</cla>
-      <cda>0.12</cda>
-      <cma>0.0</cma>
-      <cla_stall>-0.05</cla_stall>
-      <cda_stall>0.1</cda_stall>
-      <cma_stall>0.0</cma_stall>
-      <area>0.0025</area> <!-- ejemplo: rotor de 5" (12.7 cm), ancho de pala 1.5 cm -->
-      <air_density>1.2041</air_density>
-      <cp>0.084 0 0</cp>
-      <forward>0 -1 0</forward>
-      <upward>0 0 1</upward>
-      <link_name>rotor_3</link_name>
-      
-      <!-- <a0>0.3</a0>
+      <a0>0.3</a0>
       <alpha_stall>1.4</alpha_stall>
-      <cla>4.2500</cla>
+      <cla>3.5</cla>
       <cda>0.10</cda>
       <cma>0.00</cma>
       <cla_stall>-0.025</cla_stall>
@@ -720,44 +563,10 @@
       <area>0.002</area>
       <air_density>1.2041</air_density>
       <cp>0.084 0 0</cp>
-      <forward>0 -1 0</forward>
-      <upward>0 0 1</upward>
-      <link_name>rotor_3</link_name> -->
-    </plugin>
-    <plugin filename="libignition-gazebo-lift-drag-system.so"
-        name="ignition::gazebo::systems::LiftDrag">
-      <a0>0.05</a0>
-      <alpha_stall>1.3</alpha_stall>
-      <cla>5.7</cla>
-      <cda>0.12</cda>
-      <cma>0.0</cma>
-      <cla_stall>-0.05</cla_stall>
-      <cda_stall>0.1</cda_stall>
-      <cma_stall>0.0</cma_stall>
-      <area>0.0025</area> <!-- ejemplo: rotor de 5" (12.7 cm), ancho de pala 1.5 cm -->
-      <air_density>1.2041</air_density>
-      <cp>-0.084 0 0</cp>
       <forward>0 1 0</forward>
       <upward>0 0 1</upward>
       <link_name>rotor_3</link_name>
-      
-      <!-- <a0>0.3</a0>
-      <alpha_stall>1.4</alpha_stall>
-      <cla>4.2500</cla>
-      <cda>0.10</cda>
-      <cma>0.00</cma>
-      <cla_stall>-0.025</cla_stall>
-      <cda_stall>0.0</cda_stall>
-      <cma_stall>0.0</cma_stall>
-      <area>0.002</area>
-      <air_density>1.2041</air_density>
-      <cp>-0.084 0 0</cp>
-      <forward>0 1 0</forward>
-      <upward>0 0 1</upward>
-      <link_name>rotor_3</link_name> -->
     </plugin>
-
-
     <!-- ################ -->
     <!-- ARDUPILOT PLUGIN -->
     <!-- ################ -->
