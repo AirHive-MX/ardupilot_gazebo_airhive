@@ -37,8 +37,8 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>meshes/7in_3blades.stl</uri>
+            <scale>0.0001 0.0001 0.0001</scale>
+            <uri>meshes/7inch_3blade_propeller_v4_CCW_v2.stl</uri>
           </mesh>
         </geometry> 
       </collision>
@@ -46,8 +46,8 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>meshes/7in_3blades.stl</uri>
+            <scale>0.0001 0.0001 0.0001</scale>
+            <uri>meshes/7inch_3blade_propeller_v4_CCW_v2.stl</uri>
           </mesh>
         </geometry>
         <material>
