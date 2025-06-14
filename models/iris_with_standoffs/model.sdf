@@ -549,8 +549,8 @@
     </plugin>
     <plugin filename="libignition-gazebo-lift-drag-system.so"
         name="ignition::gazebo::systems::LiftDrag">
-      <a0>0.3</a0>
-      <alpha_stall>1.4</alpha_stall>
+      <a0>0.3</a0> <!-- 17° -->
+      <alpha_stall>1.4</alpha_stall> <!-- 80° -->
       <cla>4.2500</cla>
       <cda>0.10</cda>
       <cma>0.00</cma>
