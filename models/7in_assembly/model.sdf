@@ -586,7 +586,7 @@
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
         <forward>0 1 0</forward>
-        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <upward>0 0 -1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_2</link_name>
       </plugin>
     <plugin filename="ignition-gazebo-lift-drag-system"
@@ -599,7 +599,7 @@
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
         <forward>-0.866 -0.5 0</forward>
-        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <upward>0 0 -1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_2</link_name>
       </plugin>
       <plugin filename="ignition-gazebo-lift-drag-system"
@@ -612,7 +612,7 @@
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
         <forward>0.866 -0.5 0</forward>
-        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <upward>0 0 -1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_2</link_name>
       </plugin>
 
@@ -627,7 +627,7 @@
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
         <forward>0 1 0</forward>
-        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <upward>0 0 -1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_3</link_name>
       </plugin>
       <plugin filename="ignition-gazebo-lift-drag-system"
@@ -640,7 +640,7 @@
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
         <forward>-0.866 -0.5 0</forward>
-        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <upward>0 0 -1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_3</link_name>
       </plugin>
       <plugin filename="ignition-gazebo-lift-drag-system"
@@ -653,7 +653,7 @@
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
         <forward>0.866 -0.5 0</forward>
-        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <upward>0 0 -1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_3</link_name>
       </plugin>
 

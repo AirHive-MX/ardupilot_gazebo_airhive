@@ -38,7 +38,7 @@
         <geometry>
           <mesh>
             <scale>0.0001 0.0001 0.0001</scale>
-            <uri>meshes/7inch_3blade_propeller_v4_CCW_v2.stl</uri>
+            <uri>meshes/7inch_3blade_propeller_v4_CW_v2.stl</uri>
           </mesh>
         </geometry> 
       </collision>
@@ -47,7 +47,7 @@
         <geometry>
           <mesh>
             <scale>0.0001 0.0001 0.0001</scale>
-            <uri>meshes/7inch_3blade_propeller_v4_CCW_v2.stl</uri>
+            <uri>meshes/7inch_3blade_propeller_v4_CW_v2.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -175,7 +175,7 @@
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
         <forward>0 1 0</forward>
-        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <upward>0 0 -1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>7in_3blades_v2</link_name>
       </plugin>
       
@@ -190,7 +190,7 @@
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
         <forward>-0.866 -0.5 0</forward>
-        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <upward>0 0 -1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>7in_3blades_v2</link_name>
       </plugin>
 
@@ -205,7 +205,7 @@
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
         <forward>0.866 -0.5 0</forward>
-        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <upward>0 0 -1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>7in_3blades_v2</link_name>
       </plugin>
 
