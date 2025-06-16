@@ -1,0 +1,232 @@
+<sdf version='1.9'>
+  <model name='FAST_ASSEMBLY'>
+    <link name='FAST_DESING-v21_DRONE_FAST'>
+      <inertial>
+        <pose>1.373614158621583e-17 -0.0008831251289440345 0.04477388860190273 0 0 0</pose>
+        <mass>1.085696975469769</mass>
+        <inertia>
+          <ixx>0.0037806451718603931</ixx>
+          <ixy>-8.7544485002108219e-18</ixy>
+          <ixz>3.3212538046287071e-18</ixz>
+          <iyy>0.0023387732420122611</iyy>
+          <iyz>0.00013395066766007041</iyz>
+          <izz>0.0050191792659638797</izz>
+        </inertia>
+      </inertial>
+      <collision name='FAST_DESING-v21_DRONE_FAST_collision_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/FAST_DESING-v21_DRONE_FAST.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='FAST_DESING-v21_DRONE_FAST_visual_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/FAST_DESING-v21_DRONE_FAST.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='FAST_DESING-v21_DRONE_FAST_Revolución-12' type='revolute'>
+      <pose relative_to='FAST_DESING-v21_DRONE_FAST'>0.1369949465597693 -0.1409949525282165 0.06699999703797575 -3.330669073875469e-16 -1.665334536937738e-16 -1.570796326794898</pose>
+      <parent>FAST_DESING-v21_DRONE_FAST</parent>
+      <child>HELICE_PRUEBA-v9_Helice_CW_1</child>
+      <axis>
+        <xyz>-0 0 1</xyz>
+        <limit>
+          <lower>-10000000000000000</lower>
+          <upper>10000000000000000</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='HELICE_PRUEBA-v9_Helice_CW_1'>
+      <pose relative_to='FAST_DESING-v21_DRONE_FAST_Revolución-12'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.544494297509936e-09 2.750172171996314e-08 0.006490106958943441 0 0 0</pose>
+        <mass>0.018439981901447789</mass>
+        <inertia>
+          <ixx>2.2682595641488559e-05</ixx>
+          <ixy>-4.3609441523450447e-12</ixy>
+          <ixz>-8.8031852947415681e-13</ixz>
+          <iyy>2.2682593734416389e-05</iyy>
+          <iyz>1.5944500101869261e-12</iyz>
+          <izz>4.5211675809136427e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='HELICE_PRUEBA-v9_Helice_CW_1_collision_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/HELICE_PRUEBA-v9_Helice_CW_1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='HELICE_PRUEBA-v9_Helice_CW_1_visual_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/HELICE_PRUEBA-v9_Helice_CW_1.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='FAST_DESING-v21_DRONE_FAST_Revolución-15' type='revolute'>
+      <pose relative_to='FAST_DESING-v21_DRONE_FAST'>-0.1369949534402301 0.1329949474717836 0.06699999703797579 -3.330669073875469e-16 -1.665334536937738e-16 -1.570796326794898</pose>
+      <parent>FAST_DESING-v21_DRONE_FAST</parent>
+      <child>HELICE_PRUEBA-v9_Helice_CW_2</child>
+      <axis>
+        <xyz>-0 0 1</xyz>
+        <limit>
+          <lower>-10000000000000000</lower>
+          <upper>10000000000000000</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='HELICE_PRUEBA-v9_Helice_CW_2'>
+      <pose relative_to='FAST_DESING-v21_DRONE_FAST_Revolución-15'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-6.544494299851757e-09 2.750172173751057e-08 0.006490106958943441 0 0 0</pose>
+        <mass>0.018439981901447789</mass>
+        <inertia>
+          <ixx>2.2682595641488851e-05</ixx>
+          <ixy>-4.3609441813052034e-12</ixy>
+          <ixz>-8.803185544247342e-13</ixz>
+          <iyy>2.2682593734416579e-05</iyy>
+          <iyz>1.5944500357861201e-12</iyz>
+          <izz>4.5211675809136427e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='HELICE_PRUEBA-v9_Helice_CW_2_collision_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/HELICE_PRUEBA-v9_Helice_CW_2.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='HELICE_PRUEBA-v9_Helice_CW_2_visual_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/HELICE_PRUEBA-v9_Helice_CW_2.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='FAST_DESING-v21_DRONE_FAST_Revolución-16' type='revolute'>
+      <pose relative_to='FAST_DESING-v21_DRONE_FAST'>0.1369949465597697 0.1329949474717833 0.06699999703797571 -3.330669073875469e-16 -1.665334536937738e-16 -1.570796326794898</pose>
+      <parent>FAST_DESING-v21_DRONE_FAST</parent>
+      <child>HELICE_PRUEBA-v9_Helice_CCW_2</child>
+      <axis>
+        <xyz>-0 0 1</xyz>
+        <limit>
+          <lower>-10000000000000000</lower>
+          <upper>10000000000000000</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='HELICE_PRUEBA-v9_Helice_CCW_2'>
+      <pose relative_to='FAST_DESING-v21_DRONE_FAST_Revolución-16'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>6.54449429507819e-09 2.750172170130906e-08 0.006490106958943451 0 0 0</pose>
+        <mass>0.018439981901447591</mass>
+        <inertia>
+          <ixx>2.268259564148492e-05</ixx>
+          <ixy>4.3609441182811186e-12</ixy>
+          <ixz>8.803186207402382e-13</ixz>
+          <iyy>2.2682593734411561e-05</iyy>
+          <iyz>1.594450003983518e-12</iyz>
+          <izz>4.5211675809134712e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='HELICE_PRUEBA-v9_Helice_CCW_2_collision_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/HELICE_PRUEBA-v9_Helice_CCW_2.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='HELICE_PRUEBA-v9_Helice_CCW_2_visual_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/HELICE_PRUEBA-v9_Helice_CCW_2.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='FAST_DESING-v21_DRONE_FAST_Revolución-5' type='revolute'>
+      <pose relative_to='FAST_DESING-v21_DRONE_FAST'>-0.1369949534402304 -0.1409949525282161 0.06699999703797584 -3.330669073875469e-16 -1.665334536937738e-16 -1.570796326794898</pose>
+      <parent>FAST_DESING-v21_DRONE_FAST</parent>
+      <child>HELICE_PRUEBA-v9_Helice_CCW_1</child>
+      <axis>
+        <xyz>-0 0 1</xyz>
+        <limit>
+          <lower>-10000000000000000</lower>
+          <upper>10000000000000000</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='HELICE_PRUEBA-v9_Helice_CCW_1'>
+      <pose relative_to='FAST_DESING-v21_DRONE_FAST_Revolución-5'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>6.544494262705567e-09 2.75017217176795e-08 0.006490106958943438 0 0 0</pose>
+        <mass>0.018439981901447591</mass>
+        <inertia>
+          <ixx>2.2682595641484998e-05</ixx>
+          <ixy>4.3609441737503674e-12</ixy>
+          <ixz>8.8031857744303403e-13</ixz>
+          <iyy>2.2682593734411341e-05</iyy>
+          <iyz>1.594450045286514e-12</iyz>
+          <izz>4.5211675809134448e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='HELICE_PRUEBA-v9_Helice_CCW_1_collision_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/HELICE_PRUEBA-v9_Helice_CCW_1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='HELICE_PRUEBA-v9_Helice_CCW_1_visual_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/HELICE_PRUEBA-v9_Helice_CCW_1.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

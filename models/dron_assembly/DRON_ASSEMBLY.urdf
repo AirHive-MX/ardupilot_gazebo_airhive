@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="FAST_ASSEMBLY">
+    <link name="HELICE_PRUEBA-v9_Helice_CCW_1">
+        <inertial>
+            <origin xyz="6.544494262705567e-09 2.7501721717679503e-08 0.006490106958943438" rpy="0.0 0.0 0.0" />
+            <mass value="0.018439981901447588" />
+            <inertia ixx="2.2682595641485e-05" iyy="2.2682593734411344e-05" izz="4.5211675809134455e-05" ixy="4.360944173750367e-12" iyz="1.5944500452865144e-12" ixz="8.80318577443034e-13" />
+        </inertial>
+        <visual name="HELICE_PRUEBA-v9_Helice_CCW_1_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/HELICE_PRUEBA-v9_Helice_CCW_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="HELICE_PRUEBA-v9_Helice_CCW_1_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/HELICE_PRUEBA-v9_Helice_CCW_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="HELICE_PRUEBA-v9_Helice_CW_1">
+        <inertial>
+            <origin xyz="-6.544494297509936e-09 2.7501721719963143e-08 0.006490106958943441" rpy="0.0 0.0 0.0" />
+            <mass value="0.018439981901447793" />
+            <inertia ixx="2.2682595641488563e-05" iyy="2.2682593734416386e-05" izz="4.5211675809136433e-05" ixy="-4.360944152345045e-12" iyz="1.594450010186926e-12" ixz="-8.803185294741568e-13" />
+        </inertial>
+        <visual name="HELICE_PRUEBA-v9_Helice_CW_1_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/HELICE_PRUEBA-v9_Helice_CW_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="HELICE_PRUEBA-v9_Helice_CW_1_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/HELICE_PRUEBA-v9_Helice_CW_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="HELICE_PRUEBA-v9_Helice_CCW_2">
+        <inertial>
+            <origin xyz="6.54449429507819e-09 2.750172170130906e-08 0.006490106958943451" rpy="0.0 0.0 0.0" />
+            <mass value="0.018439981901447588" />
+            <inertia ixx="2.2682595641484924e-05" iyy="2.268259373441156e-05" izz="4.521167580913471e-05" ixy="4.360944118281119e-12" iyz="1.5944500039835182e-12" ixz="8.803186207402382e-13" />
+        </inertial>
+        <visual name="HELICE_PRUEBA-v9_Helice_CCW_2_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/HELICE_PRUEBA-v9_Helice_CCW_2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="HELICE_PRUEBA-v9_Helice_CCW_2_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/HELICE_PRUEBA-v9_Helice_CCW_2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="HELICE_PRUEBA-v9_Helice_CW_2">
+        <inertial>
+            <origin xyz="-6.544494299851757e-09 2.7501721737510566e-08 0.006490106958943441" rpy="0.0 0.0 0.0" />
+            <mass value="0.018439981901447793" />
+            <inertia ixx="2.2682595641488847e-05" iyy="2.2682593734416576e-05" izz="4.5211675809136433e-05" ixy="-4.360944181305203e-12" iyz="1.5944500357861199e-12" ixz="-8.803185544247342e-13" />
+        </inertial>
+        <visual name="HELICE_PRUEBA-v9_Helice_CW_2_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/HELICE_PRUEBA-v9_Helice_CW_2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="HELICE_PRUEBA-v9_Helice_CW_2_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/HELICE_PRUEBA-v9_Helice_CW_2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="FAST_DESING-v21_DRONE_FAST">
+        <inertial>
+            <origin xyz="1.3736141586215828e-17 -0.0008831251289440345 0.04477388860190273" rpy="0.0 0.0 0.0" />
+            <mass value="1.0856969754697692" />
+            <inertia ixx="0.003780645171860393" iyy="0.0023387732420122606" izz="0.00501917926596388" ixy="-8.754448500210822e-18" iyz="0.0001339506676600704" ixz="3.3212538046287067e-18" />
+        </inertial>
+        <visual name="FAST_DESING-v21_DRONE_FAST_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/FAST_DESING-v21_DRONE_FAST.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="FAST_DESING-v21_DRONE_FAST_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/FAST_DESING-v21_DRONE_FAST.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="FAST_DESING-v21_DRONE_FAST_Revolución-5" type="continuous">
+        <origin xyz="-0.13699495344023044 -0.14099495252821614 0.06699999703797584" rpy="-3.330669073875468e-16 -1.6653345369377375e-16 -1.570796326794898" />
+        <parent link="FAST_DESING-v21_DRONE_FAST" />
+        <child link="HELICE_PRUEBA-v9_Helice_CCW_1" />
+        <axis xyz="-4.930380657631324e-32 0.0 1.0" />
+    </joint>
+    <joint name="FAST_DESING-v21_DRONE_FAST_Revolución-12" type="continuous">
+        <origin xyz="0.13699494655976935 -0.1409949525282165 0.06699999703797575" rpy="-3.330669073875468e-16 -1.6653345369377375e-16 -1.570796326794898" />
+        <parent link="FAST_DESING-v21_DRONE_FAST" />
+        <child link="HELICE_PRUEBA-v9_Helice_CW_1" />
+        <axis xyz="-4.930380657631324e-32 0.0 1.0" />
+    </joint>
+    <joint name="FAST_DESING-v21_DRONE_FAST_Revolución-15" type="continuous">
+        <origin xyz="-0.13699495344023008 0.1329949474717836 0.0669999970379758" rpy="-3.330669073875468e-16 -1.6653345369377375e-16 -1.570796326794898" />
+        <parent link="FAST_DESING-v21_DRONE_FAST" />
+        <child link="HELICE_PRUEBA-v9_Helice_CW_2" />
+        <axis xyz="-4.930380657631324e-32 0.0 1.0" />
+    </joint>
+    <joint name="FAST_DESING-v21_DRONE_FAST_Revolución-16" type="continuous">
+        <origin xyz="0.1369949465597697 0.13299494747178325 0.06699999703797571" rpy="-3.330669073875468e-16 -1.6653345369377375e-16 -1.570796326794898" />
+        <parent link="FAST_DESING-v21_DRONE_FAST" />
+        <child link="HELICE_PRUEBA-v9_Helice_CCW_2" />
+        <axis xyz="-4.930380657631324e-32 0.0 1.0" />
+    </joint>
+</robot>
