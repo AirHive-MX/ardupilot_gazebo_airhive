@@ -218,8 +218,13 @@
       <pose degrees="true">0 0 0.2 0 0 0</pose>
     </include> -->
 
-    <include>
+    <!-- <include>
       <uri>model://test_mario</uri> 
+      <pose degrees="true">0 0 0.2 0 0 0</pose>
+    </include> -->
+
+    <include>
+      <uri>model://dron_assembly_2</uri>
       <pose degrees="true">0 0 0.2 0 0 0</pose>
     </include>
 
