@@ -9,13 +9,13 @@
         <visual name="Helice_visual">
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="meshes/Helice.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="meshes/7in_3blades.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </visual>
         <collision name="Helice_collision">
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="meshes/Helice.stl" scale="0.001 0.001 0.001" />
+                <mesh filename="meshes/7in_3blades.stl" scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
     </link>

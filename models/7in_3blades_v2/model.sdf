@@ -8,7 +8,7 @@
   Try sending commands:
 
     ign topic -t "/model/lift_drag_demo_model/joint/rod_1_joint/cmd_force" -m ignition.msgs.Double  -p "data: 0.7"
-    ign topic -t "/model/7in_3blades/joint/rod_1_joint/cmd_force" -m ignition.msgs.Double  -p "data: 0.5"
+    ign topic -t "/model/7in_3blades_v2/joint/rod_1_joint/cmd_force" -m ignition.msgs.Double  -p "data: 0.5"
 
 
   Listen to joint states:
@@ -71,7 +71,7 @@
             <iyz>0.0</iyz>
             <izz>1.8</izz>
           </inertia>
-          <mass>1</mass>
+          <mass>0.05</mass>
         </inertial>
         <collision name="collision">
           <geometry>
@@ -112,7 +112,7 @@
             <iyz>0.0</iyz>
             <izz>0.0012</izz>
           </inertia>
-          <mass>0.2</mass>
+          <mass>0.02</mass>
         </inertial>
         <collision name="collision">
           <geometry>
@@ -175,7 +175,7 @@
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
         <forward>0 1 0</forward>
-        <upward>0 0 -1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>7in_3blades_v2</link_name>
       </plugin>
       
@@ -190,7 +190,7 @@
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
         <forward>-0.866 -0.5 0</forward>
-        <upward>0 0 -1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>7in_3blades_v2</link_name>
       </plugin>
 
@@ -205,7 +205,7 @@
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
         <forward>0.866 -0.5 0</forward>
-        <upward>0 0 -1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>7in_3blades_v2</link_name>
       </plugin>
 
