@@ -3,7 +3,7 @@
 
 
     <link name='dron_base_link'>
-      <pose degrees="true">0 0 0 0 0 90</pose>
+      <pose degrees="true">0 0 0 0 0 0</pose>
       <inertial>
         <pose>1.373614158621583e-17 -0.0008831251289440345 0.04477388860190273 0 0 0</pose>
         <mass>1.085696975469769</mass>
@@ -27,6 +27,17 @@
       </collision>
       <visual name='dron_base_link_visual'>
         <pose>0 0 0 0 0 0</pose>
+        <material>
+          <ambient>0.1 0.1 0.1 1.0</ambient>
+          <diffuse>0.1 0.1 0.1 1.0</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material><material>
+          <ambient>0.1 0.1 0.1 1.0</ambient>
+          <diffuse>0.1 0.1 0.1 1.0</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -106,19 +117,18 @@
       <parent>dron_base_link</parent>
       <child>rotor_2</child>
       <axis>
-        <xyz>-0 0 1</xyz>
-        <limit>
-          <lower>-10000000000000000</lower> 
-          <upper>10000000000000000</upper>
-        </limit> 
+        <xyz>0 0 1</xyz>
+        <limit><lower>-1e16</lower><upper>1e16</upper></limit>
         <dynamics>
+          <damping>0.04</damping>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
     <link name='rotor_2'>
-      <pose relative_to='dron_base_link'>0 0 0 0 0 0</pose>
+      <pose relative_to='dron_base_link'>0.1369949465597693 -0.1409949525282165 0.06699999703797575 -3.330669073875469e-16 -1.665334536937738e-16 -1.570796326794898</pose>
       <inertial>
         <pose>-6.544494297509936e-09 2.750172171996314e-08 0.006490106958943441 0 0 0</pose>
         <mass>0.018439981901447789</mass>
@@ -164,19 +174,18 @@
       <parent>dron_base_link</parent>
       <child>rotor_3</child>
       <axis>
-        <xyz>-0 0 1</xyz>
-        <limit>
-          <lower>-10000000000000000</lower>
-          <upper>10000000000000000</upper> 
-        </limit> 
+        <xyz>0 0 1</xyz>
+        <limit><lower>-1e16</lower><upper>1e16</upper></limit>
         <dynamics>
+          <damping>0.04</damping>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
     <link name='rotor_3'>
-      <pose relative_to='dron_base_link'>0 0 0 0 0 0</pose>
+      <pose relative_to='dron_base_link'>-0.1369949534402301 0.1329949474717836 0.06699999703797579 -3.330669073875469e-16 -1.665334536937738e-16 -1.570796326794898</pose>
       <inertial>
         <pose>-6.544494299851757e-09 2.750172173751057e-08 0.006490106958943441 0 0 0</pose>
         <mass>0.018439981901447789</mass>
@@ -222,19 +231,18 @@
       <parent>dron_base_link</parent>
       <child>rotor_0</child>
       <axis>
-        <xyz>-0 0 1</xyz>
-        <limit>
-          <lower>-10000000000000000</lower>
-          <upper>10000000000000000</upper>
-        </limit>
+        <xyz>0 0 1</xyz>
+        <limit><lower>-1e16</lower><upper>1e16</upper></limit>
         <dynamics>
+          <damping>0.04</damping>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
     <link name='rotor_0'>
-      <pose relative_to='dron_base_link'>0 0 0 0 0 0</pose>
+      <pose relative_to='dron_base_link'>0.1369949465597697 0.1329949474717833 0.06699999703797571 -3.330669073875469e-16 -1.665334536937738e-16 -1.570796326794898</pose>
       <inertial>
         <pose>6.54449429507819e-09 2.750172170130906e-08 0.006490106958943451 0 0 0</pose>
         <mass>0.018439981901447591</mass>
@@ -263,7 +271,7 @@
             <scale>0.001 0.001 0.001</scale>
             <uri>meshes/HELICE_PRUEBA-v9_Helice_CCW_2.stl</uri>
           </mesh>
-        </geometry>
+        </geometry>x`
         <material>
           <ambient>0.1 0.1 0.1 1.0</ambient>
           <diffuse>0.1 0.1 0.1 1.0</diffuse>
@@ -280,19 +288,18 @@
       <parent>dron_base_link</parent>
       <child>rotor_1</child>
       <axis>
-        <xyz>-0 0 1</xyz>
-        <limit>
-          <lower>-10000000000000000</lower>
-          <upper>10000000000000000</upper>
-        </limit>
+        <xyz>0 0 1</xyz>
+        <limit><lower>-1e16</lower><upper>1e16</upper></limit>
         <dynamics>
+          <damping>0.04</damping>
           <spring_reference>0</spring_reference>
           <spring_stiffness>0</spring_stiffness>
         </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
     </joint>
     <link name='rotor_1'>
-      <pose relative_to='dron_base_link'>0 0 0 0 0 0</pose>
+      <pose relative_to='dron_base_link'>-0.1369949534402304 -0.1409949525282161 0.06699999703797584 -3.330669073875469e-16 -1.665334536937738e-16 -1.570796326794898</pose>
       <inertial>
         <pose>6.544494262705567e-09 2.75017217176795e-08 0.006490106958943438 0 0 0</pose>
         <mass>0.018439981901447591</mass>
@@ -330,5 +337,280 @@
         </material>
       </visual>
     </link>
+
+    <!-- Estado de articulaciones -->
+    <plugin filename="libignition-gazebo-joint-state-publisher-system.so"
+      name="ignition::gazebo::systems::JointStatePublisher">
+    </plugin>
+
+    <!-- ##################### -->
+    <!--  Lift & Drag Plugins  -->
+    <!-- ##################### --> 
+
+    <!-- Plugin for rotor 0 -->
+    <plugin filename="ignition-gazebo-lift-drag-system"
+        name="gz::sim::systems::LiftDrag">
+        <a0>.1</a0>          <!-- -10° -->
+        <cla>.1</cla>
+        <cda>0.001</cda>
+        <cma>0</cma>
+        <cp relative_to='rotor_0'>0.08 0 0.003</cp>
+        <area>0.005</area>     <!-- algo mayor si hace falta -->
+        <air_density>1.225</air_density>
+        <forward relative_to='rotor_0'>0 1 0</forward>
+        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <link_name>rotor_0</link_name>
+      </plugin>
+    <plugin filename="ignition-gazebo-lift-drag-system"
+        name="gz::sim::systems::LiftDrag">
+        <a0>.1</a0>          <!-- -10° -->
+        <cla>.1</cla>
+        <cda>0.001</cda>
+        <cma>0</cma>
+        <cp relative_to='rotor_0'>-0.04 0.069282 0.003</cp>
+        <area>0.005</area>     <!-- algo mayor si hace falta -->
+        <air_density>1.225</air_density>
+        <forward relative_to='rotor_0'>-0.866 -0.5 0</forward>
+        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <link_name>rotor_0</link_name>
+      </plugin>
+      <plugin filename="ignition-gazebo-lift-drag-system"
+        name="gz::sim::systems::LiftDrag">
+        <a0>.1</a0>          <!-- -10° -->
+        <cla>.1</cla>
+        <cda>0.001</cda>
+        <cma>0</cma>
+        <cp relative_to='rotor_0'>-0.04 -0.069282 0.003</cp>
+        <area>0.005</area>     <!-- algo mayor si hace falta -->
+        <air_density>1.225</air_density>
+        <forward relative_to='rotor_0'>0.86 -0.5 0</forward>
+        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <link_name>rotor_0</link_name>
+      </plugin>
+
+
+    <!-- Plugin for rotor 1 -->
+    <plugin filename="ignition-gazebo-lift-drag-system"
+        name="gz::sim::systems::LiftDrag">
+        <a0>.1</a0>          <!-- -10° -->
+        <cla>.1</cla>
+        <cda>0.001</cda>
+        <cma>0</cma>
+        <cp relative_to='rotor_1'>0.08 0 0.003</cp>
+        <area>0.005</area>     <!-- algo mayor si hace falta -->
+        <air_density>1.225</air_density>
+        <forward relative_to='rotor_1'>0 1 0</forward>
+        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <link_name>rotor_1</link_name>
+      </plugin>
+    <plugin filename="ignition-gazebo-lift-drag-system"
+        name="gz::sim::systems::LiftDrag">
+        <a0>.1</a0>          <!-- -10° -->
+        <cla>.1</cla>
+        <cda>0.001</cda>
+        <cma>0</cma>
+        <cp relative_to='rotor_1'>-0.04 0.069282 0.003</cp>
+        <area>0.005</area>     <!-- algo mayor si hace falta -->
+        <air_density>1.225</air_density>
+        <forward relative_to='rotor_1'>-0.86 -0.5 0</forward>
+        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <link_name>rotor_1</link_name>
+      </plugin>
+      <plugin filename="ignition-gazebo-lift-drag-system"
+        name="gz::sim::systems::LiftDrag">
+        <a0>.1</a0>          <!-- -10° -->
+        <cla>.1</cla>
+        <cda>0.001</cda>
+        <cma>0</cma>
+        <cp relative_to='rotor_1'>-0.04 -0.069282 0.003</cp>
+        <area>0.005</area>     <!-- algo mayor si hace falta -->
+        <air_density>1.225</air_density>
+        <forward relative_to='rotor_1'>0.86 -0.5 0</forward>
+        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <link_name>rotor_1</link_name>
+      </plugin>
+
+
+    <!-- Plugin for rotor 2 -->
+    <plugin filename="ignition-gazebo-lift-drag-system"
+        name="gz::sim::systems::LiftDrag">
+        <a0>.1</a0>          <!-- -10° -->
+        <cla>.1</cla>
+        <cda>0.001</cda>
+        <cma>0</cma>
+        <cp relative_to='rotor_2'>-0.08 0 0.003</cp>
+        <area>0.005</area>     <!-- algo mayor si hace falta -->
+        <air_density>1.225</air_density>
+        <forward relative_to='rotor_2'>0 1 0</forward>
+        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <link_name>rotor_2</link_name>
+      </plugin>
+    <plugin filename="ignition-gazebo-lift-drag-system"
+        name="gz::sim::systems::LiftDrag">
+        <a0>.1</a0>          <!-- -10° -->
+        <cla>.1</cla>
+        <cda>0.001</cda>
+        <cma>0</cma>
+        <cp relative_to='rotor_2'>0.04 -0.069282 0.003</cp>
+        <area>0.005</area>     <!-- algo mayor si hace falta -->
+        <air_density>1.225</air_density>
+        <forward relative_to='rotor_2'>-0.86 -0.5 0</forward>
+        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <link_name>rotor_2</link_name>
+      </plugin>
+      <plugin filename="ignition-gazebo-lift-drag-system"
+        name="gz::sim::systems::LiftDrag">
+        <a0>.1</a0>          <!-- -10° -->
+        <cla>.1</cla>
+        <cda>0.001</cda>
+        <cma>0</cma>
+        <cp relative_to='rotor_2'>0.04 0.069282 0.003</cp>
+        <area>0.005</area>     <!-- algo mayor si hace falta -->
+        <air_density>1.225</air_density>
+        <forward relative_to='rotor_2'>-0.86 0.5 0</forward>
+        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <link_name>rotor_2</link_name>
+      </plugin>
+
+    <!-- Plugin for rotor 3 -->
+      <plugin filename="ignition-gazebo-lift-drag-system"
+        name="gz::sim::systems::LiftDrag">
+        <a0>.1</a0>          <!-- -10° -->
+        <cla>.1</cla>
+        <cda>0.001</cda>
+        <cma>0</cma>
+        <cp relative_to='rotor_3'>0.08 0 0.003</cp>
+        <area>0.005</area>     <!-- algo mayor si hace falta -->
+        <air_density>1.225</air_density>
+        <forward relative_to='rotor_3'>0 1 0</forward>
+        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <link_name>rotor_3</link_name>
+      </plugin>
+      <plugin filename="ignition-gazebo-lift-drag-system"
+        name="gz::sim::systems::LiftDrag">
+        <a0>.1</a0>          <!-- -10° -->
+        <cla>.1</cla>
+        <cda>0.001</cda>
+        <cma>0</cma>
+        <cp relative_to='rotor_3'>0.04 -0.069282 0.003</cp>
+        <area>0.005</area>     <!-- algo mayor si hace falta -->
+        <air_density>1.225</air_density>
+        <forward relative_to='rotor_3'>-0.5 -0.86 0</forward>
+        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <link_name>rotor_3</link_name>
+      </plugin>
+      <plugin filename="ignition-gazebo-lift-drag-system"
+        name="gz::sim::systems::LiftDrag">
+        <a0>.1</a0>          <!-- -10° -->
+        <cla>.1</cla>
+        <cda>0.001</cda>
+        <cma>0</cma>
+        <cp relative_to='rotor_3'>0.04 0.069282 0.003</cp>
+        <area>0.005</area>     <!-- algo mayor si hace falta -->
+        <air_density>1.225</air_density>
+        <forward relative_to='rotor_3'>-0.86 0.5 0</forward>
+        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <link_name>rotor_3</link_name>
+      </plugin>
+
+    <!-- ################ -->
+    <!-- ARDUPILOT PLUGIN -->
+    <!-- ################ -->
+
+    <plugin name="ArduPilotPlugin" filename="libArduPilotPlugin.so">
+      <!-- Dirección IP y puerto para comunicación -->
+      <fdm_addr>127.0.0.1</fdm_addr>
+      <fdm_port_in>9002</fdm_port_in>
+      <connectionTimeoutMaxCount>5</connectionTimeoutMaxCount>
+      <lock_step>1</lock_step>
+
+      <!-- Conversión de coordenadas -->
+      <modelXYZToAirplaneXForwardZDown degrees="true">0 0 0 0 180 0</modelXYZToAirplaneXForwardZDown>
+      <gazeboXYZToNED degrees="true">0 0 0 180 0 0</gazeboXYZToNED>
+
+      
+
+      <!-- Sensor IMU -->
+      <!-- <imuName>base_link::imu_sensor</imuName> -->
+      <imuName>imu_sensor</imuName>
+
+      <!-- Configuración de los motores -->
+      <control channel="0">
+        <jointName>rotor_0_joint</jointName>
+        <useForce>1</useForce>
+        <multiplier>838</multiplier>
+        <offset>0</offset>
+        <servo_min>1100</servo_min>
+        <servo_max>1900</servo_max>
+        <deadband>50</deadband>
+        <type>VELOCITY</type>
+        <p_gain>0.05</p_gain>
+        <i_gain>0</i_gain>
+        <d_gain>0</d_gain>
+        <i_max>0</i_max>
+        <i_min>0</i_min>
+        <cmd_max>2.5</cmd_max>
+        <cmd_min>-2.5</cmd_min>
+        <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+      </control>
+
+      <control channel="1">
+        <jointName>rotor_1_joint</jointName>
+        <useForce>1</useForce>
+        <multiplier>838</multiplier>
+        <offset>0</offset>
+        <servo_min>1100</servo_min>
+        <servo_max>1900</servo_max>
+        <deadband>50</deadband>
+        <type>VELOCITY</type>
+        <p_gain>0.05</p_gain>
+        <i_gain>0</i_gain>
+        <d_gain>0</d_gain>
+        <i_max>0</i_max>
+        <i_min>0</i_min>
+        <cmd_max>2.5</cmd_max>
+        <cmd_min>-2.5</cmd_min>
+        <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+      </control>
+
+      <control channel="2">
+        <jointName>rotor_2_joint</jointName>
+        <useForce>1</useForce>
+        <multiplier>-838</multiplier>
+        <offset>0</offset>
+        <servo_min>1100</servo_min>
+        <servo_max>1900</servo_max>
+        <deadband>50</deadband>
+        <type>VELOCITY</type>
+        <p_gain>0.05</p_gain>
+        <i_gain>0</i_gain>
+        <d_gain>0</d_gain>
+        <i_max>0</i_max>
+        <i_min>0</i_min>
+        <cmd_max>2.5</cmd_max>
+        <cmd_min>-2.5</cmd_min>
+        <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+      </control>
+
+      <control channel="3">
+        <jointName>rotor_3_joint</jointName>
+        <useForce>1</useForce>
+        <multiplier>-838</multiplier>
+        <offset>0</offset>
+        <servo_min>1100</servo_min>
+        <servo_max>1900</servo_max> 
+        <deadband>50</deadband>
+        <type>VELOCITY</type>
+        <p_gain>0.05</p_gain>
+        <i_gain>0</i_gain>
+        <d_gain>0</d_gain>
+        <i_max>0</i_max>
+        <i_min>0</i_min>
+        <cmd_max>2.5</cmd_max>
+        <cmd_min>-2.5</cmd_min>
+        <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+      </control>
+      
+    </plugin>
   </model>
 </sdf>
