@@ -6,36 +6,35 @@
     
     <link name='dron_base_link'>
       <pose degrees="true">0 0 0 0 0 0</pose>
-      <velocity_decay>
-        <linear>0.0</linear>
-        <angular>0.0</angular>
-      </velocity_decay>
-
       <inertial>
-        <pose>6.497843739160201e-17 0.0009017790995962314 0.001388684484437706 0 0 0</pose>
-        <!-- <mass>0.89010290209178577</mass> -->
-        <mass>1.5</mass>
+        <pose>1.373614158621583e-17 -0.0008831251289440345 0.04477388860190273 0 0 0</pose>
+        <mass>1.085696975469769</mass>
         <inertia>
-          <ixx>0.002693007495041231</ixx>
-          <ixy>1.0850315633625009e-17</ixy>
-          <ixz>2.4001565683650771e-18</ixz>
-          <iyy>0.001358603695110399</iyy>
-          <iyz>0.0001186562592042086</iyz>
-          <izz>0.003485663582361638</izz>
+          <ixx>0.0037806451718603931</ixx>
+          <ixy>-8.7544485002108219e-18</ixy>
+          <ixz>3.3212538046287071e-18</ixz>
+          <iyy>0.0023387732420122611</iyy>
+          <iyz>0.00013395066766007041</iyz>
+          <izz>0.0050191792659638797</izz>
         </inertia>
       </inertial>
       <collision name='dron_base_link_collision'>
-        <pose degrees="true">0 0 0 0 0 0</pose>
+        <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>0.002 0.002 0.002</scale>
-            <uri>meshes/DRONE_FAST.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/FAST_DESING-v21_DRONE_FAST.stl</uri>
           </mesh>
         </geometry>
       </collision>
       <visual name='dron_base_link_visual'>
-        <pose degrees="true">0 0 0 0 0 0</pose>
+        <pose>0 0 0 0 0 0</pose>
         <material>
+          <ambient>0.1 0.1 0.1 1.0</ambient>
+          <diffuse>0.1 0.1 0.1 1.0</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material><material>
           <ambient>0.1 0.1 0.1 1.0</ambient>
           <diffuse>0.1 0.1 0.1 1.0</diffuse>
           <specular>0.01 0.01 0.01 1.0</specular>
@@ -43,44 +42,8 @@
         </material>
         <geometry>
           <mesh>
-            <scale>0.002 0.002 0.002</scale>
-            <uri>meshes/DRONE_FAST.stl</uri>
-          </mesh>
-        </geometry>
-      </visual>
-      <visual name="5010_motor_base_0">
-        <pose>0.217422 -0.217422 .04 0 0 -.45</pose>
-        <geometry>
-          <mesh>
-            <scale>1.0 1.0 1.0</scale>
-            <uri>model://x500/meshes/5010Base.dae</uri>
-          </mesh>
-        </geometry>
-      </visual>
-      <visual name="5010_motor_base_1">
-        <pose>-0.217422 0.217422 .04 0 0 -.45</pose>
-        <geometry>
-          <mesh>
-            <scale>1.0 1.0 1.0</scale> 
-            <uri>model://x500/meshes/5010Base.dae</uri>
-          </mesh>
-        </geometry>
-      </visual>
-      <visual name="5010_motor_base_2">
-        <pose>0.217422 0.217422 .04 0 0 -.45</pose>
-        <geometry>
-          <mesh>
-            <scale>1.0 1.0 1.0</scale>
-            <uri>model://x500/meshes/5010Base.dae</uri>
-          </mesh>
-        </geometry>
-      </visual>
-      <visual name="5010_motor_base_3">
-        <pose>-0.217422 -0.217422 .04 0 0 -.45</pose>
-        <geometry>
-          <mesh>
-            <scale>1.0 1.0 1.0</scale>
-            <uri>model://x500/meshes/5010Base.dae</uri>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/FAST_DESING-v21_DRONE_FAST.stl</uri>
           </mesh>
         </geometry>
       </visual>
@@ -152,102 +115,38 @@
     <!-- Rotors / Motors -->
     <!-- Rotor 0 -->
     <link name='rotor_0'>
-      <gravity>true</gravity>
-      <self_collide>false</self_collide>
-      <velocity_decay/>
-      <pose>-0.217422 -0.217422 0.06 0 0 0</pose>
+      <pose>-0.1369949465597693 -0.1409949525282165 0.06699999703797575 0 0 0</pose>
       <inertial>
-        <mass>0.016</mass>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.025</mass>
         <inertia>
-          <ixx>3.8e-07</ixx>
-          <iyy>2.6e-05</iyy>
-          <izz>2.6e-05</izz>
+          <ixx>9.75e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.000166704</iyy>
+          <iyz>0</iyz>
+          <izz>0.000167604</izz>
         </inertia>
       </inertial>
-      <visual name='rotor_0_visual'>
-        <pose>0.0045 0 0 0 0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>model://iris_with_standoffs/meshes/iris_prop_ccw.dae</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <!--script>
-            <name>Gazebo/Blue</name>
-            <uri>__default__</uri>
-          </script-->
-          <ambient>0 0 1</ambient>
-          <diffuse>0 0 1</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual>
-      <visual name='rotor_0_bell'>
-        <pose>0 0 -0.025 0 0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1.0 1.0 1.0</scale>
-            <uri>model://dron_proto/meshes/5010Bell.dae</uri>
-          </mesh>
-        </geometry>
-      </visual>
       <collision name='rotor_0_collision'>
+        <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <radius>0.05</radius>
             <length>0.005</length>
+            <radius>0.1</radius>
           </cylinder>
         </geometry>
         <surface>
           <contact>
-            <ode>
-              <min_depth>0.001</min_depth>
-              <max_vel>0</max_vel>
-            </ode>
+            <ode/>
           </contact>
           <friction>
             <ode/>
           </friction>
         </surface>
       </collision>
-    </link>
-
-    <joint name='rotor_0_joint' type='revolute'>
-      <parent>dron_base_link</parent>
-      <child>rotor_0</child>
-      <axis>
-        <xyz>0 0 1</xyz>
-        <limit><lower>-1e16</lower><upper>1e16</upper></limit>
-        <dynamics>
-          <damping>0.004</damping>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
-      </axis>
-      <physics>
-        <ode>
-          <implicit_spring_damper>1</implicit_spring_damper>
-        </ode>
-      </physics>
-    </joint> 
-
-    <!-- Rotor 1 -->
-    <link name='rotor_1'>
-      <gravity>true</gravity>
-      <self_collide>false</self_collide>
-      <velocity_decay/>
-      <pose>0.217422 0.217422 0.06 0 0 0</pose>
-      <inertial>
-        <mass>0.016</mass>
-        <inertia>
-          <ixx>3.8e-07</ixx>
-          <iyy>2.6e-05</iyy>
-          <izz>2.6e-05</izz>
-        </inertia>
-      </inertial>
-      <visual name='rotor_1_visual'>
-        <pose>0.0045 0 0 0 0 0</pose>
+      <visual name='rotor_0_visual'>
+        <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
@@ -264,46 +163,94 @@
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
-      <visual name='rotor_1_bell'>
-        <pose>0 0 -0.025 0 0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1.0 1.0 1.0</scale>
-            <uri>model://dron_proto/meshes/5010Bell.dae</uri>
-          </mesh>
-        </geometry>
-      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='rotor_0_joint' type='revolute'>
+      <child>rotor_0</child>
+      <parent>dron_base_link</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.004</damping>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <ode>
+          <implicit_spring_damper>1</implicit_spring_damper>
+        </ode>
+      </physics>
+    </joint>
+    <link name='rotor_1'>
+      <pose>0.1369949534402301 0.1329949474717836 0.06699999703797579 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.025</mass>
+        <inertia>
+          <ixx>9.75e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.000166704</iyy>
+          <iyz>0</iyz>
+          <izz>0.000167604</izz>
+        </inertia>
+      </inertial>
       <collision name='rotor_1_collision'>
+        <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <radius>0.05</radius>
             <length>0.005</length>
+            <radius>0.1</radius>
           </cylinder>
         </geometry>
         <surface>
           <contact>
-            <ode>
-              <min_depth>0.001</min_depth>
-              <max_vel>0</max_vel>
-            </ode>
+            <ode/>
           </contact>
           <friction>
             <ode/>
           </friction>
         </surface>
       </collision>
+      <visual name='rotor_1_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://iris_with_standoffs/meshes/iris_prop_ccw.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <!--script>
+            <name>Gazebo/White</name>
+            <uri>__default__</uri>
+          </script-->
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>.1 .1 .1 1</specular>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
     </link>
-
     <joint name='rotor_1_joint' type='revolute'>
-      <parent>dron_base_link</parent>
       <child>rotor_1</child>
+      <parent>dron_base_link</parent>
       <axis>
         <xyz>0 0 1</xyz>
-        <limit><lower>-1e16</lower><upper>1e16</upper></limit>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
         <dynamics>
           <damping>0.004</damping>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
         </dynamics>
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
@@ -312,106 +259,40 @@
           <implicit_spring_damper>1</implicit_spring_damper>
         </ode>
       </physics>
-    </joint> 
-
-    <!-- Rotor 2 -->
+    </joint>
     <link name='rotor_2'>
-      <gravity>true</gravity>
-      <self_collide>false</self_collide>
-      <velocity_decay/>
-      <pose>0.217422 -0.217422 0.06 0 0 0</pose>
+      <pose>0.1369949465597693 -0.1409949525282165 0.06699999703797575 0 0 0</pose>
       <inertial>
-        <mass>0.016</mass>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.025</mass>
         <inertia>
-          <ixx>3.8e-07</ixx>
-          <iyy>2.6e-05</iyy>
-          <izz>2.6e-05</izz>
+          <ixx>9.75e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.000166704</iyy>
+          <iyz>0</iyz>
+          <izz>0.000167604</izz>
         </inertia>
       </inertial>
-      <visual name='rotor_2_visual'>
-        <pose>0.001 0 0 0 0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>model://iris_with_standoffs/meshes/iris_prop_cw.dae</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <!--script>
-            <name>Gazebo/Blue</name>
-            <uri>__default__</uri>
-          </script-->
-          <ambient>0 0 1</ambient>
-          <diffuse>0 0 1</diffuse>
-          <specular>0.1 0.1 0.1 1</specular>
-        </material>
-      </visual>
-      <visual name='rotor_2_bell'>
-        <pose>0 0 -0.025 0 0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1.0 1.0 1.0</scale>
-            <uri>model://dron_proto/meshes/5010Bell.dae</uri>
-          </mesh>
-        </geometry>
-      </visual>
       <collision name='rotor_2_collision'>
+        <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <cylinder>
-            <radius>0.05</radius>
             <length>0.005</length>
+            <radius>0.1</radius>
           </cylinder>
         </geometry>
         <surface>
           <contact>
-            <ode>
-              <min_depth>0.001</min_depth>
-              <max_vel>0</max_vel>
-            </ode>
+            <ode/>
           </contact>
           <friction>
             <ode/>
           </friction>
         </surface>
       </collision>
-    </link>
-
-    <joint name='rotor_2_joint' type='revolute'>
-      <parent>dron_base_link</parent>
-      <child>rotor_2</child>
-      <axis>
-        <xyz>0 0 1</xyz>
-        <limit><lower>-1e16</lower><upper>1e16</upper></limit>
-        <dynamics>
-          <damping>0.004</damping>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
-      </axis>
-      <physics>
-        <ode>
-          <implicit_spring_damper>1</implicit_spring_damper>
-        </ode>
-      </physics>
-    </joint> 
-
-    <!-- Rotor 3 -->
-    <link name='rotor_3'>
-      <gravity>true</gravity>
-      <self_collide>false</self_collide>
-      <velocity_decay/>
-      <pose>-0.217422 0.217422 0.06 0 0 0</pose>
-      <inertial>
-        <mass>0.016</mass>
-        <inertia>
-          <ixx>3.8e-07</ixx>
-          <iyy>2.6e-05</iyy>
-          <izz>2.6e-05</izz>
-        </inertia>
-      </inertial>
-      <visual name='rotor_3_visual'>
-        <pose>0.001 0 0 0 0 0</pose>
+      <visual name='rotor_2_visual'>
+        <pose>0 0 0 0 -0 0</pose>
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
@@ -428,46 +309,21 @@
           <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
-      <visual name='rotor_3_bell'>
-        <pose>0 0 -0.025 0 0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1.0 1.0 1.0</scale>
-            <uri>model://dron_proto/meshes/5010Bell.dae</uri>
-          </mesh>
-        </geometry>
-      </visual>
-      <collision name='rotor_3_collision'>
-        <geometry>
-          <cylinder>
-            <radius>0.05</radius>
-            <length>0.005</length>
-          </cylinder>
-        </geometry>
-        <surface>
-          <contact>
-            <ode>
-              <min_depth>0.001</min_depth>
-              <max_vel>0</max_vel>
-            </ode>
-          </contact>
-          <friction>
-            <ode/>
-          </friction>
-        </surface>
-      </collision>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
     </link>
-
-    <joint name='rotor_3_joint' type='revolute'>
+    <joint name='rotor_2_joint' type='revolute'>
+      <child>rotor_2</child>
       <parent>dron_base_link</parent>
-      <child>rotor_3</child>
       <axis>
         <xyz>0 0 1</xyz>
-        <limit><lower>-1e16</lower><upper>1e16</upper></limit>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
         <dynamics>
           <damping>0.004</damping>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
         </dynamics>
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
@@ -476,7 +332,81 @@
           <implicit_spring_damper>1</implicit_spring_damper>
         </ode>
       </physics>
-    </joint> 
+    </joint>
+    <link name='rotor_3'>
+      <pose>-0.1369949534402301 0.1329949474717836 0.06699999703797579 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.025</mass>
+        <inertia>
+          <ixx>9.75e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.000166704</iyy>
+          <iyz>0</iyz>
+          <izz>0.000167604</izz>
+        </inertia>
+      </inertial>
+      <collision name='rotor_3_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.005</length>
+            <radius>0.1</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='rotor_3_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://iris_with_standoffs/meshes/iris_prop_cw.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <!--script>
+            <name>Gazebo/White</name>
+            <uri>__default__</uri>
+          </script-->
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>.1 .1 .1 1</specular>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+      <self_collide>0</self_collide>
+    </link>
+    <joint name='rotor_3_joint' type='revolute'>
+      <child>rotor_3</child>
+      <parent>dron_base_link</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.004</damping>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <ode>
+          <implicit_spring_damper>1</implicit_spring_damper>
+        </ode>
+      </physics>
+    </joint>
+    <static>0</static>
 
     <!-- ################# -->
     <!-- FISICAS REALISTAS -->

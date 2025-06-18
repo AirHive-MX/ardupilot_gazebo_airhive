@@ -227,7 +227,7 @@
 
     <!-- Rotor 0 Joint -->
     <joint name='rotor_0_joint' type='revolute'>
-      <pose relative_to='dron_base_link'>0.1369949465597697 0.1329949474717833 0.06699999703797571 -3.330669073875469e-16 -1.665334536937738e-16 -1.570796326794898</pose>
+      <pose relative_to='dron_base_link'>-0.1369949465597697 -0.1329949474717833 0.06699999703797571 -3.330669073875469e-16 -1.665334536937738e-16 -1.570796326794898</pose>
       <parent>dron_base_link</parent>
       <child>rotor_0</child>
       <axis>
@@ -242,7 +242,7 @@
       </axis>
     </joint>
     <link name='rotor_0'>
-      <pose relative_to='dron_base_link'>0.1369949465597697 0.1329949474717833 0.06699999703797571 -3.330669073875469e-16 -1.665334536937738e-16 -1.570796326794898</pose>
+      <pose relative_to='dron_base_link'>-0.1369949465597697 -0.1329949474717833 0.06699999703797571 -3.330669073875469e-16 -1.665334536937738e-16 -1.570796326794898</pose>
       <inertial>
         <pose>6.54449429507819e-09 2.750172170130906e-08 0.006490106958943451 0 0 0</pose>
         <mass>0.018439981901447591</mass>
@@ -284,7 +284,7 @@
 
     <!-- Rotor 1 Joint -->
     <joint name='rotor_1_joint' type='revolute'>
-      <pose relative_to='dron_base_link'>-0.1369949534402304 -0.1409949525282161 0.06699999703797584 -3.330669073875469e-16 -1.665334536937738e-16 -1.570796326794898</pose>
+      <pose relative_to='dron_base_link'>0.1369949534402304 0.1409949525282161 0.06699999703797584 -3.330669073875469e-16 -1.665334536937738e-16 -1.570796326794898</pose>
       <parent>dron_base_link</parent>
       <child>rotor_1</child>
       <axis>
@@ -299,7 +299,7 @@
       </axis>
     </joint>
     <link name='rotor_1'>
-      <pose relative_to='dron_base_link'>-0.1369949534402304 -0.1409949525282161 0.06699999703797584 -3.330669073875469e-16 -1.665334536937738e-16 -1.570796326794898</pose>
+      <pose relative_to='dron_base_link'>0.1369949534402304 0.1409949525282161 0.06699999703797584 -3.330669073875469e-16 -1.665334536937738e-16 -1.570796326794898</pose>
       <inertial>
         <pose>6.544494262705567e-09 2.75017217176795e-08 0.006490106958943438 0 0 0</pose>
         <mass>0.018439981901447591</mass>
@@ -438,10 +438,10 @@
         <cla>.1</cla>
         <cda>0.001</cda>
         <cma>0</cma>
-        <cp relative_to='rotor_2'>-0.08 0 0.003</cp>
+        <cp relative_to='rotor_2'>0.08 0 0.003</cp>
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
-        <forward relative_to='rotor_2'>0 1 0</forward>
+        <forward relative_to='rotor_2'>0 -1 0</forward>
         <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_2</link_name>
       </plugin>
@@ -451,10 +451,10 @@
         <cla>.1</cla>
         <cda>0.001</cda>
         <cma>0</cma>
-        <cp relative_to='rotor_2'>0.04 -0.069282 0.003</cp>
+        <cp relative_to='rotor_2'>-0.04 0.069282 0.003</cp>
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
-        <forward relative_to='rotor_2'>-0.86 -0.5 0</forward>
+        <forward relative_to='rotor_2'>0.86 0.5 0</forward>
         <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_2</link_name>
       </plugin>
@@ -464,7 +464,7 @@
         <cla>.1</cla>
         <cda>0.001</cda>
         <cma>0</cma>
-        <cp relative_to='rotor_2'>0.04 0.069282 0.003</cp>
+        <cp relative_to='rotor_2'>-0.04 -0.069282 0.003</cp>
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
         <forward relative_to='rotor_2'>-0.86 0.5 0</forward>
@@ -479,10 +479,10 @@
         <cla>.1</cla>
         <cda>0.001</cda>
         <cma>0</cma>
-        <cp relative_to='rotor_3'>0.08 0 0.003</cp>
+        <cp relative_to='rotor_2'>0.08 0 0.003</cp>
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
-        <forward relative_to='rotor_3'>0 1 0</forward>
+        <forward relative_to='rotor_2'>0 -1 0</forward>
         <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_3</link_name>
       </plugin>
@@ -492,10 +492,10 @@
         <cla>.1</cla>
         <cda>0.001</cda>
         <cma>0</cma>
-        <cp relative_to='rotor_3'>0.04 -0.069282 0.003</cp>
+        <cp relative_to='rotor_2'>-0.04 0.069282 0.003</cp>
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
-        <forward relative_to='rotor_3'>-0.5 -0.86 0</forward>
+        <forward relative_to='rotor_2'>0.86 0.5 0</forward>
         <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_3</link_name>
       </plugin>
@@ -505,12 +505,11 @@
         <cla>.1</cla>
         <cda>0.001</cda>
         <cma>0</cma>
-        <cp relative_to='rotor_3'>0.04 0.069282 0.003</cp>
+        <cp relative_to='rotor_2'>-0.04 -0.069282 0.003</cp>
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
-        <forward relative_to='rotor_3'>-0.86 0.5 0</forward>
+        <forward relative_to='rotor_2'>-0.86 0.5 0</forward>
         <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
-        <link_name>rotor_3</link_name>
       </plugin>
 
     <!-- ################ -->
