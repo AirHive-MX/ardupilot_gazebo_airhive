@@ -13,7 +13,7 @@
                 </geometry>
             </collision>
             <visual name="ROOF_visual">
-                <pose>0 0 16 0 0 0</pose>
+                <pose>0 0 18 0 0 0</pose>
                 <geometry>
                     <mesh>
                         <scale>5.5 5.5 0.6</scale>
@@ -48,7 +48,7 @@
             <visual name="WALLS_visual">
                 <geometry>
                     <mesh>
-                        <scale>5.5 5.5 1.6</scale>
+                        <scale>5.5 5.5 1.8</scale>
                         <uri>meshes/Depot.dae</uri>
                         <submesh>
                             <name>WALLS</name>
@@ -347,6 +347,8 @@
                     </script>
                 </material>
             </visual> -->
+
+
             <visual name="FLOOR_visual">
                 <geometry>
                     <mesh>
@@ -399,7 +401,7 @@
                     </pbr>
                 </material>
             </visual> -->
-            <visual name="crates">
+            <!-- <visual name="crates">
                 <geometry>
                     <mesh>
                         <scale>0.6 0.6 0.6</scale>
@@ -417,8 +419,750 @@
                         </metal>
                     </pbr>
                 </material>
+            </visual> -->
+        </link>
+
+        <link name='shelf_col1'>
+            <pose degrees = "true">-110.5 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh>
+                </geometry>
             </visual>
         </link>
+        <!-- <link name='box_4m'>
+            <pose degrees = "true">-107.25 0 0 0 0 0</pose>
+            <collision name='box_4m_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='box_4m_visual'>
+                <pose>0 0 6 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>4.0 34.0 12.0</size>
+                </box>
+                </geometry>
+            </visual>
+        </link> -->
+
+        <link name='shelf_col2'>
+            <pose degrees = "true">-104 0 0 0 0 -90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh>
+                </geometry>
+            </visual>
+        </link>
+        <!-- <link name='box_4m2'>
+            <pose degrees = "true">-100.75 0 0 0 0 0</pose>
+            <collision name='box_4m_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='box_4m_visual'>
+                <pose>0 0 6 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>4.0 34.0 12.0</size>
+                </box>
+                </geometry>
+            </visual>
+        </link> -->
+        <link name='shelf_col3'>
+            <pose degrees = "true">-97.5 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh>
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col4'>
+            <pose degrees = "true">-91 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col5'>
+            <pose degrees = "true">-84.5 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col6'>
+            <pose degrees = "true">-78 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col7'>
+            <pose degrees = "true">-71.5 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col8'>
+            <pose degrees = "true">-65 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col9'>
+            <pose degrees = "true">-58.5 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col10'>
+            <pose degrees = "true">-52 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col11'>
+            <pose degrees = "true">-45.5 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col12'>
+            <pose degrees = "true">-39 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col13'>
+            <pose degrees = "true">-32.5 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col14'>
+            <pose degrees = "true">-26 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col15'>
+            <pose degrees = "true">-19.5 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col16'>
+            <pose degrees = "true">-13 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link> 
+        <link name='shelf_col17'>
+            <pose degrees = "true">-6.5 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col18'>
+            <pose degrees = "true">0 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col19'>
+            <pose degrees = "true">6.5 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col20'>
+            <pose degrees = "true">13 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col21'>
+            <pose degrees = "true">19.5 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col22'>
+            <pose degrees = "true">26 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col23'>
+            <pose degrees = "true">32.5 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col24'>
+            <pose degrees = "true">39 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col25'>
+            <pose degrees = "true">45.5 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col26'>
+            <pose degrees = "true">52 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col27'>
+            <pose degrees = "true">58.5 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col28'>
+            <pose degrees = "true">65 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col29'>
+            <pose degrees = "true">71.5 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col30'>
+            <pose degrees = "true">78 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col31'>
+            <pose degrees = "true">84.5 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col32'>
+            <pose degrees = "true">91 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col33'>
+            <pose degrees = "true">97.5 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col34'>
+            <pose degrees = "true">104 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link>
+        <link name='shelf_col35'>
+            <pose degrees = "true">110.5 0 0 0 0 90</pose>
+            <collision name='shelf_chassi_collision'>
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                <box>
+                    <size>3.6 0.6 1.8</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name='shelf_chassi_visual'>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                <mesh>
+                    <scale>1.889 1.16 2.0</scale>
+                    <uri>meshes/shelf_big_movai.dae</uri>
+                </mesh> 
+                </geometry>
+            </visual>
+        </link> 
+        
+
         <!-- <link name="Fan1">
             <pose>-5.0154 -0.2952 6.12 0 0 0</pose>
             <visual name="visual">
