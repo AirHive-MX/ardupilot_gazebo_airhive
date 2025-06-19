@@ -1,9 +1,12 @@
 <sdf version='1.9'>
   <model name='dron_assembly'>
-
-
+    <pose degrees="true">0 0 0 0 0 0</pose>
     <link name='dron_base_link'>
       <pose degrees="true">0 0 0 0 0 0</pose>
+      <velocity_decay>
+        <linear>0.0</linear>
+        <angular>0.0</angular>
+      </velocity_decay>
       <inertial>
         <pose>0.0008831251289440756 3.924268322443325e-18 0.04477388860190275 0 0 0</pose>
         <mass>1.0856969754697694</mass>
@@ -46,27 +49,45 @@
         </geometry>
       </visual>
     </link>
-
-
+    <link name='iris/ground_truth/odometry_sensorgt_link'>
+      <pose>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>0.15</mass>
+        <inertia>
+          <ixx>0.0001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0002</iyy>
+          <iyz>0</iyz>
+          <izz>0.0002</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='iris/ground_truth/odometry_sensorgt_joint' type='revolute'>
+      <child>iris/ground_truth/odometry_sensorgt_link</child>
+      <parent>dron_base_link</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <damping>1</damping>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <ode>
+          <implicit_spring_damper>1</implicit_spring_damper>
+        </ode>
+      </physics>
+    </joint>
     <!-- IMU Sensor Link -->
     <link name='imu_link'>
-      <visual name='imu_visual'>
-        <!-- Coloca el cubo justo encima del fuselaje, sin rotación -->
-        <pose>0 0 0.0 0 0 0</pose>
-        <geometry>
-          <box>
-            <!-- 2 cm × 2 cm × 2 cm -->
-            <size>0.02 0.02 0.005</size>
-          </box>
-        </geometry>
-        <material>
-          <ambient>0 0 0 1.0</ambient>
-          <diffuse>0 0 0 1.0</diffuse>
-          <specular>0.01 0.01 0.01 1.0</specular>
-          <emissive>0 0 0 0</emissive>
-        </material>
-      </visual>
-
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.15</mass>
@@ -99,7 +120,7 @@
           <velocity>0</velocity>
         </limit>
         <dynamics>
-          <damping>1.0</damping>
+          <damping>1</damping>
         </dynamics>
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
@@ -109,139 +130,14 @@
         </ode>
       </physics>
     </joint>
-
-
-    <!-- Rotor 2 Joint -->
-    <joint name='rotor_2_joint' type='revolute'>
-      <parent>dron_base_link</parent>
-      <child>rotor_2</child>
-      <axis>
-        <xyz>0 0 1</xyz>
-        <limit><lower>-1e16</lower><upper>1e16</upper></limit>
-        <dynamics>
-          <damping>0.04</damping>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
-      </axis>
-    </joint>
-    <link name='rotor_2'>
-      <pose>0.1369949465597693 0.1409949525282165 0.06699999703797575 0 0 0</pose>
-      <inertial>
-        <pose>-6.544494282403448e-09 2.7501721704836438e-08 0.006490106958943424 0 0 0</pose>
-        <mass>0.018439981901447793</mass>
-        <inertia>
-          <ixx>2.268259564148882e-05</ixx>
-          <ixy>-4.360944137235399e-12</ixy>
-          <ixz>-8.803185330206345e-13</ixz>
-          <iyy>2.2682593734416413e-05</iyy>
-          <iyz>1.594450029800999e-12</iyz>
-          <izz>4.521167580913631e-05</izz>
-        </inertia>
-      </inertial>
-      <collision name='rotor_2_collision'>
-        <pose>0 0 0 0 0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>meshes/HELICE_PRUEBA-v9_Helice_CW_1.stl</uri>
-          </mesh>
-        </geometry>
-      </collision>
-      <visual name='rotor_2_visual'>
-        <pose>0 0 0 0 0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>meshes/HELICE_PRUEBA-v9_Helice_CW_1.stl</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.1 0.1 0.1 1.0</ambient>
-          <diffuse>0.1 0.1 0.1 1.0</diffuse>
-          <specular>0.01 0.01 0.01 1.0</specular>
-          <emissive>0 0 0 0</emissive>
-        </material>
-      </visual>
-    </link>
-
-
-    <!-- Rotor 3 Joint -->
-    <joint name='rotor_3_joint' type='revolute'>
-      <parent>dron_base_link</parent>
-      <child>rotor_3</child>
-      <axis>
-        <xyz>0 0 1</xyz>
-        <limit><lower>-1e16</lower><upper>1e16</upper></limit>
-        <dynamics>
-          <damping>0.04</damping>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
-      </axis>
-    </joint>
-    <link name='rotor_3'>
-      <pose>-0.1369949534402301 -0.1329949474717836 0.06699999703797579 0 0 0</pose>
-      <inertial>
-        <pose>-6.544494282403448e-09 2.7501721704836438e-08 0.006490106958943424 0 0 0</pose>
-        <mass>0.018439981901447793</mass>
-        <inertia>
-          <ixx>2.268259564148882e-05</ixx>
-          <ixy>-4.360944137235399e-12</ixy>
-          <ixz>-8.803185330206345e-13</ixz>
-          <iyy>2.2682593734416413e-05</iyy>
-          <iyz>1.594450029800999e-12</iyz>
-          <izz>4.521167580913631e-05</izz>
-        </inertia>
-      </inertial>
-      <collision name='rotor_3_collision'>
-        <pose>0 0 0 0 0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>meshes/HELICE_PRUEBA-v9_Helice_CW_2.stl</uri>
-          </mesh>
-        </geometry>
-      </collision>
-      <visual name='rotor_3_visual'>
-        <pose>0 0 0 0 0 0</pose>
-        <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>meshes/HELICE_PRUEBA-v9_Helice_CW_2.stl</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.1 0.1 0.1 1.0</ambient>
-          <diffuse>0.1 0.1 0.1 1.0</diffuse>
-          <specular>0.01 0.01 0.01 1.0</specular>
-          <emissive>0 0 0 0</emissive>
-        </material>
-      </visual>
-    </link>
-
-
-    <!-- Rotor 0 Joint -->
-    <joint name='rotor_0_joint' type='revolute'>
-      <parent>dron_base_link</parent>
-      <child>rotor_0</child>
-      <axis>
-        <xyz>0 0 1</xyz>
-        <limit><lower>-1e16</lower><upper>1e16</upper></limit>
-        <dynamics>
-          <damping>0.04</damping>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
-        </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
-      </axis>
-    </joint>
+    
+    
+    <!-- ##### ROTORES ##### -->
+    <!-- rotor_0 -->
     <link name='rotor_0'>
-      <pose>0.1369949465597697 -0.1329949474717833 0.06699999703797571 0 0 0</pose>
+      <pose>0.1369949465597693 -0.1409949525282165 0.06699999703797575 0 0 0</pose>
       <inertial>
-        <pose>6.544494279386152e-09 2.7501721699366677e-08 0.006490106958943444 0 0 0</pose>
+        <pose>0 0 0 0 0 0</pose>
         <mass>0.018439981901447588</mass>
         <inertia>
           <ixx>2.2682595641485005e-05</ixx>
@@ -255,11 +151,19 @@
       <collision name='rotor_0_collision'>
         <pose>0 0 0 0 0 0</pose>
         <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>meshes/HELICE_PRUEBA-v9_Helice_CCW_2.stl</uri>
-          </mesh>
+          <cylinder>
+            <length>0.005</length>
+            <radius>0.1</radius>
+          </cylinder>
         </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
       <visual name='rotor_0_visual'>
         <pose>0 0 0 0 0 0</pose>
@@ -268,36 +172,40 @@
             <scale>0.001 0.001 0.001</scale>
             <uri>meshes/HELICE_PRUEBA-v9_Helice_CCW_2.stl</uri>
           </mesh>
-        </geometry>x`
+        </geometry>
         <material>
-          <ambient>0.1 0.1 0.1 1.0</ambient>
-          <diffuse>0.1 0.1 0.1 1.0</diffuse>
-          <specular>0.01 0.01 0.01 1.0</specular>
-          <emissive>0 0 0 0</emissive>
+          <ambient>0 0 1</ambient>
+          <diffuse>0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
     </link>
-
-
-    <!-- Rotor 1 Joint -->
-    <joint name='rotor_1_joint' type='revolute'>
+    <!-- Rotor 0 Joint -->
+    <joint name='rotor_0_joint' type='revolute'>
+      <child>rotor_0</child>
       <parent>dron_base_link</parent>
-      <child>rotor_1</child>
       <axis>
         <xyz>0 0 1</xyz>
-        <limit><lower>-1e16</lower><upper>1e16</upper></limit>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
         <dynamics>
-          <damping>0.04</damping>
-          <spring_reference>0</spring_reference>
-          <spring_stiffness>0</spring_stiffness>
+          <damping>0.0001</damping>
         </dynamics>
         <use_parent_model_frame>1</use_parent_model_frame>
       </axis>
+      <physics>
+        <ode>
+          <implicit_spring_damper>1</implicit_spring_damper>
+        </ode>
+      </physics>
     </joint>
+    <!-- rotor_1 -->
     <link name='rotor_1'>
-      <pose>-0.1369949534402304 0.1409949525282161 0.06699999703797584 0 0 0</pose>
+      <pose>-0.1369949534402301 0.1329949474717836 0.06699999703797579 0 0 0</pose>
       <inertial>
-        <pose>6.544494279386152e-09 2.7501721699366677e-08 0.006490106958943444 0 0 0</pose>
+        <pose>0 0 0 0 0 0</pose>
         <mass>0.018439981901447588</mass>
         <inertia>
           <ixx>2.2682595641485005e-05</ixx>
@@ -309,13 +217,21 @@
         </inertia>
       </inertial>
       <collision name='rotor_1_collision'>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <geometry>
-          <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>meshes/HELICE_PRUEBA-v9_Helice_CCW_1.stl</uri>
-          </mesh>
+          <cylinder>
+            <length>0.005</length>
+            <radius>0.1</radius>
+          </cylinder>
         </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
       </collision>
       <visual name='rotor_1_visual'>
         <pose>0 0 0 0 0 0</pose>
@@ -326,13 +242,170 @@
           </mesh>
         </geometry>
         <material>
-          <ambient>0.1 0.1 0.1 1.0</ambient>
-          <diffuse>0.1 0.1 0.1 1.0</diffuse>
-          <specular>0.01 0.01 0.01 1.0</specular>
-          <emissive>0 0 0 0</emissive>
+          <ambient>0 0 1</ambient>
+          <diffuse>0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
     </link>
+    <!-- Rotor 1 Joint -->
+    <joint name='rotor_1_joint' type='revolute'>
+      <child>rotor_1</child>
+      <parent>dron_base_link</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.0001</damping>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <ode>
+          <implicit_spring_damper>1</implicit_spring_damper>
+        </ode>
+      </physics>
+    </joint>
+    <!-- rotor_2 --> 
+    <link name='rotor_2'>
+      <pose>0.1369949465597693 0.1409949525282165 0.06699999703797575 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>0.018439981901447793</mass>
+        <inertia>
+          <ixx>2.268259564148882e-05</ixx>
+          <ixy>-4.360944137235399e-12</ixy>
+          <ixz>-8.803185330206345e-13</ixz>
+          <iyy>2.2682593734416413e-05</iyy>
+          <iyz>1.594450029800999e-12</iyz>
+          <izz>4.521167580913631e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='rotor_2_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.005</length>
+            <radius>0.1</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='rotor_2_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/HELICE_PRUEBA-v9_Helice_CW_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0 0 1</ambient>
+          <diffuse>0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <!-- Rotor 2 Joint -->
+    <joint name='rotor_2_joint' type='revolute'>
+      <child>rotor_2</child>
+      <parent>dron_base_link</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.0001</damping>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <ode>
+          <implicit_spring_damper>1</implicit_spring_damper>
+        </ode>
+      </physics>
+    </joint>
+    <!-- rotor_3 -->
+    <link name='rotor_3'>
+      <pose>-0.1369949534402301 -0.1329949474717836 0.06699999703797579 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>0.018439981901447793</mass>
+        <inertia>
+          <ixx>2.268259564148882e-05</ixx>
+          <ixy>-4.360944137235399e-12</ixy>
+          <ixz>-8.803185330206345e-13</ixz>
+          <iyy>2.2682593734416413e-05</iyy>
+          <iyz>1.594450029800999e-12</iyz>
+          <izz>4.521167580913631e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='rotor_3_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.005</length>
+            <radius>0.1</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='rotor_3_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/HELICE_PRUEBA-v9_Helice_CW_2.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0 0 1</ambient>
+          <diffuse>0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+    <!-- Rotor 3 Joint -->
+    <joint name='rotor_3_joint' type='revolute'>
+      <child>rotor_3</child>
+      <parent>dron_base_link</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.0001</damping>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <ode>
+          <implicit_spring_damper>1</implicit_spring_damper>
+        </ode>
+      </physics>
+    </joint>
+    <static>0</static>
 
     <!-- Estado de articulaciones -->
     <plugin filename="libignition-gazebo-joint-state-publisher-system.so"
@@ -344,8 +417,8 @@
     <!-- ##################### --> 
 
     <!-- Plugin for rotor 0 -->
-    <plugin filename="ignition-gazebo-lift-drag-system"
-        name="gz::sim::systems::LiftDrag">
+      <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
         <a0>.1</a0>          <!-- -10° -->
         <cla>.1</cla>
         <cda>0.001</cda>
@@ -354,11 +427,11 @@
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
         <forward>0 1 0</forward>
-        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <upward>0 0 -1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_0</link_name>
       </plugin>
-    <plugin filename="ignition-gazebo-lift-drag-system"
-        name="gz::sim::systems::LiftDrag">
+      <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
         <a0>.1</a0>          <!-- -10° -->
         <cla>.1</cla>
         <cda>0.001</cda>
@@ -367,11 +440,11 @@
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
         <forward>-0.866 -0.5 0</forward>
-        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <upward>0 0 -1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_0</link_name>
       </plugin>
-      <plugin filename="ignition-gazebo-lift-drag-system"
-        name="gz::sim::systems::LiftDrag">
+      <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
         <a0>.1</a0>          <!-- -10° -->
         <cla>.1</cla>
         <cda>0.001</cda>
@@ -380,14 +453,14 @@
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
         <forward>0.866 -0.5 0</forward>
-        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <upward>0 0 -1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_0</link_name>
       </plugin>
 
 
     <!-- Plugin for rotor 1 -->
-    <plugin filename="ignition-gazebo-lift-drag-system"
-        name="gz::sim::systems::LiftDrag">
+      <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
         <a0>.1</a0>          <!-- -10° -->
         <cla>.1</cla>
         <cda>0.001</cda>
@@ -396,11 +469,11 @@
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
         <forward>0 1 0</forward>
-        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <upward>0 0 -1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_1</link_name>
       </plugin>
-    <plugin filename="ignition-gazebo-lift-drag-system"
-        name="gz::sim::systems::LiftDrag">
+      <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
         <a0>.1</a0>          <!-- -10° -->
         <cla>.1</cla>
         <cda>0.001</cda>
@@ -409,11 +482,11 @@
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
         <forward>-0.866 -0.5 0</forward>
-        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <upward>0 0 -1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_1</link_name>
       </plugin>
-      <plugin filename="ignition-gazebo-lift-drag-system"
-        name="gz::sim::systems::LiftDrag">
+      <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
         <a0>.1</a0>          <!-- -10° -->
         <cla>.1</cla>
         <cda>0.001</cda>
@@ -422,14 +495,14 @@
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
         <forward>0.866 -0.5 0</forward>
-        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <upward>0 0 -1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_1</link_name>
       </plugin>
 
 
     <!-- Plugin for rotor 2 -->
-    <plugin filename="ignition-gazebo-lift-drag-system"
-        name="gz::sim::systems::LiftDrag">
+      <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
         <a0>.1</a0>          <!-- -10° -->
         <cla>.1</cla>
         <cda>0.001</cda>
@@ -438,11 +511,11 @@
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
         <forward>0 -1 0</forward>
-        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <upward>0 0 -1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_2</link_name>
       </plugin>
-    <plugin filename="ignition-gazebo-lift-drag-system"
-        name="gz::sim::systems::LiftDrag">
+      <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
         <a0>.1</a0>          <!-- -10° -->
         <cla>.1</cla>
         <cda>0.001</cda>
@@ -451,11 +524,11 @@
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
         <forward>0.866 -0.5 0</forward>
-        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <upward>0 0 -1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_2</link_name>
       </plugin>
-      <plugin filename="ignition-gazebo-lift-drag-system"
-        name="gz::sim::systems::LiftDrag">
+      <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
         <a0>.1</a0>          <!-- -10° -->
         <cla>.1</cla>
         <cda>0.001</cda>
@@ -464,13 +537,13 @@
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
         <forward>-0.866 0.5 0</forward>
-        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <upward>0 0 -1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_2</link_name>
       </plugin>
 
     <!-- Plugin for rotor 3 -->
-      <plugin filename="ignition-gazebo-lift-drag-system"
-        name="gz::sim::systems::LiftDrag">
+      <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
         <a0>.1</a0>          <!-- -10° -->
         <cla>.1</cla>
         <cda>0.001</cda>
@@ -479,11 +552,11 @@
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
         <forward>0 -1 0</forward>
-        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <upward>0 0 -1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_2</link_name>
       </plugin>
-    <plugin filename="ignition-gazebo-lift-drag-system"
-        name="gz::sim::systems::LiftDrag">
+      <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
         <a0>.1</a0>          <!-- -10° -->
         <cla>.1</cla>
         <cda>0.001</cda>
@@ -492,11 +565,11 @@
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
         <forward>0.686 -0.5 0</forward>
-        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <upward>0 0 -1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_2</link_name>
       </plugin>
-      <plugin filename="ignition-gazebo-lift-drag-system"
-        name="gz::sim::systems::LiftDrag">
+      <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
         <a0>.1</a0>          <!-- -10° -->
         <cla>.1</cla>
         <cda>0.001</cda>
@@ -505,7 +578,7 @@
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
         <forward>-0.866 0.5 0</forward>
-        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <upward>0 0 -1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_2</link_name>
       </plugin>
 
@@ -521,7 +594,7 @@
       <lock_step>1</lock_step>
 
       <!-- Conversión de coordenadas -->
-      <modelXYZToAirplaneXForwardZDown degrees="true">0 0 0 0 180 0</modelXYZToAirplaneXForwardZDown>
+      <modelXYZToAirplaneXForwardZDown degrees="true">0 0 0 180 0 0</modelXYZToAirplaneXForwardZDown>
       <gazeboXYZToNED degrees="true">0 0 0 180 0 0</gazeboXYZToNED>
 
       
