@@ -135,7 +135,60 @@
         </ode>
       </physics>
     </joint>
-    
+
+    <link name="camera_link">
+      <pose>0.05 0 0.06 0 0 0</pose>
+      <inertial>
+        <mass>0.1</mass>
+        <inertia>
+          <ixx>0.000166667</ixx>
+          <iyy>0.000166667</iyy>
+          <izz>0.000166667</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.05</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.05</size>
+          </box>
+        </geometry>
+      </visual>
+      <sensor name="left_camera" type="camera">
+        <pose>0 0.05 0 0 0 0</pose>
+        <camera>
+          <image>
+            <width>640</width>
+            <height>480</height>
+            <format>R8G8B8</format>
+          </image>
+        </camera>
+      </sensor>
+      <sensor name="right_camera" type="camera">
+        <pose>0 -0.05 0 0 0 0</pose>
+        <camera>
+          <image>
+            <width>640</width>
+            <height>480</height>
+            <format>R8G8B8</format>
+          </image>
+        </camera>
+      </sensor>
+    </link>
+    <joint name="camera_joint" type="fixed">
+      <!-- El link padre corresponde a la parte principal del dron -->
+      <parent>dron_base_link</parent>
+      <!-- El link hijo es la cámara -->
+      <child>camera_link</child>
+      <!-- Pose en caso de que requieras ajustar la posición del joint -->
+      <pose>0 0 0 0 0 0</pose>
+    </joint>
     
     <!-- ##### ROTORES ##### -->
     <!-- rotor_0 -->
