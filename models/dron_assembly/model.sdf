@@ -35,11 +35,6 @@
           <diffuse>0.1 0.1 0.1 1.0</diffuse>
           <specular>0.01 0.01 0.01 1.0</specular>
           <emissive>0 0 0 0</emissive>
-        </material><material>
-          <ambient>0.1 0.1 0.1 1.0</ambient>
-          <diffuse>0.1 0.1 0.1 1.0</diffuse>
-          <specular>0.01 0.01 0.01 1.0</specular>
-          <emissive>0 0 0 0</emissive>
         </material>
         <geometry>
           <mesh>
@@ -164,36 +159,49 @@
         <pose>0 0.05 0 0 0 0</pose>
         <camera>
           <image>
-            <width>640</width>
-            <height>480</height>
+            <width>320</width>
+            <height>240</height>
             <format>R8G8B8</format>
           </image>
+          <clip>
+            <near>0.01</near>
+            <far>100</far>
+          </clip>
         </camera>
+        <always_on>1</always_on>
+        <update_rate>30</update_rate>
+        <visualize>true</visualize>
+        <topic>stereo/left/image_raw</topic>
       </sensor>
       <sensor name="right_camera" type="camera">
         <pose>0 -0.05 0 0 0 0</pose>
         <camera>
           <image>
-            <width>640</width>
-            <height>480</height>
+            <width>320</width>
+            <height>240</height>
             <format>R8G8B8</format>
           </image>
+          <clip>
+            <near>0.01</near>
+            <far>100</far>
+          </clip>
         </camera>
+        <always_on>1</always_on>
+        <update_rate>30</update_rate>
+        <visualize>true</visualize>
+        <topic>stereo/right/image_raw</topic>
       </sensor>
     </link>
     <joint name="camera_joint" type="fixed">
-      <!-- El link padre corresponde a la parte principal del dron -->
       <parent>dron_base_link</parent>
-      <!-- El link hijo es la cámara -->
       <child>camera_link</child>
-      <!-- Pose en caso de que requieras ajustar la posición del joint -->
       <pose>0 0 0 0 0 0</pose>
     </joint>
     
     <!-- ##### ROTORES ##### -->
     <!-- rotor_0 -->
     <link name='rotor_0'>
-      <pose>0.1369949465597693 -0.1409949525282165 0.06699999703797575 0 0 0</pose>
+      <pose>0.14099494913695718 -0.13699494981205615 0.067000004479317 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.018439981901447588</mass>
@@ -261,7 +269,7 @@
     </joint>
     <!-- rotor_1 -->
     <link name='rotor_1'>
-      <pose>-0.1369949534402301 0.1329949474717836 0.06699999703797579 0 0 0</pose>
+      <pose>-0.13299495086304286 0.13699495018794397 0.06700000447931698 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.018439981901447588</mass>
@@ -329,7 +337,7 @@
     </joint>
     <!-- rotor_2 --> 
     <link name='rotor_2'>
-      <pose>0.1369949465597693 0.1409949525282165 0.06699999703797575 0 0 0</pose>
+      <pose>0.14099494913695712 0.13699495018794397 0.06700000447931698 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.018439981901447793</mass>
@@ -397,7 +405,7 @@
     </joint>
     <!-- rotor_3 -->
     <link name='rotor_3'>
-      <pose>-0.1369949534402301 -0.1329949474717836 0.06699999703797579 0 0 0</pose>
+      <pose>-0.1329949508630428 -0.13699494981205615 0.06700000447931702 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.018439981901447793</mass>
@@ -700,8 +708,8 @@
       <lock_step>1</lock_step>
 
       <!-- Conversión de coordenadas -->
-      <modelXYZToAirplaneXForwardZDown degrees="true">0 0 0 180 0 0</modelXYZToAirplaneXForwardZDown>
-      <gazeboXYZToNED degrees="true">0 0 0 180 0 0</gazeboXYZToNED>
+      <modelXYZToAirplaneXForwardZDown degrees="true">0 0 0 180 0 90</modelXYZToAirplaneXForwardZDown>
+      <gazeboXYZToNED degrees="true">0 0 0 180 0 90</gazeboXYZToNED>
 
       
 

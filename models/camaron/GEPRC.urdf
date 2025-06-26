@@ -1,0 +1,419 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="GEPRC">
+<!-- Nuevo link raíz virtual -->
+    <link name="base_link_virtual" />
+
+    <!-- Joint raíz con rotación de 180° sobre eje Y -->
+        <joint name="base_link_joint" type="fixed">
+            <parent link="base_link_virtual" />
+            <child link="Top-Plate-1-1" />
+            <origin xyz="0 0 0" rpy="0 3.141592653589793 0" />
+        </joint>
+    <link name="Standoff-M3x25">
+        <inertial>
+            <origin xyz="0.08226846049538374 0.009500253541188145 -0.011058661383339306" rpy="0.0 -0.0 -1.2154326714572542e-63" />
+            <mass value="0.02418131640159428" />
+            <inertia ixx="4.623561077805947e-06" iyy="9.748509361465768e-05" izz="9.966200800624227e-05" ixy="-7.456041312245593e-10" iyz="-1.7796224272058428e-11" ixz="-1.7917209399355544e-07" />
+        </inertial>
+        <visual name="Standoff-M3x25_visual">
+            <origin xyz="-0.015503393867801023 0.08741157196263587 -0.027499998235572556" rpy="-3.141592653589793 4.274358644806855e-15 3.141592653589793" />
+            <geometry>
+                <mesh filename="meshes/Standoff-M3x25.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Standoff-M3x25_collision">
+            <origin xyz="-0.015503393867801023 0.08741157196263587 -0.027499998235572556" rpy="-3.141592653589793 4.274358644806855e-15 3.141592653589793" />
+            <geometry>
+                <mesh filename="meshes/Standoff-M3x25.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="GEPRC-Mk4-7in-Arms">
+        <inertial>
+            <origin xyz="0.025714065110487534 0.018406166297434492 -0.0024999982354009377" rpy="0.0 -0.0 5.934729841099876e-67" />
+            <mass value="0.2947978551080548" />
+            <inertia ixx="0.0018290558479213863" iyy="0.0015741339299447997" izz="0.0034020015345243328" ixy="4.0056218547279334e-06" iyz="-6.8904300667971255e-15" ixz="5.619636700426866e-15" />
+        </inertial>
+        <visual name="GEPRC-Mk4-7in-Arms_visual">
+            <origin xyz="-0.08575579302857136 0.15492723601622943 -0.007499998235572653" rpy="3.141592653589793 4.302114220422487e-15 3.141592653589793" />
+            <geometry>
+                <mesh filename="meshes/GEPRC-Mk4-7in-Arms.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="GEPRC-Mk4-7in-Arms_collision">
+            <origin xyz="-0.08575579302857136 0.15492723601622943 -0.007499998235572653" rpy="3.141592653589793 4.302114220422487e-15 3.141592653589793" />
+            <geometry>
+                <mesh filename="meshes/GEPRC-Mk4-7in-Arms.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Tail-Plate-1">
+        <inertial>
+            <origin xyz="-0.0006073615503766661 -0.009499961040028345 -0.0010795721337819853" rpy="0.0 -0.0 0.0" />
+            <mass value="0.00401045748668606" />
+            <inertia ixx="2.6820146660864257e-07" iyy="3.907686525582302e-08" izz="3.0395593343971947e-07" ixy="4.5317260144103755e-13" iyz="6.392418739524855e-15" ixz="-1.1064902038235638e-10" />
+        </inertial>
+        <visual name="Tail-Plate-1_visual">
+            <origin xyz="-0.021577013158552562 0.07027498323035443 1.7644272931605088e-09" rpy="-3.141592653589793 4.274358644806854e-15 -3.141592653589793" />
+            <geometry>
+                <mesh filename="meshes/Tail-Plate-1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Tail-Plate-1_collision">
+            <origin xyz="-0.021577013158552562 0.07027498323035443 1.7644272931605088e-09" rpy="-3.141592653589793 4.274358644806854e-15 -3.141592653589793" />
+            <geometry>
+                <mesh filename="meshes/Tail-Plate-1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Chin-Plate-1">
+        <inertial>
+            <origin xyz="0.0045815569612965845 -0.015699996128584744 -0.0011070514733081582" rpy="0.0 -0.0 0.0" />
+            <mass value="0.010151103989685122" />
+            <inertia ixx="1.364183532085372e-06" iyy="3.5909022019645423e-07" izz="1.7147601710280035e-06" ixy="1.7889335846010823e-18" iyz="6.776263578034403e-21" ixz="8.346662301069027e-10" />
+        </inertial>
+        <visual name="Chin-Plate-1_visual">
+            <origin xyz="-0.027515715158101132 -0.09794464320498639 1.764427981498784e-09" rpy="3.141592653589793 4.274358644806854e-15 3.141592653589793" />
+            <geometry>
+                <mesh filename="meshes/Chin-Plate-1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Chin-Plate-1_collision">
+            <origin xyz="-0.027515715158101132 -0.09794464320498639 1.764427981498784e-09" rpy="3.141592653589793 4.274358644806854e-15 3.141592653589793" />
+            <geometry>
+                <mesh filename="meshes/Chin-Plate-1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Top-Plate-1-1">
+        <inertial>
+            <origin xyz="-0.11246099926866888 -0.07457419333267559 -0.0012362895064217214" rpy="0.0 0.0 0.0" />
+            <mass value="0.06480615231676225" />
+            <inertia ixx="5.8832253800728635e-06" iyy="0.00016514186656426354" izz="0.00017095794067810183" ixy="3.143859778210464e-17" iyz="-5.221507819438561e-19" ixz="-1.8463556665152347e-09" />
+        </inertial>
+        <visual name="Top-Plate-1-1_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Top-Plate-1-1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Top-Plate-1-1_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Top-Plate-1-1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Battery-Pad">
+        <inertial>
+            <origin xyz="0.01872533921293652 -0.009999996667311243 -0.0004838455087861441" rpy="0.0 -0.0 0.0" />
+            <mass value="0.010558742556478071" />
+            <inertia ixx="8.990783873384084e-07" iyy="6.043210807396558e-06" izz="6.940614525038803e-06" ixy="3.9031278173397796e-18" iyz="5.257753806753516e-21" ixz="-1.150483013009125e-11" />
+        </inertial>
+        <visual name="Battery-Pad_visual">
+            <origin xyz="-0.0414254729778245 -0.053390368697452395 0.029999998235572457" rpy="-5.2672438891731976e-17 -4.274358644806855e-15 3.141592653589793" />
+            <geometry>
+                <mesh filename="meshes/Battery-Pad.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Battery-Pad_collision">
+            <origin xyz="-0.0414254729778245 -0.053390368697452395 0.029999998235572457" rpy="-5.2672438891731976e-17 -4.274358644806855e-15 3.141592653589793" />
+            <geometry>
+                <mesh filename="meshes/Battery-Pad.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Bottom-Plate-1">
+        <inertial>
+            <origin xyz="0.03217297107489131 0.010000052348631305 -0.0012499982355722227" rpy="-6.842277657836021e-49 -0.0 0.0" />
+            <mass value="0.0932436623447029" />
+            <inertia ixx="1.2354031177415474e-05" iyy="0.00020215774297064557" izz="0.00021441464533311898" ixy="3.949136480069919e-10" iyz="-1.3211207431412704e-36" ixz="-8.6736173798840345e-19" />
+        </inertial>
+        <visual name="Bottom-Plate-1_visual">
+            <origin xyz="-0.08296224606582253 0.07840112017334837 -0.0024999982355727334" rpy="-3.141592653589793 4.274358644806854e-15 -3.141592653589793" />
+            <geometry>
+                <mesh filename="meshes/Bottom-Plate-1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Bottom-Plate-1_collision">
+            <origin xyz="-0.08296224606582253 0.07840112017334837 -0.0024999982355727334" rpy="-3.141592653589793 4.274358644806854e-15 -3.141592653589793" />
+            <geometry>
+                <mesh filename="meshes/Bottom-Plate-1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Arm-Plate-1">
+        <inertial>
+            <origin xyz="-0.0032675168661430833 -0.010000003332669172 -0.0009999982355720061" rpy="-6.747006683667536e-80 -0.0 -7.19105488080722e-94" />
+            <mass value="0.007544696663050475" />
+            <inertia ixx="1.6516667277881806e-06" iyy="1.2224140240465423e-07" izz="1.7688783324175672e-06" ixy="2.0910240413394175e-56" iyz="7.61986064337318e-70" ixz="-6.7762635780344005e-21" />
+        </inertial>
+        <visual name="Arm-Plate-1_visual">
+            <origin xyz="-0.03820399434949824 -0.05627386021150167 -0.009499998235572153" rpy="3.141592653589793 4.274358644806855e-15 3.141592653589793" />
+            <geometry>
+                <mesh filename="meshes/Arm-Plate-1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Arm-Plate-1_collision">
+            <origin xyz="-0.03820399434949824 -0.05627386021150167 -0.009499998235572153" rpy="3.141592653589793 4.274358644806855e-15 3.141592653589793" />
+            <geometry>
+                <mesh filename="meshes/Arm-Plate-1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Arm-Plate-2">
+        <inertial>
+            <origin xyz="0.0032675256136604604 -0.010000003332669127 -0.0009999982355722325" rpy="-6.747006683667536e-80 -0.0 -7.19105488080722e-94" />
+            <mass value="0.007544696663050468" />
+            <inertia ixx="1.6516667277881941e-06" iyy="1.222414024049795e-07" izz="1.768878332417513e-06" ixy="-2.7105054312137608e-20" iyz="1.6940658945086005e-21" ixz="-9.246365253029183e-38" />
+        </inertial>
+        <visual name="Arm-Plate-2_visual">
+            <origin xyz="-0.029389435996458744 0.004911581435459036 -0.009499998235572371" rpy="-3.141592653589793 4.440892098500632e-15 3.141592653589793" />
+            <geometry>
+                <mesh filename="meshes/Arm-Plate-2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Arm-Plate-2_collision">
+            <origin xyz="-0.029389435996458744 0.004911581435459036 -0.009499998235572371" rpy="-3.141592653589793 4.440892098500632e-15 3.141592653589793" />
+            <geometry>
+                <mesh filename="meshes/Arm-Plate-2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="MOTOR_2207-1">
+        <inertial>
+            <origin xyz="-3.445192895412674e-09 1.4280564109014904e-09 -0.010196165434154487" rpy="-6.842277657836021e-49 -0.0 0.0" />
+            <mass value="0.02166445211752593" />
+            <inertia ixx="1.4216377839388395e-06" iyy="1.4216377839317176e-06" izz="2.0339490705058045e-06" ixy="-2.8460307027744484e-18" iyz="-4.624799892008479e-19" ixz="1.280713816248502e-18" />
+        </inertial>
+        <visual name="MOTOR_2207-1_visual">
+            <origin xyz="0.2102113706186355 -0.03601277015862602 -0.002500001764428239" rpy="3.141592653589792 -2.607077904744713e-16 -0.34906585039886584" />
+            <geometry>
+                <mesh filename="meshes/MOTOR_2207-1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="MOTOR_2207-1_collision">
+            <origin xyz="0.2102113706186355 -0.03601277015862602 -0.002500001764428239" rpy="3.141592653589792 -2.607077904744713e-16 -0.34906585039886584" />
+            <geometry>
+                <mesh filename="meshes/MOTOR_2207-1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="MOTOR_2207-2">
+        <inertial>
+            <origin xyz="3.6585396401278558e-09 -4.0322748873222735e-09 -0.010196165434153661" rpy="-6.842277657836021e-49 -0.0 0.0" />
+            <mass value="0.021664452117525917" />
+            <inertia ixx="1.4216377839396323e-06" iyy="1.421637783929983e-06" izz="2.033949070505154e-06" ixy="6.505213034913025e-19" iyz="-1.2535178945309014e-38" ixz="1.382357769919018e-18" />
+        </inertial>
+        <visual name="MOTOR_2207-2_visual">
+            <origin xyz="0.2098511739712172 0.038055584539667606 -0.002500001764427462" rpy="-3.141592653589792 5.198836442107503e-16 1.1102230246251607e-16" />
+            <geometry>
+                <mesh filename="meshes/MOTOR_2207-2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="MOTOR_2207-2_collision">
+            <origin xyz="0.2098511739712172 0.038055584539667606 -0.002500001764427462" rpy="-3.141592653589792 5.198836442107503e-16 1.1102230246251607e-16" />
+            <geometry>
+                <mesh filename="meshes/MOTOR_2207-2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="MOTOR_2207-3">
+        <inertial>
+            <origin xyz="3.994110642224768e-09 3.2739057687081187e-09 0.010196165434154483" rpy="-6.842277657836021e-49 -0.0 0.0" />
+            <mass value="0.02166445211752593" />
+            <inertia ixx="1.4216377839397407e-06" iyy="1.4216377839307418e-06" izz="2.0339490705055877e-06" ixy="-3.2526065174565123e-19" iyz="6.776263578034402e-21" ixz="-1.3620289791849148e-18" />
+        </inertial>
+        <visual name="MOTOR_2207-3_visual">
+            <origin xyz="0.20985117430678824 -0.038055585298036654 0.002500001764428288" rpy="1.3844570713198609e-15 -5.063369740390466e-16 1.6653345369377314e-16" />
+            <geometry>
+                <mesh filename="meshes/MOTOR_2207-3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="MOTOR_2207-3_collision">
+            <origin xyz="0.20985117430678824 -0.038055585298036654 0.002500001764428288" rpy="1.3844570713198609e-15 -5.063369740390466e-16 1.6653345369377314e-16" />
+            <geometry>
+                <mesh filename="meshes/MOTOR_2207-3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="MOTOR_2207-4">
+        <inertial>
+            <origin xyz="-3.780763222493988e-09 6.696888421586777e-10 -0.01019616543415363" rpy="0.0 -0.0 0.0" />
+            <mass value="0.02166445211752593" />
+            <inertia ixx="1.4216377839397746e-06" iyy="1.4216377839304166e-06" izz="2.0339490705055877e-06" ixy="2.7105054312137606e-19" iyz="-5.066673718076749e-21" ixz="1.3552942521776788e-18" />
+        </inertial>
+        <visual name="MOTOR_2207-4_visual">
+            <origin xyz="0.2098511665319143 0.038055589241631264 -0.0025000017644274397" rpy="-3.141592653589792 5.096508438980311e-16 1.1102230246251602e-16" />
+            <geometry>
+                <mesh filename="meshes/MOTOR_2207-4.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="MOTOR_2207-4_collision">
+            <origin xyz="0.2098511665319143 0.038055589241631264 -0.0025000017644274397" rpy="-3.141592653589792 5.096508438980311e-16 1.1102230246251602e-16" />
+            <geometry>
+                <mesh filename="meshes/MOTOR_2207-4.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Helice_CCW_1-1">
+        <inertial>
+            <origin xyz="2.7637265276325706e-09 -2.6832032817836193e-08 -0.005990108723370843" rpy="0.0 -0.0 -1.5151749180302728e-49" />
+            <mass value="0.018439981901447588" />
+            <inertia ixx="2.2682595641485032e-05" iyy="2.2682593734411893e-05" izz="4.521167580913508e-05" ixy="-4.360944168713826e-12" iyz="1.5944499687766652e-12" ixz="-8.803186049978416e-13" />
+        </inertial>
+        <visual name="Helice_CCW_1-1_visual">
+            <origin xyz="-3.780767769967497e-09 6.696888732449224e-10 0.0004999982355726062" rpy="-3.1415926535897922 -1.5252556162526078e-15 1.110223024625133e-16" />
+            <geometry>
+                <mesh filename="meshes/Helice_CCW_1-1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Helice_CCW_1-1_collision">
+            <origin xyz="-3.780767769967497e-09 6.696888732449224e-10 0.0004999982355726062" rpy="-3.1415926535897922 -1.5252556162526078e-15 1.110223024625133e-16" />
+            <geometry>
+                <mesh filename="meshes/Helice_CCW_1-1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Helice_CCW_1-2">
+        <inertial>
+            <origin xyz="1.0538600516696306e-08 -3.077562752196173e-08 -0.006490108723371685" rpy="0.0 -0.0 0.0" />
+            <mass value="0.018439981901447588" />
+            <inertia ixx="2.2682595641485026e-05" iyy="2.268259373441135e-05" izz="4.5211675809134644e-05" ixy="-4.3609440060835e-12" iyz="1.594449968348266e-12" ixz="-8.803186379073495e-13" />
+        </inertial>
+        <visual name="Helice_CCW_1-2_visual">
+            <origin xyz="3.994106219096239e-09 -3.2739058397623924e-09 -1.7644282357398566e-09" rpy="-3.1415926535897922 -2.9533667178505137e-15 -1.1102230246252017e-16" />
+            <geometry>
+                <mesh filename="meshes/Helice_CCW_1-2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Helice_CCW_1-2_collision">
+            <origin xyz="3.994106219096239e-09 -3.2739058397623924e-09 -1.7644282357398566e-09" rpy="-3.1415926535897922 -2.9533667178505137e-15 -1.1102230246252017e-16" />
+            <geometry>
+                <mesh filename="meshes/Helice_CCW_1-2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Helice_CW_1-1">
+        <inertial>
+            <origin xyz="-1.900115288222537e-08 -2.2176758083247705e-08 -0.0059901087233716855" rpy="0.0 -0.0 0.0" />
+            <mass value="0.018439981901447793" />
+            <inertia ixx="2.2682598221564368e-05" iyy="2.26825911543407e-05" izz="4.521167580913638e-05" ixy="2.7277557925094176e-12" iyz="1.1972062675333908e-12" ixz="1.3725628663630138e-12" />
+        </inertial>
+        <visual name="Helice_CW_1-1_visual">
+            <origin xyz="-3.4451970876148153e-09 1.4280580051817537e-09 0.0004999982355717625" rpy="3.1415926535897922 2.0679535435126135e-16 -0.3490658503988659" />
+            <geometry>
+                <mesh filename="meshes/Helice_CW_1-1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Helice_CW_1-1_collision">
+            <origin xyz="-3.4451970876148153e-09 1.4280580051817537e-09 0.0004999982355717625" rpy="3.1415926535897922 2.0679535435126135e-16 -0.3490658503988659" />
+            <geometry>
+                <mesh filename="meshes/Helice_CW_1-1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Helice_CW_1-2">
+        <inertial>
+            <origin xyz="-2.8859590628371734e-09 3.1533996605048745e-08 0.00599010872337086" rpy="0.0 -0.0 0.0" />
+            <mass value="0.018439981901447793" />
+            <inertia ixx="2.2682595641488603e-05" iyy="2.268259373441623e-05" izz="4.521167580913638e-05" ixy="-4.3609441145037176e-12" iyz="1.5944499789064432e-12" ixz="-8.803185650838768e-13" />
+        </inertial>
+        <visual name="Helice_CW_1-2_visual">
+            <origin xyz="3.658535234762894e-09 4.0322748873222735e-09 -0.0004999982355725885" rpy="1.6985217839772905e-15 -1.4420973096229679e-15 -1.1102230246251738e-16" />
+            <geometry>
+                <mesh filename="meshes/Helice_CW_1-2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Helice_CW_1-2_collision">
+            <origin xyz="3.658535234762894e-09 4.0322748873222735e-09 -0.0004999982355725885" rpy="1.6985217839772905e-15 -1.4420973096229679e-15 -1.1102230246251738e-16" />
+            <geometry>
+                <mesh filename="meshes/Helice_CW_1-2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Top-Plate-1-1_Rígida-2" type="fixed">
+        <origin xyz="-0.07998583375787924 -0.08457418999999995 -0.0024999982355722768" rpy="-2.5524079343054026e-17 -4.149458554536531e-15 3.141592653589793" />
+        <parent link="Top-Plate-1-1" />
+        <child link="Battery-Pad" />
+    </joint>
+    <joint name="Top-Plate-1-1_Rígida-3" type="fixed">
+        <origin xyz="-0.02757447375787926 -0.08407418999999995 1.7644275102091102e-09" rpy="3.141592653589793 -4.149458554536531e-15 3.141592653589793" />
+        <parent link="Top-Plate-1-1" />
+        <child link="Standoff-M3x25" />
+    </joint>
+    <joint name="Standoff-M3x25_Rígida-5" type="fixed">
+        <origin xyz="0.052411359999999976 0.01950000000000001 -0.018" rpy="-4.930380657631326e-32 8.758115402030109e-47 -1.0436962727771443e-47" />
+        <parent link="Standoff-M3x25" />
+        <child link="Arm-Plate-2" />
+    </joint>
+    <joint name="Standoff-M3x25_Rígida-6" type="fixed">
+        <origin xyz="0.12241135999999998 0.01950000000000001 -0.018" rpy="-4.930380657631326e-32 8.758115402030109e-47 -1.0436962727771443e-47" />
+        <parent link="Standoff-M3x25" />
+        <child link="Arm-Plate-1" />
+    </joint>
+    <joint name="Arm-Plate-2_Rígida-7" type="fixed">
+        <origin xyz="0.009000000000000057 -0.028000000000000008 -0.0020000000000000018" rpy="-1.604155006005358e-64 -7.88860905221012e-31 -1.761241279487804e-49" />
+        <parent link="Arm-Plate-2" />
+        <child link="GEPRC-Mk4-7in-Arms" />
+    </joint>
+    <joint name="GEPRC-Mk4-7in-Arms_Rígida-8" type="fixed">
+        <origin xyz="-0.009124539999999967 0.007857640000000004 -0.005" rpy="-6.162975822039155e-33 -0.0 -6.7916057928071095e-49" />
+        <parent link="GEPRC-Mk4-7in-Arms" />
+        <child link="Bottom-Plate-1" />
+    </joint>
+    <joint name="Bottom-Plate-1_Rígida-9" type="fixed">
+        <origin xyz="-0.052411369999999985 0.019500000000000003 -0.0025" rpy="6.162975822039155e-33 3.512026933326015e-81 -5.698589504061991e-49" />
+        <parent link="Bottom-Plate-1" />
+        <child link="Tail-Plate-1" />
+    </joint>
+    <joint name="Bottom-Plate-1_Rígida-10" type="fixed">
+        <origin xyz="0.10400000000000002 0.025700000000000004 -0.0025" rpy="6.162975822039155e-33 3.512026933326015e-81 -5.698589504061991e-49" />
+        <parent link="Bottom-Plate-1" />
+        <child link="Chin-Plate-1" />
+    </joint>
+    <joint name="GEPRC-Mk4-7in-Arms_Rígida-11" type="fixed">
+        <origin xyz="0.12086534000000003 0.13062978 0.0" rpy="3.141592653589793 -0.0 -6.7916057928071095e-49" />
+        <parent link="GEPRC-Mk4-7in-Arms" />
+        <child link="MOTOR_2207-1" />
+    </joint>
+    <joint name="GEPRC-Mk4-7in-Arms_Rígida-13" type="fixed">
+        <origin xyz="0.12434341000000002 -0.09077329999999999 0.0" rpy="-6.162975822039155e-33 -0.0 -6.7916057928071095e-49" />
+        <parent link="GEPRC-Mk4-7in-Arms" />
+        <child link="MOTOR_2207-3" />
+    </joint>
+    <joint name="GEPRC-Mk4-7in-Arms_Rígida-14" type="fixed">
+        <origin xyz="-0.07291528 0.12758563 0.0" rpy="-3.141592653589793 -0.0 -6.7916057928071095e-49" />
+        <parent link="GEPRC-Mk4-7in-Arms" />
+        <child link="MOTOR_2207-4" />
+    </joint>
+    <joint name="GEPRC-Mk4-7in-Arms_Rígida-15" type="fixed">
+        <origin xyz="-0.06943720999999997 -0.09381745000000001 0.0" rpy="3.141592653589793 -0.0 -6.7916057928071095e-49" />
+        <parent link="GEPRC-Mk4-7in-Arms" />
+        <child link="MOTOR_2207-2" />
+    </joint>
+    <joint name="MOTOR_2207-3_Revolución-16" type="continuous">
+        <origin xyz="1.7763568394002505e-17 0.0 0.016" rpy="-3.141592653589793 -7.001465225893381e-65 1.136052684298345e-32" />
+        <parent link="MOTOR_2207-3" />
+        <child link="Helice_CCW_1-2" />
+        <axis xyz="0.0 1.0261050920796414e-18 1.0" />
+    </joint>
+    <joint name="MOTOR_2207-4_Revolución-17" type="continuous">
+        <origin xyz="0.0 4.440892098500626e-18 -0.016" rpy="-2.3816491165433138e-17 9.860761315262648e-32 1.6925679424054655e-32" />
+        <parent link="MOTOR_2207-4" />
+        <child link="Helice_CCW_1-1" />
+        <axis xyz="-9.860761315262648e-32 1.536569915433467e-18 1.0" />
+    </joint>
+    <joint name="MOTOR_2207-1_Revolución-18" type="continuous">
+        <origin xyz="1.7763568394002505e-17 4.440892098500626e-18 -0.016" rpy="1.2327617488805125e-18 2.3736542806497784e-63 -3.851474270207997e-31" />
+        <parent link="MOTOR_2207-1" />
+        <child link="Helice_CW_1-1" />
+        <axis xyz="0.0 1.2327617488805063e-18 1.0" />
+    </joint>
+    <joint name="MOTOR_2207-2_Revolución-19" type="continuous">
+        <origin xyz="0.0 0.0 -0.016" rpy="-3.141592653589793 1.7587468522660338e-65 -2.85372992374342e-33" />
+        <parent link="MOTOR_2207-2" />
+        <child link="Helice_CW_1-2" />
+        <axis xyz="0.0 0.0 1.0" />
+    </joint>
+</robot>

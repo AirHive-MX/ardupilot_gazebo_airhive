@@ -1,0 +1,877 @@
+<sdf version='1.9'>
+  <model name='camaron'>
+    <pose>0 0 0 0 0 0</pose>
+    <link name="base_link_virtual"/>
+    <link name="Standoff-M3x25">
+      <pose>-0.02757447375787926 -0.08407418999999995 1.7644275102091102e-09 3.141592653589793 0 3.141592653589793</pose>
+      <inertial>
+        <mass>0.02418131640159428</mass>
+        <pose>0.08226846049538374 0.009500253541188145 -0.011058661383339306 0.0 -0.0 -1.2154326714572542e-63</pose>
+        <inertia>
+          <ixx>4.623561077805947e-06</ixx>
+          <ixy>-7.456041312245593e-10</ixy>
+          <ixz>-1.7917209399355544e-07</ixz>
+          <iyy>9.748509361465768e-05</iyy>
+          <iyz>-1.7796224272058428e-11</iyz>
+          <izz>9.966200800624227e-05</izz>
+        </inertia>
+      </inertial>
+      <visual name="Standoff-M3x25_visual">
+        <geometry>
+          <mesh>
+            <uri>meshes/Standoff-M3x25.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1.0</ambient>
+          <diffuse>0.1 0.1 0.1 1.0</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="Standoff-M3x25_collision">
+        <geometry>
+          <mesh>
+            <uri>meshes/Standoff-M3x25.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="GEPRC-Mk4-7in-Arms">
+      <pose>0.009000000000000057 -0.028000000000000008 -0.0020000000000000018 0 0 0</pose>
+      <inertial>
+        <mass>0.2947978551080548</mass>
+        <pose>0.025714065110487534 0.018406166297434492 -0.0024999982354009377 0.0 -0.0 5.934729841099876e-67</pose>
+        <inertia>
+          <ixx>0.0018290558479213863</ixx>
+          <ixy>4.0056218547279334e-06</ixy>
+          <ixz>5.619636700426866e-15</ixz>
+          <iyy>0.0015741339299447997</iyy>
+          <iyz>-6.8904300667971255e-15</iyz>
+          <izz>0.0034020015345243328</izz>
+        </inertia>
+      </inertial>
+      <visual name="GEPRC-Mk4-7in-Arms_visual">
+        <geometry>
+          <mesh>
+            <uri>meshes/GEPRC-Mk4-7in-Arms.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1.0</ambient>
+          <diffuse>0.1 0.1 0.1 1.0</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="GEPRC-Mk4-7in-Arms_collision">
+        <geometry>
+          <mesh>
+            <uri>meshes/GEPRC-Mk4-7in-Arms.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="Tail-Plate-1">
+      <pose>-0.052411369999999985 0.019500000000000003 -0.0025 0 0 0</pose>
+      <inertial>
+        <mass>0.00401045748668606</mass>
+        <pose>-0.0006073615503766661 -0.009499961040028345 -0.0010795721337819853 0.0 -0.0 0.0</pose>
+        <inertia>
+          <ixx>2.6820146660864257e-07</ixx>
+          <ixy>4.5317260144103755e-13</ixy>
+          <ixz>-1.1064902038235638e-10</ixz>
+          <iyy>3.907686525582302e-08</iyy>
+          <iyz>6.392418739524855e-15</iyz>
+          <izz>3.0395593343971947e-07</izz>
+        </inertia>
+      </inertial>
+      <visual name="Tail-Plate-1_visual">
+        <geometry>
+          <mesh>
+            <uri>meshes/Tail-Plate-1.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1.0</ambient>
+          <diffuse>0.1 0.1 0.1 1.0</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="Tail-Plate-1_collision">
+        <geometry>
+          <mesh>
+            <uri>meshes/Tail-Plate-1.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="Chin-Plate-1">
+      <pose>0.10400000000000002 0.025700000000000004 -0.0025 0 0 0</pose>
+      <inertial>
+        <mass>0.010151103989685122</mass>
+        <pose>0.0045815569612965845 -0.015699996128584744 -0.0011070514733081582 0.0 -0.0 0.0</pose>
+        <inertia>
+          <ixx>1.364183532085372e-06</ixx>
+          <ixy>1.7889335846010823e-18</ixy>
+          <ixz>8.346662301069027e-10</ixz>
+          <iyy>3.5909022019645423e-07</iyy>
+          <iyz>6.776263578034403e-21</iyz>
+          <izz>1.7147601710280035e-06</izz>
+        </inertia>
+      </inertial>
+      <visual name="Chin-Plate-1_visual">
+        <geometry>
+          <mesh>
+            <uri>meshes/Chin-Plate-1.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1.0</ambient>
+          <diffuse>0.1 0.1 0.1 1.0</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="Chin-Plate-1_collision">
+        <geometry>
+          <mesh>
+            <uri>meshes/Chin-Plate-1.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="Top-Plate-1-1">
+      <pose>0.07998583375787924 0.08457418999999995 -0.0024999982355722768 0 0 0</pose>
+      <inertial>
+        <mass>0.06480615231676225</mass>
+        <pose>-0.11246099926866888 -0.07457419333267559 -0.0012362895064217214 0.0 0.0 0.0</pose>
+        <inertia>
+          <ixx>5.8832253800728635e-06</ixx>
+          <ixy>3.143859778210464e-17</ixy>
+          <ixz>-1.8463556665152347e-09</ixz>
+          <iyy>0.00016514186656426354</iyy>
+          <iyz>-5.221507819438561e-19</iyz>
+          <izz>0.00017095794067810183</izz>
+        </inertia>
+      </inertial>
+      <visual name="Top-Plate-1-1_visual">
+        <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Top-Plate-1-1.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1.0</ambient>
+          <diffuse>0.1 0.1 0.1 1.0</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="Top-Plate-1-1_collision">
+        <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Top-Plate-1-1.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="Battery-Pad">
+    <pose>-0.07998583375787924 -0.08457418999999995 -0.0024999982355722768 0 0 3.1415926535897930</pose>
+      <inertial>
+        <mass>0.010558742556478071</mass>
+        <pose>0.01872533921293652 -0.009999996667311243 -0.0004838455087861441 0.0 -0.0 0.0</pose>
+        <inertia>
+          <ixx>8.990783873384084e-07</ixx>
+          <ixy>3.9031278173397796e-18</ixy>
+          <ixz>-1.150483013009125e-11</ixz>
+          <iyy>6.043210807396558e-06</iyy>
+          <iyz>5.257753806753516e-21</iyz>
+          <izz>6.940614525038803e-06</izz>
+        </inertia>
+      </inertial>
+      <visual name="Battery-Pad_visual">
+        <geometry>
+          <mesh>
+            <uri>meshes/Battery-Pad.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1.0</ambient>
+          <diffuse>0.1 0.1 0.1 1.0</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="Battery-Pad_collision">
+        <geometry>
+          <mesh>
+            <uri>meshes/Battery-Pad.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="Bottom-Plate-1">
+    <pose>-0.009124539999999967 0.007857640000000004 -0.005 0 0 0</pose>
+      <inertial>
+        <mass>0.0932436623447029</mass>
+        <pose>0.03217297107489131 0.010000052348631305 -0.0012499982355722227 -6.842277657836021e-49 -0.0 0.0</pose>
+        <inertia>
+          <ixx>1.2354031177415474e-05</ixx>
+          <ixy>3.949136480069919e-10</ixy>
+          <ixz>-8.6736173798840345e-19</ixz>
+          <iyy>0.00020215774297064557</iyy>
+          <iyz>-1.3211207431412704e-36</iyz>
+          <izz>0.00021441464533311898</izz>
+        </inertia>
+      </inertial>
+      <visual name="Bottom-Plate-1_visual">
+        <geometry>
+          <mesh>
+            <uri>meshes/Bottom-Plate-1.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1.0</ambient>
+          <diffuse>0.1 0.1 0.1 1.0</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="Bottom-Plate-1_collision">
+        <geometry>
+          <mesh>
+            <uri>meshes/Bottom-Plate-1.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="Arm-Plate-1">
+    <pose>0.12241135999999998 0.01950000000000001 -0.018 0 0 0</pose>
+      <inertial>
+        <mass>0.007544696663050475</mass>
+        <pose>-0.0032675168661430833 -0.010000003332669172 -0.0009999982355720061 -6.747006683667536e-80 -0.0 -7.19105488080722e-94</pose>
+        <inertia>
+          <ixx>1.6516667277881806e-06</ixx>
+          <ixy>2.0910240413394175e-56</ixy>
+          <ixz>-6.7762635780344005e-21</ixz>
+          <iyy>1.2224140240465423e-07</iyy>
+          <iyz>7.61986064337318e-70</iyz>
+          <izz>1.7688783324175672e-06</izz>
+        </inertia>
+      </inertial>
+      <visual name="Arm-Plate-1_visual">
+        <geometry>
+          <mesh>
+            <uri>meshes/Arm-Plate-1.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1.0</ambient>
+          <diffuse>0.1 0.1 0.1 1.0</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="Arm-Plate-1_collision">
+        <geometry>
+          <mesh>
+            <uri>meshes/Arm-Plate-1.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="Arm-Plate-2">
+    <pose>0.052411359999999976 0.01950000000000001 -0.018 0 0 0</pose>
+      <inertial>
+        <mass>0.007544696663050468</mass>
+        <pose>0.0032675256136604604 -0.010000003332669127 -0.0009999982355722325 -6.747006683667536e-80 -0.0 -7.19105488080722e-94</pose>
+        <inertia>
+          <ixx>1.6516667277881941e-06</ixx>
+          <ixy>-2.7105054312137608e-20</ixy>
+          <ixz>-9.246365253029183e-38</ixz>
+          <iyy>1.222414024049795e-07</iyy>
+          <iyz>1.6940658945086005e-21</iyz>
+          <izz>1.768878332417513e-06</izz>
+        </inertia>
+      </inertial>
+      <visual name="Arm-Plate-2_visual">
+        <geometry>
+          <mesh>
+            <uri>meshes/Arm-Plate-2.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1.0</ambient>
+          <diffuse>0.1 0.1 0.1 1.0</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="Arm-Plate-2_collision">
+        <geometry>
+          <mesh>
+            <uri>meshes/Arm-Plate-2.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="MOTOR_2207-1">
+    <pose>0.12086534000000003 0.13062978 0 0 0 0</pose>
+      <inertial>
+        <mass>0.02166445211752593</mass>
+        <pose>1 1 -0.002500001764428239 0 0 0</pose>
+        <inertia>
+          <ixx>1.4216377839388395e-06</ixx>
+          <ixy>-2.8460307027744484e-18</ixy>
+          <ixz>1.280713816248502e-18</ixz>
+          <iyy>1.4216377839317176e-06</iyy>
+          <iyz>-4.624799892008479e-19</iyz>
+          <izz>2.0339490705058045e-06</izz>
+        </inertia>
+      </inertial>
+      <visual name="MOTOR_2207-1_visual">
+        <geometry>
+          <mesh>
+            <uri>meshes/MOTOR_2207-1.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1.0</ambient>
+          <diffuse>0.1 0.1 0.1 1.0</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="MOTOR_2207-1_collision">
+        <geometry>
+          <mesh>
+            <uri>meshes/MOTOR_2207-1.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="MOTOR_2207-2">
+      <inertial>
+        <mass>0.021664452117525917</mass>
+        <pose>3.6585396401278558e-09 -4.0322748873222735e-09 -0.010196165434153661 -6.842277657836021e-49 -0.0 0.0</pose>
+        <inertia>
+          <ixx>1.4216377839396323e-06</ixx>
+          <ixy>6.505213034913025e-19</ixy>
+          <ixz>1.382357769919018e-18</ixz>
+          <iyy>1.421637783929983e-06</iyy>
+          <iyz>-1.2535178945309014e-38</iyz>
+          <izz>2.033949070505154e-06</izz>
+        </inertia>
+      </inertial>
+      <visual name="MOTOR_2207-2_visual">
+        <pose>0.2098511739712172 0.038055584539667606 -0.002500001764427462 -3.141592653589792 5.198836442107503e-16 1.1102230246251607e-16</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/MOTOR_2207-2.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1.0</ambient>
+          <diffuse>0.1 0.1 0.1 1.0</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="MOTOR_2207-2_collision">
+        <pose>0.2098511739712172 0.038055584539667606 -0.002500001764427462 -3.141592653589792 5.198836442107503e-16 1.1102230246251607e-16</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/MOTOR_2207-2.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="MOTOR_2207-3">
+      <inertial>
+        <mass>0.02166445211752593</mass>
+        <pose>3.994110642224768e-09 3.2739057687081187e-09 0.010196165434154483 -6.842277657836021e-49 -0.0 0.0</pose>
+        <inertia>
+          <ixx>1.4216377839397407e-06</ixx>
+          <ixy>-3.2526065174565123e-19</ixy>
+          <ixz>-1.3620289791849148e-18</ixz>
+          <iyy>1.4216377839307418e-06</iyy>
+          <iyz>6.776263578034402e-21</iyz>
+          <izz>2.0339490705055877e-06</izz>
+        </inertia>
+      </inertial>
+      <visual name="MOTOR_2207-3_visual">
+        <pose>0.20985117430678824 -0.038055585298036654 0.002500001764428288 1.3844570713198609e-15 -5.063369740390466e-16 1.6653345369377314e-16</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/MOTOR_2207-3.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1.0</ambient>
+          <diffuse>0.1 0.1 0.1 1.0</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="MOTOR_2207-3_collision">
+        <pose>0.20985117430678824 -0.038055585298036654 0.002500001764428288 1.3844570713198609e-15 -5.063369740390466e-16 1.6653345369377314e-16</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/MOTOR_2207-3.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="MOTOR_2207-4">
+      <inertial>
+        <mass>0.02166445211752593</mass>
+        <pose>-3.780763222493988e-09 6.696888421586777e-10 -0.01019616543415363 0.0 -0.0 0.0</pose>
+        <inertia>
+          <ixx>1.4216377839397746e-06</ixx>
+          <ixy>2.7105054312137606e-19</ixy>
+          <ixz>1.3552942521776788e-18</ixz>
+          <iyy>1.4216377839304166e-06</iyy>
+          <iyz>-5.066673718076749e-21</iyz>
+          <izz>2.0339490705055877e-06</izz>
+        </inertia>
+      </inertial>
+      <visual name="MOTOR_2207-4_visual">
+        <pose>0.2098511665319143 0.038055589241631264 -0.0025000017644274397 -3.141592653589792 5.096508438980311e-16 1.1102230246251602e-16</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/MOTOR_2207-4.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.1 0.1 0.1 1.0</ambient>
+          <diffuse>0.1 0.1 0.1 1.0</diffuse>
+          <specular>0.01 0.01 0.01 1.0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name="MOTOR_2207-4_collision">
+        <pose>0.2098511665319143 0.038055589241631264 -0.0025000017644274397 -3.141592653589792 5.096508438980311e-16 1.1102230246251602e-16</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/MOTOR_2207-4.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="Helice_CCW_1-1">
+      <inertial>
+        <mass>0.018439981901447588</mass>
+        <pose>2.7637265276325706e-09 -2.6832032817836193e-08 -0.005990108723370843 0.0 -0.0 -1.5151749180302728e-49</pose>
+        <inertia>
+          <ixx>2.2682595641485032e-05</ixx>
+          <ixy>-4.360944168713826e-12</ixy>
+          <ixz>-8.803186049978416e-13</ixz>
+          <iyy>2.2682593734411893e-05</iyy>
+          <iyz>1.5944499687766652e-12</iyz>
+          <izz>4.521167580913508e-05</izz>
+        </inertia>
+      </inertial>
+      <visual name="Helice_CCW_1-1_visual">
+        <pose>-3.780767769967497e-09 6.696888732449224e-10 0.0004999982355726062 -3.1415926535897922 -1.5252556162526078e-15 1.110223024625133e-16</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Helice_CCW_1-1.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0 0 1</ambient>
+          <diffuse>0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+      <collision name="Helice_CCW_1-1_collision">
+        <pose>-3.780767769967497e-09 6.696888732449224e-10 0.0004999982355726062 -3.1415926535897922 -1.5252556162526078e-15 1.110223024625133e-16</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Helice_CCW_1-1.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="Helice_CCW_1-2">
+      <inertial>
+        <mass>0.018439981901447588</mass>
+        <pose>1.0538600516696306e-08 -3.077562752196173e-08 -0.006490108723371685 0.0 -0.0 0.0</pose>
+        <inertia>
+          <ixx>2.2682595641485026e-05</ixx>
+          <ixy>-4.3609440060835e-12</ixy>
+          <ixz>-8.803186379073495e-13</ixz>
+          <iyy>2.268259373441135e-05</iyy>
+          <iyz>1.594449968348266e-12</iyz>
+          <izz>4.5211675809134644e-05</izz>
+        </inertia>
+      </inertial>
+      <visual name="Helice_CCW_1-2_visual">
+        <pose>3.994106219096239e-09 -3.2739058397623924e-09 -1.7644282357398566e-09 -3.1415926535897922 -2.9533667178505137e-15 -1.1102230246252017e-16</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Helice_CCW_1-2.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0 0 1</ambient>
+          <diffuse>0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+      <collision name="Helice_CCW_1-2_collision">
+        <pose>3.994106219096239e-09 -3.2739058397623924e-09 -1.7644282357398566e-09 -3.1415926535897922 -2.9533667178505137e-15 -1.1102230246252017e-16</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Helice_CCW_1-2.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="Helice_CW_1-1">
+      <inertial>
+        <mass>0.018439981901447793</mass>
+        <pose>-1.900115288222537e-08 -2.2176758083247705e-08 -0.0059901087233716855 0.0 -0.0 0.0</pose>
+        <inertia>
+          <ixx>2.2682598221564368e-05</ixx>
+          <ixy>2.7277557925094176e-12</ixy>
+          <ixz>1.3725628663630138e-12</ixz>
+          <iyy>2.26825911543407e-05</iyy>
+          <iyz>1.1972062675333908e-12</iyz>
+          <izz>4.521167580913638e-05</izz>
+        </inertia>
+      </inertial>
+      <visual name="Helice_CW_1-1_visual">
+        <pose>-3.4451970876148153e-09 1.4280580051817537e-09 0.0004999982355717625 3.1415926535897922 2.0679535435126135e-16 -0.3490658503988659</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Helice_CW_1-1.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0 0 1</ambient>
+          <diffuse>0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+      <collision name="Helice_CW_1-1_collision">
+        <pose>-3.4451970876148153e-09 1.4280580051817537e-09 0.0004999982355717625 3.1415926535897922 2.0679535435126135e-16 -0.3490658503988659</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Helice_CW_1-1.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="Helice_CW_1-2">
+      <inertial>
+        <mass>0.018439981901447793</mass>
+        <pose>-2.8859590628371734e-09 3.1533996605048745e-08 0.00599010872337086 0.0 -0.0 0.0</pose>
+        <inertia>
+          <ixx>2.2682595641488603e-05</ixx>
+          <ixy>-4.3609441145037176e-12</ixy>
+          <ixz>-8.803185650838768e-13</ixz>
+          <iyy>2.268259373441623e-05</iyy>
+          <iyz>1.5944499789064432e-12</iyz>
+          <izz>4.521167580913638e-05</izz>
+        </inertia>
+      </inertial>
+      <visual name="Helice_CW_1-2_visual">
+        <pose>3.658535234762894e-09 4.0322748873222735e-09 -0.0004999982355725885 1.6985217839772905e-15 -1.4420973096229679e-15 -1.1102230246251738e-16</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Helice_CW_1-2.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0 0 1</ambient>
+          <diffuse>0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+      <collision name="Helice_CW_1-2_collision">
+        <pose>3.658535234762894e-09 4.0322748873222735e-09 -0.0004999982355725885 1.6985217839772905e-15 -1.4420973096229679e-15 -1.1102230246251738e-16</pose>
+        <geometry>
+          <mesh>
+            <uri>meshes/Helice_CW_1-2.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name="base_link_joint" type="fixed">
+      <parent>base_link_virtual</parent>
+      <child>Top-Plate-1-1</child>
+    </joint>
+    <joint name="Top-Plate-1-1_Rígida-2" type="fixed">
+      <parent>Top-Plate-1-1</parent>
+      <child>Battery-Pad</child>
+    </joint>
+    <joint name="Top-Plate-1-1_Rígida-3" type="fixed">
+      <parent>Top-Plate-1-1</parent>
+      <child>Standoff-M3x25</child>
+    </joint>
+    <joint name="Standoff-M3x25_Rígida-5" type="fixed">
+      <parent>Standoff-M3x25</parent>
+      <child>Arm-Plate-2</child>
+    </joint>
+    <joint name="Standoff-M3x25_Rígida-6" type="fixed">
+      <parent>Standoff-M3x25</parent>
+      <child>Arm-Plate-1</child>
+    </joint>
+    <joint name="Arm-Plate-2_Rígida-7" type="fixed">
+      <parent>Arm-Plate-2</parent>
+      <child>GEPRC-Mk4-7in-Arms</child>
+    </joint>
+    <joint name="GEPRC-Mk4-7in-Arms_Rígida-8" type="fixed">
+      <parent>GEPRC-Mk4-7in-Arms</parent>
+      <child>Bottom-Plate-1</child>
+    </joint>
+    <joint name="Bottom-Plate-1_Rígida-9" type="fixed">
+      <parent>Bottom-Plate-1</parent>
+      <child>Tail-Plate-1</child>
+    </joint>
+    <joint name="Bottom-Plate-1_Rígida-10" type="fixed">
+      <parent>Bottom-Plate-1</parent>
+      <child>Chin-Plate-1</child>
+    </joint>
+    <joint name="GEPRC-Mk4-7in-Arms_Rígida-11" type="fixed">
+      <parent>GEPRC-Mk4-7in-Arms</parent>
+      <child>MOTOR_2207-1</child>
+    </joint>
+    <joint name="GEPRC-Mk4-7in-Arms_Rígida-13" type="fixed">
+      <parent>GEPRC-Mk4-7in-Arms</parent>
+      <child>MOTOR_2207-3</child>
+    </joint>
+    <joint name="GEPRC-Mk4-7in-Arms_Rígida-14" type="fixed">
+      <parent>GEPRC-Mk4-7in-Arms</parent>
+      <child>MOTOR_2207-4</child>
+    </joint>
+    <joint name="GEPRC-Mk4-7in-Arms_Rígida-15" type="fixed">
+      <parent>GEPRC-Mk4-7in-Arms</parent>
+      <child>MOTOR_2207-2</child>
+    </joint>
+    <joint name="MOTOR_2207-3_Revolución-16" type="revolute">
+      <parent>MOTOR_2207-3</parent>
+      <child>Helice_CCW_1-2</child>
+      <axis>
+        <xyz>0.0 1.0261050920796414e-18 1.0</xyz>
+      </axis>
+    </joint>
+    <joint name="MOTOR_2207-4_Revolución-17" type="revolute">
+      <parent>MOTOR_2207-4</parent>
+      <child>Helice_CCW_1-1</child>
+      <axis>
+        <xyz>-9.860761315262648e-32 1.536569915433467e-18 1.0</xyz>
+      </axis>
+    </joint>
+    <joint name="MOTOR_2207-1_Revolución-18" type="revolute">
+      <parent>MOTOR_2207-1</parent>
+      <child>Helice_CW_1-1</child>
+      <axis>
+        <xyz>0.0 1.2327617488805063e-18 1.0</xyz>
+      </axis>
+    </joint>
+    <joint name="MOTOR_2207-2_Revolución-19" type="revolute">
+      <parent>MOTOR_2207-2</parent>
+      <child>Helice_CW_1-2</child>
+      <axis>
+        <xyz>0.0 0.0 1.0</xyz>
+      </axis>
+    </joint>
+
+    <link name='iris/ground_truth/odometry_sensorgt_link'>
+      <pose>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>0.15</mass>
+        <inertia>
+          <ixx>0.0001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0002</iyy>
+          <iyz>0</iyz>
+          <izz>0.0002</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='iris/ground_truth/odometry_sensorgt_joint' type='revolute'>
+      <child>iris/ground_truth/odometry_sensorgt_link</child>
+      <parent>base_link_virtual</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <damping>1</damping>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <ode>
+          <implicit_spring_damper>1</implicit_spring_damper>
+        </ode>
+      </physics>
+    </joint>
+    <!-- IMU Sensor Link -->
+    <link name='imu_link'>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>0.15</mass>
+        <inertia>
+          <ixx>0.00001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00002</iyy>
+          <iyz>0</iyz>
+          <izz>0.00002</izz>
+        </inertia>
+      </inertial>
+      <sensor name='imu_sensor' type='imu'>
+        <!-- Déjalo en 0,0,0 si la pose visual ya está arriba -->
+        <pose>0 0 0 3.141593 0 0</pose>
+        <always_on>1</always_on>
+        <update_rate>1000</update_rate>
+      </sensor>
+      <sensor name="mag_sensor" type="magnetometer">
+        <always_on>1</always_on>
+        <update_rate>50</update_rate>
+        <visualize>1</visualize>
+      </sensor>
+    </link>
+    <!-- Fixed Joint: attach IMU to base -->
+    <joint name='base_imu_joint' type='fixed'>
+      <parent>base_link_virtual</parent>
+      <child>imu_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>  
+        <limit> 
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <damping>1</damping>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+      <physics>
+        <ode>
+          <implicit_spring_damper>1</implicit_spring_damper>
+        </ode>
+      </physics>
+    </joint>
+
+    <link name="camera_link">
+      <pose>0.05 0 0.06 0 0 0</pose>
+      <inertial>
+        <mass>0.1</mass>
+        <inertia>
+          <ixx>0.000166667</ixx>
+          <iyy>0.000166667</iyy>
+          <izz>0.000166667</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.05</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.05 0.05 0.05</size>
+          </box>
+        </geometry>
+      </visual>
+      <sensor name="left_camera" type="camera">
+        <pose>0 0.05 0 0 0 0</pose>
+        <camera>
+          <image>
+            <width>320</width>
+            <height>240</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.01</near>
+            <far>100</far>
+          </clip>
+        </camera>
+        <always_on>1</always_on>
+        <update_rate>30</update_rate>
+        <visualize>true</visualize>
+        <topic>stereo/left/image_raw</topic>
+      </sensor>
+      <sensor name="right_camera" type="camera">
+        <pose>0 -0.05 0 0 0 0</pose>
+        <camera>
+          <image>
+            <width>320</width>
+            <height>240</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.01</near>
+            <far>100</far>
+          </clip>
+        </camera>
+        <always_on>1</always_on>
+        <update_rate>30</update_rate>
+        <visualize>true</visualize>
+        <topic>stereo/right/image_raw</topic>
+      </sensor>
+    </link>
+    <joint name="camera_joint" type="fixed">
+      <parent>base_link_virtual</parent>
+      <child>camera_link</child>
+      <pose>0 0 0 0 0 0</pose>
+    </joint>
+ 
+    <static>0</static>
+
+  </model>
+</sdf>
