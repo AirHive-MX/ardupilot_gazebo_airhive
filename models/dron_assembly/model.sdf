@@ -708,8 +708,8 @@
       <lock_step>1</lock_step>
 
       <!-- Conversión de coordenadas -->
-      <modelXYZToAirplaneXForwardZDown degrees="true">0 0 0 180 0 90</modelXYZToAirplaneXForwardZDown>
-      <gazeboXYZToNED degrees="true">0 0 0 180 0 90</gazeboXYZToNED>
+      <modelXYZToAirplaneXForwardZDown degrees="true">0 0 0 180 0 0</modelXYZToAirplaneXForwardZDown>
+      <gazeboXYZToNED degrees="true">0 0 0 180 0 0</gazeboXYZToNED>
 
       
 

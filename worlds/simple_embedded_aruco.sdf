@@ -104,7 +104,7 @@
     </include> -->
 
     <include>
-      <uri>model://camaron</uri> 
+      <uri>model://dron_assembly</uri>
       <pose degrees="true">0 0 0.2 0 0 0</pose>
     </include>
 
