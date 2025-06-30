@@ -4,7 +4,7 @@
         <link name="frame">
             <pose>0.0026949791582304605 0.01728684686758559 -0.010166560751401398 1.040834085586085e-17 -2.220446049250312e-16 8.32667268468868e-17</pose>
             <inertial>
-                <mass>1.09139661687078682</mass>
+                <mass>0.09139661687078682</mass>
                 <pose>-0.0006782484625554659 2.1083214583628293e-05 0.010784022069002287 0.0 0.0 0.0</pose>
                 <inertia>
                     <ixx>0.00034560018218043827</ixx>
@@ -442,7 +442,7 @@
         name="ignition::gazebo::systems::LiftDrag">
         <a0>0.3</a0>
         <alpha_stall>1.4</alpha_stall>
-        <cla>4.25</cla>
+        <cla>2.11</cla>
         <cda>0.10</cda>
         <cma>0.00</cma>
         <cla_stall>-0.025</cla_stall>
@@ -459,7 +459,7 @@
         name="ignition::gazebo::systems::LiftDrag">
         <a0>0.3</a0>
         <alpha_stall>1.4</alpha_stall>
-        <cla>4.25</cla>
+        <cla>2.11</cla>
         <cda>0.10</cda>
         <cma>0.00</cma>
         <cla_stall>-0.025</cla_stall>
@@ -476,7 +476,7 @@
         name="ignition::gazebo::systems::LiftDrag">
         <a0>0.3</a0>
         <alpha_stall>1.4</alpha_stall>
-        <cla>4.25</cla>
+        <cla>2.11</cla>
         <cda>0.10</cda>
         <cma>0.00</cma>
         <cla_stall>-0.025</cla_stall>
@@ -496,7 +496,7 @@
         name="ignition::gazebo::systems::LiftDrag">
         <a0>0.3</a0>
         <alpha_stall>1.4</alpha_stall>
-        <cla>4.25</cla>
+        <cla>2.11</cla>
         <cda>0.10</cda>
         <cma>0.00</cma>
         <cla_stall>-0.025</cla_stall>
@@ -513,7 +513,7 @@
         name="ignition::gazebo::systems::LiftDrag">
         <a0>0.3</a0>
         <alpha_stall>1.4</alpha_stall>
-        <cla>4.25</cla>
+        <cla>2.11</cla>
         <cda>0.10</cda>
         <cma>0.00</cma>
         <cla_stall>-0.025</cla_stall>
@@ -530,7 +530,7 @@
         name="ignition::gazebo::systems::LiftDrag">
         <a0>0.3</a0>
         <alpha_stall>1.4</alpha_stall>
-        <cla>4.25</cla>
+        <cla>2.11</cla>
         <cda>0.10</cda>
         <cma>0.00</cma>
         <cla_stall>-0.025</cla_stall>
@@ -550,7 +550,7 @@
         name="ignition::gazebo::systems::LiftDrag">
         <a0>0.3</a0>
         <alpha_stall>1.4</alpha_stall>
-        <cla>4.25</cla>
+        <cla>2.11</cla>
         <cda>0.10</cda>
         <cma>0.00</cma>
         <cla_stall>-0.025</cla_stall>
@@ -567,7 +567,7 @@
         name="ignition::gazebo::systems::LiftDrag">
         <a0>0.3</a0>
         <alpha_stall>1.4</alpha_stall>
-        <cla>4.25</cla>
+        <cla>2.11</cla>
         <cda>0.10</cda>
         <cma>0.00</cma>
         <cla_stall>-0.025</cla_stall>
@@ -584,7 +584,7 @@
         name="ignition::gazebo::systems::LiftDrag">
         <a0>0.3</a0>
         <alpha_stall>1.4</alpha_stall>
-        <cla>4.25</cla>
+        <cla>2.11</cla>
         <cda>0.10</cda>
         <cma>0.00</cma>
         <cla_stall>-0.025</cla_stall>
@@ -603,7 +603,7 @@
         name="ignition::gazebo::systems::LiftDrag">
         <a0>0.3</a0>
         <alpha_stall>1.4</alpha_stall>
-        <cla>4.25</cla>
+        <cla>2.11</cla>
         <cda>0.10</cda>
         <cma>0.00</cma>
         <cla_stall>-0.025</cla_stall>
@@ -620,7 +620,7 @@
         name="ignition::gazebo::systems::LiftDrag">
         <a0>0.3</a0>
         <alpha_stall>1.4</alpha_stall>
-        <cla>4.25</cla>
+        <cla>2.11</cla>
         <cda>0.10</cda>
         <cma>0.00</cma>
         <cla_stall>-0.025</cla_stall>
@@ -637,7 +637,7 @@
         name="ignition::gazebo::systems::LiftDrag">
         <a0>0.3</a0>
         <alpha_stall>1.4</alpha_stall>
-        <cla>4.25</cla>
+        <cla>2.11</cla>
         <cda>0.10</cda>
         <cma>0.00</cma>
         <cla_stall>-0.025</cla_stall>
@@ -674,7 +674,7 @@
       <control channel="0">
         <jointName>motor_fr_Revolución-8</jointName>
         <useForce>1</useForce>
-        <multiplier>838</multiplier>
+        <multiplier>400</multiplier>
         <offset>0</offset>
         <servo_min>1100</servo_min>
         <servo_max>1900</servo_max>
@@ -693,7 +693,7 @@
       <control channel="1">
         <jointName>motor_rl_Revolución-9</jointName>
         <useForce>1</useForce>
-        <multiplier>838</multiplier>
+        <multiplier>400</multiplier>
         <offset>0</offset>
         <servo_min>1100</servo_min>
         <servo_max>1900</servo_max>
@@ -712,7 +712,7 @@
       <control channel="2">
         <jointName>motor_fl_Revolución-6</jointName>
         <useForce>1</useForce>
-        <multiplier>-838</multiplier>
+        <multiplier>-400</multiplier>
         <offset>0</offset>
         <servo_min>1100</servo_min>
         <servo_max>1900</servo_max>
@@ -731,7 +731,7 @@
       <control channel="3">
         <jointName>motor_rr_Revolución-7</jointName>
         <useForce>1</useForce>
-        <multiplier>-838</multiplier>
+        <multiplier>-400</multiplier>
         <offset>0</offset>
         <servo_min>1100</servo_min>
         <servo_max>1900</servo_max> 
