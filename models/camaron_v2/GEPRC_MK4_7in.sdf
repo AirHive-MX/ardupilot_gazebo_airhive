@@ -4,7 +4,7 @@
         <link name="frame">
             <pose>0.0026949791582304605 0.01728684686758559 -0.010166560751401398 1.040834085586085e-17 -2.220446049250312e-16 8.32667268468868e-17</pose>
             <inertial>
-                <mass>0.09139661687078682</mass>
+                <mass>1.09139661687078682</mass>
                 <pose>-0.0006782484625554659 2.1083214583628293e-05 0.010784022069002287 0.0 0.0 0.0</pose>
                 <inertia>
                     <ixx>0.00034560018218043827</ixx>
@@ -22,6 +22,12 @@
                         <scale>0.001 0.001 0.001</scale>
                     </mesh>
                 </geometry>
+                <material>
+                    <ambient>0.1 0.1 0.1 1.0</ambient>
+                    <diffuse>0.1 0.1 0.1 1.0</diffuse>
+                    <specular>0.01 0.01 0.01 1.0</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
             </visual>
             <collision name="frame_collision">
                 <geometry>
@@ -53,6 +59,12 @@
                         <scale>0.001 0.001 0.001</scale>
                     </mesh>
                 </geometry>
+                <material>
+                    <ambient>0.1 0.1 0.1 1.0</ambient>
+                    <diffuse>0.1 0.1 0.1 1.0</diffuse>
+                    <specular>0.01 0.01 0.01 1.0</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
             </visual>
             <collision name="motor_fr_collision">
                 <geometry>
@@ -84,6 +96,12 @@
                         <scale>0.001 0.001 0.001</scale>
                     </mesh>
                 </geometry>
+                <material>
+                    <ambient>0.1 0.1 0.1 1.0</ambient>
+                    <diffuse>0.1 0.1 0.1 1.0</diffuse>
+                    <specular>0.01 0.01 0.01 1.0</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
             </visual>
             <collision name="motor_fl_collision">
                 <geometry>
@@ -115,6 +133,12 @@
                         <scale>0.001 0.001 0.001</scale>
                     </mesh>
                 </geometry>
+                <material>
+                    <ambient>0.1 0.1 0.1 1.0</ambient>
+                    <diffuse>0.1 0.1 0.1 1.0</diffuse>
+                    <specular>0.01 0.01 0.01 1.0</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
             </visual>
             <collision name="motor_rr_collision">
                 <geometry>
@@ -146,6 +170,12 @@
                         <scale>0.001 0.001 0.001</scale>
                     </mesh>
                 </geometry>
+                <material>
+                    <ambient>0.1 0.1 0.1 1.0</ambient>
+                    <diffuse>0.1 0.1 0.1 1.0</diffuse>
+                    <specular>0.01 0.01 0.01 1.0</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
             </visual>
             <collision name="motor_rl_collision">
                 <geometry>
@@ -177,6 +207,11 @@
                         <scale>0.001 0.001 0.001</scale>
                     </mesh>
                 </geometry>
+                <material>
+                    <ambient>0 0 1</ambient>
+                    <diffuse>0 0 1</diffuse>
+                    <specular>0.1 0.1 0.1 1</specular>
+                </material>
             </visual>
             <collision name="prop_cw_1_collision">
                 <geometry>
@@ -208,6 +243,11 @@
                         <scale>0.001 0.001 0.001</scale>
                     </mesh>
                 </geometry>
+                <material>
+                    <ambient>0 0 1</ambient>
+                    <diffuse>0 0 1</diffuse>
+                    <specular>0.1 0.1 0.1 1</specular>
+                </material>
             </visual>
             <collision name="prop_cw_2_collision">
                 <geometry>
@@ -239,6 +279,11 @@
                         <scale>0.001 0.001 0.001</scale>
                     </mesh>
                 </geometry>
+                <material>
+                    <ambient>0 0 1</ambient>
+                    <diffuse>0 0 1</diffuse>
+                    <specular>0.1 0.1 0.1 1</specular>
+                </material>
             </visual>
             <collision name="prop_ccw_1_collision">
                 <geometry>
@@ -270,6 +315,11 @@
                         <scale>0.001 0.001 0.001</scale>
                     </mesh>
                 </geometry>
+                <material>
+                    <ambient>0 0 1</ambient>
+                    <diffuse>0 0 1</diffuse>
+                    <specular>0.1 0.1 0.1 1</specular>
+                </material>
             </visual>
             <collision name="prop_ccw_2_collision">
                 <geometry>
@@ -280,6 +330,55 @@
                 </geometry>
             </collision>
         </link>
+        <link name='imu_link'>
+            <inertial>
+                <pose>0 0 0 0 0 0</pose>
+                <mass>0.15</mass>
+                <inertia>
+                <ixx>0.00001</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.00002</iyy>
+                <iyz>0</iyz>
+                <izz>0.00002</izz>
+                </inertia>
+            </inertial>
+            <sensor name='imu_sensor' type='imu'>
+                <!-- Déjalo en 0,0,0 si la pose visual ya está arriba -->
+                <pose>0 0 0 3.141593 0 0</pose>
+                <always_on>1</always_on>
+                <update_rate>1000</update_rate>
+            </sensor>
+            <sensor name="mag_sensor" type="magnetometer">
+                <always_on>1</always_on>
+                <update_rate>50</update_rate>
+                <visualize>1</visualize>
+            </sensor>
+        </link>
+        <!-- Fixed Joint: attach IMU to base -->
+        <joint name='base_imu_joint' type='fixed'>
+            <parent>frame</parent>
+            <child>imu_link</child>
+            <axis>
+                <xyz>0 0 1</xyz>  
+                <limit> 
+                <lower>0</lower>
+                <upper>0</upper>
+                <effort>0</effort>
+                <velocity>0</velocity>
+                </limit>
+                <dynamics>
+                <damping>1</damping>
+                </dynamics>
+                <use_parent_model_frame>1</use_parent_model_frame>
+            </axis>
+            <physics>
+                <ode>
+                <implicit_spring_damper>1</implicit_spring_damper>
+                </ode>
+            </physics>
+        </joint>
+
         <joint name="frame_Rígida-2" type="fixed">
             <pose>-0.209851400305948 0.038055924087711655 -0.0025004385687023706 0.0 0.0 0.0</pose>
             <parent>frame</parent>
@@ -332,5 +431,323 @@
                 <xyz expressed_in="__model__">0.0 -0.0 1.0</xyz>
             </axis>
         </joint>
+        <static>0</static>
+
+    <plugin filename="libignition-gazebo-joint-state-publisher-system.so"
+      name="ignition::gazebo::systems::JointStatePublisher">
+    </plugin>
+
+    <!-- Plugin for prop_ccw_1  -->
+      <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
+        <a0>0.3</a0>
+        <alpha_stall>1.4</alpha_stall>
+        <cla>4.25</cla>
+        <cda>0.10</cda>
+        <cma>0.00</cma>
+        <cla_stall>-0.025</cla_stall>
+        <cda_stall>0.0</cda_stall>
+        <cma_stall>0.0</cma_stall>
+        <cp>0.08 0 0.003</cp>
+        <area>0.005</area>     <!-- algo mayor si hace falta -->
+        <air_density>1.225</air_density>
+        <forward>0 1 0</forward>
+        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <link_name>prop_ccw_1</link_name>
+      </plugin>
+      <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
+        <a0>0.3</a0>
+        <alpha_stall>1.4</alpha_stall>
+        <cla>4.25</cla>
+        <cda>0.10</cda>
+        <cma>0.00</cma>
+        <cla_stall>-0.025</cla_stall>
+        <cda_stall>0.0</cda_stall>
+        <cma_stall>0.0</cma_stall>
+        <cp>-0.04 0.069282 0.003</cp>
+        <area>0.005</area>     <!-- algo mayor si hace falta -->
+        <air_density>1.225</air_density>
+        <forward>0.866025 -0.5 0</forward>
+        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <link_name>prop_ccw_1</link_name>
+      </plugin>
+      <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
+        <a0>0.3</a0>
+        <alpha_stall>1.4</alpha_stall>
+        <cla>4.25</cla>
+        <cda>0.10</cda>
+        <cma>0.00</cma>
+        <cla_stall>-0.025</cla_stall>
+        <cda_stall>0.0</cda_stall>
+        <cma_stall>0.0</cma_stall>
+        <cp>-0.04 -0.069282 0.003</cp>
+        <area>0.005</area>     <!-- algo mayor si hace falta -->
+        <air_density>1.225</air_density>
+        <forward>0.866025 0.5 0</forward>
+        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <link_name>prop_ccw_1</link_name>
+      </plugin>
+
+
+    <!-- Plugin for prop_ccw_2 -->
+      <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
+        <a0>0.3</a0>
+        <alpha_stall>1.4</alpha_stall>
+        <cla>4.25</cla>
+        <cda>0.10</cda>
+        <cma>0.00</cma>
+        <cla_stall>-0.025</cla_stall>
+        <cda_stall>0.0</cda_stall>
+        <cma_stall>0.0</cma_stall>
+        <cp>0.08 0 0.003</cp>
+        <area>0.005</area>     <!-- algo mayor si hace falta -->
+        <air_density>1.225</air_density>
+        <forward>0 1 0</forward>
+        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <link_name>prop_ccw_2</link_name>
+      </plugin>
+      <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
+        <a0>0.3</a0>
+        <alpha_stall>1.4</alpha_stall>
+        <cla>4.25</cla>
+        <cda>0.10</cda>
+        <cma>0.00</cma>
+        <cla_stall>-0.025</cla_stall>
+        <cda_stall>0.0</cda_stall>
+        <cma_stall>0.0</cma_stall>
+        <cp>-0.04 0.069282 0.003</cp>
+        <area>0.005</area>     <!-- algo mayor si hace falta -->
+        <air_density>1.225</air_density>
+        <forward>0.866025 -0.5 0</forward>
+        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <link_name>prop_ccw_2</link_name>
+      </plugin>
+      <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
+        <a0>0.3</a0>
+        <alpha_stall>1.4</alpha_stall>
+        <cla>4.25</cla>
+        <cda>0.10</cda>
+        <cma>0.00</cma>
+        <cla_stall>-0.025</cla_stall>
+        <cda_stall>0.0</cda_stall>
+        <cma_stall>0.0</cma_stall>
+        <cp>-0.04 -0.069282 0.003</cp>
+        <area>0.005</area>     <!-- algo mayor si hace falta -->
+        <air_density>1.225</air_density>
+        <forward>0.866025 0.5 0</forward>
+        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <link_name>prop_ccw_2</link_name>
+      </plugin>
+
+
+    <!-- Plugin for prop_cw_1 -->
+      <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
+        <a0>0.3</a0>
+        <alpha_stall>1.4</alpha_stall>
+        <cla>4.25</cla>
+        <cda>0.10</cda>
+        <cma>0.00</cma>
+        <cla_stall>-0.025</cla_stall>
+        <cda_stall>0.0</cda_stall>
+        <cma_stall>0.0</cma_stall>
+        <cp>0.08 0 0.003</cp>
+        <area>0.005</area>     <!-- algo mayor si hace falta -->
+        <air_density>1.225</air_density>
+        <forward>0 -1 0</forward>
+        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <link_name>prop_cw_1</link_name>
+      </plugin>
+      <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
+        <a0>0.3</a0>
+        <alpha_stall>1.4</alpha_stall>
+        <cla>4.25</cla>
+        <cda>0.10</cda>
+        <cma>0.00</cma>
+        <cla_stall>-0.025</cla_stall>
+        <cda_stall>0.0</cda_stall>
+        <cma_stall>0.0</cma_stall>
+        <cp>-0.04 0.069282 0.003</cp>
+        <area>0.005</area>     <!-- algo mayor si hace falta -->
+        <air_density>1.225</air_density>
+        <forward>0.866025 -0.5 0</forward>
+        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <link_name>prop_cw_1</link_name>
+      </plugin>
+      <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
+        <a0>0.3</a0>
+        <alpha_stall>1.4</alpha_stall>
+        <cla>4.25</cla>
+        <cda>0.10</cda>
+        <cma>0.00</cma>
+        <cla_stall>-0.025</cla_stall>
+        <cda_stall>0.0</cda_stall>
+        <cma_stall>0.0</cma_stall>
+        <cp>-0.04 -0.069282 0.003</cp>
+        <area>0.005</area>     <!-- algo mayor si hace falta -->
+        <air_density>1.225</air_density>
+        <forward>0.866025 0.5 0</forward>
+        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <link_name>prop_cw_1</link_name>
+      </plugin>
+
+    <!-- Plugin for prop_cw_2 -->
+      <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
+        <a0>0.3</a0>
+        <alpha_stall>1.4</alpha_stall>
+        <cla>4.25</cla>
+        <cda>0.10</cda>
+        <cma>0.00</cma>
+        <cla_stall>-0.025</cla_stall>
+        <cda_stall>0.0</cda_stall>
+        <cma_stall>0.0</cma_stall>
+        <cp>0.08 0 0.003</cp>
+        <area>0.005</area>     <!-- algo mayor si hace falta -->
+        <air_density>1.225</air_density>
+        <forward>0 -1 0</forward>
+        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <link_name>prop_cw_2</link_name>
+      </plugin>
+      <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
+        <a0>0.3</a0>
+        <alpha_stall>1.4</alpha_stall>
+        <cla>4.25</cla>
+        <cda>0.10</cda>
+        <cma>0.00</cma>
+        <cla_stall>-0.025</cla_stall>
+        <cda_stall>0.0</cda_stall>
+        <cma_stall>0.0</cma_stall>
+        <cp>-0.04 0.069282 0.003</cp>
+        <area>0.005</area>     <!-- algo mayor si hace falta -->
+        <air_density>1.225</air_density>
+        <forward>0.866025 -0.5 0</forward>
+        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <link_name>prop_cw_2</link_name>
+      </plugin>
+      <plugin filename="libignition-gazebo-lift-drag-system.so"
+        name="ignition::gazebo::systems::LiftDrag">
+        <a0>0.3</a0>
+        <alpha_stall>1.4</alpha_stall>
+        <cla>4.25</cla>
+        <cda>0.10</cda>
+        <cma>0.00</cma>
+        <cla_stall>-0.025</cla_stall>
+        <cda_stall>0.0</cda_stall>
+        <cma_stall>0.0</cma_stall>
+        <cp>-0.04 -0.069282 0.003</cp>
+        <area>0.005</area>     <!-- algo mayor si hace falta -->
+        <air_density>1.225</air_density>
+        <forward>0.866025 0.5 0</forward>
+        <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+        <link_name>prop_cw_2</link_name>
+      </plugin>
+
+
+
+    <plugin name="ArduPilotPlugin" filename="libArduPilotPlugin.so">
+      <!-- Dirección IP y puerto para comunicación -->
+      <fdm_addr>127.0.0.1</fdm_addr>
+      <fdm_port_in>9002</fdm_port_in>
+      <connectionTimeoutMaxCount>5</connectionTimeoutMaxCount>
+      <lock_step>1</lock_step>
+
+      <!-- Conversión de coordenadas -->
+      <modelXYZToAirplaneXForwardZDown degrees="true">0 0 0 180 0 0</modelXYZToAirplaneXForwardZDown>
+      <gazeboXYZToNED degrees="true">0 0 0 180 0 0</gazeboXYZToNED>
+
+      
+
+      <!-- Sensor IMU -->
+      <!-- <imuName>base_link::imu_sensor</imuName> -->
+      <imuName>imu_sensor</imuName>
+
+      <!-- Configuración de los motores -->
+      <control channel="0">
+        <jointName>motor_fr_Revolución-8</jointName>
+        <useForce>1</useForce>
+        <multiplier>838</multiplier>
+        <offset>0</offset>
+        <servo_min>1100</servo_min>
+        <servo_max>1900</servo_max>
+        <deadband>50</deadband>
+        <type>VELOCITY</type>
+        <p_gain>0.05</p_gain>
+        <i_gain>0</i_gain>
+        <d_gain>0</d_gain>
+        <i_max>0</i_max>
+        <i_min>0</i_min>
+        <cmd_max>2.5</cmd_max>
+        <cmd_min>-2.5</cmd_min>
+        <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+      </control>
+
+      <control channel="1">
+        <jointName>motor_rl_Revolución-9</jointName>
+        <useForce>1</useForce>
+        <multiplier>838</multiplier>
+        <offset>0</offset>
+        <servo_min>1100</servo_min>
+        <servo_max>1900</servo_max>
+        <deadband>50</deadband>
+        <type>VELOCITY</type>
+        <p_gain>0.05</p_gain>
+        <i_gain>0</i_gain>
+        <d_gain>0</d_gain>
+        <i_max>0</i_max>
+        <i_min>0</i_min>
+        <cmd_max>2.5</cmd_max>
+        <cmd_min>-2.5</cmd_min>
+        <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+      </control>
+
+      <control channel="2">
+        <jointName>motor_fl_Revolución-6</jointName>
+        <useForce>1</useForce>
+        <multiplier>-838</multiplier>
+        <offset>0</offset>
+        <servo_min>1100</servo_min>
+        <servo_max>1900</servo_max>
+        <deadband>50</deadband>
+        <type>VELOCITY</type>
+        <p_gain>0.05</p_gain>
+        <i_gain>0</i_gain>
+        <d_gain>0</d_gain>
+        <i_max>0</i_max>
+        <i_min>0</i_min>
+        <cmd_max>2.5</cmd_max>
+        <cmd_min>-2.5</cmd_min>
+        <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+      </control>
+
+      <control channel="3">
+        <jointName>motor_rr_Revolución-7</jointName>
+        <useForce>1</useForce>
+        <multiplier>-838</multiplier>
+        <offset>0</offset>
+        <servo_min>1100</servo_min>
+        <servo_max>1900</servo_max> 
+        <deadband>50</deadband>
+        <type>VELOCITY</type>
+        <p_gain>0.05</p_gain>
+        <i_gain>0</i_gain>
+        <d_gain>0</d_gain>
+        <i_max>0</i_max>
+        <i_min>0</i_min>
+        <cmd_max>2.5</cmd_max>
+        <cmd_min>-2.5</cmd_min>
+        <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+      </control>
+      
+    </plugin>
+
     </model>
 </sdf>
