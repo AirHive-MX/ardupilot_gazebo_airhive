@@ -1,0 +1,336 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.7">
+    <model name="GEPRC_MK4_7in">
+        <link name="frame">
+            <pose>0.0026949791582304605 0.01728684686758559 -0.010166560751401398 1.040834085586085e-17 -2.220446049250312e-16 8.32667268468868e-17</pose>
+            <inertial>
+                <mass>0.09139661687078682</mass>
+                <pose>-0.0006782484625554659 2.1083214583628293e-05 0.010784022069002287 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>0.00034560018218043827</ixx>
+                    <iyy>0.0003968469258107727</iyy>
+                    <izz>0.0007261566545820602</izz>
+                    <ixy>-1.5453335844736468e-09</ixy>
+                    <iyz>-3.717456978504229e-11</iyz>
+                    <ixz>1.794830066307801e-06</ixz>
+                </inertia>
+            </inertial>
+            <visual name="frame_visual">
+                <geometry>
+                    <mesh>
+                        <uri> meshes/frame.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="frame_collision">
+                <geometry>
+                    <mesh>
+                        <uri> meshes/frame.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="motor_fr">
+            <pose>0.309427400305948 -0.13146292408771165 0.002333438568702384 8.610842435828138e-18 -6.245004513516503e-17 8.326672684688681e-17</pose>
+            <inertial>
+                <mass>0.02166445211752593</mass>
+                <pose>-0.20985117031267744 0.03805558857194248 0.007696163669726244 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>1.4216377839398496e-06</ixx>
+                    <iyy>1.4216377839299003e-06</iyy>
+                    <izz>2.0339490705058036e-06</izz>
+                    <ixy>-1.0849913399857158e-19</ixy>
+                    <iyz>3.400762194247015e-21</iyz>
+                    <ixz>-1.3518257986499633e-18</ixz>
+                </inertia>
+            </inertial>
+            <visual name="motor_fr_visual">
+                <geometry>
+                    <mesh>
+                        <uri> meshes/motor_fr.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="motor_fr_collision">
+                <geometry>
+                    <mesh>
+                        <uri> meshes/motor_fr.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="motor_fl">
+            <pose>0.3094274003059479 0.08996746852834737 0.0023334385687022573 -1.2870064778636884e-20 2.0816681711721704e-17 8.326672684688681e-17</pose>
+            <inertial>
+                <mass>0.021664452117525955</mass>
+                <pose>-0.2098511705458248 0.038055586612747425 0.007696163669726246 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>1.421637783938765e-06</ixx>
+                    <iyy>1.42163778393207e-06</iyy>
+                    <izz>2.0339490705059112e-06</izz>
+                    <ixy>2.8189256484623096e-18</ixy>
+                    <iyz>-4.57402701304117e-19</iyz>
+                    <ixz>-1.2909012084695685e-18</ixz>
+                </inertia>
+            </inertial>
+            <visual name="motor_fl_visual">
+                <geometry>
+                    <mesh>
+                        <uri> meshes/motor_fl.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="motor_fl_collision">
+                <geometry>
+                    <mesh>
+                        <uri> meshes/motor_fl.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="motor_rr">
+            <pose>0.1156228707865266 -0.13146292408771135 0.0023334385687022586 8.711205527150232e-18 6.938893903907267e-18 8.326672684688681e-17</pose>
+            <inertial>
+                <mass>0.021664452117525955</mass>
+                <pose>-0.2098511695148767 0.038055589601216855 0.007696163669726242 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>1.4216377839387904e-06</ixx>
+                    <iyy>1.4216377839318235e-06</iyy>
+                    <izz>2.0339490705069954e-06</izz>
+                    <ixy>2.601848463715145e-18</ixy>
+                    <iyz>-4.506086934006409e-19</iyz>
+                    <ixz>-1.277331157481624e-18</ixz>
+                </inertia>
+            </inertial>
+            <visual name="motor_rr_visual">
+                <geometry>
+                    <mesh>
+                        <uri> meshes/motor_rr.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="motor_rr_collision">
+                <geometry>
+                    <mesh>
+                        <uri> meshes/motor_rr.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="motor_rl">
+            <pose>0.11562287078652714 0.08996746852834754 0.0023334385687021316 3.4351997352675825e-18 2.465190328815662e-32 8.326672684688681e-17</pose>
+            <inertial>
+                <mass>0.02166445211752593</mass>
+                <pose>-0.20985117031267744 0.038055588571942515 0.007696163669726247 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>1.421637783939958e-06</ixx>
+                    <iyy>1.4216377839309591e-06</iyy>
+                    <izz>2.0339490705061298e-06</izz>
+                    <ixy>5.421010862427447e-20</ixy>
+                    <iyz>2.1034115696569438e-24</iyz>
+                    <ixz>-1.3518645838178633e-18</ixz>
+                </inertia>
+            </inertial>
+            <visual name="motor_rl_visual">
+                <geometry>
+                    <mesh>
+                        <uri> meshes/motor_rl.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="motor_rl_collision">
+                <geometry>
+                    <mesh>
+                        <uri> meshes/motor_rl.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="prop_cw_1">
+            <pose>0.09957622976011866 0.12802305514109327 0.01583343856870227 4.998467105929134e-16 -1.3877787807813726e-17 8.32667268468867e-17</pose>
+            <inertial>
+                <mass>0.018439981901447793</mass>
+                <pose>-6.544494297509985e-09 2.750172172097047e-08 0.00649010695894344 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>2.2682595641488515e-05</ixx>
+                    <iyy>2.2682593734416223e-05</iyy>
+                    <izz>4.521167580913639e-05</izz>
+                    <ixy>-4.360944126499112e-12</ixy>
+                    <iyz>1.5944500312853312e-12</iyz>
+                    <ixz>-8.803184924541186e-13</ixz>
+                </inertia>
+            </inertial>
+            <visual name="prop_cw_1_visual">
+                <geometry>
+                    <mesh>
+                        <uri> meshes/prop_cw_1.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="prop_cw_1_collision">
+                <geometry>
+                    <mesh>
+                        <uri> meshes/prop_cw_1.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="prop_cw_2">
+            <pose>-0.09422829872835443 -0.09340733448649605 0.015833438568702257 3.2134243029659865e-16 -1.3877787807813916e-17 8.326672684688677e-17</pose>
+            <inertial>
+                <mass>0.018439981901447793</mass>
+                <pose>-6.544494297509991e-09 2.7501721719812007e-08 0.006490106958943445 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>2.268259564148859e-05</ixx>
+                    <iyy>2.2682593734416386e-05</iyy>
+                    <izz>4.5211675809136433e-05</izz>
+                    <ixy>-4.360944125239986e-12</ixy>
+                    <iyz>1.5944500232148594e-12</iyz>
+                    <ixz>-8.803185091453694e-13</ixz>
+                </inertia>
+            </inertial>
+            <visual name="prop_cw_2_visual">
+                <geometry>
+                    <mesh>
+                        <uri> meshes/prop_cw_2.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="prop_cw_2_collision">
+                <geometry>
+                    <mesh>
+                        <uri> meshes/prop_cw_2.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="prop_ccw_1">
+            <pose>-0.09422829952615487 0.12802305710029002 0.015833438568702146 -3.2757951563023806e-16 5.412337245047632e-16 8.326672684688675e-17</pose>
+            <inertial>
+                <mass>0.018439981901447588</mass>
+                <pose>6.544494276323832e-09 2.750172169783686e-08 0.006490106958943441 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>2.2682595641484937e-05</ixx>
+                    <iyy>2.268259373441138e-05</iyy>
+                    <izz>4.5211675809134536e-05</izz>
+                    <ixy>4.360944150422724e-12</ixy>
+                    <iyz>1.5944499803234902e-12</iyz>
+                    <ixz>8.803185991891912e-13</ixz>
+                </inertia>
+            </inertial>
+            <visual name="prop_ccw_1_visual">
+                <geometry>
+                    <mesh>
+                        <uri> meshes/prop_ccw_1.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="prop_ccw_1_collision">
+                <geometry>
+                    <mesh>
+                        <uri> meshes/prop_ccw_1.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="prop_ccw_2">
+            <pose>0.09957622999326599 -0.09340733551576919 0.015333438568702383 -1.7169577965421372e-16 9.7144514654701e-17 8.326672684688669e-17</pose>
+            <inertial>
+                <mass>0.018439981901447588</mass>
+                <pose>6.5444942792060196e-09 2.750172169884857e-08 0.006490106958943443 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>2.268259564148497e-05</ixx>
+                    <iyy>2.2682593734411453e-05</iyy>
+                    <izz>4.521167580913456e-05</izz>
+                    <ixy>4.360944092435207e-12</ixy>
+                    <iyz>1.5944499873712528e-12</iyz>
+                    <ixz>8.803185662822384e-13</ixz>
+                </inertia>
+            </inertial>
+            <visual name="prop_ccw_2_visual">
+                <geometry>
+                    <mesh>
+                        <uri> meshes/prop_ccw_2.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="prop_ccw_2_collision">
+                <geometry>
+                    <mesh>
+                        <uri> meshes/prop_ccw_2.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <joint name="frame_Rígida-2" type="fixed">
+            <pose>-0.209851400305948 0.038055924087711655 -0.0025004385687023706 0.0 0.0 0.0</pose>
+            <parent>frame</parent>
+            <child>motor_fr</child>
+        </joint>
+        <joint name="frame_Rígida-3" type="fixed">
+            <pose>-0.20985087078652642 0.038055924087711364 -0.0025004385687022587 0.0 0.0 0.0</pose>
+            <parent>frame</parent>
+            <child>motor_rr</child>
+        </joint>
+        <joint name="frame_Rígida-4" type="fixed">
+            <pose>-0.20985140030594784 0.03805553147165264 -0.0025004385687022596 0.0 0.0 0.0</pose>
+            <parent>frame</parent>
+            <child>motor_fl</child>
+        </joint>
+        <joint name="frame_Rígida-5" type="fixed">
+            <pose>-0.20985087078652714 0.03805553147165248 -0.0025004385687021316 0.0 0.0 0.0</pose>
+            <parent>frame</parent>
+            <child>motor_rl</child>
+        </joint>
+        <joint name="motor_fl_Revolución-6" type="revolute">
+            <pose>-2.2976011866682147e-07 -5.514109327475782e-08 -4.3856870227121354e-07 0.0 0.0 0.0</pose>
+            <parent>motor_fl</parent>
+            <child>prop_cw_1</child>
+            <axis>
+                <xyz expressed_in="__model__">0.0 -0.0 1.0</xyz>
+            </axis>
+        </joint>
+        <joint name="motor_rr_Revolución-7" type="revolute">
+            <pose>2.9872835442812363e-07 3.344864960425076e-07 -4.385687022573354e-07 0.0 0.0 0.0</pose>
+            <parent>motor_rr</parent>
+            <child>prop_cw_2</child>
+            <axis>
+                <xyz expressed_in="__model__">0.0 -0.0 1.0</xyz>
+            </axis>
+        </joint>
+        <joint name="motor_fr_Revolución-8" type="revolute">
+            <pose>-2.2999326598776408e-07 3.3551576918136334e-07 0.000499561431297616 0.0 0.0 0.0</pose>
+            <parent>motor_fr</parent>
+            <child>prop_ccw_2</child>
+            <axis>
+                <xyz expressed_in="__model__">-0.0 -0.0 1.0</xyz>
+            </axis>
+        </joint>
+        <joint name="motor_rl_Revolución-9" type="revolute">
+            <pose>2.995261548649486e-07 -5.710029002403666e-08 -4.385687021463128e-07 0.0 0.0 0.0</pose>
+            <parent>motor_rl</parent>
+            <child>prop_ccw_1</child>
+            <axis>
+                <xyz expressed_in="__model__">0.0 -0.0 1.0</xyz>
+            </axis>
+        </joint>
+    </model>
+</sdf>
