@@ -366,9 +366,9 @@
             <name>Gazebo/White</name>
             <uri>__default__</uri>
           </script-->
-          <ambient>1 1 1 1</ambient>
-          <diffuse>1 1 1 1</diffuse>
-          <specular>.1 .1 .1 1</specular>
+          <ambient>0 0 1</ambient>
+          <diffuse>0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
       <gravity>1</gravity>
@@ -512,9 +512,9 @@
             <name>Gazebo/White</name>
             <uri>__default__</uri>
           </script-->
-          <ambient>1 1 1 1</ambient>
-          <diffuse>1 1 1 1</diffuse>
-          <specular>.1 .1 .1 1</specular>
+          <ambient>0 0 1</ambient>
+          <diffuse>0 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
         </material>
       </visual>
       <gravity>1</gravity>

@@ -487,7 +487,7 @@
         name="ignition::gazebo::systems::LiftDrag">
         <a0>0.3</a0>
         <alpha_stall>1.4</alpha_stall>
-        <cla>2.1</cla>
+        <cla>2.11</cla>
         <cda>0.10</cda>
         <cma>0.00</cma>
         <cla_stall>-0.025</cla_stall>
@@ -504,7 +504,7 @@
         name="ignition::gazebo::systems::LiftDrag">
         <a0>0.3</a0>
         <alpha_stall>1.4</alpha_stall>
-        <cla>2.1</cla>
+        <cla>2.11</cla>
         <cda>0.10</cda>
         <cma>0.00</cma>
         <cla_stall>-0.025</cla_stall>
@@ -513,7 +513,7 @@
         <cp>-0.04 0.069282 0.003</cp>
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
-        <forward>-0.866 -0.5 0</forward>
+        <forward>0.866025 -0.5 0</forward>
         <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_0</link_name>
       </plugin>
@@ -521,7 +521,7 @@
         name="ignition::gazebo::systems::LiftDrag">
         <a0>0.3</a0>
         <alpha_stall>1.4</alpha_stall>
-        <cla>2.1</cla>
+        <cla>2.11</cla>
         <cda>0.10</cda>
         <cma>0.00</cma>
         <cla_stall>-0.025</cla_stall>
@@ -530,7 +530,7 @@
         <cp>-0.04 -0.069282 0.003</cp>
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
-        <forward>0.866 -0.5 0</forward>
+        <forward>0.866025 0.5 0</forward>
         <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_0</link_name>
       </plugin>
@@ -541,7 +541,7 @@
         name="ignition::gazebo::systems::LiftDrag">
         <a0>0.3</a0>
         <alpha_stall>1.4</alpha_stall>
-        <cla>2.1</cla>
+        <cla>2.11</cla>
         <cda>0.10</cda>
         <cma>0.00</cma>
         <cla_stall>-0.025</cla_stall>
@@ -558,7 +558,7 @@
         name="ignition::gazebo::systems::LiftDrag">
         <a0>0.3</a0>
         <alpha_stall>1.4</alpha_stall>
-        <cla>2.1</cla>
+        <cla>2.11</cla>
         <cda>0.10</cda>
         <cma>0.00</cma>
         <cla_stall>-0.025</cla_stall>
@@ -567,7 +567,7 @@
         <cp>-0.04 0.069282 0.003</cp>
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
-        <forward>-0.866 -0.5 0</forward>
+        <forward>0.866025 -0.5 0</forward>
         <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_1</link_name>
       </plugin>
@@ -575,7 +575,7 @@
         name="ignition::gazebo::systems::LiftDrag">
         <a0>0.3</a0>
         <alpha_stall>1.4</alpha_stall>
-        <cla>2.1</cla>
+        <cla>2.11</cla>
         <cda>0.10</cda>
         <cma>0.00</cma>
         <cla_stall>-0.025</cla_stall>
@@ -584,7 +584,7 @@
         <cp>-0.04 -0.069282 0.003</cp>
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
-        <forward>0.866 -0.5 0</forward>
+        <forward>0.866025 0.5 0</forward>
         <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_1</link_name>
       </plugin>
@@ -595,7 +595,7 @@
         name="ignition::gazebo::systems::LiftDrag">
         <a0>0.3</a0>
         <alpha_stall>1.4</alpha_stall>
-        <cla>2.1</cla>
+        <cla>2.11</cla>
         <cda>0.10</cda>
         <cma>0.00</cma>
         <cla_stall>-0.025</cla_stall>
@@ -612,7 +612,7 @@
         name="ignition::gazebo::systems::LiftDrag">
         <a0>0.3</a0>
         <alpha_stall>1.4</alpha_stall>
-        <cla>2.1</cla>
+        <cla>2.11</cla>
         <cda>0.10</cda>
         <cma>0.00</cma>
         <cla_stall>-0.025</cla_stall>
@@ -621,7 +621,7 @@
         <cp>-0.04 0.069282 0.003</cp>
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
-        <forward>0.866 -0.5 0</forward>
+        <forward>0.866025 -0.5 0</forward>
         <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_2</link_name>
       </plugin>
@@ -629,7 +629,7 @@
         name="ignition::gazebo::systems::LiftDrag">
         <a0>0.3</a0>
         <alpha_stall>1.4</alpha_stall>
-        <cla>2.1</cla>
+        <cla>2.11</cla>
         <cda>0.10</cda>
         <cma>0.00</cma>
         <cla_stall>-0.025</cla_stall>
@@ -638,7 +638,7 @@
         <cp>-0.04 -0.069282 0.003</cp>
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
-        <forward>-0.866 0.5 0</forward>
+        <forward>0.866025 0.5 0</forward>
         <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_2</link_name>
       </plugin>
@@ -648,7 +648,7 @@
         name="ignition::gazebo::systems::LiftDrag">
         <a0>0.3</a0>
         <alpha_stall>1.4</alpha_stall>
-        <cla>2.1</cla>
+        <cla>2.11</cla>
         <cda>0.10</cda>
         <cma>0.00</cma>
         <cla_stall>-0.025</cla_stall>
@@ -665,7 +665,7 @@
         name="ignition::gazebo::systems::LiftDrag">
         <a0>0.3</a0>
         <alpha_stall>1.4</alpha_stall>
-        <cla>2.1</cla>
+        <cla>2.11</cla>
         <cda>0.10</cda>
         <cma>0.00</cma>
         <cla_stall>-0.025</cla_stall>
@@ -674,7 +674,7 @@
         <cp>-0.04 0.069282 0.003</cp>
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
-        <forward>0.686 -0.5 0</forward>
+        <forward>0.866025 -0.5 0</forward>
         <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_3</link_name>
       </plugin>
@@ -682,7 +682,7 @@
         name="ignition::gazebo::systems::LiftDrag">
         <a0>0.3</a0>
         <alpha_stall>1.4</alpha_stall>
-        <cla>2.1</cla>
+        <cla>2.11</cla>
         <cda>0.10</cda>
         <cma>0.00</cma>
         <cla_stall>-0.025</cla_stall>
@@ -691,7 +691,7 @@
         <cp>-0.04 -0.069282 0.003</cp>
         <area>0.005</area>     <!-- algo mayor si hace falta -->
         <air_density>1.225</air_density>
-        <forward>-0.866 0.5 0</forward>
+        <forward>0.866025 0.5 0</forward>
         <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
         <link_name>rotor_3</link_name>
       </plugin>
