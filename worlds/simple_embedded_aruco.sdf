@@ -88,24 +88,19 @@
       <pose>0 0 0.227 0 0 0</pose>
     </include> -->
 
-    <include>
+    <!-- <include>
       <uri>model://embedded_aruco</uri> 
-      <pose degrees="true">0.1 0 0.009 0 0 -90</pose>
+      <pose degrees="true">3 0 .378 0 -90 0</pose>
+    </include> -->
+
+    <include>
+      <uri>model://construction_cone</uri> 
+      <pose degrees="true">2 0 0.2 0 0 0</pose>
     </include>
-
-    <!-- <include>
-      <uri>model://dron_proto</uri> 
-      <pose degrees="true">0 0 0.2 0 0 0</pose>
-    </include> -->
-
-    <!-- <include>
-      <uri>model://dron_proto_2</uri> 
-      <pose degrees="true">0 0 0.2 0 0 0</pose>
-    </include> -->
 
     <include>
       <uri>model://camaron_v2</uri>
-      <pose degrees="true">0 0 0.2 0 0 0</pose>
+      <pose degrees="true">0 0 0.1 0 0 0</pose>
     </include>
 
     <!-- <include>

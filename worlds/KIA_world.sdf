@@ -394,6 +394,9 @@
       </link>
     </model>
 
-    
+    <include>
+      <uri>model://dron_assembly</uri>
+      <pose degrees="true">-2,5 0 0.2 0 0 0</pose>
+    </include>
   </world>
 </sdf>

@@ -12,7 +12,7 @@
           <plane>
             <normal>0 0 1</normal>
             <!-- Ajusta aquí el tamaño en metros: 0.45×0.45 m -->
-            <size>0.25 0.25</size>
+            <size>0.756 0.972</size>
           </plane>
         </geometry>
         <material>
@@ -21,7 +21,7 @@
           <pbr>
             <metal>
               <!-- <albedo_map>textures/embedded_aruco_marker_18_100.png</albedo_map> -->
-              <albedo_map>model://embedded_aruco/textures/embedded_aruco_marker_18_100.png</albedo_map>
+              <albedo_map>model://embedded_aruco/textures/chessboard1.png</albedo_map>
               <roughness>0.6</roughness>
               <metalness>0</metalness>
             </metal>
