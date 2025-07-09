@@ -1,0 +1,991 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.7">
+    <model name="CINEWHOOP_4.5">
+        <link name="frame_4_5">
+            <pose>0.0 0.0 0.0 0.0 -0.0 0.0</pose>
+            <inertial>
+                <mass>0.46559043380318527</mass>
+                <pose>0.0030291193216684465 4.153273349654646e-06 0.018332329913369583 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>0.0021744778498765994</ixx>
+                    <iyy>0.002488853720756953</iyy>
+                    <izz>0.004457899881763257</izz>
+                    <ixy>-1.832858723255757e-07</ixy>
+                    <iyz>-1.822494627435283e-08</iyz>
+                    <ixz>-1.4123664265542227e-05</ixz>
+                </inertia>
+            </inertial>
+            <visual name="frame_4_5_visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://cinewhoop/meshes/frame_4.5.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.1 0.1 0.1 1.0</ambient>
+                    <diffuse>0.1 0.1 0.1 1.0</diffuse>
+                    <specular>0.01 0.01 0.01 1.0</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+            <collision name="frame_4_5_collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://cinewhoop/meshes/frame_4.5.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="siyi_ip_camera">
+            <pose>0.10816599938804068 -1.7275070263167436e-15 0.020500000000000008 9.244463733058728e-32 -4.417951470996925e-18 1.5707963267948968</pose>
+            <inertial>
+                <mass>0.034531703811389286</mass>
+                <pose>-1.271742261216883e-15 -0.009130708665020693 -1.462820061108202e-18 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>5.620390098305882e-06</ixx>
+                    <iyy>9.24352863067799e-06</iyy>
+                    <izz>6.027604506851181e-06</izz>
+                    <ixy>-6.838812146243414e-19</ixy>
+                    <iyz>1.4808982354579313e-21</iyz>
+                    <ixz>-1.027054303156257e-11</ixz>
+                </inertia>
+            </inertial>
+            <visual name="siyi_ip_camera_visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://cinewhoop/meshes/siyi_ip_camera.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.2 0.2 0.2 1.0</ambient>
+                    <diffuse>0.2 0.2 0.2 1.0</diffuse>
+                    <specular>0.02 0.02 0.02 1.0</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+            <collision name="siyi_ip_camera_collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://cinewhoop/meshes/siyi_ip_camera.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="motor_fr">
+            <pose>0.274930173354724 -0.03694440364659316 0.029499999999999967 3.141592653589793 2.6367796834847463e-16 0.0</pose>
+            <inertial>
+                <mass>0.02166445211752593</mass>
+                <pose>-0.20985117029189773 0.038055588330862845 0.007696163669726234 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>1.421637783939523e-06</ixx>
+                    <iyy>1.4216377839314737e-06</iyy>
+                    <izz>2.0339490705062644e-06</izz>
+                    <ixy>1.2737599899829212e-18</ixy>
+                    <iyz>-2.303980641541076e-19</iyz>
+                    <ixz>-1.27367722463913e-18</ixz>
+                </inertia>
+            </inertial>
+            <visual name="motor_fr_visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://cinewhoop/meshes/motor_fr.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.2 0.2 0.2 1.0</ambient>
+                    <diffuse>0.2 0.2 0.2 1.0</diffuse>
+                    <specular>0.02 0.02 0.02 1.0</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+            <collision name="motor_fr_collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://cinewhoop/meshes/motor_fr.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="motor_fl">
+            <pose>0.27493017335473496 0.11305558079046382 0.029500000000000047 -3.141592653589793 -1.3877787807814454e-16 0.0</pose>
+            <inertial>
+                <mass>0.02166445211752592</mass>
+                <pose>-0.20985117007347823 0.03805558834997017 0.007696163669726252 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>1.4216377839396332e-06</ixx>
+                    <iyy>1.4216377839309595e-06</iyy>
+                    <izz>2.0339490705053437e-06</izz>
+                    <ixy>1.5044488894486688e-18</ixy>
+                    <iyz>-2.3039127803815886e-19</iyz>
+                    <ixz>-1.3350179333965965e-18</ixz>
+                </inertia>
+            </inertial>
+            <visual name="motor_fl_visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://cinewhoop/meshes/motor_fl.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.2 0.2 0.2 1.0</ambient>
+                    <diffuse>0.2 0.2 0.2 1.0</diffuse>
+                    <specular>0.02 0.02 0.02 1.0</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+            <collision name="motor_fl_collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://cinewhoop/meshes/motor_fl.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="motor_rr">
+            <pose>0.14477216604671359 -0.03694440364658221 0.029499999999999995 3.141592653589793 9.714451465470125e-17 -2.4651903288156635e-32</pose>
+            <inertial>
+                <mass>0.02166445211752593</mass>
+                <pose>-0.20985117033059833 0.038055588773191124 0.007696163669726242 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>1.4216377839395497e-06</ixx>
+                    <iyy>1.4216377839304289e-06</iyy>
+                    <izz>2.033949070506183e-06</izz>
+                    <ixy>1.1787541955779033e-18</ixy>
+                    <iyz>-2.439699854182217e-19</iyz>
+                    <ixz>-1.300925598784377e-18</ixz>
+                </inertia>
+            </inertial>
+            <visual name="motor_rr_visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://cinewhoop/meshes/motor_rr.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.2 0.2 0.2 1.0</ambient>
+                    <diffuse>0.2 0.2 0.2 1.0</diffuse>
+                    <specular>0.02 0.02 0.02 1.0</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+            <collision name="motor_rr_collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://cinewhoop/meshes/motor_rr.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="motor_rl">
+            <pose>0.14477216604672452 0.11305558079047473 0.02950000000000002 3.141592653589793 -0.0 0.0</pose>
+            <inertial>
+                <mass>0.02166445211752593</mass>
+                <pose>-0.20985117011217871 0.03805558879229849 0.0076961636697262525 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>1.4216377839396056e-06</ixx>
+                    <iyy>1.42163778393142e-06</iyy>
+                    <izz>2.033949070506401e-06</izz>
+                    <ixy>1.3823577699190182e-18</ixy>
+                    <iyz>-2.371692252312041e-19</iyz>
+                    <ixz>-1.3417001884508117e-18</ixz>
+                </inertia>
+            </inertial>
+            <visual name="motor_rl_visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://cinewhoop/meshes/motor_rl.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.2 0.2 0.2 1.0</ambient>
+                    <diffuse>0.2 0.2 0.2 1.0</diffuse>
+                    <specular>0.02 0.02 0.02 1.0</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+            <collision name="motor_rl_collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://cinewhoop/meshes/motor_rl.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="prop_ccw_1">
+            <pose>0.06507900306282184 -0.07499999197745517 -0.007500000000000071 -4.8570128095075863e-17 -7.21644966006352e-16 -9.720794061142923e-48</pose>
+            <inertial>
+                <mass>0.003055288032744085</mass>
+                <pose>1.0107556796525069e-07 -9.520076465027065e-08 0.019866036312918018 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>9.386423608052252e-07</ixx>
+                    <iyy>9.386625365933881e-07</iyy>
+                    <izz>1.8144437132977541e-06</izz>
+                    <ixy>-2.468761636897001e-12</ixy>
+                    <iyz>7.361053688216663e-13</iyz>
+                    <ixz>-1.0264157098639926e-12</ixz>
+                </inertia>
+            </inertial>
+            <visual name="prop_ccw_1_visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://cinewhoop/meshes/prop_ccw_1.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0 0 1</ambient>
+                    <diffuse>0 0 1</diffuse>
+                    <specular>0.1 0.1 0.1 1</specular>
+                </material>
+            </visual>
+            <collision name="prop_ccw_1_collision">
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <cylinder>
+                        <length>0.005</length>
+                        <radius>0.1</radius>
+                    </cylinder>
+                </geometry>
+                <surface>
+                    <contact>
+                        <ode/>
+                    </contact>
+                    <friction>
+                        <ode/>
+                    </friction>
+                </surface>
+            </collision>
+        </link>
+        <link name="prop_ccw_2">
+            <pose>-0.06507900406545856 0.07499999199817704 -0.007499999999999947 -1.2352531617612977e-16 -7.415942859800849e-16 0.0</pose>
+            <inertial>
+                <mass>0.003055288032744085</mass>
+                <pose>1.010755679745287e-07 -9.520076465175954e-08 0.019866036312917976 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>9.386423608052273e-07</ixx>
+                    <iyy>9.386625365933761e-07</iyy>
+                    <izz>1.8144437132977473e-06</izz>
+                    <ixy>-2.468761635140239e-12</ixy>
+                    <iyz>7.361053691091785e-13</iyz>
+                    <ixz>-1.0264157081049597e-12</ixz>
+                </inertia>
+            </inertial>
+            <visual name="prop_ccw_2_visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://cinewhoop/meshes/prop_ccw_2.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0 0 1</ambient>
+                    <diffuse>0 0 1</diffuse>
+                    <specular>0.1 0.1 0.1 1</specular>
+                </material>
+            </visual>
+            <collision name="prop_ccw_2_collision">
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <cylinder>
+                        <length>0.005</length>
+                        <radius>0.1</radius>
+                    </cylinder>
+                </geometry>
+                <surface>
+                    <contact>
+                        <ode/>
+                    </contact>
+                    <friction>
+                        <ode/>
+                    </friction>
+                </surface>
+            </collision>
+        </link>
+        <link name="prop_cw_1">
+            <pose>0.06507900328125238 0.07499999244049448 -0.007499999999999876 -9.799311739310995e-16 1.7347234759768157e-17 2.7061742689683618e-49</pose>
+            <inertial>
+                <mass>0.0030552880224177003</mass>
+                <pose>1.0107556833248662e-07 9.520076491405558e-08 0.019866036320335193 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>9.386423600392953e-07</ixx>
+                    <iyy>9.386625350965473e-07</iyy>
+                    <izz>1.8144437124096816e-06</izz>
+                    <ixy>2.4687616373529236e-12</ixy>
+                    <iyz>-7.361053705718206e-13</iyz>
+                    <ixz>-1.026415705253706e-12</ixz>
+                </inertia>
+            </inertial>
+            <visual name="prop_cw_1_visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://cinewhoop/meshes/prop_cw_1.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0 0 1</ambient>
+                    <diffuse>0 0 1</diffuse>
+                    <specular>0.1 0.1 0.1 1</specular>
+                </material>
+            </visual>
+            <collision name="prop_cw_1_collision">
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <cylinder>
+                        <length>0.005</length>
+                        <radius>0.1</radius>
+                    </cylinder>
+                </geometry>
+                <surface>
+                    <contact>
+                        <ode/>
+                    </contact>
+                    <friction>
+                        <ode/>
+                    </friction>
+                </surface>
+            </collision>
+        </link>
+        <link name="prop_cw_2">
+            <pose>-0.062124581024852576 -0.0755209369527733 -0.0075 -1.2246467991473532e-16 1.4248351561832541e-80 -2.4651903288156646e-32</pose>
+            <inertial>
+                <mass>0.0030552880224177003</mass>
+                <pose>1.0107556833283127e-07 9.520076493109003e-08 0.019866036320335283 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>9.386423600392957e-07</ixx>
+                    <iyy>9.386625350965416e-07</iyy>
+                    <izz>1.8144437124096998e-06</izz>
+                    <ixy>2.4687616334502548e-12</ixy>
+                    <iyz>-7.361053668994625e-13</iyz>
+                    <ixz>-1.0264157056812224e-12</ixz>
+                </inertia>
+            </inertial>
+            <visual name="prop_cw_2_visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://cinewhoop/meshes/prop_cw_2.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0 0 1</ambient>
+                    <diffuse>0 0 1</diffuse>
+                    <specular>0.1 0.1 0.1 1</specular>
+                </material>
+            </visual>
+            <collision name="prop_cw_2_collision">
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <cylinder>
+                        <length>0.005</length>
+                        <radius>0.1</radius>
+                    </cylinder>
+                </geometry>
+                <surface>
+                    <contact>
+                        <ode/>
+                    </contact>
+                    <friction>
+                        <ode/>
+                    </friction>
+                </surface>
+            </collision>
+        </link>
+        <link name="siyi_air_unit">
+            <pose>-0.03500336143572493 0.027499999999998335 0.03700000000000003 3.141592653589793 -4.85722573273506e-17 -3.081487911019581e-33</pose>
+            <inertial>
+                <mass>0.04557472080298034</mass>
+                <pose>0.03499999999999993 0.027499999999999962 0.005836379592726967 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>1.1193094656117847e-05</ixx>
+                    <iyy>1.7609661308200536e-05</iyy>
+                    <izz>2.7547878553966728e-05</izz>
+                    <ixy>-3.573378833154884e-20</ixy>
+                    <iyz>-2.4100810870347752e-20</iyz>
+                    <ixz>-4.782017193695928e-21</ixz>
+                </inertia>
+            </inertial>
+            <visual name="siyi_air_unit_visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://cinewhoop/meshes/siyi_air_unit.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.5 0.5 0.5 1.0</ambient>
+                    <diffuse>0.5 0.5 0.5 1.0</diffuse>
+                    <specular>0.05 0.05 0.05 1.0</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+            <collision name="siyi_air_unit_collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://cinewhoop/meshes/siyi_air_unit.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="mtf_01">
+            <pose>0.001402111925407643 -0.007526695777428938 0.011279042763823459 3.1415924787442404 8.742277595534357e-08 -3.141592653589793</pose>
+            <inertial>
+                <mass>0.013295325356687966</mass>
+                <pose>0.014009787400437767 0.0075178157913489045 0.0035476952044421854 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>6.753309908838135e-07</ixx>
+                    <iyy>3.9790948813233957e-07</iyy>
+                    <izz>7.718463097971414e-07</izz>
+                    <ixy>-8.83766017028076e-09</ixy>
+                    <iyz>1.7675759429293753e-08</iyz>
+                    <ixz>4.769354837227354e-08</ixz>
+                </inertia>
+            </inertial>
+            <visual name="mtf_01_visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://cinewhoop/meshes/mtf_01.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.5 0.5 0.5 1.0</ambient>
+                    <diffuse>0.5 0.5 0.5 1.0</diffuse>
+                    <specular>0.05 0.05 0.05 1.0</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+            <collision name="mtf_01_collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://cinewhoop/meshes/mtf_01.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="speedybee_f405_aio">
+            <pose>0.027533154453973765 0.0004322813446612961 0.008000000000000005 -4.08636269416162e-16 8.649843312289846e-32 2.465190328815663e-32</pose>
+            <inertial>
+                <mass>0.009431279583242714</mass>
+                <pose>-0.0025331545871163943 -0.00043228195663682354 0.003999999999999995 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>9.213199669108751e-07</ixx>
+                    <iyy>9.213199669108787e-07</iyy>
+                    <izz>1.720500607706739e-06</izz>
+                    <ixy>9.879954062212517e-10</ixy>
+                    <iyz>-7.484305977735065e-22</iyz>
+                    <ixz>4.1866377504880735e-22</ixz>
+                </inertia>
+            </inertial>
+            <visual name="speedybee_f405_aio_visual">
+                <geometry>
+                    <mesh>
+                        <uri>model://cinewhoop/meshes/speedybee_f405_aio.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.5 0.5 0.5 1.0</ambient>
+                    <diffuse>0.5 0.5 0.5 1.0</diffuse>
+                    <specular>0.05 0.05 0.05 1.0</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+            <collision name="speedybee_f405_aio_collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://cinewhoop/meshes/speedybee_f405_aio.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name='imu_link'>
+            <inertial>
+                <pose>0 0 0 0 0 0</pose>
+                <mass>0.15</mass>
+                <inertia>
+                <ixx>0.00001</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0.00002</iyy>
+                <iyz>0</iyz>
+                <izz>0.00002</izz>
+                </inertia>
+            </inertial>
+            <sensor name='imu_sensor' type='imu'>
+                <pose>0 0 0 3.141593 0 0</pose>
+                <always_on>1</always_on>
+                <update_rate>1000</update_rate>
+            </sensor>
+            <sensor name="mag_sensor" type="magnetometer">
+                <always_on>1</always_on>
+                <update_rate>50</update_rate>
+                <visualize>1</visualize>
+            </sensor>
+        </link>
+        <joint name='base_imu_joint' type='fixed'>
+            <parent>frame_4_5</parent>
+            <child>imu_link</child>
+            <axis>
+                <xyz>0 0 1</xyz>  
+                <limit> 
+                <lower>0</lower>
+                <upper>0</upper>
+                <effort>0</effort>
+                <velocity>0</velocity>
+                </limit>
+                <dynamics>
+                <damping>1</damping>
+                </dynamics>
+                <use_parent_model_frame>1</use_parent_model_frame>
+            </axis>
+            <physics>
+                <ode>
+                <implicit_spring_damper>1</implicit_spring_damper>
+                </ode>
+            </physics>
+        </joint>
+        <joint name="frame_4_5_Rigida-2" type="fixed">
+            <pose>1.7276020122054278e-15 -6.119593165543335e-10 0.021499999999999995 0.0 0.0 0.0</pose>
+            <parent>frame_4_5</parent>
+            <child>siyi_ip_camera</child>
+        </joint>
+        <joint name="frame_4_5_Rigida-3" type="fixed">
+            <pose>-0.2098511733547239 0.038055596353406856 -0.0024999999999999922 0.0 0.0 0.0</pose>
+            <parent>frame_4_5</parent>
+            <child>motor_fr</child>
+        </joint>
+        <joint name="frame_4_5_Rigida-4" type="fixed">
+            <pose>-0.20985117335473502 0.03805558079046381 -0.0024999999999999814 0.0 0.0 0.0</pose>
+            <parent>frame_4_5</parent>
+            <child>motor_fl</child>
+        </joint>
+        <joint name="frame_4_5_Rigida-5" type="fixed">
+            <pose>-0.20985116604672452 0.03805558079047473 -0.0024999999999999814 0.0 0.0 0.0</pose>
+            <parent>frame_4_5</parent>
+            <child>motor_rl</child>
+        </joint>
+        <joint name="frame_4_5_Rigida-6" type="fixed">
+            <pose>-0.20985116604671347 0.038055596353417806 -0.0024999999999999935 0.0 0.0 0.0</pose>
+            <parent>frame_4_5</parent>
+            <child>motor_rr</child>
+        </joint>
+        <joint name="motor_fr_Revolucion-7" type="revolute">
+            <pose>-3.062821826410597e-09 -8.022544824046824e-09 0.023500000000000056 0.0 0.0 0.0</pose>
+            <parent>motor_fr</parent>
+            <child>prop_ccw_1</child>
+            <axis>
+                <xyz>0 0 1</xyz>
+                <limit>
+                <lower>-1e+16</lower>
+                <upper>1e+16</upper>
+                </limit>
+                <dynamics>
+                <damping>0.004</damping>
+                </dynamics>
+                <use_parent_model_frame>1</use_parent_model_frame>
+            </axis>
+            <physics>
+                <ode>
+                <implicit_spring_damper>1</implicit_spring_damper>
+                </ode>
+            </physics>
+        </joint>
+        <joint name="motor_rl_Revolucion-8" type="revolute">
+            <pose>4.065458584442693e-09 8.001822951337147e-09 0.02349999999999991 0.0 0.0 0.0</pose>
+            <parent>motor_rl</parent>
+            <child>prop_ccw_2</child>
+            <axis>
+                <xyz>0 0 1</xyz>
+                <limit>
+                <lower>-1e+16</lower>
+                <upper>1e+16</upper>
+                </limit>
+                <dynamics>
+                <damping>0.004</damping>
+                </dynamics>
+                <use_parent_model_frame>1</use_parent_model_frame>
+            </axis>
+            <physics>
+                <ode>
+                <implicit_spring_damper>1</implicit_spring_damper>
+                </ode>
+            </physics>
+        </joint>
+        <joint name="motor_fl_Revolucion-9" type="revolute">
+            <pose>-3.281252381323248e-09 7.559505498530984e-09 0.023499999999999823 0.0 0.0 0.0</pose>
+            <parent>motor_fl</parent>
+            <child>prop_cw_1</child>
+            <axis>
+                <xyz>0 0 1</xyz>
+                <limit>
+                <lower>-1e+16</lower>
+                <upper>1e+16</upper>
+                </limit>
+                <dynamics>
+                <damping>0.004</damping>
+                </dynamics>
+                <use_parent_model_frame>1</use_parent_model_frame>
+            </axis>
+            <physics>
+                <ode>
+                <implicit_spring_damper>1</implicit_spring_damper>
+                </ode>
+            </physics>
+        </joint>
+        <joint name="motor_rr_Revolucion-10" type="revolute">
+            <pose>-4.189751474231729e-07 -6.304722670612794e-08 0.0235 0.0 0.0 0.0</pose>
+            <parent>motor_rr</parent>
+            <child>prop_cw_2</child>
+            <axis>
+                <xyz>0 0 1</xyz>
+                <limit>
+                <lower>-1e+16</lower>
+                <upper>1e+16</upper>
+                </limit>
+                <dynamics>
+                <damping>0.004</damping>
+                </dynamics>
+                <use_parent_model_frame>1</use_parent_model_frame>
+            </axis>
+            <physics>
+                <ode>
+                <implicit_spring_damper>1</implicit_spring_damper>
+                </ode>
+            </physics>
+        </joint>
+        <joint name="frame_4_5_Rigida-11" type="fixed">
+            <pose>0.035000361435724894 0.027499999999998314 3.5432969954616553e-17 0.0 0.0 0.0</pose>
+            <parent>frame_4_5</parent>
+            <child>siyi_air_unit</child>
+        </joint>
+        <joint name="frame_4_5_Rigida-12" type="fixed">
+            <pose>0.012170112911452808 0.0024336938053386085 0.011279042125399145 0.0 0.0 0.0</pose>
+            <parent>frame_4_5</parent>
+            <child>mtf_01</child>
+        </joint>
+        <joint name="frame_4_5_Rigida-13" type="fixed">
+            <pose>-0.027533154453973755 -0.00043228134466129486 -0.003000000000000004 0.0 0.0 0.0</pose>
+            <parent>frame_4_5</parent>
+            <child>speedybee_f405_aio</child>
+        </joint>
+
+        <!-- PLUGINS -->
+
+        <plugin filename="libignition-gazebo-joint-state-publisher-system.so"
+        name="ignition::gazebo::systems::JointStatePublisher">
+        </plugin>
+
+        <plugin filename="libignition-gazebo-lift-drag-system.so"
+            name="ignition::gazebo::systems::LiftDrag">
+            <a0>0.3</a0>
+            <alpha_stall>1.4</alpha_stall>
+            <cla>2.11</cla>
+            <cda>0.10</cda>
+            <cma>0.00</cma>
+            <cla_stall>-0.025</cla_stall>
+            <cda_stall>0.0</cda_stall>
+            <cma_stall>0.0</cma_stall>
+            <cp>0.08 0 0.003</cp>
+            <area>0.005</area>     <!-- algo mayor si hace falta -->
+            <air_density>1.225</air_density>
+            <forward>0 1 0</forward>
+            <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+            <link_name>prop_ccw_1</link_name>
+        </plugin>
+        <plugin filename="libignition-gazebo-lift-drag-system.so"
+            name="ignition::gazebo::systems::LiftDrag">
+            <a0>0.3</a0>
+            <alpha_stall>1.4</alpha_stall>
+            <cla>2.11</cla>
+            <cda>0.10</cda>
+            <cma>0.00</cma>
+            <cla_stall>-0.025</cla_stall>
+            <cda_stall>0.0</cda_stall>
+            <cma_stall>0.0</cma_stall>
+            <cp>-0.04 0.069282 0.003</cp>
+            <area>0.005</area>     <!-- algo mayor si hace falta -->
+            <air_density>1.225</air_density>
+            <forward>0.866025 -0.5 0</forward>
+            <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+            <link_name>prop_ccw_1</link_name>
+        </plugin>
+        <plugin filename="libignition-gazebo-lift-drag-system.so"
+            name="ignition::gazebo::systems::LiftDrag">
+            <a0>0.3</a0>
+            <alpha_stall>1.4</alpha_stall>
+            <cla>2.11</cla>
+            <cda>0.10</cda>
+            <cma>0.00</cma>
+            <cla_stall>-0.025</cla_stall>
+            <cda_stall>0.0</cda_stall>
+            <cma_stall>0.0</cma_stall>
+            <cp>-0.04 -0.069282 0.003</cp>
+            <area>0.005</area>     <!-- algo mayor si hace falta -->
+            <air_density>1.225</air_density>
+            <forward>0.866025 0.5 0</forward>
+            <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+            <link_name>prop_ccw_1</link_name>
+        </plugin>
+
+        <plugin filename="libignition-gazebo-lift-drag-system.so"
+            name="ignition::gazebo::systems::LiftDrag">
+            <a0>0.3</a0>
+            <alpha_stall>1.4</alpha_stall>
+            <cla>2.11</cla>
+            <cda>0.10</cda>
+            <cma>0.00</cma>
+            <cla_stall>-0.025</cla_stall>
+            <cda_stall>0.0</cda_stall>
+            <cma_stall>0.0</cma_stall>
+            <cp>0.08 0 0.003</cp>
+            <area>0.005</area>     <!-- algo mayor si hace falta -->
+            <air_density>1.225</air_density>
+            <forward>0 1 0</forward>
+            <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+            <link_name>prop_ccw_2</link_name>
+        </plugin>
+        <plugin filename="libignition-gazebo-lift-drag-system.so"
+            name="ignition::gazebo::systems::LiftDrag">
+            <a0>0.3</a0>
+            <alpha_stall>1.4</alpha_stall>
+            <cla>2.11</cla>
+            <cda>0.10</cda>
+            <cma>0.00</cma>
+            <cla_stall>-0.025</cla_stall>
+            <cda_stall>0.0</cda_stall>
+            <cma_stall>0.0</cma_stall>
+            <cp>-0.04 0.069282 0.003</cp>
+            <area>0.005</area>     <!-- algo mayor si hace falta -->
+            <air_density>1.225</air_density>
+            <forward>0.866025 -0.5 0</forward>
+            <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+            <link_name>prop_ccw_2</link_name>
+        </plugin>
+        <plugin filename="libignition-gazebo-lift-drag-system.so"
+            name="ignition::gazebo::systems::LiftDrag">
+            <a0>0.3</a0>
+            <alpha_stall>1.4</alpha_stall>
+            <cla>2.11</cla>
+            <cda>0.10</cda>
+            <cma>0.00</cma>
+            <cla_stall>-0.025</cla_stall>
+            <cda_stall>0.0</cda_stall>
+            <cma_stall>0.0</cma_stall>
+            <cp>-0.04 -0.069282 0.003</cp>
+            <area>0.005</area>     <!-- algo mayor si hace falta -->
+            <air_density>1.225</air_density>
+            <forward>0.866025 0.5 0</forward>
+            <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+            <link_name>prop_ccw_2</link_name>
+        </plugin>
+
+        <plugin filename="libignition-gazebo-lift-drag-system.so"
+            name="ignition::gazebo::systems::LiftDrag">
+            <a0>0.3</a0>
+            <alpha_stall>1.4</alpha_stall>
+            <cla>2.11</cla>
+            <cda>0.10</cda>
+            <cma>0.00</cma>
+            <cla_stall>-0.025</cla_stall>
+            <cda_stall>0.0</cda_stall>
+            <cma_stall>0.0</cma_stall>
+            <cp>0.08 0 0.003</cp>
+            <area>0.005</area>     <!-- algo mayor si hace falta -->
+            <air_density>1.225</air_density>
+            <forward>0 -1 0</forward>
+            <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+            <link_name>prop_cw_1</link_name>
+        </plugin>
+        <plugin filename="libignition-gazebo-lift-drag-system.so"
+            name="ignition::gazebo::systems::LiftDrag">
+            <a0>0.3</a0>
+            <alpha_stall>1.4</alpha_stall>
+            <cla>2.11</cla>
+            <cda>0.10</cda>
+            <cma>0.00</cma>
+            <cla_stall>-0.025</cla_stall>
+            <cda_stall>0.0</cda_stall>
+            <cma_stall>0.0</cma_stall>
+            <cp>-0.04 0.069282 0.003</cp>
+            <area>0.005</area>     <!-- algo mayor si hace falta -->
+            <air_density>1.225</air_density>
+            <forward>0.866025 -0.5 0</forward>
+            <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+            <link_name>prop_cw_1</link_name>
+        </plugin>
+        <plugin filename="libignition-gazebo-lift-drag-system.so"
+            name="ignition::gazebo::systems::LiftDrag">
+            <a0>0.3</a0>
+            <alpha_stall>1.4</alpha_stall>
+            <cla>2.11</cla>
+            <cda>0.10</cda>
+            <cma>0.00</cma>
+            <cla_stall>-0.025</cla_stall>
+            <cda_stall>0.0</cda_stall>
+            <cma_stall>0.0</cma_stall>
+            <cp>-0.04 -0.069282 0.003</cp>
+            <area>0.005</area>     <!-- algo mayor si hace falta -->
+            <air_density>1.225</air_density>
+            <forward>0.866025 0.5 0</forward>
+            <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+            <link_name>prop_cw_1</link_name>
+        </plugin>
+
+        <plugin filename="libignition-gazebo-lift-drag-system.so"
+            name="ignition::gazebo::systems::LiftDrag">
+            <a0>0.3</a0>
+            <alpha_stall>1.4</alpha_stall>
+            <cla>2.11</cla>
+            <cda>0.10</cda>
+            <cma>0.00</cma>
+            <cla_stall>-0.025</cla_stall>
+            <cda_stall>0.0</cda_stall>
+            <cma_stall>0.0</cma_stall>
+            <cp>0.08 0 0.003</cp>
+            <area>0.005</area>     <!-- algo mayor si hace falta -->
+            <air_density>1.225</air_density>
+            <forward>0 -1 0</forward>
+            <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+            <link_name>prop_cw_2</link_name>
+        </plugin>
+        <plugin filename="libignition-gazebo-lift-drag-system.so"
+            name="ignition::gazebo::systems::LiftDrag">
+            <a0>0.3</a0>
+            <alpha_stall>1.4</alpha_stall>
+            <cla>2.11</cla>
+            <cda>0.10</cda>
+            <cma>0.00</cma>
+            <cla_stall>-0.025</cla_stall>
+            <cda_stall>0.0</cda_stall>
+            <cma_stall>0.0</cma_stall>
+            <cp>-0.04 0.069282 0.003</cp>
+            <area>0.005</area>     <!-- algo mayor si hace falta -->
+            <air_density>1.225</air_density>
+            <forward>0.866025 -0.5 0</forward>
+            <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+            <link_name>prop_cw_2</link_name>
+        </plugin>
+        <plugin filename="libignition-gazebo-lift-drag-system.so"
+            name="ignition::gazebo::systems::LiftDrag">
+            <a0>0.3</a0>
+            <alpha_stall>1.4</alpha_stall>
+            <cla>2.11</cla>
+            <cda>0.10</cda>
+            <cma>0.00</cma>
+            <cla_stall>-0.025</cla_stall>
+            <cda_stall>0.0</cda_stall>
+            <cma_stall>0.0</cma_stall>
+            <cp>-0.04 -0.069282 0.003</cp>
+            <area>0.005</area>     <!-- algo mayor si hace falta -->
+            <air_density>1.225</air_density>
+            <forward>0.866025 0.5 0</forward>
+            <upward>0 0 1</upward>  <!-- o 0 0 -1 si mediste empuje negativo -->
+            <link_name>prop_cw_2</link_name>
+        </plugin>
+
+        <plugin name="ArduPilotPlugin" filename="libArduPilotPlugin.so">
+            <fdm_addr>127.0.0.1</fdm_addr>
+            <fdm_port_in>9002</fdm_port_in>
+            <connectionTimeoutMaxCount>5</connectionTimeoutMaxCount>
+            <lock_step>1</lock_step>
+
+            <modelXYZToAirplaneXForwardZDown degrees="true">0 0 0 180 0 0</modelXYZToAirplaneXForwardZDown>
+            <gazeboXYZToNED degrees="true">0 0 0 180 0 0</gazeboXYZToNED>
+
+            <imuName>imu_sensor</imuName>
+            <magSensorName>mag_sensor</magSensorName> 
+
+            <control channel="0">
+                <jointName>motor_fr_Revolucion-7</jointName>
+                <useForce>1</useForce>
+                <multiplier>838</multiplier>
+                <offset>0</offset>
+                <servo_min>1100</servo_min>
+                <servo_max>1900</servo_max>
+                <deadband>50</deadband>
+                <type>VELOCITY</type>
+                <p_gain>0.05</p_gain>
+                <i_gain>0</i_gain>
+                <d_gain>0</d_gain>
+                <i_max>0</i_max>
+                <i_min>0</i_min>
+                <cmd_max>2.5</cmd_max>
+                <cmd_min>-2.5</cmd_min>
+                <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+            </control>
+
+            <control channel="1">
+                <jointName>motor_rl_Revolucion-8</jointName>
+                <useForce>1</useForce>
+                <multiplier>838</multiplier>
+                <offset>0</offset>
+                <servo_min>1100</servo_min>
+                <servo_max>1900</servo_max>
+                <deadband>50</deadband>
+                <type>VELOCITY</type>
+                <p_gain>0.05</p_gain>
+                <i_gain>0</i_gain>
+                <d_gain>0</d_gain>
+                <i_max>0</i_max>
+                <i_min>0</i_min>
+                <cmd_max>2.5</cmd_max>
+                <cmd_min>-2.5</cmd_min>
+                <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+            </control>
+
+            <control channel="2">
+                <jointName>motor_fl_Revolucion-9</jointName>
+                <useForce>1</useForce>
+                <multiplier>-838</multiplier>
+                <offset>0</offset>
+                <servo_min>1100</servo_min>
+                <servo_max>1900</servo_max>
+                <deadband>50</deadband>
+                <type>VELOCITY</type>
+                <p_gain>0.05</p_gain>
+                <i_gain>0</i_gain>
+                <d_gain>0</d_gain>
+                <i_max>0</i_max>
+                <i_min>0</i_min>
+                <cmd_max>2.5</cmd_max>
+                <cmd_min>-2.5</cmd_min>
+                <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+            </control>
+
+            <control channel="3">
+                <jointName>motor_rr_Revolucion-10</jointName>
+                <useForce>1</useForce>
+                <multiplier>-838</multiplier>
+                <offset>0</offset>
+                <servo_min>1100</servo_min>
+                <servo_max>1900</servo_max> 
+                <deadband>50</deadband>
+                <type>VELOCITY</type>
+                <p_gain>0.05</p_gain>
+                <i_gain>0</i_gain>
+                <d_gain>0</d_gain>
+                <i_max>0</i_max>
+                <i_min>0</i_min>
+                <cmd_max>2.5</cmd_max>
+                <cmd_min>-2.5</cmd_min>
+                <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
+            </control>
+        </plugin>
+    </model>
+</sdf>

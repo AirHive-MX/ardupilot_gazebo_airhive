@@ -1,0 +1,314 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="CINEWHOOP_4.5">
+    <link name="frame_4.5">
+        <inertial>
+            <origin xyz="0.0030291193216684465 4.153273349654646e-06 0.018332329913369583" rpy="0.0 0.0 0.0" />
+            <mass value="0.46559043380318527" />
+            <inertia ixx="0.0021744778498765994" iyy="0.002488853720756953" izz="0.004457899881763257" ixy="-1.832858723255757e-07" iyz="-1.822494627435283e-08" ixz="-1.4123664265542227e-05" />
+        </inertial>
+        <visual name="frame_4.5_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/frame_4.5.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="frame_4.5_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/frame_4.5.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="siyi_ip_camera">
+        <inertial>
+            <origin xyz="-2.9982355752345224e-15 -0.021499999999999995 0.009130708053061376" rpy="0.0 -0.0 0.0" />
+            <mass value="0.034531703811389286" />
+            <inertia ixx="5.620390098305889e-06" iyy="6.027604506851181e-06" izz="9.243528630677994e-06" ixy="-1.0270543032082753e-11" iyz="0.0" ixz="6.793866408844889e-19" />
+        </inertial>
+        <visual name="siyi_ip_camera_visual">
+            <origin xyz="-1.7275070263167436e-15 -0.021499999999999995 -6.119593187747797e-10" rpy="-1.5707963267948968 -2.8372366184865045e-16 4.417951470996925e-18" />
+            <geometry>
+                <mesh filename="meshes/siyi_ip_camera.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="siyi_ip_camera_collision">
+            <origin xyz="-1.7275070263167436e-15 -0.021499999999999995 -6.119593187747797e-10" rpy="-1.5707963267948968 -2.8372366184865045e-16 4.417951470996925e-18" />
+            <geometry>
+                <mesh filename="meshes/siyi_ip_camera.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="motor_fr">
+        <inertial>
+            <origin xyz="3.0628261793452793e-09 1.977455985624488e-09 0.01019616366972623" rpy="0.0 -0.0 0.0" />
+            <mass value="0.02166445211752593" />
+            <inertia ixx="1.4216377839395243e-06" iyy="1.4216377839314741e-06" izz="2.0339490705062653e-06" ixy="1.2739375526704677e-18" iyz="-2.303929616531697e-19" ixz="-1.2739375526704677e-18" />
+        </inertial>
+        <visual name="motor_fr_visual">
+            <origin xyz="0.209851173354724 -0.038055586353406834 0.0025000000000000356" rpy="-2.5086670123025916e-18 -2.6367796834847463e-16 0.0" />
+            <geometry>
+                <mesh filename="meshes/motor_fr.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="motor_fr_collision">
+            <origin xyz="0.209851173354724 -0.038055586353406834 0.0025000000000000356" rpy="-2.5086670123025916e-18 -2.6367796834847463e-16 0.0" />
+            <geometry>
+                <mesh filename="meshes/motor_fr.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="motor_fl">
+        <inertial>
+            <origin xyz="3.281256777398767e-09 -2.44049362940757e-09 0.010196163669726236" rpy="0.0 -0.0 0.0" />
+            <mass value="0.02166445211752592" />
+            <inertia ixx="1.4216377839396327e-06" iyy="1.4216377839309591e-06" izz="2.0339490705053437e-06" ixy="1.5043305143236374e-18" iyz="-2.303929616531697e-19" ixz="-1.3349239248727773e-18" />
+        </inertial>
+        <visual name="motor_fl_visual">
+            <origin xyz="0.20985117335473497 -0.03805559079046382 0.002499999999999956" rpy="8.277567197724743e-19 1.3877787807814454e-16 0.0" />
+            <geometry>
+                <mesh filename="meshes/motor_fl.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="motor_fl_collision">
+            <origin xyz="0.20985117335473497 -0.03805559079046382 0.002499999999999956" rpy="8.277567197724743e-19 1.3877787807814454e-16 0.0" />
+            <geometry>
+                <mesh filename="meshes/motor_fl.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="motor_rr">
+        <inertial>
+            <origin xyz="-4.283884837974483e-09 2.4197733150543857e-09 0.01019616366972624" rpy="0.0 -0.0 0.0" />
+            <mass value="0.02166445211752593" />
+            <inertia ixx="1.4216377839395514e-06" iyy="1.4216377839304306e-06" izz="2.033949070506184e-06" ixy="1.179069862577986e-18" iyz="-2.439454888092385e-19" ixz="-1.3010426069826053e-18" />
+        </inertial>
+        <visual name="motor_rr_visual">
+            <origin xyz="0.20985116604671358 -0.03805558635341779 0.0025000000000000087" rpy="-1.2043865472767129e-17 -9.714451465470125e-17 2.4651903288156635e-32" />
+            <geometry>
+                <mesh filename="meshes/motor_rr.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="motor_rr_collision">
+            <origin xyz="0.20985116604671358 -0.03805558635341779 0.0025000000000000087" rpy="-1.2043865472767129e-17 -9.714451465470125e-17 2.4651903288156635e-32" />
+            <geometry>
+                <mesh filename="meshes/motor_rr.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="motor_rl">
+        <inertial>
+            <origin xyz="-4.065454168866722e-09 -1.9981762289233986e-09 0.010196163669726236" rpy="0.0 -0.0 0.0" />
+            <mass value="0.02166445211752593" />
+            <inertia ixx="1.4216377839396056e-06" iyy="1.42163778393142e-06" izz="2.033949070506401e-06" ixy="1.3823577699190182e-18" iyz="-2.371692252312041e-19" ixz="-1.3417001884508117e-18" />
+        </inertial>
+        <visual name="motor_rl_visual">
+            <origin xyz="0.20985116604672452 -0.03805559079047472 0.0024999999999999823" rpy="0.0 -0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/motor_rl.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="motor_rl_collision">
+            <origin xyz="0.20985116604672452 -0.03805559079047472 0.0024999999999999823" rpy="0.0 -0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/motor_rl.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="prop_ccw_1">
+        <inertial>
+            <origin xyz="1.0413838978706735e-07 -9.717821981780617e-08 -0.0036339636870820445" rpy="0.0 -0.0 0.0" />
+            <mass value="0.003055288032744085" />
+            <inertia ixx="9.386423608052269e-07" iyy="9.386625365933894e-07" izz="1.8144437132977562e-06" ixy="-2.4687616368383866e-12" iyz="7.361053689097926e-13" ixz="-1.0264157103399038e-12" />
+        </inertial>
+        <visual name="prop_ccw_1_visual">
+            <origin xyz="3.0628218361528073e-09 -1.9774551685003415e-09 -0.023500000000000073" rpy="-4.8570128095075863e-17 -7.21644966006352e-16 -9.720794061142923e-48" />
+            <geometry>
+                <mesh filename="meshes/prop_ccw_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="prop_ccw_1_collision">
+            <origin xyz="3.0628218361528073e-09 -1.9774551685003415e-09 -0.023500000000000073" rpy="-4.8570128095075863e-17 -7.21644966006352e-16 -9.720794061142923e-48" />
+            <geometry>
+                <mesh filename="meshes/prop_ccw_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="prop_ccw_2">
+        <inertial>
+            <origin xyz="9.701010939444643e-08 -9.320258760325828e-08 -0.0036339636870819404" rpy="0.0 -0.0 0.0" />
+            <mass value="0.003055288032744085" />
+            <inertia ixx="9.386423608052303e-07" iyy="9.386625365933809e-07" izz="1.8144437132977528e-06" ixy="-2.4687616351443207e-12" iyz="7.361053693333091e-13" ixz="-1.0264157086458379e-12" />
+        </inertial>
+        <visual name="prop_ccw_2_visual">
+            <origin xyz="-4.0654585653499e-09 1.9981770460475446e-09 -0.023499999999999948" rpy="-1.2352531617612977e-16 -7.415942859800849e-16 0.0" />
+            <geometry>
+                <mesh filename="meshes/prop_ccw_2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="prop_ccw_2_collision">
+            <origin xyz="-4.0654585653499e-09 1.9981770460475446e-09 -0.023499999999999948" rpy="-1.2352531617612977e-16 -7.415942859800849e-16 0.0" />
+            <geometry>
+                <mesh filename="meshes/prop_ccw_2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="prop_cw_1">
+        <inertial>
+            <origin xyz="1.0435682070486508e-07 -9.764125941558177e-08 0.00363396367966464" rpy="0.0 -0.0 0.0" />
+            <mass value="0.0030552880224177003" />
+            <inertia ixx="9.386423600392957e-07" iyy="9.386625350965484e-07" izz="1.8144437124096896e-06" ixy="-2.4687616368383866e-12" iyz="-7.361053689107699e-13" ixz="1.0264157052576619e-12" />
+        </inertial>
+        <visual name="prop_cw_1_visual">
+            <origin xyz="3.281252372033805e-09 -2.4404944820588528e-09 0.02349999999999988" rpy="3.1415926535897922 -1.7347234759768133e-17 -1.935877736204715e-35" />
+            <geometry>
+                <mesh filename="meshes/prop_cw_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="prop_cw_1_collision">
+            <origin xyz="3.281252372033805e-09 -2.4404944820588528e-09 0.02349999999999988" rpy="3.1415926535897922 -1.7347234759768133e-17 -1.935877736204715e-35" />
+            <geometry>
+                <mesh filename="meshes/prop_cw_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="prop_cw_2">
+        <inertial>
+            <origin xyz="1.0005071576557612e-07 9.824799163560271e-08 -0.0036339636796647225" rpy="0.0 -0.0 1.2154326714572545e-63" />
+            <mass value="0.0030552880224177003" />
+            <inertia ixx="9.386423600392955e-07" iyy="9.386625350965416e-07" izz="1.8144437124096994e-06" ixy="2.4687616334502544e-12" iyz="-7.361053667922101e-13" ixz="-1.0264157056812222e-12" />
+        </inertial>
+        <visual name="prop_cw_2_visual">
+            <origin xyz="-1.0248525672551522e-09 3.0472267020797974e-09 -0.023500000000000007" rpy="-1.2246467991473532e-16 -1.2325951644078312e-32 -2.465190328815665e-32" />
+            <geometry>
+                <mesh filename="meshes/prop_cw_2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="prop_cw_2_collision">
+            <origin xyz="-1.0248525672551522e-09 3.0472267020797974e-09 -0.023500000000000007" rpy="-1.2246467991473532e-16 -1.2325951644078312e-32 -2.465190328815665e-32" />
+            <geometry>
+                <mesh filename="meshes/prop_cw_2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="siyi_air_unit">
+        <inertial>
+            <origin xyz="-1.4357249689426685e-09 1.6475709685437323e-15 0.005836379592726941" rpy="0.0 -0.0 0.0" />
+            <mass value="0.04557472080298034" />
+            <inertia ixx="1.119309465611787e-05" iyy="1.7609661308200556e-05" izz="2.7547878553966782e-05" ixy="-3.35590928358435e-20" iyz="-1.963493381101992e-20" ixz="-3.68012654524842e-21" />
+        </inertial>
+        <visual name="siyi_air_unit_visual">
+            <origin xyz="-0.03500000143572493 -0.027499999999998335 -3.1086244689504386e-17" rpy="-1.6211328398951438e-16 4.85722573273506e-17 3.081487911019581e-33" />
+            <geometry>
+                <mesh filename="meshes/siyi_air_unit.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="siyi_air_unit_collision">
+            <origin xyz="-0.03500000143572493 -0.027499999999998335 -3.1086244689504386e-17" rpy="-1.6211328398951438e-16 4.85722573273506e-17 3.081487911019581e-33" />
+            <geometry>
+                <mesh filename="meshes/siyi_air_unit.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="mtf_01">
+        <inertial>
+            <origin xyz="-0.001839985164880842 -0.0050844606342186 -0.007731347649063487" rpy="0.0 -0.0 0.0" />
+            <mass value="0.013295325356687966" />
+            <inertia ixx="6.753309825448112e-07" iyy="3.979094943134081e-07" izz="7.718463119550795e-07" ixy="-8.837653376545054e-09" iyz="-1.767582403787081e-08" ixz="-4.769354147986148e-08" />
+        </inertial>
+        <visual name="mtf_01_visual">
+            <origin xyz="0.012169801925407644 0.0024333557774289384 -0.011279042763823459" rpy="-1.7484555274184362e-07 -8.742277595534357e-08 3.141592653589793" />
+            <geometry>
+                <mesh filename="meshes/mtf_01.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="mtf_01_collision">
+            <origin xyz="0.012169801925407644 0.0024333557774289384 -0.011279042763823459" rpy="-1.7484555274184362e-07 -8.742277595534357e-08 3.141592653589793" />
+            <geometry>
+                <mesh filename="meshes/mtf_01.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="speedybee_f405_aio">
+        <inertial>
+            <origin xyz="0.02499999986685737 -6.119755260186599e-10 0.007000000000000002" rpy="0.0 -0.0 0.0" />
+            <mass value="0.009431279583242714" />
+            <inertia ixx="9.213199669108757e-07" iyy="9.213199669108795e-07" izz="1.7205006077067406e-06" ixy="9.879954062212462e-10" iyz="-4.5366444026174124e-23" ixz="4.235164736271502e-22" />
+        </inertial>
+        <visual name="speedybee_f405_aio_visual">
+            <origin xyz="0.027533154453973765 0.0004322813446612961 0.003000000000000005" rpy="-4.08636269416162e-16 8.649843312289846e-32 2.465190328815663e-32" />
+            <geometry>
+                <mesh filename="meshes/speedybee_f405_aio.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="speedybee_f405_aio_collision">
+            <origin xyz="0.027533154453973765 0.0004322813446612961 0.003000000000000005" rpy="-4.08636269416162e-16 8.649843312289846e-32 2.465190328815663e-32" />
+            <geometry>
+                <mesh filename="meshes/speedybee_f405_aio.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="frame_4.5_Rígida-2" type="fixed">
+        <origin xyz="0.108166 0.0 0.042" rpy="1.5707963267948966 -0.0 1.570796326794897" />
+        <parent link="frame_4.5" />
+        <child link="siyi_ip_camera" />
+    </joint>
+    <joint name="frame_4.5_Rígida-3" type="fixed">
+        <origin xyz="0.065079 -0.07499999 0.032" rpy="3.141592653589793 -0.0 0.0" />
+        <parent link="frame_4.5" />
+        <child link="motor_fr" />
+    </joint>
+    <joint name="frame_4.5_Rígida-4" type="fixed">
+        <origin xyz="0.065079 0.07499999 0.032" rpy="3.141592653589793 -0.0 0.0" />
+        <parent link="frame_4.5" />
+        <child link="motor_fl" />
+    </joint>
+    <joint name="frame_4.5_Rígida-5" type="fixed">
+        <origin xyz="-0.065079 0.07499999 0.032" rpy="3.141592653589793 -0.0 0.0" />
+        <parent link="frame_4.5" />
+        <child link="motor_rl" />
+    </joint>
+    <joint name="frame_4.5_Rígida-6" type="fixed">
+        <origin xyz="-0.065079 -0.07499999 0.032" rpy="3.141592653589793 -0.0 0.0" />
+        <parent link="frame_4.5" />
+        <child link="motor_rr" />
+    </joint>
+    <joint name="motor_fr_Revolución-7" type="continuous">
+        <origin xyz="0.0 0.0 0.016" rpy="-3.141592653589793 -4.930380657631324e-32 0.0" />
+        <parent link="motor_fr" />
+        <child link="prop_ccw_1" />
+        <axis xyz="4.930380657631324e-32 -3.851859888774472e-34 -1.0" />
+    </joint>
+    <joint name="motor_rl_Revolución-8" type="continuous">
+        <origin xyz="0.0 0.0 0.016" rpy="3.141592653589793 -0.0 0.0" />
+        <parent link="motor_rl" />
+        <child link="prop_ccw_2" />
+        <axis xyz="0.0 0.0 -1.0" />
+    </joint>
+    <joint name="motor_fl_Revolución-9" type="continuous">
+        <origin xyz="0.0 0.0 0.016" rpy="-1.1159575361799988e-18 -2.465190328815662e-32 3.0385816786431356e-64" />
+        <parent link="motor_fl" />
+        <child link="prop_cw_1" />
+        <axis xyz="-2.465190328815662e-32 1.1159575361799988e-18 -1.0" />
+    </joint>
+    <joint name="motor_rr_Revolución-10" type="continuous">
+        <origin xyz="0.0029544200000000045 0.0005209500000000045 0.016" rpy="-3.141592653589793 -1.2325951644078312e-32 -5.780645640606276e-48" />
+        <parent link="motor_rr" />
+        <child link="prop_cw_2" />
+        <axis xyz="1.232595164407831e-32 -1.5407439555097887e-33 -0.9999999999999999" />
+    </joint>
+    <joint name="frame_4.5_Rígida-11" type="fixed">
+        <origin xyz="-3.36e-06 0.0 0.037000000000000005" rpy="3.141592653589793 -0.0 0.0" />
+        <parent link="frame_4.5" />
+        <child link="siyi_air_unit" />
+    </joint>
+    <joint name="frame_4.5_Rígida-12" type="fixed">
+        <origin xyz="-0.010767690000000002 -0.00509334 0.0" rpy="3.141592653589793 -0.0 0.0" />
+        <parent link="frame_4.5" />
+        <child link="mtf_01" />
+    </joint>
+    <joint name="frame_4.5_Rígida-13" type="fixed">
+        <origin xyz="0.0 0.0 0.005" rpy="0.0 -0.0 0.0" />
+        <parent link="frame_4.5" />
+        <child link="speedybee_f405_aio" />
+    </joint>
+</robot>
