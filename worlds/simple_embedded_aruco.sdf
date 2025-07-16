@@ -51,7 +51,7 @@
       <direction>-0.5 0.1 -0.9</direction>
     </light>
 
-    <model name="ground_plane">
+    <!-- <model name="ground_plane">
       <static>true</static>
       <link name="link">
         <collision name="collision">
@@ -76,7 +76,12 @@
           </material>
         </visual>
       </link>
-    </model>
+    </model> -->
+
+    <include>
+      <uri>model://textured_floor</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
 
     <!-- <include>
       <uri>model://iris_with_standoffs</uri>

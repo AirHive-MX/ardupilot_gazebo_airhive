@@ -534,22 +534,26 @@
                 <always_on>1</always_on>
                 <visualize>true</visualize>
             </sensor>
-            <sensor name='optical_flow' type='camera'>
+            <sensor name='optical_flow_cam' type='camera'>
                 <pose>0 0 0.01 0 -1.57079632679 0</pose>
                 <update_rate>10</update_rate>
-                <topic>optical_flow_cam</topic>
-                <image>
-                    <width>320</width>
-                    <height>240</height>
-                    <format>R8</format>
-                </image>
-                <clip>
-                    <near>0.02</near>
-                    <far>10</far>
-                </clip>         
+                <topic>optical_flow</topic>  
+                <camera> 
+                    <image>
+                        <width>320</width>
+                        <height>240</height>
+                        <format>R8G8B8</format>
+                    </image> 
+                    <clip>
+                        <near>0.02</near>
+                        <far>10</far>
+                    </clip> 
+                    <!-- <horizontal_fov>0.785</horizontal_fov> -->
+                </camera>        
                 <visualize>true</visualize>
                 <always_on>1</always_on>
             </sensor>
+            
         </link>
         <link name="speedybee_f405_aio">
             <pose>0.027533154453973765 0.0004322813446612961 0.008000000000000005 -4.08636269416162e-16 8.649843312289846e-32 2.465190328815663e-32</pose>
@@ -984,6 +988,7 @@
 
             <imuName>imu_sensor</imuName>
             <magSensorName>mag_sensor</magSensorName> 
+            <opticalFlowName>optical_flow</opticalFlowName>
 
             <control channel="0">
                 <jointName>motor_fr_Revolucion-7</jointName>
