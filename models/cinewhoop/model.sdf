@@ -534,22 +534,19 @@
                 <always_on>1</always_on>
                 <visualize>true</visualize>
             </sensor>
-            <sensor name='optical_flow_cam' type='camera'>
+            <sensor name='optical_flow' type='camera'>
                 <pose>0 0 0.01 0 -1.57079632679 0</pose>
                 <update_rate>10</update_rate>
-                <topic>optical_flow</topic>  
-                <camera> 
-                    <image>
-                        <width>320</width>
-                        <height>240</height>
-                        <format>R8G8B8</format>
-                    </image> 
-                    <clip>
-                        <near>0.02</near>
-                        <far>10</far>
-                    </clip> 
-                    <!-- <horizontal_fov>0.785</horizontal_fov> -->
-                </camera>        
+                <topic>optical_flow_cam</topic>
+                <image>
+                    <width>320</width>
+                    <height>240</height>
+                    <format>R8G8B8</format>
+                </image>
+                <clip>
+                    <near>0.02</near>
+                    <far>10</far>
+                </clip>         
                 <visualize>true</visualize>
                 <always_on>1</always_on>
             </sensor>
