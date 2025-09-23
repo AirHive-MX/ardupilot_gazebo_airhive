@@ -1,0 +1,896 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.9">
+    <model name="kit">
+        <pose degrees="true">0 0 0 0 0 0</pose>
+        <link name="kit/body">
+            <pose>0.0 0.0 0.0 0.0 -0.0 0.0</pose>
+            <inertial>
+                <mass>1.3975241290988123</mass>
+                <pose>-9.046794009263537e-05 -0.0009562747838068988 0.012858199720463814 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>0.003957788225764547</ixx>
+                    <iyy>0.002320896620721669</iyy>
+                    <izz>0.005661635793867209</izz>
+                    <ixy>1.3363347888705596e-05</ixy>
+                    <iyz>1.489024142128422e-05</iyz>
+                    <ixz>-2.859308285209357e-06</ixz>
+                </inertia>
+            </inertial>
+            <visual name="frame_visual">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/frame.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="frame_collision">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/frame.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="spacer2">
+            <pose>-0.032500000000000015 -0.060000000000000026 -0.005 0.0 -0.0 0.0</pose>
+            <inertial>
+                <mass>0.005098724564780885</mass>
+                <pose>5.0581761001922135e-15 0.0 0.019274480254306284 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>4.070685604409562e-07</ixx>
+                    <iyy>4.070685604410799e-07</iyy>
+                    <izz>1.7703904738696196e-08</izz>
+                    <ixy>1.6940658945086007e-21</ixy>
+                    <iyz>0.0</iyz>
+                    <ixz>4.573977915173222e-20</ixz>
+                </inertia>
+            </inertial>
+            <visual name="spacer2_visual">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/spacer2.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="spacer2_collision">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/spacer2.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="spacer2-1">
+            <pose>0.03249999999999998 -0.060000000000000046 -0.005 0.0 -0.0 0.0</pose>
+            <inertial>
+                <mass>0.005098724564780885</mass>
+                <pose>5.0581761001922135e-15 0.0 0.019274480254306284 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>4.0706856044095283e-07</ixx>
+                    <iyy>4.0706856044108073e-07</iyy>
+                    <izz>1.7703904738699584e-08</izz>
+                    <ixy>-1.6940658945086007e-21</ixy>
+                    <iyz>0.0</iyz>
+                    <ixz>4.531626267810507e-20</ixz>
+                </inertia>
+            </inertial>
+            <visual name="spacer2-1_visual">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/spacer2-1.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="spacer2-1_collision">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/spacer2-1.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="spacer2-2">
+            <pose>0.021500000000000023 0.06499999999999996 -0.005 0.0 -0.0 0.0</pose>
+            <inertial>
+                <mass>0.005098724564780885</mass>
+                <pose>5.0581761001922135e-15 0.0 0.019274480254306284 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>4.0706856044094605e-07</ixx>
+                    <iyy>4.0706856044108115e-07</iyy>
+                    <izz>1.770390473868942e-08</izz>
+                    <ixy>8.470329472543003e-22</ixy>
+                    <iyz>0.0</iyz>
+                    <ixz>4.5951537388545793e-20</ixz>
+                </inertia>
+            </inertial>
+            <visual name="spacer2-2_visual">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/spacer2-2.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="spacer2-2_collision">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/spacer2-2.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="spacer2-3">
+            <pose>-0.021499999999999977 0.06499999999999996 -0.005 0.0 -0.0 0.0</pose>
+            <inertial>
+                <mass>0.005098724564780885</mass>
+                <pose>5.0581761001922135e-15 0.0 0.019274480254306284 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>4.0706856044094605e-07</ixx>
+                    <iyy>4.0706856044108073e-07</iyy>
+                    <izz>1.770390473868942e-08</izz>
+                    <ixy>0.0</ixy>
+                    <iyz>0.0</iyz>
+                    <ixz>4.573977915173222e-20</ixz>
+                </inertia>
+            </inertial>
+            <visual name="spacer2-3_visual">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/spacer2-3.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="spacer2-3_collision">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/spacer2-3.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="rasp">
+            <pose>-3.1433189384699746e-17 -0.030350000000000037 0.003289999999999971 1.5707963267948966 -2.4651903288156602e-32 -1.5707963267948968</pose>
+            <inertial>
+                <mass>0.14743967797114743</mass>
+                <pose>0.014552554638685902 0.004192990865634043 -0.0005393573075982792 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>4.317683697388278e-05</ixx>
+                    <iyy>0.00013568890202395864</iyy>
+                    <izz>9.968798222511098e-05</izz>
+                    <ixy>-1.0265885502930054e-05</ixy>
+                    <iyz>-2.2781275850864802e-07</iyz>
+                    <ixz>-8.610125404843334e-07</ixz>
+                </inertia>
+            </inertial>
+            <visual name="rasp_visual">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/rasp.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="rasp_collision">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/rasp.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="cam">
+            <pose>3.1439244914057213e-06 0.06309999999999998 0.015534500122068638 1.5707963267948966 1.2246467991473517e-16 3.1415926535897922</pose>
+            <inertial>
+                <mass>0.012581061808745858</mass>
+                <pose>2.318861496499978e-06 0.0010636133949692569 -0.0005143431541209256 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>6.256694365584978e-07</ixx>
+                    <iyy>4.437938926390567e-07</iyy>
+                    <izz>9.962228661177008e-07</izz>
+                    <ixy>-7.969036391657073e-10</ixy>
+                    <iyz>2.54812004683445e-08</iyz>
+                    <ixz>6.473756464682891e-10</ixz>
+                </inertia>
+            </inertial>
+            <visual name="cam_visual">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/cam.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="cam_collision">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/cam.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="speed">
+            <pose>0.002283154423113978 0.03543228209748138 0.005499999999999998 0.0 -0.0 0.0</pose>
+            <inertial>
+                <mass>0.009431279583242714</mass>
+                <pose>-0.0025331544230934432 -0.0004322820974810737 0.004000000000000002 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>9.203319715046592e-07</ixx>
+                    <iyy>9.223079623170988e-07</iyy>
+                    <izz>1.7205006077067474e-06</izz>
+                    <ixy>-9.26442286059391e-22</ixy>
+                    <iyz>-4.235164736271502e-22</iyz>
+                    <ixz>3.077111878697263e-22</ixz>
+                </inertia>
+            </inertial>
+            <visual name="speed_visual">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/speed.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="speed_collision">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/speed.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="bat">
+            <pose>-0.01599999999999955 -0.038500000000000034 0.0342363788984579 0.0 -0.0 0.0</pose>
+            <inertial>
+                <mass>0.5224960000000001</mass>
+                <pose>0.016 0.0325 0.016000000000000007 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>0.00022854845866666657</ixx>
+                    <iyy>8.917265066666659e-05</iyy>
+                    <izz>0.0002285484586666667</izz>
+                    <ixy>4.544119747150959e-20</ixy>
+                    <iyz>0.0</iyz>
+                    <ixz>1.033536345717781e-20</ixz>
+                </inertia>
+            </inertial>
+            <visual name="bat_visual">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/bat.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="bat_collision">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/bat.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="m1">
+            <pose>0.09381802093007348 -0.09381802093007319 0.004249999999999999 0.0 -0.0 0.0</pose>
+            <inertial>
+                <mass>0.018516666419059958</mass>
+                <pose>-1.1723955140041654e-15 -1.7763568394002505e-17 0.003854232633166276 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>5.063978800663217e-07</ixx>
+                    <iyy>5.06059513184472e-07</iyy>
+                    <izz>7.607155930454716e-07</izz>
+                    <ixy>2.710505431213761e-20</ixy>
+                    <iyz>1.6940658945086007e-21</iyz>
+                    <ixz>-6.098637220230962e-20</ixz>
+                </inertia>
+            </inertial>
+            <visual name="m1_visual">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/m1.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="m1_collision">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/m1.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="pata">
+            <pose>0.007070903521307299 -0.007070903521307299 0.0 0.0 -0.0 0.0</pose>
+            <inertial>
+                <mass>0.009833816316897276</mass>
+                <pose>0.06822652987317801 -0.0682265298731906 -0.009138920478582762 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>5.275899459274266e-07</ixx>
+                    <iyy>5.275899457744186e-07</iyy>
+                    <izz>4.148130381152396e-07</izz>
+                    <ixy>1.539730385693793e-07</ixy>
+                    <iyz>3.947414083387938e-08</iyz>
+                    <ixz>-3.9474140833243256e-08</ixz>
+                </inertia>
+            </inertial>
+            <visual name="pata_visual">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/pata.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="pata_collision">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/pata.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="pata-1">
+            <pose>0.007070903521307299 0.007070903521307308 0.0 0.0 -0.0 1.5707963267948966</pose>
+            <inertial>
+                <mass>0.009833816316897276</mass>
+                <pose>0.06822652987317801 -0.0682265298731906 -0.009138920478582762 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>5.275899459274334e-07</ixx>
+                    <iyy>5.275899457744322e-07</iyy>
+                    <izz>4.148130381152396e-07</izz>
+                    <ixy>1.539730385693793e-07</ixy>
+                    <iyz>3.947414083387853e-08</iyz>
+                    <ixz>-3.9474140833243256e-08</ixz>
+                </inertia>
+            </inertial>
+            <visual name="pata-1_visual">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/pata-1.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="pata-1_collision">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/pata-1.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="pata-2">
+            <pose>-0.14457521677195959 0.14457521677195959 -8.881784197001253e-18 0.0 -0.0 0.0</pose>
+            <inertial>
+                <mass>0.009833816316897276</mass>
+                <pose>0.06822652987317773 -0.06822652987319046 -0.009138920478582703 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>5.275899459273771e-07</ixx>
+                    <iyy>5.275899457745122e-07</iyy>
+                    <izz>4.148130381149523e-07</izz>
+                    <ixy>1.539730385693856e-07</ixy>
+                    <iyz>3.9474140833881747e-08</iyz>
+                    <ixz>-3.94741408332439e-08</ixz>
+                </inertia>
+            </inertial>
+            <visual name="pata-2_visual">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/pata-2.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="pata-2_collision">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/pata-2.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="pata-3">
+            <pose>-0.007070903521307328 -0.007070903521307095 3.327199626923516e-17 -2.5973537557407903e-16 6.412347658722911e-16 -1.570796326794895</pose>
+            <inertial>
+                <mass>0.009833816316897276</mass>
+                <pose>0.06822652987317823 -0.06822652987319056 -0.009138920478582826 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>5.275899459277616e-07</ixx>
+                    <iyy>5.275899457743919e-07</iyy>
+                    <izz>4.148130381154579e-07</izz>
+                    <ixy>1.5397303856952963e-07</ixy>
+                    <iyz>3.947414083386332e-08</iyz>
+                    <ixz>-3.947414083330375e-08</ixz>
+                </inertia>
+            </inertial>
+            <visual name="pata-3_visual">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/pata-3.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="pata-3_collision">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/pata-3.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="rotor_0">
+            <pose>0.09381802093007348 -0.0938180209300732 0.0005000000000000049 7.389455181965935e-17 -7.21644966006352e-16 1.0947644252537643e-47</pose>
+            <inertial>
+                <mass>0.003055288032744085</mass>
+                <pose>1.0107556796525069e-07 -9.520076463895599e-08 0.019866036312918018 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>9.386423608052354e-07</ixx>
+                    <iyy>9.386625365933729e-07</iyy>
+                    <izz>1.8144437132977372e-06</izz>
+                    <ixy>-2.4687616318148032e-12</ixy>
+                    <iyz>7.36105368505402e-13</iyz>
+                    <ixz>-1.0264157081699263e-12</ixz>
+                </inertia>
+            </inertial>
+            <visual name="rotor_0_visual">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/prop_ccw_1.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="rotor_0_collision">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/prop_ccw_1.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="rotor_1">
+            <pose>0.09381802093007352 0.09381802093007313 0.0005000000000000648 -9.788152163949195e-16 1.7347234759768157e-17 -7.189737070148008e-49</pose>
+            <inertial>
+                <mass>0.0030552880224177003</mass>
+                <pose>1.010755683413684e-07 9.520076492295952e-08 0.01986603632033519 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>9.386423600392953e-07</ixx>
+                    <iyy>9.386625350965439e-07</iyy>
+                    <izz>1.8144437124096883e-06</izz>
+                    <ixy>2.468761632270726e-12</ixy>
+                    <iyz>-7.361053693002939e-13</iyz>
+                    <ixz>-1.026415704406673e-12</ixz>
+                </inertia>
+            </inertial>
+            <visual name="rotor_1_visual">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/prop_cw_1.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="rotor_1_collision">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/prop_cw_1.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="rotor_2">
+            <pose>-0.0938180209300729 0.09381802093007316 0.000500000000000016 -1.060636261394723e-18 -7.415942859800849e-16 0.0</pose>
+            <inertial>
+                <mass>0.003055288032744085</mass>
+                <pose>1.0107556796564693e-07 -9.520076464044488e-08 0.019866036312917976 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>9.38642360805224e-07</ixx>
+                    <iyy>9.386625365933727e-07</iyy>
+                    <izz>1.8144437132977406e-06</izz>
+                    <ixy>-2.4687616385283707e-12</ixy>
+                    <iyz>7.361053700634637e-13</iyz>
+                    <ixz>-1.0264157081049593e-12</ixz>
+                </inertia>
+            </inertial>
+            <visual name="rotor_2_visual">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/prop_ccw_2.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="rotor_2_collision">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/prop_ccw_2.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="rotor_3">
+            <pose>-0.09381802093007288 -0.09381802093007319 0.0004999999999999983 -1.224646799147353e-16 6.077163357286278e-64 0.0</pose>
+            <inertial>
+                <mass>0.0030552880224177003</mass>
+                <pose>1.0107556834171305e-07 9.520076493997181e-08 0.019866036320335283 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>9.386423600392889e-07</ixx>
+                    <iyy>9.386625350965416e-07</iyy>
+                    <izz>1.8144437124097167e-06</izz>
+                    <ixy>2.468761631756189e-12</ixy>
+                    <iyz>-7.361053677464955e-13</iyz>
+                    <ixz>-1.026415705257706e-12</ixz>
+                </inertia>
+            </inertial>
+            <visual name="rotor_3_visual">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/prop_cw_2.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="rotor_3_collision">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/prop_cw_2.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="m2">
+            <pose>0.09381802093007348 0.09381802093007316 0.004249999999999999 0.0 -4.706453280556797e-53 0.0</pose>
+            <inertial>
+                <mass>0.018516666419059958</mass>
+                <pose>-1.1723955140041654e-15 -1.7763568394002505e-17 0.003854232633166276 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>5.063978800663217e-07</ixx>
+                    <iyy>5.06059513184472e-07</iyy>
+                    <izz>7.607155930454174e-07</izz>
+                    <ixy>0.0</ixy>
+                    <iyz>0.0</iyz>
+                    <ixz>-6.098637220230962e-20</ixz>
+                </inertia>
+            </inertial>
+            <visual name="m2_visual">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/m2.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="m2_collision">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/m2.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="m3">
+            <pose>-0.09381802093007288 0.09381802093007315 0.00425 0.0 -0.0 0.0</pose>
+            <inertial>
+                <mass>0.018516666419059958</mass>
+                <pose>-1.1723955140041654e-15 -1.7763568394002505e-17 0.003854232633166276 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>5.063978800662946e-07</ixx>
+                    <iyy>5.06059513184472e-07</iyy>
+                    <izz>7.607155930454716e-07</izz>
+                    <ixy>0.0</ixy>
+                    <iyz>-1.6940658945086007e-21</iyz>
+                    <ixz>-5.929230630780102e-20</ixz>
+                </inertia>
+            </inertial>
+            <visual name="m3_visual">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/m3.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="m3_collision">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/m3.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <link name="m4">
+            <pose>-0.09381802093007288 -0.09381802093007319 0.00425 0.0 -0.0 0.0</pose>
+            <inertial>
+                <mass>0.018516666419059958</mass>
+                <pose>-1.1723955140041654e-15 -1.7763568394002505e-17 0.003854232633166276 0.0 0.0 0.0</pose>
+                <inertia>
+                    <ixx>5.063978800663217e-07</ixx>
+                    <iyy>5.06059513184472e-07</iyy>
+                    <izz>7.607155930454716e-07</izz>
+                    <ixy>-2.710505431213761e-20</ixy>
+                    <iyz>-1.6940658945086007e-21</iyz>
+                    <ixz>-5.929230630780102e-20</ixz>
+                </inertia>
+            </inertial>
+            <visual name="m4_visual">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/m4.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <collision name="m4_collision">
+                <geometry>
+                    <mesh>
+                        <uri>meshes/meshes/m4.stl</uri>
+                        <scale>0.001 0.001 0.001</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+        <joint name="frame_Rigida-1" type="fixed">
+            <pose>1.3877787807814457e-17 2.7755575615628914e-17 0.005 0.0 0.0 0.0</pose>
+            <parent>kit/body</parent>
+            <child>spacer2</child>
+        </joint>
+        <joint name="frame_Rigida-2" type="fixed">
+            <pose>2.0816681711721685e-17 4.85722573273506e-17 0.005 0.0 0.0 0.0</pose>
+            <parent>kit/body</parent>
+            <child>spacer2-1</child>
+        </joint>
+        <joint name="frame_Rigida-3" type="fixed">
+            <pose>-2.42861286636753e-17 4.163336342344337e-17 0.005 0.0 0.0 0.0</pose>
+            <parent>kit/body</parent>
+            <child>spacer2-2</child>
+        </joint>
+        <joint name="frame_Rigida-4" type="fixed">
+            <pose>-2.0816681711721685e-17 4.163336342344337e-17 0.005 0.0 0.0 0.0</pose>
+            <parent>kit/body</parent>
+            <child>spacer2-3</child>
+        </joint>
+        <joint name="frame_Rigida-5" type="fixed">
+            <pose>0.018999999999999975 -0.0007899999999999674 -0.024500000000000063 0.0 0.0 0.0</pose>
+            <parent>kit/body</parent>
+            <child>rasp</child>
+        </joint>
+        <joint name="frame_Rigida-6" type="fixed">
+            <pose>-0.010499856075508613 0.0021004998779313635 3.372988137539747e-17 0.0 0.0 0.0</pose>
+            <parent>kit/body</parent>
+            <child>cam</child>
+        </joint>
+        <joint name="frame_Rigida-7" type="fixed">
+            <pose>0.010216845576886024 0.012067717902518621 -0.002999999999999998 0.0 0.0 0.0</pose>
+            <parent>kit/body</parent>
+            <child>speed</child>
+        </joint>
+        <joint name="frame_Rigida-8" type="fixed">
+            <pose>0.01599999999999955 0.038500000000000034 -3.788984579006227e-07 0.0 0.0 0.0</pose>
+            <parent>kit/body</parent>
+            <child>bat</child>
+        </joint>
+        <joint name="frame_Rigida-9" type="fixed">
+            <pose>-2.093007347991893e-08 2.0930073188485387e-08 -0.0017499999999999985 0.0 0.0 0.0</pose>
+            <parent>kit/body</parent>
+            <child>m1</child>
+        </joint>
+        <joint name="frame_Rigida-13" type="fixed">
+            <pose>0.07600009647869271 -0.07600009647869271 -0.0025 0.0 0.0 0.0</pose>
+            <parent>kit/body</parent>
+            <child>pata</child>
+        </joint>
+        <joint name="frame_Rigida-14" type="fixed">
+            <pose>0.061504216771959455 -0.06150421677195951 -0.002499999999999983 0.0 0.0 0.0</pose>
+            <parent>kit/body</parent>
+            <child>pata-2</child>
+        </joint>
+        <joint name="frame_Rigida-15" type="fixed">
+            <pose>0.0760000964786927 -0.07600009647869271 -0.0025 0.0 0.0 0.0</pose>
+            <parent>kit/body</parent>
+            <child>pata-1</child>
+        </joint>
+        <joint name="frame_Rigida-16" type="fixed">
+            <pose>0.07600009647869296 -0.0760000964786927 -0.0025000000000000447 0.0 0.0 0.0</pose>
+            <parent>kit/body</parent>
+            <child>pata-3</child>
+        </joint>
+        <joint name="m1_Revolucion-18" type="revolute">
+            <pose>-2.093007347125917e-08 2.0930073203249896e-08 0.011999999999999988 0.0 0.0 0.0</pose>
+            <parent>m1</parent>
+            <child>rotor_0</child>
+            <axis>
+                <xyz expressed_in="__model__">0.0 0.0 1.0</xyz>
+            </axis>
+        </joint>
+        <joint name="frame_Rigida-25" type="fixed">
+            <pose>-2.093007347991893e-08 -2.0930073160729812e-08 -0.0017499999999999985 0.0 0.0 0.0</pose>
+            <parent>kit/body</parent>
+            <child>m2</child>
+        </joint>
+        <joint name="m2_Revolucion-26" type="revolute">
+            <pose>-2.093007352176046e-08 -2.0930073144720016e-08 0.01199999999999991 0.0 0.0 0.0</pose>
+            <parent>m2</parent>
+            <child>rotor_1</child>
+            <axis>
+                <xyz expressed_in="__model__">0.0 0.0 1.0</xyz>
+            </axis>
+        </joint>
+        <joint name="frame_Rigida-27" type="fixed">
+            <pose>2.0930072883174056e-08 -2.0930073146852024e-08 -0.0017500000000000003 0.0 0.0 0.0</pose>
+            <parent>kit/body</parent>
+            <child>m3</child>
+        </joint>
+        <joint name="frame_Rigida-28" type="fixed">
+            <pose>2.0930072883174056e-08 2.0930073188485387e-08 -0.0017500000000000003 0.0 0.0 0.0</pose>
+            <parent>kit/body</parent>
+            <child>m4</child>
+        </joint>
+        <joint name="m3_Revolucion-29" type="revolute">
+            <pose>2.093007290595094e-08 -2.0930073160742488e-08 0.011999999999999966 0.0 0.0 0.0</pose>
+            <parent>m3</parent>
+            <child>rotor_2</child>
+            <axis>
+                <xyz expressed_in="__model__">0.0 0.0 -1.0</xyz>
+            </axis>
+        </joint>
+        <joint name="m4_Revolucion-30" type="revolute">
+            <pose>2.0930072883174056e-08 2.0930073187015812e-08 0.012000000000000002 0.0 0.0 0.0</pose>
+            <parent>m4</parent>
+            <child>rotor_3</child>
+            <axis>
+                <xyz expressed_in="__model__">0.0 0.0 1.0</xyz>
+            </axis>
+        </joint>
+
+        <!-- Plugins -->
+    <!-- Multicopter motor model (controller) -->
+    <plugin
+        filename="ignition-gazebo-multicopter-motor-model-system"
+        name="gz::sim::systems::MulticopterMotorModel">
+        <robotNamespace>kit</robotNamespace>
+        <jointName>m1_Revolucion-18</jointName>
+        <linkName>rotor_0</linkName>
+        <turningDirection>ccw</turningDirection>
+        <timeConstantUp>0.0125</timeConstantUp>
+        <timeConstantDown>0.025</timeConstantDown>
+        <maxRotVelocity>800.0</maxRotVelocity>
+        <motorConstant>8.54858e-06</motorConstant>
+        <momentConstant>0.016</momentConstant>
+        <commandSubTopic>gazebo/command/motor_speed</commandSubTopic>
+        <motorNumber>0</motorNumber>
+        <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>
+        <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+        <motorSpeedPubTopic>motor_speed/0</motorSpeedPubTopic>
+        <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+        <motorType>velocity</motorType>
+      </plugin>
+      <plugin
+        filename="ignition-gazebo-multicopter-motor-model-system"
+        name="gz::sim::systems::MulticopterMotorModel">
+        <robotNamespace>kit</robotNamespace>
+        <jointName>m2_Revolucion-26</jointName>
+        <linkName>rotor_1</linkName>
+        <turningDirection>ccw</turningDirection>
+        <timeConstantUp>0.0125</timeConstantUp>
+        <timeConstantDown>0.025</timeConstantDown>
+        <maxRotVelocity>800.0</maxRotVelocity>
+        <motorConstant>8.54858e-06</motorConstant>
+        <momentConstant>0.016</momentConstant>
+        <commandSubTopic>gazebo/command/motor_speed</commandSubTopic>
+        <motorNumber>1</motorNumber>
+        <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>
+        <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+        <motorSpeedPubTopic>motor_speed/1</motorSpeedPubTopic>
+        <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+        <motorType>velocity</motorType>
+      </plugin>
+      <plugin
+        filename="ignition-gazebo-multicopter-motor-model-system"
+        name="gz::sim::systems::MulticopterMotorModel">
+        <robotNamespace>kit</robotNamespace>
+        <jointName>m3_Revolucion-29</jointName>
+        <linkName>rotor_2</linkName>
+        <turningDirection>cw</turningDirection>
+        <timeConstantUp>0.0125</timeConstantUp>
+        <timeConstantDown>0.025</timeConstantDown>
+        <maxRotVelocity>800.0</maxRotVelocity>
+        <motorConstant>8.54858e-06</motorConstant>
+        <momentConstant>0.016</momentConstant>
+        <commandSubTopic>gazebo/command/motor_speed</commandSubTopic>
+        <motorNumber>2</motorNumber>
+        <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>
+        <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+        <motorSpeedPubTopic>motor_speed/2</motorSpeedPubTopic>
+        <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+        <motorType>velocity</motorType>
+      </plugin>
+      <plugin
+        filename="ignition-gazebo-multicopter-motor-model-system"
+        name="gz::sim::systems::MulticopterMotorModel">
+        <robotNamespace>kit</robotNamespace>
+        <jointName>m4_Revolucion-30</jointName>
+        <linkName>rotor_3</linkName>
+        <turningDirection>cw</turningDirection>
+        <timeConstantUp>0.0125</timeConstantUp>
+        <timeConstantDown>0.025</timeConstantDown>
+        <maxRotVelocity>800.0</maxRotVelocity>
+        <motorConstant>8.54858e-06</motorConstant>
+        <momentConstant>0.016</momentConstant>
+        <commandSubTopic>gazebo/command/motor_speed</commandSubTopic>
+        <motorNumber>3</motorNumber>
+        <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>
+        <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+        <motorSpeedPubTopic>motor_speed/3</motorSpeedPubTopic>
+        <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+        <motorType>velocity</motorType>
+      </plugin>
+      <plugin
+        filename="ignition-gazebo-multicopter-control-system"
+        name="gz::sim::systems::MulticopterVelocityControl">
+        <robotNamespace>kit</robotNamespace>
+        <commandSubTopic>gazebo/command/twist</commandSubTopic>
+        <enableSubTopic>enable</enableSubTopic>
+        <comLinkName>kit/body</comLinkName>
+        <velocityGain>2.7 2.7 2.7</velocityGain>
+        <attitudeGain>2 3 0.15</attitudeGain>
+        <angularRateGain>0.4 0.52 0.18</angularRateGain>
+        <maximumLinearAcceleration>2 2 2</maximumLinearAcceleration>
+
+        <rotorConfiguration>
+          <rotor>
+            <jointName>m1_Revolucion-18</jointName>
+            <forceConstant>8.54858e-06</forceConstant>
+            <momentConstant>0.016</momentConstant>
+            <direction>1</direction>
+          </rotor>
+          <rotor>
+            <jointName>m2_Revolucion-26</jointName>
+            <forceConstant>8.54858e-06</forceConstant>
+            <momentConstant>0.016</momentConstant>
+            <direction>1</direction>
+          </rotor>
+          <rotor>
+            <jointName>m3_Revolucion-29</jointName>
+            <forceConstant>8.54858e-06</forceConstant>
+            <momentConstant>0.016</momentConstant>
+            <direction>-1</direction>
+          </rotor>
+          <rotor>
+            <jointName>m4_Revolucion-30</jointName>
+            <forceConstant>8.54858e-06</forceConstant>
+            <momentConstant>0.016</momentConstant>
+            <direction>-1</direction>
+          </rotor>
+        </rotorConfiguration>
+      </plugin>
+      <plugin
+        filename="ignition-gazebo-odometry-publisher-system"
+        name="ignition::gazebo::systems::OdometryPublisher">
+        <dimensions>3</dimensions>
+      </plugin>
+    </model>
+</sdf>

@@ -167,7 +167,7 @@
     </model>
 
     <include>
-      <uri>model://7in_assembly</uri>
+      <uri>model://hive2</uri>
       <pose degrees="true">0 0 0.195 0 0 0</pose>
     </include>
 
